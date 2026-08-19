@@ -1,0 +1,3 @@
+Civilization oracle configurations are independent comparison aids only.
+
+Never use emulator output to generate C source, create dispatch contexts, fill game constants, resolve unproved dynamic targets, or supply production endpoint state. Never link emulator code into the static core or frontend. Compare only behavior already independently implemented from the exact ROM and documented hardware.

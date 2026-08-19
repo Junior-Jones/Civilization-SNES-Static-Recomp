@@ -1,0 +1,42 @@
+Civilization Architecture Improvements - Parts 05 through 12
+==============================================================
+Completed: 2026-08-19
+
+Outcome
+-------
+The remaining architecture roadmap is implemented without changing the frozen
+103,584-context static CPU authority. Headed and headless execution share one
+frame operation; rendering consumes per-scanline PPU state; Full Static audio
+uses a checked singleton lease with per-instance capture/hooks; snapshots use a
+canonical field schema with SHA-256 identities; first-frame memory duplication
+is removed; machine I/O is separated into focused modules; test dependencies
+are optional; and generated provenance is continuously verified.
+
+Clean regeneration evidence
+---------------------------
+generate_v33_closed_core.py and generate_v35_compact_aot_core.py were executed
+against the exact USA ROM, frozen fixed-point analysis and indirect proof in:
+
+  D:\Users\build\retro\Recomp\Civilization\Temp\civilization-v36-architecture-improvements\regen-check-v36
+
+Compared output:
+  generated core/index/return/manifest files: 3
+  compact AOT header/templates/manifest/shards: 283
+  total files: 286
+  byte differences: 0
+
+Safety and compatibility decisions
+----------------------------------
+CVSNAP33 stored compiler-private CivRecomp bytes. The removal of obsolete audio
+and certification arrays plus API opacity makes a reliable compatibility read
+unsafe, so Version 33 snapshots fail clearly instead of being guessed into the
+new state. CVSNAP36 excludes ROM pointers, host callbacks and pending host yield
+requests, and only commits data after identity, sizing and SHA-256 validation.
+
+Verification gates
+------------------
+The architecture completion gate checks the frame/hook contract, per-scanline
+presentation, audio lease/callback isolation, CVSNAP36 schema, bloat removal,
+subsystem split and CMake hygiene. The provenance gate validates all recorded
+source hashes and all 280 compact-AOT shard hashes. Historical static-authority,
+timing, DMA/HDMA, PPU, controller, SRAM, screenshot and snapshot gates remain.

@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "mesen_global_startup_pending_checkpoint": true,
+    "mesen_hdma_init_nested_sync_suppression": true,
+    "mesen_hdma_scanline_nested_sync_suppression": true,
+    "mesen_pending_priority_hdma_before_init_before_mdma": true,
+    "mesen_rundma_after_byte_checkpoint": true,
+    "mesen_rundma_pending_checkpoint_count": true,
+    "production_channel_checkpoint_after_8_clocks": true,
+    "production_exact_channel2_config": true,
+    "production_global_checkpoint_after_8_clocks": true,
+    "production_hdma_mask_fail_closed_04": true,
+    "production_manual_dma_channels_bounded": true,
+    "production_nested_hdma_folds_clock_counter": true,
+    "production_nested_hdma_suppresses_sync_start": true,
+    "production_per_byte_checkpoint_after_8_clocks": true,
+    "production_per_byte_pending_checkpoint": true
+  },
+  "isolated_hdma_disabled_65536_byte_case": {
+    "channel_startup": 8,
+    "end_sync": 2,
+    "expected_master_delta": 524328,
+    "global_startup": 8,
+    "mdmaen_bus_write": 6,
+    "per_byte_clocks": 8,
+    "resumed_cpu_cycle": 6,
+    "start_alignment": 4,
+    "start_delay_cpu_cycle": 6,
+    "transfer_bytes": 65536
+  },
+  "mesence": {
+    "commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb",
+    "file": "Core/SNES/SnesDmaController.cpp",
+    "repository": "nesdev-org/MesenCE",
+    "sha256": "32d459840fd06084fe46b87955bf6d831ac85023772b313aaa243af4c6be78d4"
+  },
+  "passed": true,
+  "production_not_oracle_dependent": true,
+  "production_scope": "Civilization exact-ROM target-specific DMA/HDMA only",
+  "schema": "civilization-v33-dma-hdma-oracle-contract-v1"
+}

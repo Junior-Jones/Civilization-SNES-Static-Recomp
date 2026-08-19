@@ -1,0 +1,23 @@
+{
+  "allowed": [
+    "post-implementation comparison of independently written CPU/PPU/DMA/audio behavior",
+    "disassembly/trace comparison after static proof",
+    "hardware-timing source cross-check",
+    "screenshots/audio as validation evidence"
+  ],
+  "forbidden": [
+    "using observed PCs/targets to widen generated control flow",
+    "copying emulator dispatch as production runtime",
+    "linking emulator source/binaries into production",
+    "importing another game static core logic",
+    "using oracle constants/endpoints as unproved game authority"
+  ],
+  "format": "civilization-oracle-policy-v32",
+  "natural_test_policy": "run only after source freeze; first fail-closed boundary ends the version test and becomes a future offline proof milestone",
+  "primary_local_oracle": {
+    "name": "MesenCE 2.2.1",
+    "production_dependency": false,
+    "tag_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb"
+  },
+  "version": 32
+}

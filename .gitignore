@@ -1,0 +1,9 @@
+build/
+build-*/
+*.sfc
+*.smc
+*.srm
+*.sav
+*.state
+*.wav
+*.png

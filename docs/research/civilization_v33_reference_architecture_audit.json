@@ -1,0 +1,37 @@
+{
+  "format": "civilization-v33-reference-architecture-audit-v1",
+  "pass": true,
+  "current_core": {
+    "single_current_generated_scpu_authority": true,
+    "generated_cpu_shards": 280,
+    "historical_cpu_runtime_side_lanes": false,
+    "handwritten_machine_layer_separate_from_generated_cpu": true,
+    "full_static_audio_only": true,
+    "runtime_opcode_decoder": false,
+    "runtime_control_flow_learning": false,
+    "emulator_fallback": false,
+    "battery_sram_separate_from_snapshots": true,
+    "persistent_direct_state_snapshot_slots": 5
+  },
+  "reference_structure_lessons_retained": [
+    "generated exact-game CPU authority remains distinct from compact handwritten SNES hardware support",
+    "Full Static audio is build-owned and fail-closed rather than a switchable emulator backend",
+    "large generated sources use isolated warning/optimization policy while handwritten code stays strict",
+    "superseded milestone code is historical evidence rather than selectable production authority",
+    "battery-backed SRAM survives console reset and is persisted separately from direct machine-state snapshots",
+    "snapshot restore reattaches host ROM state only after exact-ROM/integrity validation and does not replay inputs"
+  ],
+  "references": {
+    "simcity": "user-supplied completed static recomp architecture and persistent snapshot/SRAM reference",
+    "top_gear": "user-supplied Version 27 exact-game current-core/fail-closed architecture reference"
+  },
+  "scope_note": "Architecture comparison only. Civilization keeps one exact-ROM generated CPU authority, target-bounded hardware support, Full Static audio and shared frontend persistence. No SimCity/Top Gear game-specific CPU logic or emulator runtime is copied.",
+  "version33_additions": [
+    "all 17 former legacy-risk indirect sites independently recertified",
+    "all 69 finite indirect effective-pointer/target contracts independently normalized and exact-ROM decoded",
+    "33 finite sites additionally producer/value-set-complete",
+    "special NMI saved-return-frame, threaded RTS and native interrupt roots independently recertified",
+    "EARTH/city gameplay lifecycle represented by source-owned graph clusters",
+    "five persistent shared-frontend snapshots plus separate battery SRAM persistence"
+  ]
+}

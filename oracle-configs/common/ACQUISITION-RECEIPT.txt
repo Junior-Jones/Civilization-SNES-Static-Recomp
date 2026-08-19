@@ -1,0 +1,24 @@
+Civilization Version 04 oracle/tool receipt
+
+Primary oracle/debugger: MesenCE 2.2.1 Linux source
+Pinned source commit: 20ba206cef5ba207c21203176d02cb9f43dda9fb
+Pinned official Linux binary SHA-256: c88ff4d251b407515c43d3332d641927655cd69fb538996b6a21da4509dbb58f
+
+The user-supplied Mesen Linux source is physically available and verifies against
+MesenCE 2.2.1 known SNES debugger Git blobs. Pristine SnesDebugger.cpp has Git
+blob 9189d58981883c977a6af0c8f190b97fa8e23d0e.
+
+For Version 04, pristine SnesDisUtils.cpp was compiled into an independent Linux
+disassembly harness. It checked all 390 generated Version 04 contexts with zero
+raw-byte/mnemonic mismatches and independently decoded the D4:850A descriptor
+worker plus handlers D4:8746 and D4:8780.
+
+Only after the static Version 04 18/18 gate passed was a separate oracle copy
+patched for observation through D4:80C7. Patch application and the modified
+SnesDebugger translation-unit compile pass. The trace identifies DMA reads and
+writes as DR/DW. A full runtime comparison remains pending because the current
+environment lacks SDL2 development headers and .NET 8.
+
+Secondary independent implementation reference: ares v148. It is used only for
+hardware/architecture cross-checks and never as production runtime or generation
+authority.

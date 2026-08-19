@@ -1,0 +1,64 @@
+Civilization (USA) SNES Static Recompilation - Version 33 Static Completion Audit
+================================================================================
+
+Status before natural gameplay validation: STATIC IMPLEMENTATION COMPLETE / READY TO FREEZE
+
+Exact-ROM closed graph
+----------------------
+Runtime contexts: 103,576
+Proof states: 122,216
+Procedures: 2,421
+Call edges: 8,939
+Finite indirect sites: 69
+Finite return-proof sites: 2,117
+Finite return targets: 7,889
+Generated CPU shards: 280
+Generated production files: 285
+Static-analysis frontiers: 0
+Work queue empty: yes
+Runtime opcode decode: no
+Runtime control-flow learning: no
+Emulator fallback: no
+
+Version 33 proof-strengthening milestones
+-----------------------------------------
+- All 17 former legacy-risk finite indirect sites independently recertified.
+- All 69 finite indirect sites independently exact-ROM decoded under normalized
+  semantic-selector/raw-X/effective-pointer contracts.
+- 33 of 69 sites additionally have producer/value-set-complete classification.
+- Remaining 36 remain finite, exact and fail-closed but are explicitly retained
+  as future producer/value-set-strengthening work; no adjacent table widening.
+- Three NMI saved-return-frame re-entry edges independently recertified.
+- Three threaded-RTS dispatchers independently recertified.
+- Eight native IRQ/NMI width roots independently recertified.
+- All 8,939 call edges and 2,109 normal RTS/RTL sites independently reconciled.
+- EARTH/setup/tribe/leader/first-city/Production/View/End-Turn/research route
+  represented as source-owned lifecycle clusters rather than gameplay-PC proof.
+
+Version 33 persistence milestones
+---------------------------------
+- Civilization cartridge SRAM remains an exact 32 KiB battery-backed surface.
+- Console reset now preserves battery SRAM instead of clearing it.
+- SRAM dirty tracking and exact copy/load/mark-clean APIs added.
+- Shared frontend persists battery SRAM separately as Civilization.srm.
+- Five persistent snapshot slots added under Snapshots/Snapshot1..5.civsnap.
+- Snapshot format directly stores the exact static-machine state plus Full Static
+  audio state with magic/version/size/ROM/hash guards.
+- External ROM pointer and command-local headless stop state are never restored
+  from untrusted snapshot bytes.
+- Headless uses the same shared frontend persistence APIs as the app-facing layer.
+- Cross-process regression saves slot 1, exits, starts a fresh process, restores
+  it and matches CPU/frame/master/framebuffer/audio state exactly.
+- Deliberately corrupted snapshot is rejected fail-closed.
+
+Compiler/gate certification before freeze
+-----------------------------------------
+GCC Release: 36/36 PASS
+Clang Release: 36/36 PASS
+Source-policy scan: PASS, zero findings
+Static-purity scan: PASS, zero findings
+
+The natural test is deliberately not part of this pre-freeze audit.  Version 33
+source must be archived and clean-extraction certified before gameplay validation.
+Any gameplay-discovered missing proof/hardware route becomes Version 34 work and
+must not be learned into this frozen source.

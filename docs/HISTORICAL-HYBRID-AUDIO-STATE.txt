@@ -1,0 +1,32 @@
+Civilization Historical Hybrid Audio State
+===========================================
+
+Version 36 Part 2 removed the superseded development transport from the
+production CivRecomp machine. These fields documented incremental V06-V19
+research, but they were no longer read or updated by the authoritative runtime:
+
+- the handwritten CivSmpState and its ARAM-known mask;
+- shadow ARAM, DSP registers, known masks and functional timer state;
+- APUIO latch mirrors and read/write counters;
+- V11 IPL upload/rendezvous bookkeeping;
+- V12 driver-rendezvous bookkeeping;
+- V13 selector-1 trace storage;
+- V14 command burst digests and counters;
+- obsolete V15 and V16 transport counters, except the generated main-thread
+  v16_wram_clear_bytes diagnostic still written by compact AOT templates;
+- V19 selector-$0C upload/command bookkeeping and NMI wait counters;
+- the V19 audio-return gate and V20 comparison-lane counters;
+- the unused mirror of the current DSP register file.
+
+The production lane is unchanged: civilization_audio.cpp owns the only Full
+Static S-SMP/S-DSP route through sc_static_apu. APUIO reads and writes go
+directly to that authority; its exact-PC AOT guard remains fail closed. Current
+PCM, DSP/ARAM/port digests, snapshot state and failure diagnostics remain.
+
+The legacy v19_audio_return_observed field had no writer anywhere in production
+or generated code but gated first-visible-frame capture. Removing the dead gate
+makes the real forced-blank-to-visible transition itself arm presentation.
+
+Historical discovery receipts remain under docs/research and the earlier
+Version archives. They are evidence, not executable runtime state.
+

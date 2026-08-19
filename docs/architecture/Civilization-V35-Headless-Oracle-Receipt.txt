@@ -1,0 +1,56 @@
+Civilization V35 Test - MesenCE CLI/Headless Oracle Receipt
+==========================================================
+
+Purpose
+-------
+
+This is a bounded comparison oracle, not gameplay testing and not production
+authority. It checks whether any strictly unclassified instruction-start
+candidates from the independent disassembler execute during a three-frame boot
+window. No trace-derived address is imported into the static core.
+
+Pinned inputs
+-------------
+
+ROM SHA-256:
+de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32
+
+MesenCE release: 2.2.1
+Mesen_2.2.1_Windows.zip SHA-256:
+c19e10b3b3865eb0e86e4d01bf09a5027a4452081c04b5bd5b6cbbf76e346fd6
+
+Mesen.exe SHA-256:
+8ef403d6b9af32075416193914d7993ce8480b347fe1f20a0cfd9815374933e7
+
+MesenCE source commit:
+20ba206cef5ba207c21203176d02cb9f43dda9fb
+
+Source archive SHA-256:
+a16a880173d73c8320ad15203e9e69b59e0789da0fe8cf5358ec33c1b92b2886
+
+Bound
+-----
+
+- CLI switch: --testRunner
+- video/UI: not initialized by Mesen TestRunner
+- stop condition: three frames or 250,000 S-CPU instructions
+- candidates checked: 582 physical offsets / 2,136 CPU aliases
+- elapsed wall time: approximately 1.2 seconds
+
+Observed result
+---------------
+
+V35_HEADLESS_ORACLE reason=frame-limit frames=3 instructions=21574
+unique_pc=41 unique_hash=1C59BA24 candidate_physical_hits=0 hit_offsets=
+
+Mesen also reported two uninitialized WRAM reads at $7E0100 and $7E0101 during
+boot. These are retained as oracle diagnostics and do not affect ROM code
+classification.
+
+Interpretation
+--------------
+
+No strict independent-disassembler candidate executed in this bounded boot
+window. This is useful negative confirmation only. Static classification still
+comes from exact-ROM consumers, formats, control-flow proofs, and independent
+reconciliation.

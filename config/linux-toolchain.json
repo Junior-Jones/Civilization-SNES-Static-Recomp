@@ -1,0 +1,27 @@
+{
+  "certification_environment": {
+    "clang": "17.0.0",
+    "cmake": "3.31.6",
+    "gcc": "14.2.0",
+    "ninja": "1.12.1",
+    "python": "3.13.5"
+  },
+  "external_oracles": {
+    "MesenCE": "2.2.1, comparison only",
+    "ares": "v148, optional secondary comparison"
+  },
+  "format": "civilization-linux-toolchain-v32",
+  "network_required_for_build": false,
+  "release_matrix": {
+    "clang_release": "required",
+    "clean_extract_gcc_release": "required",
+    "gcc_release": "required"
+  },
+  "required": {
+    "c_standard": "C11",
+    "cmake_minimum": "3.20",
+    "cxx_standard": "C++17",
+    "python": "3.x"
+  },
+  "version": 32
+}

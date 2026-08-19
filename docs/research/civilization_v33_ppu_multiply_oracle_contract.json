@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "oracle_has_2134": true,
+    "oracle_has_2135": true,
+    "oracle_has_2136": true,
+    "oracle_matrix_write": true,
+    "oracle_ppu1_open_bus": true,
+    "oracle_shared_value_latch": true,
+    "oracle_signed_a": true,
+    "oracle_signed_b_high": true,
+    "production_24bit_mask": true,
+    "production_narrow_read_window": true,
+    "production_ppu1_open_bus": true,
+    "production_shared_latch": true,
+    "production_signed_a": true,
+    "production_signed_b_high": true
+  },
+  "contract": {
+    "$211B-$2120": "single shared low-byte/value latch; each write forms (new<<8)|previous_latch then updates latch",
+    "$2134-$2136": "low/mid/high bytes of signed int16 M7A times signed high byte of M7B, exposed as 24-bit two-complement result",
+    "ppu1_open_bus": "each $2134-$2136 read updates the PPU1 open-bus latch to the returned byte"
+  },
+  "format": "civilization-v33-ppu-multiply-oracle-contract-v1",
+  "oracle": "MesenCE 2.2.1 Core/SNES/SnesPpu.cpp",
+  "oracle_role": "post-implementation hardware behavior cross-check only; never generation or runtime authority",
+  "oracle_sha256": "dd73b18cec76094e4a25acc45da993f151e8a7cc6cf3b83e92a23bf9e867609e",
+  "pass": true
+}

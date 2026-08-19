@@ -1,0 +1,52 @@
+diff --git a/Core/SNES/Debugger/SnesDebugger.cpp b/Core/SNES/Debugger/SnesDebugger.cpp
+index 9189d58..af2464b 100644
+--- a/Core/SNES/Debugger/SnesDebugger.cpp
++++ b/Core/SNES/Debugger/SnesDebugger.cpp
+@@ -38,6 +38,7 @@
+ #include "Utilities/Patches/IpsPatcher.h"
+ #include "Utilities/CRC32.h"
+ #include "Shared/MemoryOperationType.h"
++#include "SNES/Debugger/CivilizationOracleTrace.h"
+ 
+ SnesDebugger::SnesDebugger(Debugger* debugger, CpuType cpuType) : IDebugger(debugger->GetEmulator())
+ {
+@@ -147,6 +148,12 @@ void SnesDebugger::ProcessInstruction()
+ 	uint32_t pc = (state.K << 16) | state.PC;
+ 	AddressInfo addressInfo = GetAbsoluteAddress(pc);
+ 	uint8_t opCode = _memoryMappings->Peek(pc);
++	if(_cpuType == CpuType::Snes) {
++		CivilizationOracleTrace::Instruction(
++			_memoryManager->GetMasterClock(), state.CycleCount, pc, opCode,
++			state.EmulationMode, state.A, state.X, state.Y, state.D, state.DBR,
++			state.SP, state.PS, _memoryManager->GetHClock(), _ppu->GetScanline());
++	}
+ 	MemoryOperationInfo operation(pc, opCode, MemoryOperationType::ExecOpCode, _cpuMemType);
+ 	InstructionProgress.LastMemOperation = operation;
+ 	InstructionProgress.StartCycle = state.CycleCount;
+@@ -225,6 +232,12 @@ void SnesDebugger::ProcessRead(uint32_t addr, uint8_t value, MemoryOperationType
+ 	MemoryOperationInfo operation(addr, value, type, _cpuMemType);
+ 	InstructionProgress.LastMemOperation = operation;
+ 	SnesCpuState& state = GetCpuState();
++	if(_cpuType == CpuType::Snes) {
++		uint32_t pc = (state.K << 16) | state.PC;
++		CivilizationOracleTrace::Read(
++			_memoryManager->GetMasterClock(), state.CycleCount, pc, addr, value,
++			static_cast<uint32_t>(type), _memoryManager->GetHClock(), _ppu->GetScanline());
++	}
+ 
+ 	if(IsRegister(addr)) {
+ 		_eventManager->AddEvent(DebugEventType::Register, operation);
+@@ -282,6 +295,13 @@ void SnesDebugger::ProcessWrite(uint32_t addr, uint8_t value, MemoryOperationTyp
+ {
+ 	AddressInfo addressInfo = GetAbsoluteAddress(addr);
+ 	MemoryOperationInfo operation(addr, value, type, _cpuMemType);
++	if(_cpuType == CpuType::Snes) {
++		SnesCpuState& state = GetCpuState();
++		uint32_t pc = (state.K << 16) | state.PC;
++		CivilizationOracleTrace::Write(
++			_memoryManager->GetMasterClock(), state.CycleCount, pc, addr, value,
++			static_cast<uint32_t>(type), _memoryManager->GetHClock(), _ppu->GetScanline());
++	}
+ 	InstructionProgress.LastMemOperation = operation;
+ 	if(addressInfo.Address >= 0 && (addressInfo.Type == MemoryType::SnesWorkRam || addressInfo.Type == MemoryType::SnesSaveRam)) {
+ 		_disassembler->InvalidateCache(addressInfo, _cpuType);

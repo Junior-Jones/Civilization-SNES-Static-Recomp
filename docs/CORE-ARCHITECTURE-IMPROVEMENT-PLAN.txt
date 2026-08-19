@@ -1,0 +1,193 @@
+Civilization Static-Core Architecture Improvement Plan
+=====================================================
+
+Baseline
+--------
+Version 35 Test retains 103,584 exact PBR:PC:E:M:X contexts in 280 compact
+AOT shards. Static dispatch is closed and fail-closed, with no runtime opcode
+decoder, learned edge, or emulator fallback. The work below modernizes the
+runtime architecture without weakening that authority.
+
+Recommended implementation order
+--------------------------------
+
+1. Architecture regression tests
+   Publish tests for the public API, simultaneous renderer instances, audio
+   ownership, host hooks, unknown generated dispatch, and transactional
+   snapshot rejection. Preserve the current static-authority tests.
+
+2. Remove obsolete hybrid-audio state
+   Remove unused V11-V19 transport, ARAM-known-mask, old DSP, command-upload,
+   selector, and trace state from the production machine. Preserve historical
+   discoveries in documentation.
+
+3. Opaque lifecycle and stable API
+   Make CivRecomp private. Add explicit create, destroy and reset operations,
+   stable input/frame/audio/SRAM/snapshot/status calls, and eliminate reset by
+   probing an uninitialized caller-owned object.
+
+4. Stable and research API separation
+   Keep normal application operations in the stable header. Move CPU/WRAM
+   inspection, proof counters, ARAM/DSP peeks and certification checkpoints to
+   an opt-in diagnostics header.
+
+5. One authoritative frame and hook path
+   Add a core-owned run-frame operation used by headed and headless callers.
+   Add explicit frame, failure, diagnostic and PCM hooks. Frontends must not
+   write scheduler or headless-stop fields directly.
+
+6. Scanline-correct presentation
+   Capture the active PPU state for every displayed scanline on every frame and
+   render from those line records. Mid-frame PPU and HDMA changes must affect
+   the correct lines rather than applying final-frame state to the whole image.
+
+7. Explicit instance-safe audio ownership
+   Move PCM capture, metrics, callback state and ownership out of file globals.
+   Either make Full Static audio fully per-instance or expose a checked lease
+   whose transfer cannot leave stale ownership flags or callbacks.
+
+8. Canonical transactional snapshots
+   Replace raw CivRecomp dumps and FNV32/ROM-CRC binding with field-by-field
+   serialization, exact-ROM SHA-256, generated-core identity and SHA-256
+   payload integrity. Save atomically and load into temporary state before
+   committing. Retain a compatibility reader for Version 33 snapshots if safe.
+
+9. Remove first-frame certification bloat
+   Remove frozen duplicate VRAM, CGRAM, OAM and scanline arrays from the normal
+   runtime. Keep active render state and a presentation-ready flag; move the
+   one-time certification capture into diagnostics/tests.
+
+10. Split machine subsystems
+    Divide civilization_bus.c into PPU, DMA/HDMA, controller/mouse,
+    cartridge/SRAM and routing modules with focused internal interfaces.
+
+11. CMake and warning hygiene
+    Use include(CTest) and BUILD_TESTING, make Python test-only, and scope
+    warning exceptions to generated files. Do not suppress unreachable-code
+    diagnostics across handwritten production source.
+
+12. Clean regeneration and integrated integrity
+    Regenerate compact AOT authority in a clean temporary tree and compare the
+    complete output byte-for-byte. Publish deterministic source and generated
+    provenance manifests and verify them through CTest.
+
+Part 1 status
+-------------
+COMPLETE - 2026-08-19
+
+Five new CTest gates cover six architectural concerns: public API linkage,
+parallel two-instance rendering, exclusive Full Static audio ownership, PCM
+hook isolation, unknown generated dispatch, and exact-ROM snapshot corruption
+rollback/restoration. The entire historical and new suite passes 45/45.
+
+Part 2 status
+-------------
+COMPLETE - 2026-08-19
+
+Removed the unused V11-V19 hybrid-audio transport, shadow ARAM/DSP, trace,
+upload, selector and comparison state from the production machine. APUIO now
+has one direct authoritative Full Static route. A structural CTest gate rejects
+reintroduction of the retired state, and the entire suite passes 46/46.
+
+The audit also removed a dead first-visible-frame condition which depended on
+v19_audio_return_observed, a flag that had no writer anywhere in the source.
+Historical meaning and removals are retained in
+docs/HISTORICAL-HYBRID-AUDIO-STATE.txt.
+
+Part 3 status
+-------------
+COMPLETE - 2026-08-19
+
+CivRecomp is now an opaque public handle. The core supplies explicit create,
+destroy and reset operations; destruction releases Full Static audio ownership.
+The common frontend owns a pointer instead of embedding the machine and closes
+that lifecycle on shutdown. Core-owned counter, failure, audio-state and
+run-to-frame operations replace frontend writes to private scheduler fields.
+
+The public API/lifecycle and structural opacity gates pass along with the full
+47-test suite. The Windows launcher target also builds successfully.
+
+Part 4 status
+-------------
+COMPLETE - 2026-08-19
+
+The stable application header now contains lifecycle, ROM, input, execution,
+framebuffer, SRAM, snapshot and host-PCM operations only. Optional CPU/PPU/input
+state, WRAM inspection, proof hashes, video checkpoints, detailed audio status,
+audio capture and ARAM/DSP peeks live in civilization_diagnostics.h.
+
+Headless research commands and the Windows diagnostic log use copied diagnostic
+state and bounded WRAM reads. No frontend source includes the private machine
+header. Both separation gates and the complete 49-test suite pass, and the
+native Windows launcher target builds successfully.
+
+Part 5 status
+-------------
+COMPLETE - 2026-08-19
+
+The stable API now owns one civ_run_frame operation. Both common and Windows
+frontends advance through it, and frame, failure, diagnostic and PCM delivery
+use one CivHostHooks contract preserved across reset and snapshot restoration.
+
+Part 6 status
+-------------
+COMPLETE - 2026-08-19
+
+The scheduler records decoded PPU and write-register state at every displayed
+scanline on every frame. Rendering selects each line's own state, so scroll,
+window, brightness, mode and HDMA-driven register changes are not incorrectly
+applied as one final-frame state across the complete picture.
+
+Part 7 status
+-------------
+COMPLETE - 2026-08-19
+
+PCM capture, capture progress and the host callback are per-instance. The one
+unavoidable process-global static S-SMP object is governed by a checked lease;
+transfer explicitly revokes the previous owner's acquired flag and cannot
+retain its callback.
+
+Part 8 status
+-------------
+COMPLETE - 2026-08-19
+
+CVSNAP36 serializes an ordered 181-field guest-state schema rather than dumping
+CivRecomp. Host pointers/hooks/yield requests are excluded. The format binds the
+exact ROM SHA-256 and compact-AOT identity, protects the complete payload with
+SHA-256, rejects extra/truncated data before commit, and saves via atomic replace.
+Raw Version 33 snapshots are deliberately rejected because their private
+structure layout changed and cannot be restored safely.
+
+Part 9 status
+-------------
+COMPLETE - 2026-08-19
+
+Removed duplicate frozen VRAM, CGRAM, OAM and first-frame scanline arrays.
+Certification retains hashes/counters while normal presentation retains only
+the active per-line state and framebuffer-ready flag.
+
+Part 10 status
+--------------
+COMPLETE - 2026-08-19
+
+The bus is now a routing layer. PPU ports, DMA/HDMA, controller/mouse and
+cartridge/SRAM live in civilization_ppu_io.c, civilization_dma.c,
+civilization_input.c and civilization_cartridge.c with focused internal calls.
+
+Part 11 status
+--------------
+COMPLETE - 2026-08-19
+
+CMake uses include(CTest) and BUILD_TESTING, and discovers Python only for test
+builds. Handwritten sources retain strict warnings; MSVC 4310/4702 exceptions
+are scoped to generated exact-context authority instead of applied globally.
+
+Part 12 status
+--------------
+COMPLETE - 2026-08-19
+
+Both generators were run into a clean isolated directory. The generated core,
+return authority and complete compact-AOT tree reproduced byte-for-byte: 286
+files checked, zero differences. SOURCE-PROVENANCE.json records deterministic
+SHA-256 identities for handwritten and generated production sources, and CTest
+verifies it plus all 280 shard hashes.

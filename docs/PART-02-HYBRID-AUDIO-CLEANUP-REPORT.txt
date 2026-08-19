@@ -1,0 +1,66 @@
+Civilization Architecture Improvement Part 2
+==============================================
+
+Status: COMPLETE - 2026-08-19
+
+Objective
+---------
+Remove obsolete hybrid-audio-era storage from the live CivRecomp object without
+changing the authoritative Full Static audio route or weakening static-core
+certification.
+
+Audit result
+------------
+Production and generated-source reference tracing proved that the old V11-V19
+transport experiments were no longer part of execution. The cleanup removed:
+
+- the 64 KiB shadow ARAM image and its known-byte mask;
+- old SMP and shadow DSP state, known masks and register-write counters;
+- APUIO mirror bytes and obsolete read/write counters;
+- V11-V14 upload, trace, command and comparison experiments;
+- retired V15/V16 transport fields, retaining v16_wram_clear_bytes because the
+  generated compact AOT authority still writes it;
+- V19 upload, selector, continuation and NMI-wait audio fields; and
+- V20 comparison-only counters and the unused shadow DSP register mirror.
+
+The historical purpose of these fields remains documented in
+docs/HISTORICAL-HYBRID-AUDIO-STATE.txt instead of occupying every live core
+instance.
+
+Correctness finding
+-------------------
+The first forced-blank-to-visible transition was gated by
+v19_audio_return_observed. No production, generated or test source ever wrote
+that flag. The impossible condition was removed so the normal PPU transition is
+no longer coupled to an abandoned audio-return experiment.
+
+Authority after cleanup
+-----------------------
+CPU APUIO access routes directly through civ_v20_audio_cpu_read/write. The Full
+Static audio implementation, ownership checks, PCM hook, snapshots, status and
+digests remain authoritative. No emulator fallback or runtime opcode decoder
+was introduced.
+
+Regression protection
+---------------------
+The new arch-no-legacy-hybrid-audio-state test scans production source for the
+retired declarations and requires the current Full Static route. A clean core
+build completed, and all 46 CTest cases passed, including audio authority,
+parallel renderer instances, fail-closed dispatch, persistent snapshots and
+transactional corruption rollback.
+
+Development snapshot boundary
+-----------------------------
+The current CVSNAP33 format contains a raw CivRecomp payload and records its
+exact size. Since Part 2 intentionally changes that structure size, snapshots
+created by the frozen Version 35 build are rejected by this development build's
+existing size guard. New snapshots round-trip correctly. Do not promote this
+work copy as a release until Part 8 supplies canonical serialization and the
+planned safe compatibility handling.
+
+Next improvement
+----------------
+Part 3 will make CivRecomp private and introduce explicit create, destroy and
+reset operations. This removes the current need for callers to allocate the
+full machine structure and prevents reset logic from probing potentially
+uninitialized caller-owned memory.

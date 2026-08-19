@@ -1,0 +1,34 @@
+Civilization SNES Static Recomp Version 33 - Final Reproducibility
+
+Exact ROM SHA256:
+de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32
+
+Two independent exact-ROM fixed-point analyses were executed from empty output paths.
+Both produced byte-identical fixed-point and ownership manifests, and both are byte-identical to the production Version 33 manifests.
+
+Final fixed point:
+  runtime contexts: 103576
+  proof states: 122216
+  procedures: 2421
+  call edges: 8939
+  finite indirect sites: 69
+  static frontiers: 0
+  work queue empty: yes
+
+Two independent generation passes were executed from those manifests into empty output directories.
+Both generated trees contain 285 files total, including 280 CPU shards.
+The two generated trees are byte-identical to each other and byte-identical to the production generated tree.
+
+Generated authority:
+  runtime contexts: 103576
+  generated shards: 280
+  finite indirect sites: 69
+  return proof sites: 2117
+  return proof targets: 7889
+  static frontiers: 0
+
+Analyzer manifest SHA256:
+63b93e56167b3cdd16929ece18652e3f0b30b601a14928da720a6673e84cb046  civilization_v33_fixedpoint.manifest.json
+acfae2c03f45eae71930b2eb6b521bb6c6d47fba3067bbf781744f2358b2a0e1  civilization_v33_ownership.manifest.json
+
+Result: PASS

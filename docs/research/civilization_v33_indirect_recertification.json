@@ -1,0 +1,161 @@
+{
+  "analysis_sha256": "63b93e56167b3cdd16929ece18652e3f0b30b601a14928da720a6673e84cb046",
+  "format": "civilization-v33-independent-indirect-recertification-v1",
+  "nmi_direct_producer_count": 61,
+  "nmi_literal_union": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40
+  ],
+  "production_proof_sha256": "4797e5c2ce5ab5737a39fef82028c1c3a0915e5ff1eff1df4e27fcf39833f5aa",
+  "result": "PASS: second-method exact-ROM recertification reproduces all four finite selector domains and table targets without invoking the Version-26 proof programs.",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "sites": [
+    {
+      "address": "C0:81E7",
+      "legal_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "targets": [
+        "C0:8277",
+        "C0:8278",
+        "C0:8281",
+        "C0:828E",
+        "C0:829B",
+        "C0:82A4",
+        "C0:82AD",
+        "C0:82B2",
+        "C0:82BB",
+        "C0:82C4",
+        "C0:82D1",
+        "C0:82DA",
+        "C0:82E3",
+        "C0:82EC",
+        "C0:82F5",
+        "C0:82FA",
+        "C0:82FF",
+        "C0:8308",
+        "C0:8311",
+        "C0:831A",
+        "C0:8323"
+      ]
+    },
+    {
+      "address": "C2:AD7A",
+      "legal_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34
+      ],
+      "targets": [
+        "C2:ADA3",
+        "C2:ADD3",
+        "C2:AE30",
+        "C2:AE60",
+        "C2:AE90",
+        "C2:AEC0",
+        "C2:AEF0",
+        "C2:AF20",
+        "C2:AF50",
+        "C2:AF80",
+        "C2:AFEE",
+        "C2:AFF5",
+        "C2:B025",
+        "C2:B055",
+        "C2:B085",
+        "C2:B0B5",
+        "C2:B0E5",
+        "C2:B115"
+      ]
+    },
+    {
+      "address": "C2:E992",
+      "legal_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "targets": [
+        "C2:E9AA",
+        "C2:EA34",
+        "C2:EA6A",
+        "C2:EAA0"
+      ]
+    },
+    {
+      "address": "D0:BB7C",
+      "legal_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "targets": [
+        "D0:BB9F",
+        "D0:BC24",
+        "D0:BC54",
+        "D0:BC84",
+        "D0:BCB4",
+        "D0:BCE4",
+        "D0:BC23"
+      ]
+    }
+  ]
+}

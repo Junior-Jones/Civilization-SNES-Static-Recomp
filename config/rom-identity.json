@@ -1,0 +1,14 @@
+{
+  "checksum": "0x5082",
+  "checksum_complement": "0xAF7D",
+  "copier_header_present": false,
+  "crc32": "41fdba82",
+  "file_bytes": 1572864,
+  "format": "civilization-snes-rom-identity-v1",
+  "header_offset": "0x00FFC0",
+  "mirrored_checksum": "0x5082",
+  "release_archive_policy": "external_only_never_package",
+  "required_filename_hint": "Civilization (USA).sfc",
+  "sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "title": "CIVILIZATION"
+}

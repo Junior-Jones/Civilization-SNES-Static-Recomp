@@ -1,0 +1,383 @@
+{
+  "analysis_sha256": "16eca421b199951f13e8133ea58c5d84e8b6cdeaffa0921efb053257b5fb7daf",
+  "claim": "All 17 former legacy-risk sites are recertified by a checker independent of the fixed-point analyzer: exact selector-forming source bytes, exact ROM table words, closed-target ownership, and complete writer inventories for the priority shared state families. No adjacent table word is admitted.",
+  "d4_state_writer_count": 8,
+  "errors": [],
+  "format": "civilization-v33-legacy-indirect-second-method-v1",
+  "object_type_writer_count": 12,
+  "priority_sites": [
+    "C3:0AC0",
+    "C0:A8E9",
+    "C0:B420",
+    "C0:F058",
+    "C0:EECF",
+    "D4:8D72"
+  ],
+  "proof_sha256": "4797e5c2ce5ab5737a39fef82028c1c3a0915e5ff1eff1df4e27fcf39833f5aa",
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "rows": [
+    {
+      "address": "C0:0331",
+      "case_count": 13,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:81E7",
+      "case_count": 21,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "selector_receipt": "separate-current-source-proof",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:A8E9",
+      "case_count": 28,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:B420",
+      "case_count": 28,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:B88F",
+      "case_count": 4,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:C3F4",
+      "case_count": 6,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:E2E7",
+      "case_count": 3,
+      "runtime_x": [
+        0,
+        2,
+        4
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:E607",
+      "case_count": 3,
+      "runtime_x": [
+        0,
+        2,
+        4
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:EECF",
+      "case_count": 21,
+      "runtime_x": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C0:F058",
+      "case_count": 24,
+      "runtime_x": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C2:2475",
+      "case_count": 5,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C2:247A",
+      "case_count": 5,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "C2:AD7A",
+      "case_count": 18,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34
+      ],
+      "selector_receipt": "separate-current-source-proof",
+      "targets_closed": true
+    },
+    {
+      "address": "C2:E992",
+      "case_count": 4,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "selector_receipt": "separate-current-source-proof",
+      "targets_closed": true
+    },
+    {
+      "address": "C3:0AC0",
+      "case_count": 22,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    },
+    {
+      "address": "D0:BB7C",
+      "case_count": 7,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "selector_receipt": "separate-current-source-proof",
+      "targets_closed": true
+    },
+    {
+      "address": "D4:8D72",
+      "case_count": 11,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "selector_receipt": "exact-ROM",
+      "targets_closed": true
+    }
+  ],
+  "runtime_observation_used_as_proof": false,
+  "site_count": 17,
+  "unit_state_writer_count": 12
+}

@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "name": "cold-boot-to-live-map-and-movement",
+  "frame_limit": 17700,
+  "taps": [
+    { "start": 3000, "end": 3059, "button": "start" },
+    { "start": 3300, "end": 3319, "button": "a" },
+    { "start": 3740, "end": 3759, "button": "a" },
+    { "start": 4030, "end": 4049, "button": "a" },
+    { "start": 4290, "end": 4309, "button": "a" },
+    { "start": 4610, "end": 4629, "button": "start" },
+    { "start": 4930, "end": 4949, "button": "a" },
+    { "start": 16500, "end": 16511, "button": "a" },
+    { "start": 16602, "end": 16613, "button": "a" },
+    { "start": 16704, "end": 16715, "button": "a" },
+    { "start": 16806, "end": 16817, "button": "a" },
+    { "start": 16908, "end": 16919, "button": "a" },
+    { "start": 17100, "end": 17119, "button": "start" },
+    { "start": 17420, "end": 17431, "button": "right" }
+  ],
+  "checkpoints": [
+    { "frame": 2999, "label": "title" },
+    { "frame": 3700, "label": "difficulty" },
+    { "frame": 4000, "label": "competition" },
+    { "frame": 4260, "label": "tribe" },
+    { "frame": 4580, "label": "name" },
+    { "frame": 5200, "label": "story" },
+    { "frame": 7950, "label": "worldgen-progress" },
+    { "frame": 12500, "label": "worldgen-late" },
+    { "frame": 16450, "label": "tutorial-map" },
+    { "frame": 17090, "label": "tutorial-last-page" },
+    { "frame": 17390, "label": "gameplay-map" },
+    { "frame": 17600, "label": "gameplay-moved" }
+  ]
+}

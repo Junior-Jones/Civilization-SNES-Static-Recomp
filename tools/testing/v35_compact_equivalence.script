@@ -1,0 +1,19 @@
+# Deterministic CLI checkpoint route; this is not natural gameplay testing.
+status
+checkpoint
+play
+run 1
+checkpoint
+run 100
+checkpoint
+frame-run 1
+checkpoint
+input-snes 0x0080
+frame-step 1
+input-snes 0
+checkpoint
+frame-run 5
+checkpoint
+frame-run 10
+checkpoint
+quit

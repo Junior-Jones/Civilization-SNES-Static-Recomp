@@ -1,0 +1,305 @@
+{
+  "analysis_sha256": "63b93e56167b3cdd16929ece18652e3f0b30b601a14928da720a6673e84cb046",
+  "channel2_register_writers": {
+    "4320": [
+      [
+        "C1:9973",
+        "STA $4320"
+      ]
+    ],
+    "4321": [
+      [
+        "C1:9978",
+        "STA $4321"
+      ]
+    ],
+    "4322": [
+      [
+        "C1:997E",
+        "STX $4322"
+      ]
+    ],
+    "4324": [
+      [
+        "C1:9983",
+        "STA $4324"
+      ]
+    ],
+    "4327": [
+      [
+        "C1:9988",
+        "STA $4327"
+      ]
+    ]
+  },
+  "configuration": {
+    "bbad": "0D",
+    "dmap": "42",
+    "indirect_bank": "00",
+    "source": "C1:4AE3"
+  },
+  "descriptor_interpretation": [
+    {
+      "indirect": "1B85",
+      "line_count": 55
+    },
+    {
+      "indirect": "1B81",
+      "line_count": 80
+    },
+    {
+      "indirect": "1B81",
+      "line_count": 89
+    },
+    {
+      "line_count": 0,
+      "terminate": true
+    }
+  ],
+  "descriptor_table_bytes": "37851b50811b59811b00",
+  "enabled_channel": 2,
+  "format": "civilization-v33-hdma-channel2-proof-v1",
+  "hdmaen_domain": [
+    0,
+    4
+  ],
+  "hdmaen_writers": [
+    {
+      "address": "C0:8043",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C0:8078",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C0:81DC",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C0:81FE",
+      "class": "restore-$0006",
+      "instruction": "STA $420C"
+    },
+    {
+      "address": "C0:8336",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C0:8427",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:5B6C",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:996E",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:AD53",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:AE56",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:C07D",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:C180",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:D23D",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:D340",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:E231",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:E334",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:EFE5",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C1:F0E8",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C2:A73A",
+      "class": "literal-zero",
+      "instruction": "STA $420C"
+    },
+    {
+      "address": "C2:A745",
+      "class": "literal-zero",
+      "instruction": "STA $420C"
+    },
+    {
+      "address": "C3:2ED2",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:2FD3",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:345F",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:3560",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:6E80",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:6F83",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:7486",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:7589",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:7B98",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:7C9B",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:7FC5",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:80C8",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:8A53",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:8B56",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:AD63",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C3:AE66",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C8:D200",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C8:D303",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C8:E236",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "C8:E339",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    },
+    {
+      "address": "D4:848E",
+      "class": "zero",
+      "instruction": "STZ $420C"
+    }
+  ],
+  "live_indirect_data_writers": [
+    [
+      "C1:9605",
+      "STX $1B81"
+    ],
+    [
+      "C1:960B",
+      "STX $1B85"
+    ]
+  ],
+  "nmi_restore_writers": [
+    [
+      "C1:5B69",
+      "STZ $0006"
+    ],
+    [
+      "C1:998E",
+      "STA $0006"
+    ]
+  ],
+  "result": "PASS: exact-ROM authority proves HDMAEN {0,$04} only and one channel-2 indirect mode-2 BG1HOFS route. All other HDMA masks/configurations remain fail-closed.",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "state_writers": [
+    [
+      "C1:5C0E",
+      "STA $1B80"
+    ],
+    [
+      "C1:5C45",
+      "STA $1B80"
+    ]
+  ]
+}

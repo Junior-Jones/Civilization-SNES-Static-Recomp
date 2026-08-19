@@ -1,0 +1,36 @@
+# Static-core counterpart to civilization-coldboot-gameplay-route.json.
+play
+frame-run 3000
+tap-snes 0x1000 60
+frame-step 240
+tap-snes 0x0080 20
+frame-step 420
+tap-snes 0x0080 20
+frame-step 270
+tap-snes 0x0080 20
+frame-step 240
+tap-snes 0x0080 20
+frame-step 300
+tap-snes 0x1000 20
+frame-step 300
+tap-snes 0x0080 20
+frame-step 11549
+tap-snes 0x0080 12
+frame-step 90
+tap-snes 0x0080 12
+frame-step 90
+tap-snes 0x0080 12
+frame-step 90
+tap-snes 0x0080 12
+frame-step 90
+tap-snes 0x0080 12
+frame-step 180
+tap-snes 0x1000 20
+frame-step 300
+tap-snes 0x0100 12
+frame-step 268
+checkpoint
+frame-hash
+audio-status
+screenshot-current D:/Users/build/retro/Recomp/Civilization/Temp/civilization-v36-architecture-improvements/Audit/static-gameplay-final.ppm
+quit

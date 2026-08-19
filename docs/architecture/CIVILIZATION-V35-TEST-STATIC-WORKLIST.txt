@@ -1,0 +1,48 @@
+Civilization Version 35 Test - Architecture-First Static Worklist
+================================================================
+
+Status: COMPLETE FOR STATIC/HEADLESS SCOPE
+
+The frozen Current Version 35 source and app remain unchanged.
+
+Completed authority inventory
+-----------------------------
+
+- exact ROM: 1,572,864 bytes, SHA-256 de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32
+- runtime contexts: 103,584 exact PBR:PC:E:M:X keys
+- unique instruction addresses: 102,236
+- proof states: 122,224
+- procedures/call edges: 2,425 / 8,939
+- indexed-indirect sites: 69 of 69 producer/value-set complete
+- return proof sites/targets: 2,117 / 7,889
+- external strict disassembly candidates: 582 classified, zero unresolved
+- fixed-point result: empty queue, zero static frontiers
+
+Completed work packages
+-----------------------
+
+1. ROM classification and orphan-code reconciliation: PASS.
+2. Indirect producer/value-set proof: 69/69 PASS; no runtime observations used.
+3. Vectors, calls, returns, interrupt re-entry and dynamic entry families: PASS.
+4. Basic-block compaction prototype: measured and rejected because correct
+   resumable blocks increased output.
+5. Exact-context AOT template factoring: PASS with 299 templates, 294,241
+   parameter words, 280 shards and exact all-context reconstruction.
+6. Diagnostic frontend: screenshot companion logs implemented and headlessly
+   verified.
+7. Static validation: strict GCC build, 39/39 CTest and byte-identical former-
+   core/compact-core checkpoint outputs.
+
+Production acceptance
+---------------------
+
+- one compact generated CPU authority only;
+- no runtime ROM opcode decoder, learning or emulator fallback;
+- fail-closed hardware and control-flow barriers retained;
+- generated source authority 6.9498 MiB;
+- compiled static library 2.4536 MiB;
+- complete headless program 2.8226 MiB;
+- complete Windows launcher 8.0726 MiB.
+
+Natural gameplay testing is deliberately not part of this completion gate. It
+remains paused until the user chooses to resume it with a shorter protocol.

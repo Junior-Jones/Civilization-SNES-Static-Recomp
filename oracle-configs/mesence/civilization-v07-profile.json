@@ -1,0 +1,8 @@
+{
+  "format": "civilization-v07-mesence-oracle-profile-v1",
+  "emulator": "MesenCE 2.2.1",
+  "upstream_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb",
+  "trace_frontier": {"pc":"D4:8D72","x":"0006"},
+  "authority": "comparison-only after static implementation",
+  "runtime_comparison": "pending environment dependencies"
+}

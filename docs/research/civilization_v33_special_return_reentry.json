@@ -1,0 +1,85 @@
+{
+  "analysis_sha256": "16eca421b199951f13e8133ea58c5d84e8b6cdeaffa0921efb053257b5fb7daf",
+  "claim": "Independent exact-ROM recertification covers the specialized NMI saved-return-frame replacements, the three threaded-RTS record dispatchers, and all native BRK/IRQ/NMI width roots excluded from the normal call/return checker.",
+  "errors": [],
+  "format": "civilization-v33-special-return-reentry-v1",
+  "interrupt_root_count": 12,
+  "nmi_stack_reentry_edges": [
+    {
+      "exact_writer_bytes": "a2bd398e0206a9c18d0406",
+      "owner_proc": "C1:3942/RTL",
+      "resume": "C1:39BD",
+      "writer": "C1:397E"
+    },
+    {
+      "exact_writer_bytes": "a2ada68e0206a9c18d0406",
+      "owner_proc": "C1:A632/RTL",
+      "resume": "C1:A6AD",
+      "writer": "C1:A664"
+    },
+    {
+      "exact_writer_bytes": "a224b08e0206a9c18d0406",
+      "owner_proc": "C1:AFF5/RTS",
+      "resume": "C1:B024",
+      "writer": "C1:B001"
+    }
+  ],
+  "normal_return_sites_separately_audited": 2109,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "runtime_observation_used_as_proof": false,
+  "threaded_rts_sites": {
+    "C0:84E8": [
+      0,
+      13,
+      14,
+      15,
+      17
+    ],
+    "C0:858A": [
+      0,
+      1,
+      4,
+      5,
+      11,
+      12,
+      13,
+      22,
+      26
+    ],
+    "C0:8665": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  }
+}

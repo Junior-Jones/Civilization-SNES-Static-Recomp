@@ -1,0 +1,30 @@
+{
+  "base_counts": {
+    "$2134": 150,
+    "$2135": 11,
+    "$2136": 2,
+    "$2140": 22,
+    "$4016": 5,
+    "$4210": 1,
+    "$4211": 1,
+    "$4212": 2,
+    "$4214": 51,
+    "$4215": 8,
+    "$4216": 67,
+    "$4218": 2,
+    "$421A": 2
+  },
+  "checks": {
+    "apuio_2140_2143_supported": true,
+    "autojoy_4218_421f_supported": true,
+    "controller_4016_4017_supported": true,
+    "cpu_math_4214_4217_supported": true,
+    "cpu_status_4210_4212_supported": true,
+    "emitted_io_read_bases_exact": true,
+    "ppu_2134_2136_supported": true,
+    "unproved_reads_fail_closed": true
+  },
+  "claim": "All statically emitted I/O-read base addresses in the closed generated graph fall inside already-owned target-specific handlers. Indexed/dynamic addresses remain runtime fail-closed outside those owned ranges.",
+  "format": "civilization-v33-static-io-read-surface-v1",
+  "pass": true
+}

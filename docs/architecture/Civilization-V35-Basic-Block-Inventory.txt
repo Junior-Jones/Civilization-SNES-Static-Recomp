@@ -1,0 +1,17 @@
+Civilization V35 Test - Conservative Basic-Block Inventory
+===========================================================
+
+Runtime contexts: 103,584
+Unique instruction addresses: 102,236
+Conservative blocks: 38,215
+Block-entry contexts: 39,563
+Potential dispatch entries removed: 64,021 (61.81%)
+Mean instructions per block: 2.68
+Maximum instructions per block: 65
+One-instruction blocks: 13,951
+Unique block bodies: 19,335
+Redundant block bodies: 18,880
+Current generated tree: 33,976,975 bytes (32.403 MiB), 285 files
+
+This is a conservative upper-bound model for block dispatch compaction.
+It preserves exact per-instruction PC updates and all static boundaries.

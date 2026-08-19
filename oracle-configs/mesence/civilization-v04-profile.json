@@ -1,0 +1,41 @@
+{
+  "comparison_end": "D4:80C7 instruction boundary before CLI",
+  "comparison_policy": "first divergence only; never import oracle state or dynamic targets into generation",
+  "comparison_start": "00:804A reset",
+  "expected_independently_implemented_state": {
+    "$4200": "$31",
+    "$4207-$4208": "$0104",
+    "$4209-$420A": "$00D7",
+    "$420D": "$01",
+    "DBR": "$7E",
+    "DMA bytes": 66048,
+    "DMA runs": 2,
+    "frontier": "D4:80C7",
+    "stack": "$1FFF"
+  },
+  "expected_reached_dma": [
+    {
+      "BBAD": "$18",
+      "DMAP": "$09",
+      "bytes": 65536,
+      "effect": "zero-fill physical 64 KiB VRAM",
+      "handler": "D4:8746"
+    },
+    {
+      "BBAD": "$22",
+      "DMAP": "$00",
+      "bytes": 512,
+      "effect": "load 512-byte CGRAM stream",
+      "handler": "D4:8780",
+      "source": "$7E:4006"
+    }
+  ],
+  "oracle": "MesenCE 2.2.1 Linux x64",
+  "oracle_generation_authority": false,
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "source_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb",
+  "trace_environment": {
+    "CIVILIZATION_ORACLE_TRACE": "absolute output CSV path",
+    "CIVILIZATION_ORACLE_TRACE_WRAM": "0 by default; 1 only for WRAM-write investigations"
+  }
+}

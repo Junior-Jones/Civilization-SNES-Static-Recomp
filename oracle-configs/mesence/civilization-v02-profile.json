@@ -1,0 +1,17 @@
+{
+  "comparison_end": "D4:8073 before JSL $D48109",
+  "comparison_start": "00:804A reset",
+  "expected_independently_implemented_register_state": {
+    "$2100": "$80",
+    "$2105": "$09",
+    "$212C": "$17",
+    "$4200": "$00",
+    "$420B": "$00",
+    "$420C": "$00",
+    "$420D": "$01"
+  },
+  "oracle": "MesenCE 2.2.1 Linux x64",
+  "oracle_generation_authority": false,
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "source_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb"
+}

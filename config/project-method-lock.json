@@ -1,0 +1,51 @@
+{
+  "architecture_policy": {
+    "exact_rom_specialized_console": true,
+    "general_snes_emulator": false,
+    "historical_runtime_side_lanes": false,
+    "single_current_scpu_authority": true,
+    "single_full_static_audio_authority": true
+  },
+  "context_key": [
+    "PBR",
+    "PC",
+    "E",
+    "M",
+    "X"
+  ],
+  "context_preconditions": [
+    "DBR when relevant",
+    "direct page when relevant",
+    "finite call/return stack identity where required",
+    "status-stack identity where required",
+    "memory epoch where executable/data dependence requires it"
+  ],
+  "execution_policy": {
+    "emulator_fallback": false,
+    "indirect_target_without_offline_proof": "fail_closed",
+    "interpreter_fallback": false,
+    "runtime_learning": false,
+    "runtime_opcode_decode": false,
+    "runtime_opcode_fetch_for_dispatch": false,
+    "unknown_context": "fail_closed"
+  },
+  "format": "civilization-static-recomp-method-lock-v32",
+  "oracle_policy": {
+    "code_generation_authority": false,
+    "comparison_only": true,
+    "endpoint_import": false,
+    "runtime_linkage": "forbidden"
+  },
+  "release_policy": {
+    "build_products_excluded": true,
+    "clean_extract_rebuild_required": true,
+    "history_archive_every_version": true,
+    "natural_observation_may_not_change_frozen_version": true,
+    "prompt_handoff_every_version": true,
+    "python_cache_excluded": true,
+    "rom_external": true,
+    "savestate_and_sram_excluded": true,
+    "source_frozen_before_natural_test": true
+  },
+  "version": 32
+}

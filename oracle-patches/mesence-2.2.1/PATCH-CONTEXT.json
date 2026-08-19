@@ -1,0 +1,9 @@
+{
+  "format": "civilization-mesence-v10-patch-context-v1",
+  "upstream": "MesenCE 2.2.1",
+  "tag_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb",
+  "frontier_pc": "C0:8088",
+  "patch_purpose": "observation-only bounded S-CPU/register/DMA/APUIO tracing through the independently implemented Version 10 stages 5-9 route; stop immediately before the real S-CPU audio-upload JSL",
+  "generation_authority": false,
+  "runtime_oracle_comparison": "pending environment dependencies"
+}

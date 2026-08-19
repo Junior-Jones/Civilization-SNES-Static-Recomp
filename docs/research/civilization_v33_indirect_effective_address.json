@@ -1,0 +1,5033 @@
+{
+  "format": "civilization-v33-indirect-effective-address-audit-v1",
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "runtime_learning_used_as_proof": false,
+  "site_count": 69,
+  "sites": [
+    {
+      "address": "C0:0331",
+      "case_count": 13,
+      "cases": [
+        {
+          "effective_pointer": "0336",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": "0338",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:036F"
+        },
+        {
+          "effective_pointer": "033A",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": "033C",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:0417"
+        },
+        {
+          "effective_pointer": "033E",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:049A"
+        },
+        {
+          "effective_pointer": "0340",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": "0342",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:049A"
+        },
+        {
+          "effective_pointer": "0344",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": "0346",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C0:04BF"
+        },
+        {
+          "effective_pointer": "0348",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C0:04BF"
+        },
+        {
+          "effective_pointer": "034A",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": "034C",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": "034E",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C0:043C"
+        }
+      ],
+      "encoded_operand": "0336",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:0336"
+    },
+    {
+      "address": "C0:24F9",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": "2564",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:2B45"
+        },
+        {
+          "effective_pointer": "2568",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:2B47"
+        },
+        {
+          "effective_pointer": "256A",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:2BFC"
+        },
+        {
+          "effective_pointer": "256C",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:2C37"
+        },
+        {
+          "effective_pointer": "256E",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:2C54"
+        },
+        {
+          "effective_pointer": "2570",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:2C6E"
+        },
+        {
+          "effective_pointer": "2572",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:2C61"
+        }
+      ],
+      "encoded_operand": "2564",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:2564"
+    },
+    {
+      "address": "C0:41C2",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": "41DA",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:41F4"
+        },
+        {
+          "effective_pointer": "41DC",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:4217"
+        },
+        {
+          "effective_pointer": "41DE",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C0:423A"
+        },
+        {
+          "effective_pointer": "41E0",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C0:427B"
+        },
+        {
+          "effective_pointer": "41E2",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C0:42DD"
+        },
+        {
+          "effective_pointer": "41E4",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C0:4335"
+        },
+        {
+          "effective_pointer": "41E6",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C0:436E"
+        },
+        {
+          "effective_pointer": "41E8",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C0:43CE"
+        },
+        {
+          "effective_pointer": "41EC",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C0:43F1"
+        }
+      ],
+      "encoded_operand": "41CE",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:41CE"
+    },
+    {
+      "address": "C0:81E7",
+      "case_count": 21,
+      "cases": [
+        {
+          "effective_pointer": "824D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:8277"
+        },
+        {
+          "effective_pointer": "824F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:8278"
+        },
+        {
+          "effective_pointer": "8251",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:8281"
+        },
+        {
+          "effective_pointer": "8253",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:828E"
+        },
+        {
+          "effective_pointer": "8255",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:829B"
+        },
+        {
+          "effective_pointer": "8257",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:82A4"
+        },
+        {
+          "effective_pointer": "8259",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:82AD"
+        },
+        {
+          "effective_pointer": "825B",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:82B2"
+        },
+        {
+          "effective_pointer": "825D",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C0:82BB"
+        },
+        {
+          "effective_pointer": "825F",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C0:82C4"
+        },
+        {
+          "effective_pointer": "8261",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C0:82D1"
+        },
+        {
+          "effective_pointer": "8263",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C0:82DA"
+        },
+        {
+          "effective_pointer": "8265",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C0:82E3"
+        },
+        {
+          "effective_pointer": "8267",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C0:82EC"
+        },
+        {
+          "effective_pointer": "8269",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C0:82F5"
+        },
+        {
+          "effective_pointer": "826B",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C0:82FA"
+        },
+        {
+          "effective_pointer": "826D",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C0:82FF"
+        },
+        {
+          "effective_pointer": "826F",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C0:8308"
+        },
+        {
+          "effective_pointer": "8271",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C0:8311"
+        },
+        {
+          "effective_pointer": "8273",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C0:831A"
+        },
+        {
+          "effective_pointer": "8275",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C0:8323"
+        }
+      ],
+      "encoded_operand": "824D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:824D"
+    },
+    {
+      "address": "C0:A8E9",
+      "case_count": 28,
+      "cases": [
+        {
+          "effective_pointer": "A8EE",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8F0",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8F2",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8F4",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8F6",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8F8",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8FA",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8FC",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A8FE",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A900",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A902",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A904",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A906",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A908",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A90A",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C0:A962"
+        },
+        {
+          "effective_pointer": "A90C",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C0:A980"
+        },
+        {
+          "effective_pointer": "A90E",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": "A910",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": "A912",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": "A914",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": "A916",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": "A918",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": "A91A",
+          "runtime_x": "002C",
+          "selector_offset": "002C",
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": "A91C",
+          "runtime_x": "002E",
+          "selector_offset": "002E",
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": "A91E",
+          "runtime_x": "0030",
+          "selector_offset": "0030",
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": "A920",
+          "runtime_x": "0032",
+          "selector_offset": "0032",
+          "target": "C0:A9FC"
+        },
+        {
+          "effective_pointer": "A922",
+          "runtime_x": "0034",
+          "selector_offset": "0034",
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": "A924",
+          "runtime_x": "0036",
+          "selector_offset": "0036",
+          "target": "C0:A926"
+        }
+      ],
+      "encoded_operand": "A8EE",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:A8EE"
+    },
+    {
+      "address": "C0:B420",
+      "case_count": 28,
+      "cases": [
+        {
+          "effective_pointer": "B44E",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:B486"
+        },
+        {
+          "effective_pointer": "B450",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B452",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B454",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B456",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B458",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B45A",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B45C",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B45E",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B460",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B462",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B464",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B466",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B468",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": "B46A",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C0:B570"
+        },
+        {
+          "effective_pointer": "B46C",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C0:B5DA"
+        },
+        {
+          "effective_pointer": "B46E",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": "B470",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": "B472",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": "B474",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": "B476",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": "B478",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": "B47A",
+          "runtime_x": "002C",
+          "selector_offset": "002C",
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": "B47C",
+          "runtime_x": "002E",
+          "selector_offset": "002E",
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": "B47E",
+          "runtime_x": "0030",
+          "selector_offset": "0030",
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": "B480",
+          "runtime_x": "0032",
+          "selector_offset": "0032",
+          "target": "C0:B763"
+        },
+        {
+          "effective_pointer": "B482",
+          "runtime_x": "0034",
+          "selector_offset": "0034",
+          "target": "C0:B7C3"
+        },
+        {
+          "effective_pointer": "B484",
+          "runtime_x": "0036",
+          "selector_offset": "0036",
+          "target": "C0:B859"
+        }
+      ],
+      "encoded_operand": "B44E",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:B44E"
+    },
+    {
+      "address": "C0:B88F",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "CCC2",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:CCCA"
+        },
+        {
+          "effective_pointer": "CCC4",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:CCCB"
+        },
+        {
+          "effective_pointer": "CCC6",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:CCF4"
+        },
+        {
+          "effective_pointer": "CCC8",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:CD2C"
+        }
+      ],
+      "encoded_operand": "CCC2",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:CCC2"
+    },
+    {
+      "address": "C0:C3F4",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": "C45F",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:C46B"
+        },
+        {
+          "effective_pointer": "C461",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:C4C8"
+        },
+        {
+          "effective_pointer": "C463",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:C51E"
+        },
+        {
+          "effective_pointer": "C465",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:C628"
+        },
+        {
+          "effective_pointer": "C467",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:C74D"
+        },
+        {
+          "effective_pointer": "C469",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:C883"
+        }
+      ],
+      "encoded_operand": "C45F",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:C45F"
+    },
+    {
+      "address": "C0:E2E7",
+      "case_count": 3,
+      "cases": [
+        {
+          "effective_pointer": "E2EC",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:E2F2"
+        },
+        {
+          "effective_pointer": "E2EE",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:E3B2"
+        },
+        {
+          "effective_pointer": "E2F0",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:E3DB"
+        }
+      ],
+      "encoded_operand": "E2EC",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:E2EC"
+    },
+    {
+      "address": "C0:E607",
+      "case_count": 3,
+      "cases": [
+        {
+          "effective_pointer": "E617",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C0:E61D"
+        },
+        {
+          "effective_pointer": "E619",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:E625"
+        },
+        {
+          "effective_pointer": "E61B",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:E62D"
+        }
+      ],
+      "encoded_operand": "E617",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:E617"
+    },
+    {
+      "address": "C0:EECF",
+      "case_count": 21,
+      "cases": [
+        {
+          "effective_pointer": "EED9",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEDB",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEDD",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEDF",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEE1",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEE3",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEE5",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEE7",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEE9",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEEB",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEED",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEEF",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEF1",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEF3",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C0:EF74"
+        },
+        {
+          "effective_pointer": "EEF5",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEF7",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEF9",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEFB",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EEFD",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C0:EF03"
+        },
+        {
+          "effective_pointer": "EEFF",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": "EF01",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "C0:EF8E"
+        }
+      ],
+      "encoded_operand": "EED7",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:EED7"
+    },
+    {
+      "address": "C0:F058",
+      "case_count": 24,
+      "cases": [
+        {
+          "effective_pointer": "F05F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C0:F08F"
+        },
+        {
+          "effective_pointer": "F061",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F063",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F065",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F067",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F069",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F06B",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F06D",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C0:F0FF"
+        },
+        {
+          "effective_pointer": "F06F",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F071",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F073",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F075",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F077",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F079",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F07B",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F07D",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F07F",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F081",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F083",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F085",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F087",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": "F089",
+          "runtime_x": "002C",
+          "selector_offset": "002C",
+          "target": "C0:F126"
+        },
+        {
+          "effective_pointer": "F08B",
+          "runtime_x": "002E",
+          "selector_offset": "002E",
+          "target": "C0:F126"
+        },
+        {
+          "effective_pointer": "F08D",
+          "runtime_x": "0030",
+          "selector_offset": "0030",
+          "target": "C0:F126"
+        }
+      ],
+      "encoded_operand": "F05D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C0:F05D"
+    },
+    {
+      "address": "C1:0DD7",
+      "case_count": 2,
+      "cases": [
+        {
+          "effective_pointer": "0E07",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C1:18DC"
+        },
+        {
+          "effective_pointer": "0E09",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C1:1914"
+        }
+      ],
+      "encoded_operand": "0E07",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C1:0E07"
+    },
+    {
+      "address": "C1:0EEA",
+      "case_count": 16,
+      "cases": [
+        {
+          "effective_pointer": "0F1A",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C1:18DC"
+        },
+        {
+          "effective_pointer": "0F1C",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C1:1914"
+        },
+        {
+          "effective_pointer": "0F1E",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": "0F20",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": "0F22",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C1:0F7E"
+        },
+        {
+          "effective_pointer": "0F24",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": "0F26",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": "0F28",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C1:12F6"
+        },
+        {
+          "effective_pointer": "0F2A",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C1:11DB"
+        },
+        {
+          "effective_pointer": "0F2C",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": "0F2E",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": "0F30",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C1:0F78"
+        },
+        {
+          "effective_pointer": "0F32",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C1:11DB"
+        },
+        {
+          "effective_pointer": "0F34",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": "0F36",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": "0F38",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C1:0FA2"
+        }
+      ],
+      "encoded_operand": "0F1A",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C1:0F1A"
+    },
+    {
+      "address": "C1:5ADE",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": "4AEE",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C1:8630"
+        },
+        {
+          "effective_pointer": "4AF0",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C1:A27B"
+        },
+        {
+          "effective_pointer": "4AF2",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C1:8C9E"
+        },
+        {
+          "effective_pointer": "4AF4",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C1:77DE"
+        },
+        {
+          "effective_pointer": "4AF6",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C1:5560"
+        },
+        {
+          "effective_pointer": "4AF8",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C1:74DB"
+        },
+        {
+          "effective_pointer": "4AFA",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C1:77DE"
+        }
+      ],
+      "encoded_operand": "4AEE",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C1:4AEE"
+    },
+    {
+      "address": "C1:5B12",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": "4AFC",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C1:5C52"
+        },
+        {
+          "effective_pointer": "4AFE",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C1:7CAC"
+        },
+        {
+          "effective_pointer": "4B00",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C1:91E3"
+        },
+        {
+          "effective_pointer": "4B02",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C1:72C4"
+        },
+        {
+          "effective_pointer": "4B04",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C1:5CF2"
+        },
+        {
+          "effective_pointer": "4B06",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C1:72C4"
+        },
+        {
+          "effective_pointer": "4B08",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C1:72C4"
+        }
+      ],
+      "encoded_operand": "4AFC",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C1:4AFC"
+    },
+    {
+      "address": "C1:5ED5",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": "4A30",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C1:5EDD"
+        },
+        {
+          "effective_pointer": "4A32",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C1:5F74"
+        },
+        {
+          "effective_pointer": "4A34",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C1:6106"
+        },
+        {
+          "effective_pointer": "4A36",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C1:63A2"
+        },
+        {
+          "effective_pointer": "4A38",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C1:6210"
+        },
+        {
+          "effective_pointer": "4A3A",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C1:63A2"
+        },
+        {
+          "effective_pointer": "4A3C",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C1:63A2"
+        }
+      ],
+      "encoded_operand": "4A30",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C1:4A30"
+    },
+    {
+      "address": "C1:A13A",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": "4B0A",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C1:A3CF"
+        },
+        {
+          "effective_pointer": "4B0C",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C1:A1BD"
+        },
+        {
+          "effective_pointer": "4B0E",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C1:92A2"
+        },
+        {
+          "effective_pointer": "4B10",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C1:75CE"
+        },
+        {
+          "effective_pointer": "4B12",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C1:5495"
+        },
+        {
+          "effective_pointer": "4B14",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C1:7360"
+        },
+        {
+          "effective_pointer": "4B16",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C1:75CE"
+        }
+      ],
+      "encoded_operand": "4B0A",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C1:4B0A"
+    },
+    {
+      "address": "C2:2475",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": "2482",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:2496"
+        },
+        {
+          "effective_pointer": "2484",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:25BA"
+        },
+        {
+          "effective_pointer": "2486",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:26A3"
+        },
+        {
+          "effective_pointer": "2488",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:2706"
+        },
+        {
+          "effective_pointer": "248A",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:2877"
+        }
+      ],
+      "encoded_operand": "2482",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:2482"
+    },
+    {
+      "address": "C2:247A",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": "248C",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:2542"
+        },
+        {
+          "effective_pointer": "248E",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:264B"
+        },
+        {
+          "effective_pointer": "2490",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:26DF"
+        },
+        {
+          "effective_pointer": "2492",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:27CE"
+        },
+        {
+          "effective_pointer": "2494",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:28AF"
+        }
+      ],
+      "encoded_operand": "248C",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:248C"
+    },
+    {
+      "address": "C2:37A7",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": "37AC",
+          "runtime_x": "37AC",
+          "selector_offset": "0000",
+          "target": "C2:37BA"
+        },
+        {
+          "effective_pointer": "37AE",
+          "runtime_x": "37AE",
+          "selector_offset": "0002",
+          "target": "C2:37FE"
+        },
+        {
+          "effective_pointer": "37B0",
+          "runtime_x": "37B0",
+          "selector_offset": "0004",
+          "target": "C2:385F"
+        },
+        {
+          "effective_pointer": "37B2",
+          "runtime_x": "37B2",
+          "selector_offset": "0006",
+          "target": "C2:3A37"
+        },
+        {
+          "effective_pointer": "37B4",
+          "runtime_x": "37B4",
+          "selector_offset": "0008",
+          "target": "C2:37D6"
+        }
+      ],
+      "encoded_operand": "0000",
+      "opcode": "FC",
+      "runtime_x_bias": "37AC",
+      "runtime_x_contract": "raw-x-prebiased-table-pointer",
+      "table_base": "C2:37AC"
+    },
+    {
+      "address": "C2:414C",
+      "case_count": 2,
+      "cases": [
+        {
+          "effective_pointer": "417F",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:4183"
+        },
+        {
+          "effective_pointer": "4181",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:418F"
+        }
+      ],
+      "encoded_operand": "417F",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:417F"
+    },
+    {
+      "address": "C2:4F5C",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": "501E",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:50D4"
+        },
+        {
+          "effective_pointer": "5020",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:515E"
+        },
+        {
+          "effective_pointer": "5022",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:51C1"
+        },
+        {
+          "effective_pointer": "5024",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:517A"
+        },
+        {
+          "effective_pointer": "5026",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:5164"
+        },
+        {
+          "effective_pointer": "5028",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C2:5180"
+        }
+      ],
+      "encoded_operand": "501E",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:501E"
+    },
+    {
+      "address": "C2:5016",
+      "case_count": 35,
+      "cases": [
+        {
+          "effective_pointer": "54C5",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": "54C7",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": "54C9",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54CB",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": "54CD",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": "54CF",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": "54D1",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": "54D3",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": "54D5",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": "54D7",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": "54D9",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": "54DB",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54DD",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": "54DF",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": "54E1",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C2:5562"
+        },
+        {
+          "effective_pointer": "54E3",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C2:5589"
+        },
+        {
+          "effective_pointer": "54E5",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": "54E7",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": "54E9",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54EB",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54ED",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C2:5571"
+        },
+        {
+          "effective_pointer": "54EF",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F1",
+          "runtime_x": "002C",
+          "selector_offset": "002C",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F3",
+          "runtime_x": "002E",
+          "selector_offset": "002E",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F5",
+          "runtime_x": "0030",
+          "selector_offset": "0030",
+          "target": "C2:5653"
+        },
+        {
+          "effective_pointer": "54F7",
+          "runtime_x": "0032",
+          "selector_offset": "0032",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F9",
+          "runtime_x": "0034",
+          "selector_offset": "0034",
+          "target": "C2:55A1"
+        },
+        {
+          "effective_pointer": "54FB",
+          "runtime_x": "0036",
+          "selector_offset": "0036",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54FD",
+          "runtime_x": "0038",
+          "selector_offset": "0038",
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": "54FF",
+          "runtime_x": "003A",
+          "selector_offset": "003A",
+          "target": "C2:566A"
+        },
+        {
+          "effective_pointer": "5501",
+          "runtime_x": "003C",
+          "selector_offset": "003C",
+          "target": "C2:5681"
+        },
+        {
+          "effective_pointer": "5503",
+          "runtime_x": "003E",
+          "selector_offset": "003E",
+          "target": "C2:5698"
+        },
+        {
+          "effective_pointer": "5505",
+          "runtime_x": "0040",
+          "selector_offset": "0040",
+          "target": "C2:56AF"
+        },
+        {
+          "effective_pointer": "5507",
+          "runtime_x": "0042",
+          "selector_offset": "0042",
+          "target": "C2:56CA"
+        },
+        {
+          "effective_pointer": "5509",
+          "runtime_x": "0044",
+          "selector_offset": "0044",
+          "target": "C2:56E1"
+        }
+      ],
+      "encoded_operand": "54C5",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:54C5"
+    },
+    {
+      "address": "C2:5297",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "535C",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:53B6"
+        },
+        {
+          "effective_pointer": "535E",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:540A"
+        },
+        {
+          "effective_pointer": "5360",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:543E"
+        },
+        {
+          "effective_pointer": "5362",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:541A"
+        }
+      ],
+      "encoded_operand": "535C",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:535C"
+    },
+    {
+      "address": "C2:5354",
+      "case_count": 35,
+      "cases": [
+        {
+          "effective_pointer": "54C5",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": "54C7",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": "54C9",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54CB",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": "54CD",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": "54CF",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": "54D1",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": "54D3",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": "54D5",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": "54D7",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": "54D9",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": "54DB",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54DD",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": "54DF",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": "54E1",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C2:5562"
+        },
+        {
+          "effective_pointer": "54E3",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C2:5589"
+        },
+        {
+          "effective_pointer": "54E5",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": "54E7",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": "54E9",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54EB",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54ED",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C2:5571"
+        },
+        {
+          "effective_pointer": "54EF",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F1",
+          "runtime_x": "002C",
+          "selector_offset": "002C",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F3",
+          "runtime_x": "002E",
+          "selector_offset": "002E",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F5",
+          "runtime_x": "0030",
+          "selector_offset": "0030",
+          "target": "C2:5653"
+        },
+        {
+          "effective_pointer": "54F7",
+          "runtime_x": "0032",
+          "selector_offset": "0032",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54F9",
+          "runtime_x": "0034",
+          "selector_offset": "0034",
+          "target": "C2:55A1"
+        },
+        {
+          "effective_pointer": "54FB",
+          "runtime_x": "0036",
+          "selector_offset": "0036",
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": "54FD",
+          "runtime_x": "0038",
+          "selector_offset": "0038",
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": "54FF",
+          "runtime_x": "003A",
+          "selector_offset": "003A",
+          "target": "C2:566A"
+        },
+        {
+          "effective_pointer": "5501",
+          "runtime_x": "003C",
+          "selector_offset": "003C",
+          "target": "C2:5681"
+        },
+        {
+          "effective_pointer": "5503",
+          "runtime_x": "003E",
+          "selector_offset": "003E",
+          "target": "C2:5698"
+        },
+        {
+          "effective_pointer": "5505",
+          "runtime_x": "0040",
+          "selector_offset": "0040",
+          "target": "C2:56AF"
+        },
+        {
+          "effective_pointer": "5507",
+          "runtime_x": "0042",
+          "selector_offset": "0042",
+          "target": "C2:56CA"
+        },
+        {
+          "effective_pointer": "5509",
+          "runtime_x": "0044",
+          "selector_offset": "0044",
+          "target": "C2:56E1"
+        }
+      ],
+      "encoded_operand": "54C5",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:54C5"
+    },
+    {
+      "address": "C2:5937",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "5978",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:5BB7"
+        },
+        {
+          "effective_pointer": "597A",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:5FF4"
+        },
+        {
+          "effective_pointer": "597C",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:5BDF"
+        },
+        {
+          "effective_pointer": "597E",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:5C26"
+        }
+      ],
+      "encoded_operand": "5978",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:5978"
+    },
+    {
+      "address": "C2:5C29",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "5C2D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:5C35"
+        },
+        {
+          "effective_pointer": "5C2F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:5CA3"
+        },
+        {
+          "effective_pointer": "5C31",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:5D4B"
+        },
+        {
+          "effective_pointer": "5C33",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:5DEA"
+        }
+      ],
+      "encoded_operand": "5C2D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:5C2D"
+    },
+    {
+      "address": "C2:5FF7",
+      "case_count": 10,
+      "cases": [
+        {
+          "effective_pointer": "5FFB",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:600F"
+        },
+        {
+          "effective_pointer": "5FFD",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:604F"
+        },
+        {
+          "effective_pointer": "5FFF",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:6268"
+        },
+        {
+          "effective_pointer": "6001",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:6291"
+        },
+        {
+          "effective_pointer": "6003",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:62F4"
+        },
+        {
+          "effective_pointer": "6005",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C2:630A"
+        },
+        {
+          "effective_pointer": "6007",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C2:60C6"
+        },
+        {
+          "effective_pointer": "6009",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C2:60FF"
+        },
+        {
+          "effective_pointer": "600B",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C2:6199"
+        },
+        {
+          "effective_pointer": "600D",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C2:6231"
+        }
+      ],
+      "encoded_operand": "5FFB",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:5FFB"
+    },
+    {
+      "address": "C2:AD7A",
+      "case_count": 18,
+      "cases": [
+        {
+          "effective_pointer": "AD7F",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:ADA3"
+        },
+        {
+          "effective_pointer": "AD81",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:ADD3"
+        },
+        {
+          "effective_pointer": "AD83",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:AE30"
+        },
+        {
+          "effective_pointer": "AD85",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:AE60"
+        },
+        {
+          "effective_pointer": "AD87",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:AE90"
+        },
+        {
+          "effective_pointer": "AD89",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C2:AEC0"
+        },
+        {
+          "effective_pointer": "AD8B",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C2:AEF0"
+        },
+        {
+          "effective_pointer": "AD8D",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C2:AF20"
+        },
+        {
+          "effective_pointer": "AD8F",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C2:AF50"
+        },
+        {
+          "effective_pointer": "AD91",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C2:AF80"
+        },
+        {
+          "effective_pointer": "AD93",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C2:AFEE"
+        },
+        {
+          "effective_pointer": "AD95",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C2:AFF5"
+        },
+        {
+          "effective_pointer": "AD97",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C2:B025"
+        },
+        {
+          "effective_pointer": "AD99",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C2:B055"
+        },
+        {
+          "effective_pointer": "AD9B",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C2:B085"
+        },
+        {
+          "effective_pointer": "AD9D",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C2:B0B5"
+        },
+        {
+          "effective_pointer": "AD9F",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C2:B0E5"
+        },
+        {
+          "effective_pointer": "ADA1",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C2:B115"
+        }
+      ],
+      "encoded_operand": "AD7F",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:AD7F"
+    },
+    {
+      "address": "C2:E992",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "E9A2",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:E9AA"
+        },
+        {
+          "effective_pointer": "E9A4",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:EA34"
+        },
+        {
+          "effective_pointer": "E9A6",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:EA6A"
+        },
+        {
+          "effective_pointer": "E9A8",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:EAA0"
+        }
+      ],
+      "encoded_operand": "E9A2",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:E9A2"
+    },
+    {
+      "address": "C2:EC97",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": "EC9C",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C2:ECA6"
+        },
+        {
+          "effective_pointer": "EC9E",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C2:ED12"
+        },
+        {
+          "effective_pointer": "ECA0",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C2:ED3F"
+        },
+        {
+          "effective_pointer": "ECA2",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C2:EE03"
+        },
+        {
+          "effective_pointer": "ECA4",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C2:ED6C"
+        }
+      ],
+      "encoded_operand": "EC9C",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C2:EC9C"
+    },
+    {
+      "address": "C3:0194",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": "0199",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:01AB"
+        },
+        {
+          "effective_pointer": "019B",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:01FD"
+        },
+        {
+          "effective_pointer": "019D",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:02D1"
+        },
+        {
+          "effective_pointer": "019F",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:0363"
+        },
+        {
+          "effective_pointer": "01A1",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:0499"
+        },
+        {
+          "effective_pointer": "01A3",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:05B4"
+        },
+        {
+          "effective_pointer": "01A5",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C3:05F5"
+        },
+        {
+          "effective_pointer": "01A7",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C3:06F5"
+        },
+        {
+          "effective_pointer": "01A9",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C3:077B"
+        }
+      ],
+      "encoded_operand": "0199",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:0199"
+    },
+    {
+      "address": "C3:0266",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": "02A7",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:02B3"
+        },
+        {
+          "effective_pointer": "02A9",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:02B8"
+        },
+        {
+          "effective_pointer": "02AB",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:02BD"
+        },
+        {
+          "effective_pointer": "02AD",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:02C2"
+        },
+        {
+          "effective_pointer": "02AF",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:02C7"
+        },
+        {
+          "effective_pointer": "02B1",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:02CC"
+        }
+      ],
+      "encoded_operand": "02A7",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:02A7"
+    },
+    {
+      "address": "C3:0435",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": "0476",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:0480"
+        },
+        {
+          "effective_pointer": "0478",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:0485"
+        },
+        {
+          "effective_pointer": "047A",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:048A"
+        },
+        {
+          "effective_pointer": "047C",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:048F"
+        },
+        {
+          "effective_pointer": "047E",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:0494"
+        }
+      ],
+      "encoded_operand": "0476",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:0476"
+    },
+    {
+      "address": "C3:08B8",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": "08E4",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:08F0"
+        },
+        {
+          "effective_pointer": "08E6",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:08FE"
+        },
+        {
+          "effective_pointer": "08E8",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:090C"
+        },
+        {
+          "effective_pointer": "08EA",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:091A"
+        },
+        {
+          "effective_pointer": "08EC",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:0928"
+        },
+        {
+          "effective_pointer": "08EE",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:0933"
+        }
+      ],
+      "encoded_operand": "08E4",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:08E4"
+    },
+    {
+      "address": "C3:0AC0",
+      "case_count": 22,
+      "cases": [
+        {
+          "effective_pointer": "0AC5",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:0AF1"
+        },
+        {
+          "effective_pointer": "0AC7",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:0AF5"
+        },
+        {
+          "effective_pointer": "0AC9",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:0AF9"
+        },
+        {
+          "effective_pointer": "0ACB",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:0B03"
+        },
+        {
+          "effective_pointer": "0ACD",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:0B0D"
+        },
+        {
+          "effective_pointer": "0ACF",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:0B17"
+        },
+        {
+          "effective_pointer": "0AD1",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C3:0B21"
+        },
+        {
+          "effective_pointer": "0AD3",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C3:0B2B"
+        },
+        {
+          "effective_pointer": "0AD5",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C3:0B35"
+        },
+        {
+          "effective_pointer": "0AD7",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C3:0B3F"
+        },
+        {
+          "effective_pointer": "0AD9",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C3:0B49"
+        },
+        {
+          "effective_pointer": "0ADB",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C3:0B4D"
+        },
+        {
+          "effective_pointer": "0ADD",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C3:0B51"
+        },
+        {
+          "effective_pointer": "0ADF",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C3:0B99"
+        },
+        {
+          "effective_pointer": "0AE1",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C3:0BAE"
+        },
+        {
+          "effective_pointer": "0AE3",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C3:0BC3"
+        },
+        {
+          "effective_pointer": "0AE5",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C3:0BD8"
+        },
+        {
+          "effective_pointer": "0AE7",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C3:0BED"
+        },
+        {
+          "effective_pointer": "0AE9",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C3:0C20"
+        },
+        {
+          "effective_pointer": "0AEB",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C3:0C35"
+        },
+        {
+          "effective_pointer": "0AED",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C3:0C39"
+        },
+        {
+          "effective_pointer": "0AEF",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "C3:0C3D"
+        }
+      ],
+      "encoded_operand": "0AC5",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:0AC5"
+    },
+    {
+      "address": "C3:0C9F",
+      "case_count": 21,
+      "cases": [
+        {
+          "effective_pointer": "0CAF",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:0CD9"
+        },
+        {
+          "effective_pointer": "0CB1",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:0CEC"
+        },
+        {
+          "effective_pointer": "0CB3",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:0D36"
+        },
+        {
+          "effective_pointer": "0CB5",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:0D74"
+        },
+        {
+          "effective_pointer": "0CB7",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:0E1B"
+        },
+        {
+          "effective_pointer": "0CB9",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:0EE0"
+        },
+        {
+          "effective_pointer": "0CBB",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C3:0F1A"
+        },
+        {
+          "effective_pointer": "0CBD",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C3:0F35"
+        },
+        {
+          "effective_pointer": "0CBF",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C3:0F50"
+        },
+        {
+          "effective_pointer": "0CC1",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C3:0F6B"
+        },
+        {
+          "effective_pointer": "0CC3",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C3:0F86"
+        },
+        {
+          "effective_pointer": "0CC5",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C3:0FA1"
+        },
+        {
+          "effective_pointer": "0CC7",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C3:0FBC"
+        },
+        {
+          "effective_pointer": "0CC9",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C3:0FD7"
+        },
+        {
+          "effective_pointer": "0CCB",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C3:0FF2"
+        },
+        {
+          "effective_pointer": "0CCD",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C3:110A"
+        },
+        {
+          "effective_pointer": "0CCF",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "C3:1125"
+        },
+        {
+          "effective_pointer": "0CD1",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "C3:123F"
+        },
+        {
+          "effective_pointer": "0CD3",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "C3:125C"
+        },
+        {
+          "effective_pointer": "0CD5",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "C3:12A5"
+        },
+        {
+          "effective_pointer": "0CD7",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "C3:11C1"
+        }
+      ],
+      "encoded_operand": "0CAF",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:0CAF"
+    },
+    {
+      "address": "C3:236E",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "2373",
+          "runtime_x": "2373",
+          "selector_offset": "0000",
+          "target": "C3:237B"
+        },
+        {
+          "effective_pointer": "2375",
+          "runtime_x": "2375",
+          "selector_offset": "0002",
+          "target": "C3:24D2"
+        },
+        {
+          "effective_pointer": "2377",
+          "runtime_x": "2377",
+          "selector_offset": "0004",
+          "target": "C3:25EE"
+        },
+        {
+          "effective_pointer": "2379",
+          "runtime_x": "2379",
+          "selector_offset": "0006",
+          "target": "C3:2732"
+        }
+      ],
+      "encoded_operand": "0000",
+      "opcode": "FC",
+      "runtime_x_bias": "2373",
+      "runtime_x_contract": "raw-x-prebiased-table-pointer",
+      "table_base": "C3:2373"
+    },
+    {
+      "address": "C3:5740",
+      "case_count": 13,
+      "cases": [
+        {
+          "effective_pointer": "57BB",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:57D5"
+        },
+        {
+          "effective_pointer": "57BD",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:5814"
+        },
+        {
+          "effective_pointer": "57BF",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:5831"
+        },
+        {
+          "effective_pointer": "57C1",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:584E"
+        },
+        {
+          "effective_pointer": "57C3",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:586B"
+        },
+        {
+          "effective_pointer": "57C5",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:5888"
+        },
+        {
+          "effective_pointer": "57C7",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C3:5900"
+        },
+        {
+          "effective_pointer": "57C9",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C3:5975"
+        },
+        {
+          "effective_pointer": "57CB",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C3:5992"
+        },
+        {
+          "effective_pointer": "57CD",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C3:59D5"
+        },
+        {
+          "effective_pointer": "57CF",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C3:5A2F"
+        },
+        {
+          "effective_pointer": "57D1",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C3:5A71"
+        },
+        {
+          "effective_pointer": "57D3",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C3:5AEE"
+        }
+      ],
+      "encoded_operand": "57BB",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:57BB"
+    },
+    {
+      "address": "C3:5BBC",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": "5C19",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:5C2B"
+        },
+        {
+          "effective_pointer": "5C1B",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:5C51"
+        },
+        {
+          "effective_pointer": "5C1D",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:5C83"
+        },
+        {
+          "effective_pointer": "5C1F",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:5CAB"
+        },
+        {
+          "effective_pointer": "5C21",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:5CD3"
+        },
+        {
+          "effective_pointer": "5C23",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:5D08"
+        },
+        {
+          "effective_pointer": "5C25",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C3:5D33"
+        },
+        {
+          "effective_pointer": "5C27",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C3:5D5B"
+        },
+        {
+          "effective_pointer": "5C29",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C3:5D9C"
+        }
+      ],
+      "encoded_operand": "5C19",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:5C19"
+    },
+    {
+      "address": "C3:5BE1",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": "5C19",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C3:5C2B"
+        },
+        {
+          "effective_pointer": "5C1B",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C3:5C51"
+        },
+        {
+          "effective_pointer": "5C1D",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C3:5C83"
+        },
+        {
+          "effective_pointer": "5C1F",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C3:5CAB"
+        },
+        {
+          "effective_pointer": "5C21",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C3:5CD3"
+        },
+        {
+          "effective_pointer": "5C23",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C3:5D08"
+        },
+        {
+          "effective_pointer": "5C25",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C3:5D33"
+        },
+        {
+          "effective_pointer": "5C27",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C3:5D5B"
+        },
+        {
+          "effective_pointer": "5C29",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C3:5D9C"
+        }
+      ],
+      "encoded_operand": "5C19",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C3:5C19"
+    },
+    {
+      "address": "C6:015E",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": "0225",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0245"
+        },
+        {
+          "effective_pointer": "0227",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:025D"
+        },
+        {
+          "effective_pointer": "0229",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:0275"
+        },
+        {
+          "effective_pointer": "022B",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:028D"
+        },
+        {
+          "effective_pointer": "022D",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:02A5"
+        },
+        {
+          "effective_pointer": "022F",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:02BD"
+        },
+        {
+          "effective_pointer": "0231",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:02D5"
+        },
+        {
+          "effective_pointer": "0233",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C6:02ED"
+        },
+        {
+          "effective_pointer": "0235",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C6:0305"
+        },
+        {
+          "effective_pointer": "0237",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C6:031D"
+        },
+        {
+          "effective_pointer": "0239",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C6:0335"
+        },
+        {
+          "effective_pointer": "023B",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C6:034D"
+        }
+      ],
+      "encoded_operand": "0223",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:0223"
+    },
+    {
+      "address": "C6:0163",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": "01F1",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:021E"
+        },
+        {
+          "effective_pointer": "01F3",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:021D"
+        },
+        {
+          "effective_pointer": "01F5",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:021C"
+        },
+        {
+          "effective_pointer": "01F7",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:021B"
+        },
+        {
+          "effective_pointer": "01F9",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C6:0216"
+        },
+        {
+          "effective_pointer": "01FB",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C6:0215"
+        },
+        {
+          "effective_pointer": "01FD",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C6:0214"
+        },
+        {
+          "effective_pointer": "01FF",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C6:0213"
+        },
+        {
+          "effective_pointer": "0201",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C6:0212"
+        },
+        {
+          "effective_pointer": "0203",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "C6:0211"
+        },
+        {
+          "effective_pointer": "0205",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "C6:0210"
+        },
+        {
+          "effective_pointer": "0207",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "C6:020F"
+        }
+      ],
+      "encoded_operand": "01E9",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:01E9"
+    },
+    {
+      "address": "C6:01C1",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": "01EB",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0221"
+        },
+        {
+          "effective_pointer": "01ED",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:0220"
+        },
+        {
+          "effective_pointer": "01EF",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:021F"
+        },
+        {
+          "effective_pointer": "01F1",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:021E"
+        },
+        {
+          "effective_pointer": "01F3",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:021D"
+        },
+        {
+          "effective_pointer": "01F5",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:021C"
+        },
+        {
+          "effective_pointer": "01F7",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:021B"
+        },
+        {
+          "effective_pointer": "01F9",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C6:0216"
+        },
+        {
+          "effective_pointer": "01FB",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C6:0215"
+        },
+        {
+          "effective_pointer": "01FD",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C6:0214"
+        },
+        {
+          "effective_pointer": "01FF",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C6:0213"
+        },
+        {
+          "effective_pointer": "0201",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C6:0212"
+        }
+      ],
+      "encoded_operand": "01E9",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:01E9"
+    },
+    {
+      "address": "C6:01CC",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": "0225",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0245"
+        },
+        {
+          "effective_pointer": "0227",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:025D"
+        },
+        {
+          "effective_pointer": "0229",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:0275"
+        },
+        {
+          "effective_pointer": "022B",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:028D"
+        },
+        {
+          "effective_pointer": "022D",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:02A5"
+        },
+        {
+          "effective_pointer": "022F",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:02BD"
+        },
+        {
+          "effective_pointer": "0231",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:02D5"
+        },
+        {
+          "effective_pointer": "0233",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C6:02ED"
+        },
+        {
+          "effective_pointer": "0235",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C6:0305"
+        },
+        {
+          "effective_pointer": "0237",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "C6:031D"
+        },
+        {
+          "effective_pointer": "0239",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "C6:0335"
+        },
+        {
+          "effective_pointer": "023B",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "C6:034D"
+        }
+      ],
+      "encoded_operand": "0223",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:0223"
+    },
+    {
+      "address": "C6:0246",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "024D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:04D1"
+        },
+        {
+          "effective_pointer": "024F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:04CB"
+        },
+        {
+          "effective_pointer": "0251",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": "0253",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": "0255",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": "0257",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": "0259",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": "025B",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:04A6"
+        }
+      ],
+      "encoded_operand": "024D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:024D"
+    },
+    {
+      "address": "C6:025E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "0265",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:04CB"
+        },
+        {
+          "effective_pointer": "0267",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": "0269",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": "026B",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": "026D",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": "026F",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": "0271",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": "0273",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:04AA"
+        }
+      ],
+      "encoded_operand": "0265",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:0265"
+    },
+    {
+      "address": "C6:0276",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "027D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": "027F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": "0281",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": "0283",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": "0285",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": "0287",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": "0289",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": "028B",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:04AF"
+        }
+      ],
+      "encoded_operand": "027D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:027D"
+    },
+    {
+      "address": "C6:028E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "0295",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": "0297",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": "0299",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": "029B",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": "029D",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": "029F",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": "02A1",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": "02A3",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:04B5"
+        }
+      ],
+      "encoded_operand": "0295",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:0295"
+    },
+    {
+      "address": "C6:02A6",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "02AD",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": "02AF",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": "02B1",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": "02B3",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": "02B5",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": "02B7",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": "02B9",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": "02BB",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:046A"
+        }
+      ],
+      "encoded_operand": "02AD",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:02AD"
+    },
+    {
+      "address": "C6:02BE",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "02C5",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": "02C7",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": "02C9",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": "02CB",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": "02CD",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": "02CF",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": "02D1",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": "02D3",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:0464"
+        }
+      ],
+      "encoded_operand": "02C5",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:02C5"
+    },
+    {
+      "address": "C6:02D6",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "02DD",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": "02DF",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": "02E1",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": "02E3",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": "02E5",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": "02E7",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": "02E9",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": "02EB",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:045F"
+        }
+      ],
+      "encoded_operand": "02DD",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:02DD"
+    },
+    {
+      "address": "C6:02EE",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "02F5",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": "02F7",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": "02F9",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": "02FB",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": "02FD",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": "02FF",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": "0301",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": "0303",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:045B"
+        }
+      ],
+      "encoded_operand": "02F5",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:02F5"
+    },
+    {
+      "address": "C6:0306",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "030D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:0482"
+        },
+        {
+          "effective_pointer": "030F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0479"
+        },
+        {
+          "effective_pointer": "0311",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": "0313",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": "0315",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": "0317",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": "0319",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": "031B",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:0458"
+        }
+      ],
+      "encoded_operand": "030D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:030D"
+    },
+    {
+      "address": "C6:031E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "0325",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:0479"
+        },
+        {
+          "effective_pointer": "0327",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": "0329",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": "032B",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": "032D",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": "032F",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": "0331",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": "0333",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:0445"
+        }
+      ],
+      "encoded_operand": "0325",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:0325"
+    },
+    {
+      "address": "C6:0336",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "033D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": "033F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": "0341",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": "0343",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": "0345",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": "0347",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": "0349",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:0445"
+        },
+        {
+          "effective_pointer": "034B",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:0430"
+        }
+      ],
+      "encoded_operand": "033D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:033D"
+    },
+    {
+      "address": "C6:034E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": "0355",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": "0357",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": "0359",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": "035B",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": "035D",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": "035F",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "C6:0445"
+        },
+        {
+          "effective_pointer": "0361",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "C6:0430"
+        },
+        {
+          "effective_pointer": "0363",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:0419"
+        }
+      ],
+      "encoded_operand": "0355",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:0355"
+    },
+    {
+      "address": "C6:DF97",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": "DFCD",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "C6:E344"
+        },
+        {
+          "effective_pointer": "DFCF",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "C6:E23E"
+        },
+        {
+          "effective_pointer": "DFD1",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "C6:E1BA"
+        },
+        {
+          "effective_pointer": "DFD7",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "C6:E068"
+        },
+        {
+          "effective_pointer": "DFD9",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "C6:E0EC"
+        },
+        {
+          "effective_pointer": "DFDB",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "C6:DFE2"
+        }
+      ],
+      "encoded_operand": "DFC9",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "C6:DFC9"
+    },
+    {
+      "address": "D0:BB7C",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": "BB91",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:BB9F"
+        },
+        {
+          "effective_pointer": "BB93",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:BC24"
+        },
+        {
+          "effective_pointer": "BB95",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:BC54"
+        },
+        {
+          "effective_pointer": "BB97",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:BC84"
+        },
+        {
+          "effective_pointer": "BB99",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "D0:BCB4"
+        },
+        {
+          "effective_pointer": "BB9B",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "D0:BCE4"
+        },
+        {
+          "effective_pointer": "BB9D",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "D0:BC23"
+        }
+      ],
+      "encoded_operand": "BB91",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:BB91"
+    },
+    {
+      "address": "D0:CF4A",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": "CF85",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": "CF87",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:CF97"
+        },
+        {
+          "effective_pointer": "CF89",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:CFE2"
+        },
+        {
+          "effective_pointer": "CF8B",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:D02D"
+        },
+        {
+          "effective_pointer": "CF8D",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "D0:D078"
+        },
+        {
+          "effective_pointer": "CF8F",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "D0:D0C3"
+        },
+        {
+          "effective_pointer": "CF91",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "D0:D10E"
+        },
+        {
+          "effective_pointer": "CF93",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "D0:D159"
+        },
+        {
+          "effective_pointer": "CF95",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "D0:D1A4"
+        }
+      ],
+      "encoded_operand": "CF85",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:CF85"
+    },
+    {
+      "address": "D0:D441",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": "D47C",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": "D47E",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:D488"
+        },
+        {
+          "effective_pointer": "D480",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:D4D3"
+        },
+        {
+          "effective_pointer": "D482",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:D51E"
+        },
+        {
+          "effective_pointer": "D484",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "D0:D569"
+        },
+        {
+          "effective_pointer": "D486",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "D0:D5B4"
+        }
+      ],
+      "encoded_operand": "D47C",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:D47C"
+    },
+    {
+      "address": "D0:D732",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "D76D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": "D76F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:D96A"
+        },
+        {
+          "effective_pointer": "D771",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:D995"
+        },
+        {
+          "effective_pointer": "D773",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:D9C0"
+        }
+      ],
+      "encoded_operand": "D76D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:D76D"
+    },
+    {
+      "address": "D0:D802",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "D83D",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": "D83F",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:D96A"
+        },
+        {
+          "effective_pointer": "D841",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:DA2B"
+        },
+        {
+          "effective_pointer": "D843",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:DA2B"
+        }
+      ],
+      "encoded_operand": "D83D",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:D83D"
+    },
+    {
+      "address": "D0:D86E",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "D8A9",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": "D8AB",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:D9EB"
+        },
+        {
+          "effective_pointer": "D8AD",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:D9EB"
+        },
+        {
+          "effective_pointer": "D8AF",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:D9C0"
+        }
+      ],
+      "encoded_operand": "D8A9",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:D8A9"
+    },
+    {
+      "address": "D0:D91D",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": "D958",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": "D95A",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": "D95C",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:D995"
+        },
+        {
+          "effective_pointer": "D95E",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:D9C0"
+        }
+      ],
+      "encoded_operand": "D958",
+      "opcode": "FC",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:D958"
+    },
+    {
+      "address": "D0:F66B",
+      "case_count": 28,
+      "cases": [
+        {
+          "effective_pointer": "FAE7",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:F8A1"
+        },
+        {
+          "effective_pointer": "FAE9",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:F8DF"
+        },
+        {
+          "effective_pointer": "FAEB",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAED",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAEF",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAF1",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAF3",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAF5",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAF7",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAF9",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAFB",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAFD",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FAFF",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB01",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB03",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "D0:F8F5"
+        },
+        {
+          "effective_pointer": "FB05",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB07",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB09",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB0B",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB0D",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB0F",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB11",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB13",
+          "runtime_x": "002C",
+          "selector_offset": "002C",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB15",
+          "runtime_x": "002E",
+          "selector_offset": "002E",
+          "target": "D0:F93C"
+        },
+        {
+          "effective_pointer": "FB17",
+          "runtime_x": "0030",
+          "selector_offset": "0030",
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": "FB19",
+          "runtime_x": "0032",
+          "selector_offset": "0032",
+          "target": "D0:F93F"
+        },
+        {
+          "effective_pointer": "FB1B",
+          "runtime_x": "0034",
+          "selector_offset": "0034",
+          "target": "D0:F968"
+        },
+        {
+          "effective_pointer": "FB1D",
+          "runtime_x": "0036",
+          "selector_offset": "0036",
+          "target": "D0:FA2B"
+        }
+      ],
+      "encoded_operand": "FAE7",
+      "opcode": "7C",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:FAE7"
+    },
+    {
+      "address": "D0:FB55",
+      "case_count": 24,
+      "cases": [
+        {
+          "effective_pointer": "FE7A",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": "FE7C",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D0:FC44"
+        },
+        {
+          "effective_pointer": "FE7E",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D0:FC58"
+        },
+        {
+          "effective_pointer": "FE80",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D0:FC7B"
+        },
+        {
+          "effective_pointer": "FE82",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "D0:FC92"
+        },
+        {
+          "effective_pointer": "FE84",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "D0:FCAF"
+        },
+        {
+          "effective_pointer": "FE86",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "D0:FCE0"
+        },
+        {
+          "effective_pointer": "FE88",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "D0:FCFD"
+        },
+        {
+          "effective_pointer": "FE8A",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "D0:FD38"
+        },
+        {
+          "effective_pointer": "FE8C",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "D0:FCAF"
+        },
+        {
+          "effective_pointer": "FE8E",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "D0:FD7D"
+        },
+        {
+          "effective_pointer": "FE90",
+          "runtime_x": "0016",
+          "selector_offset": "0016",
+          "target": "D0:FD94"
+        },
+        {
+          "effective_pointer": "FE92",
+          "runtime_x": "0018",
+          "selector_offset": "0018",
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": "FE94",
+          "runtime_x": "001A",
+          "selector_offset": "001A",
+          "target": "D0:FDAE"
+        },
+        {
+          "effective_pointer": "FE96",
+          "runtime_x": "001C",
+          "selector_offset": "001C",
+          "target": "D0:FDC5"
+        },
+        {
+          "effective_pointer": "FE98",
+          "runtime_x": "001E",
+          "selector_offset": "001E",
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": "FE9A",
+          "runtime_x": "0020",
+          "selector_offset": "0020",
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": "FE9C",
+          "runtime_x": "0022",
+          "selector_offset": "0022",
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": "FE9E",
+          "runtime_x": "0024",
+          "selector_offset": "0024",
+          "target": "D0:FDFD"
+        },
+        {
+          "effective_pointer": "FEA0",
+          "runtime_x": "0026",
+          "selector_offset": "0026",
+          "target": "D0:FDC5"
+        },
+        {
+          "effective_pointer": "FEA2",
+          "runtime_x": "0028",
+          "selector_offset": "0028",
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": "FEA4",
+          "runtime_x": "002A",
+          "selector_offset": "002A",
+          "target": "D0:FE2E"
+        },
+        {
+          "effective_pointer": "FEA6",
+          "runtime_x": "002C",
+          "selector_offset": "002C",
+          "target": "D0:FE77"
+        },
+        {
+          "effective_pointer": "FEA8",
+          "runtime_x": "002E",
+          "selector_offset": "002E",
+          "target": "D0:FE77"
+        }
+      ],
+      "encoded_operand": "FE7A",
+      "opcode": "7C",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D0:FE7A"
+    },
+    {
+      "address": "D4:8D72",
+      "case_count": 11,
+      "cases": [
+        {
+          "effective_pointer": "8D75",
+          "runtime_x": "0000",
+          "selector_offset": "0000",
+          "target": "D4:8D8B"
+        },
+        {
+          "effective_pointer": "8D77",
+          "runtime_x": "0002",
+          "selector_offset": "0002",
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": "8D79",
+          "runtime_x": "0004",
+          "selector_offset": "0004",
+          "target": "D4:8EB5"
+        },
+        {
+          "effective_pointer": "8D7B",
+          "runtime_x": "0006",
+          "selector_offset": "0006",
+          "target": "D4:8F5F"
+        },
+        {
+          "effective_pointer": "8D7D",
+          "runtime_x": "0008",
+          "selector_offset": "0008",
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": "8D7F",
+          "runtime_x": "000A",
+          "selector_offset": "000A",
+          "target": "D4:8FB2"
+        },
+        {
+          "effective_pointer": "8D81",
+          "runtime_x": "000C",
+          "selector_offset": "000C",
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": "8D83",
+          "runtime_x": "000E",
+          "selector_offset": "000E",
+          "target": "D4:B40F"
+        },
+        {
+          "effective_pointer": "8D85",
+          "runtime_x": "0010",
+          "selector_offset": "0010",
+          "target": "D4:8D58"
+        },
+        {
+          "effective_pointer": "8D87",
+          "runtime_x": "0012",
+          "selector_offset": "0012",
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": "8D89",
+          "runtime_x": "0014",
+          "selector_offset": "0014",
+          "target": "D4:8D64"
+        }
+      ],
+      "encoded_operand": "8D75",
+      "opcode": "7C",
+      "runtime_x_bias": "0000",
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "table_base": "D4:8D75"
+    }
+  ],
+  "transformed_site_count": 2,
+  "transformed_sites": [
+    "C2:37A7",
+    "C3:236E"
+  ]
+}

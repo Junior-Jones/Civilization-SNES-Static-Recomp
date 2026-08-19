@@ -1,0 +1,43 @@
+{
+  "claim_boundary": {
+    "game_code": "W65C816 ROM/interrupt/re-entry code and Full Static S-SMP execution are static authority.",
+    "hardware": "cartridge mapping, WRAM/SRAM, CPU I/O/timing, DMA/HDMA, PPU, controllers and S-DSP signal behavior are compact deterministic Civilization-specific support.",
+    "not_a_general_emulator": true,
+    "oracle": "comparison only; never production or generation authority"
+  },
+  "format": "civilization-v33-hardware-coverage-v1",
+  "production": {
+    "audio": "Full Static S-SMP/S-DSP only",
+    "call_edges": 8939,
+    "emulator_fallback": false,
+    "finite_indirect_sites": 69,
+    "generated_shards": 280,
+    "hdma": "source-proved channel 2 configuration only; manual-DMA/HDMA arbitration supported",
+    "manual_dma": "source-proved channel masks/modes only",
+    "ppu_read_ports_proved": [
+      "$2134",
+      "$2135",
+      "$2136"
+    ],
+    "procedures": 2425,
+    "runtime_learning": false,
+    "runtime_opcode_decode": false,
+    "scpu_contexts": 103584,
+    "scpu_proof_states": 122224,
+    "static_frontiers": 0,
+    "visible_ppu_modes_proved": [
+      1,
+      3
+    ]
+  },
+  "version": 33,
+  "v33_new_acceptance": {
+    "legacy_second_method": "17 formerly older-method finite indirect sites independently recertified without table widening",
+    "generalized_indirect_domains": "all 69 finite sites independently structurally re-decoded; 33 currently producer/value-set complete",
+    "special_return_reentry": "three NMI saved-frame re-entry edges, three threaded RTS dispatchers and native IRQ/NMI width roots independently recertified",
+    "earth_city_lifecycle": "setup/EARTH, tribe/leader and first-city/production/view/end-turn/research ownership clusters source-audited",
+    "persistence": "32 KiB battery SRAM survives reset separately from five persistent full-machine+Full-Static-audio snapshot slots",
+    "graph_effect": "103,576 contexts / 122,216 proof states / 2,421 procedures / 8,939 call edges / zero frontiers",
+    "natural_test": "Version 34 Windows headless route passed title/setup/world generation/first city/production/city/unit-order/repeated-turn coverage with no frontier"
+  }
+}

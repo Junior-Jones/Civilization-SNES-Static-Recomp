@@ -1,0 +1,35 @@
+{
+  "ares": {
+    "release": "v148",
+    "role": "secondary implementation/documentation cross-check only",
+    "source_asset": "ares-source.tar.gz",
+    "source_asset_sha256": "06b053d0f407d33272222efd55446d46bfd61859eea46b6ae16c0cc4fa1e51e5"
+  },
+  "mesence": {
+    "asset": "Mesen_2.2.1_Linux_x64.zip",
+    "asset_sha256": "c88ff4d251b407515c43d3332d641927655cd69fb538996b6a21da4509dbb58f",
+    "platform": "Linux x64",
+    "release": "2.2.1",
+    "role": "primary independent comparison oracle; editable source only for observation instrumentation",
+    "source_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb",
+    "supplied_source_archive_sha256": "2771dea145bc9b1b637f7c1ced821a46d0586f1836fff0df86c721a7903c3f87",
+    "SnesDebugger_git_blob": "9189d58981883c977a6af0c8f190b97fa8e23d0e"
+  },
+  "mesence_windows": {
+    "asset": "Mesen_2.2.1_Windows.zip",
+    "asset_sha256": "c19e10b3b3865eb0e86e4d01bf09a5027a4452081c04b5bd5b6cbbf76e346fd6",
+    "executable_sha256": "8ef403d6b9af32075416193914d7993ce8480b347fe1f20a0cfd9815374933e7",
+    "platform": "Windows x64",
+    "release": "2.2.1",
+    "role": "bounded CLI headless comparison oracle only"
+  },
+  "independent_disassembler": {
+    "name": "devinacker/65816disasm",
+    "source_commit": "8afe044fef83d2927e5193466de0687d304b458c",
+    "source_archive_sha256": "e22e1a8c1a159632fe927d2993fcbfb54364cd8a7b636addae33d555283da4f0",
+    "built_executable_sha256": "2d83aff95da7cfca4d46c9d32292d00de668a8d5548ae04bbfe030eefbe260e4",
+    "role": "independent recursive-flow candidate generator only"
+  },
+  "production_authority": false,
+  "version": "03"
+}

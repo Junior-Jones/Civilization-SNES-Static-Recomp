@@ -1,0 +1,139 @@
+{
+  "format": "civilization-v35-independent-candidate-reconciliation-v1",
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "strict_candidate_count": 582,
+  "classified_candidate_count": 582,
+  "unresolved_candidates": [],
+  "classification_counts": {
+    "BITPLANE_GRAPHICS_ASSET_DATA": 50,
+    "DORMANT_CODE_AFTER_NONRETURNING_CALL": 4,
+    "GAME_TEXT_DATA": 466,
+    "GRAPHICS_OR_COMPRESSED_ASSET_DATA": 3,
+    "LOOKUP_AND_RESOURCE_INDEX_DATA": 30,
+    "PACKED_LOOKUP_TABLE_DATA": 9,
+    "RESERVED_VECTOR_FILL_DATA": 7,
+    "SERIALIZED_ADDRESS_RECORD_DATA": 13
+  },
+  "ranges": [
+    {
+      "start": "0x00222E",
+      "end_exclusive": "0x002234",
+      "class": "DORMANT_CODE_AFTER_NONRETURNING_CALL",
+      "evidence": "Exact bytes 20 21 00 28 6B form JSR $0021; PLP; RTL. The preceding C0:222B call enters C0:2258, whose closed procedure has no return instruction or exit.",
+      "bytes": 6,
+      "candidate_starts": 3,
+      "first_candidate": "0x00222E",
+      "last_candidate": "0x002233"
+    },
+    {
+      "start": "0x0081AD",
+      "end_exclusive": "0x0081B0",
+      "class": "DORMANT_CODE_AFTER_NONRETURNING_CALL",
+      "evidence": "Exact bytes 4C 55 81 form JMP $8155. The preceding C0:81A9 call enters C0:2217, which reaches the nonreturning C0:2258 path.",
+      "bytes": 3,
+      "candidate_starts": 1,
+      "first_candidate": "0x0081AD",
+      "last_candidate": "0x0081AD"
+    },
+    {
+      "start": "0x00EEEA",
+      "end_exclusive": "0x00EF03",
+      "class": "RESERVED_VECTOR_FILL_DATA",
+      "evidence": "Repeated $8EEF/$8EEE-style filler is reached only because the independent tool seeds reserved vector words as code; the exact-ROM production vector inventory roots reset, native BRK, NMI, and IRQ separately.",
+      "bytes": 25,
+      "candidate_starts": 7,
+      "first_candidate": "0x00EEEA",
+      "last_candidate": "0x00EF02"
+    },
+    {
+      "start": "0x02455C",
+      "end_exclusive": "0x0246B2",
+      "class": "LOOKUP_AND_RESOURCE_INDEX_DATA",
+      "evidence": "Immediately follows RTS at C2:455B and contains monotonic/indexed byte and word sequences with zero-filled resource maps until the next proved code start C2:46B2.",
+      "bytes": 342,
+      "candidate_starts": 30,
+      "first_candidate": "0x02455C",
+      "last_candidate": "0x024594"
+    },
+    {
+      "start": "0x02D840",
+      "end_exclusive": "0x02D85A",
+      "class": "PACKED_LOOKUP_TABLE_DATA",
+      "evidence": "Immediately follows RTS at C2:D838 and is a regular packed pair table ending before proved executable wrappers at C2:D85A/C2:D86C.",
+      "bytes": 26,
+      "candidate_starts": 9,
+      "first_candidate": "0x02D840",
+      "last_candidate": "0x02D859"
+    },
+    {
+      "start": "0x030080",
+      "end_exclusive": "0x0300E7",
+      "class": "SERIALIZED_ADDRESS_RECORD_DATA",
+      "evidence": "Contains repeated small fields and $7E WRAM-address records; it precedes the first proved C3 code start at C3:00E7.",
+      "bytes": 103,
+      "candidate_starts": 13,
+      "first_candidate": "0x0300A9",
+      "last_candidate": "0x0300E6"
+    },
+    {
+      "start": "0x039BF0",
+      "end_exclusive": "0x03A251",
+      "class": "GAME_TEXT_DATA",
+      "evidence": "Dense Civilization text alphabet with $00/$FE/$FF separators; bounded by proved code ending C3:9BC6 and beginning C3:A251.",
+      "bytes": 1633,
+      "candidate_starts": 250,
+      "first_candidate": "0x039C21",
+      "last_candidate": "0x039E40"
+    },
+    {
+      "start": "0x03A3FD",
+      "end_exclusive": "0x03AB14",
+      "class": "GAME_TEXT_DATA",
+      "evidence": "Dense Civilization text alphabet and control bytes; bounded by proved code ending C3:A3FC and beginning C3:AB14.",
+      "bytes": 1815,
+      "candidate_starts": 216,
+      "first_candidate": "0x03A92C",
+      "last_candidate": "0x03AB12"
+    },
+    {
+      "start": "0x048EC0",
+      "end_exclusive": "0x048F40",
+      "class": "GRAPHICS_OR_COMPRESSED_ASSET_DATA",
+      "evidence": "Bit-pattern payload inside a large non-executable asset region between proved C3 and C6 code banks; no independently proved control-flow consumer targets it.",
+      "bytes": 128,
+      "candidate_starts": 3,
+      "first_candidate": "0x048EFA",
+      "last_candidate": "0x048F02"
+    },
+    {
+      "start": "0x101F00",
+      "end_exclusive": "0x102060",
+      "class": "BITPLANE_GRAPHICS_ASSET_DATA",
+      "evidence": "Repeated planar mask patterns ($00/$55/$AA/$FF) and pixel-like records in the D0 asset region, far outside adjacent proved code intervals.",
+      "bytes": 352,
+      "candidate_starts": 50,
+      "first_candidate": "0x101F26",
+      "last_candidate": "0x10203D"
+    }
+  ],
+  "exact_dormant_bytes": {
+    "C0:222E-C0:2233": true,
+    "C0:81AD-C0:81AF": true
+  },
+  "nonreturning_predecessor_checks": {
+    "C0:2258": true,
+    "C0:2217": true
+  },
+  "bounded_mesen_confirmation": {
+    "reason": "frame-limit",
+    "frames": 3,
+    "instructions": 21574,
+    "unique_pc": 41,
+    "unique_hash": "1C59BA24",
+    "candidate_physical_hits": 0,
+    "hit_offsets": ""
+  },
+  "runtime_observation_used_as_static_proof": false,
+  "errors": []
+}

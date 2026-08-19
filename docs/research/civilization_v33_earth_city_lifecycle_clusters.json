@@ -1,0 +1,74 @@
+{
+  "claim": "The passed EARTH/setup/leader/first-city/Production/View/End-Turn/research route is represented as source-identified finite dispatcher ownership clusters inside the closed graph. Runtime gameplay PCs are not used as proof inputs.",
+  "clusters": [
+    {
+      "cluster": "setup-earth",
+      "declared_target_count": 20,
+      "finite_dispatch_sites": [
+        "C3:0194",
+        "C3:0266",
+        "C3:0435"
+      ],
+      "owner_procedures": [
+        "C3:018E/E0M0X0C?/RTS",
+        "C3:01FD/E0M0X0C?/RTS",
+        "C3:0363/E0M0X0C?/RTS"
+      ],
+      "site_count": 3,
+      "static_call_neighborhood_procedures": 3
+    },
+    {
+      "cluster": "tribe-leader",
+      "declared_target_count": 27,
+      "finite_dispatch_sites": [
+        "C3:08B8",
+        "C3:0C9F"
+      ],
+      "owner_procedures": [
+        "C3:08A1/E0M0X0C?/RTS",
+        "C3:0C99/E0M0X0C?/RTS"
+      ],
+      "site_count": 2,
+      "static_call_neighborhood_procedures": 2
+    },
+    {
+      "cluster": "first-city-and-city-menu",
+      "declared_target_count": 26,
+      "finite_dispatch_sites": [
+        "C3:0AC0",
+        "C3:236E"
+      ],
+      "owner_procedures": [
+        "C3:0AB7/E0M0X0C?/RTL",
+        "C3:2334/E0M0X0C?/RTL"
+      ],
+      "site_count": 2,
+      "static_call_neighborhood_procedures": 2
+    },
+    {
+      "cluster": "city-production-view-endturn-research",
+      "declared_target_count": 22,
+      "finite_dispatch_sites": [
+        "C0:A8E9",
+        "C0:B420",
+        "C0:EECF",
+        "C0:F058"
+      ],
+      "owner_procedures": [
+        "C0:A87B/E0M0X0C?/RTL",
+        "C0:B3B5/E0M1X0C?/RTL",
+        "C0:EE4A/E0M1X0C?/RTS",
+        "C0:EF8F/E0M1X0C?/RTS"
+      ],
+      "site_count": 4,
+      "static_call_neighborhood_procedures": 4
+    }
+  ],
+  "errors": [],
+  "format": "civilization-v33-earth-city-lifecycle-clusters-v1",
+  "procedure_count": 2425,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "runtime_context_count": 103584,
+  "runtime_observation_used_as_proof": false
+}

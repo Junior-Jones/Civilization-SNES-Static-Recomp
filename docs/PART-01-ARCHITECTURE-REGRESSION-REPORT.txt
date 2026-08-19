@@ -1,0 +1,48 @@
+Civilization Version 36 - Part 1 Architecture Regression Report
+================================================================
+
+Date: 2026-08-19
+Result: COMPLETE
+
+New gates
+---------
+1. arch-public-api-surface
+   Compiles and links the current ROM, lifecycle, execution, presentation,
+   snapshot, input and PCM-hook application boundary.
+
+2. arch-parallel-renderer-instances
+   Renders two distinct CivRecomp instances concurrently on separate host
+   threads for 32 complete frames each. Their red and green framebuffers remain
+   isolated.
+
+3. arch-audio-ownership-and-pcm-hook
+   Confirms the current Full Static audio contract is one exclusive process
+   lane. Ownership transfer makes status unavailable through the prior owner,
+   and the first owner's PCM callback receives no samples from the second.
+
+4. arch-unknown-dispatch-fails-closed
+   Sends an impossible 7E:1234 context to generated dispatch and requires a
+   hard frontier with the exact address and closed-authority diagnostic.
+
+5. arch-snapshot-corruption-rollback
+   Saves against the exact USA ROM, corrupts the payload, proves rejection does
+   not mutate the active CPU/WRAM/frame state, then restores the valid snapshot
+   and verifies ROM attachment and exact saved fields.
+
+Full validation
+---------------
+- Strict MinGW GCC/G++ Release build: PASS
+- 280 compact AOT shards compiled: PASS
+- Existing static authority and hardware regressions: PASS
+- New architecture gates: PASS
+- Complete CTest result: 45/45 PASS
+
+Boundaries deliberately left for later parts
+--------------------------------------------
+- Full Static audio is still a process-global exclusive lane rather than truly
+  per-instance state. Part 7 will replace or formalize that ownership model.
+- The snapshot test covers checksum rejection before commit. Part 8 must add
+  canonical serialization, atomic save, SHA-256 identity and rollback for an
+  audio-restore failure after payload validation.
+- The public structure is intentionally still exposed until Parts 3 and 4.
+

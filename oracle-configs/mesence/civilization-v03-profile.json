@@ -1,0 +1,22 @@
+{
+  "comparison_start": "00:804A reset",
+  "comparison_end": "D4:80B6 instruction boundary before JSL $D4850A",
+  "oracle": "MesenCE 2.2.1 Linux x64",
+  "source_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "oracle_generation_authority": false,
+  "trace_environment": {
+    "CIVILIZATION_ORACLE_TRACE": "absolute output CSV path",
+    "CIVILIZATION_ORACLE_TRACE_WRAM": "0 by default; 1 only for WRAM-write investigations"
+  },
+  "expected_independently_implemented_state": {
+    "$4200": "$31",
+    "$4207-$4208": "$0104",
+    "$4209-$420A": "$00D7",
+    "$420D": "$01",
+    "frontier": "D4:80B6",
+    "stack": "$1FFF",
+    "DBR": "$7E"
+  },
+  "comparison_policy": "first divergence only; never import oracle state into generation"
+}

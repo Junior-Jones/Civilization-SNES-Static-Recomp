@@ -1,0 +1,49 @@
+{
+  "cpu": "W65C816",
+  "current_natural_validation": "Version 34 deterministic Windows headless route passed through first city and repeated turns with synchronized visible video and Full Static PCM; no frontier",
+  "current_static_authority": {
+    "call_edges": 8939,
+    "finite_indirect_sites": 69,
+    "frontiers": 0,
+    "generated_shards": 280,
+    "procedures": 2425,
+    "proof_states": 122224,
+    "runtime_contexts": 103584
+  },
+  "format": "civilization-snes-target-profile-v33",
+  "platform": "Super Nintendo Entertainment System",
+  "region": "USA / NTSC",
+  "rom": {
+    "bytes": 1572864,
+    "enhancement_chip": "none declared",
+    "map_mode": "0x31",
+    "mapping": "HiROM",
+    "sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+    "speed": "FastROM",
+    "sram_bytes": 32768
+  },
+  "target_specific_hardware": {
+    "audio": "Full Static S-SMP/S-DSP",
+    "controllers": "manual serial + source-proved autojoy",
+    "hdma_enabled_mask_domain": [
+      "$00",
+      "$04"
+    ],
+    "ppu_read_ports": [
+      "$2134",
+      "$2135",
+      "$2136"
+    ],
+    "ppu_visible_modes": [
+      1,
+      3
+    ]
+  },
+  "vectors": {
+    "native_brk": "00:81B5",
+    "native_irq": "00:81B0",
+    "native_nmi": "00:81B9",
+    "reset": "00:804A"
+  },
+  "version": 33
+}

@@ -1,0 +1,198 @@
+{
+  "declared_legal_x": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30
+  ],
+  "escapes": [],
+  "format": "civilization-v33-indirect-transition-consistency-v2-explicit-selector-offset",
+  "method": "independent exact-ROM target classifier + transition-domain closure over explicit selector_offset cases; does not import prove_v33_name_state_machine.py",
+  "natural_test_observations_used": false,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "rows": [
+    {
+      "effect": "stay_or_set4",
+      "outside_declared_domain": [],
+      "selector": 0,
+      "successors": [
+        0,
+        2,
+        4
+      ],
+      "target": "C1:18DC"
+    },
+    {
+      "effect": "stay_or_terminal",
+      "outside_declared_domain": [],
+      "selector": 2,
+      "successors": [
+        2,
+        "FFFF"
+      ],
+      "target": "C1:1914"
+    },
+    {
+      "effect": "plus2",
+      "outside_declared_domain": [],
+      "selector": 4,
+      "successors": [
+        2,
+        6
+      ],
+      "target": "C1:0F3A"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 6,
+      "successors": [
+        2,
+        6,
+        8
+      ],
+      "target": "C1:108D"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 8,
+      "successors": [
+        10,
+        2,
+        8
+      ],
+      "target": "C1:0F7E"
+    },
+    {
+      "effect": "plus2",
+      "outside_declared_domain": [],
+      "selector": 10,
+      "successors": [
+        12,
+        2
+      ],
+      "target": "C1:0F3A"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 12,
+      "successors": [
+        12,
+        14,
+        2
+      ],
+      "target": "C1:108D"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 14,
+      "successors": [
+        14,
+        16,
+        2
+      ],
+      "target": "C1:12F6"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 16,
+      "successors": [
+        16,
+        18,
+        2
+      ],
+      "target": "C1:11DB"
+    },
+    {
+      "effect": "plus2",
+      "outside_declared_domain": [],
+      "selector": 18,
+      "successors": [
+        2,
+        20
+      ],
+      "target": "C1:0F3A"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 20,
+      "successors": [
+        2,
+        20,
+        22
+      ],
+      "target": "C1:108D"
+    },
+    {
+      "effect": "set1a",
+      "outside_declared_domain": [],
+      "selector": 22,
+      "successors": [
+        2,
+        26
+      ],
+      "target": "C1:0F78"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 24,
+      "successors": [
+        2,
+        24,
+        26
+      ],
+      "target": "C1:11DB"
+    },
+    {
+      "effect": "plus2",
+      "outside_declared_domain": [],
+      "selector": 26,
+      "successors": [
+        2,
+        28
+      ],
+      "target": "C1:0F3A"
+    },
+    {
+      "effect": "stay_or_plus2",
+      "outside_declared_domain": [],
+      "selector": 28,
+      "successors": [
+        2,
+        28,
+        30
+      ],
+      "target": "C1:108D"
+    },
+    {
+      "effect": "set18_or_2",
+      "outside_declared_domain": [],
+      "selector": 30,
+      "successors": [
+        2,
+        24
+      ],
+      "target": "C1:0FA2"
+    }
+  ],
+  "site": "C1:0EEA"
+}

@@ -1,0 +1,135 @@
+{
+  "analysis_sha256": "16eca421b199951f13e8133ea58c5d84e8b6cdeaffa0921efb053257b5fb7daf",
+  "finite_site_count": 69,
+  "format": "civilization-v33-indirect-domain-completeness-v1",
+  "method": "closed caller sites from final static manifest + immutable immediate producer instructions + exact ROM transforms/table words; transformed domains compared for set equality with production proof",
+  "producer_derived": {
+    "C2:37A7": {
+      "cases": [
+        {
+          "effective_pointer": 14252,
+          "runtime_x": 14252,
+          "selector_offset": 0,
+          "target": "C2:37BA"
+        },
+        {
+          "effective_pointer": 14254,
+          "runtime_x": 14254,
+          "selector_offset": 2,
+          "target": "C2:37FE"
+        },
+        {
+          "effective_pointer": 14256,
+          "runtime_x": 14256,
+          "selector_offset": 4,
+          "target": "C2:385F"
+        },
+        {
+          "effective_pointer": 14258,
+          "runtime_x": 14258,
+          "selector_offset": 6,
+          "target": "C2:3A37"
+        },
+        {
+          "effective_pointer": 14260,
+          "runtime_x": 14260,
+          "selector_offset": 8,
+          "target": "C2:37D6"
+        }
+      ],
+      "reachable_callers": [
+        {
+          "input_a": 5,
+          "site": "C0:237E"
+        },
+        {
+          "input_a": 2,
+          "site": "C0:2496"
+        },
+        {
+          "input_a": 4,
+          "site": "C0:249D"
+        },
+        {
+          "input_a": 3,
+          "site": "C0:24C9"
+        },
+        {
+          "input_a": 1,
+          "site": "C0:E958"
+        }
+      ]
+    },
+    "C3:236E": {
+      "cases": [
+        {
+          "effective_pointer": 9075,
+          "runtime_x": 9075,
+          "selector_offset": 0,
+          "target": "C3:237B"
+        },
+        {
+          "effective_pointer": 9077,
+          "runtime_x": 9077,
+          "selector_offset": 2,
+          "target": "C3:24D2"
+        },
+        {
+          "effective_pointer": 9079,
+          "runtime_x": 9079,
+          "selector_offset": 4,
+          "target": "C3:25EE"
+        },
+        {
+          "effective_pointer": 9081,
+          "runtime_x": 9081,
+          "selector_offset": 6,
+          "target": "C3:2732"
+        }
+      ],
+      "reachable_callers": [
+        {
+          "input_x": 0,
+          "site": "C0:F2AC"
+        },
+        {
+          "input_x": 2,
+          "site": "C0:FB84"
+        },
+        {
+          "input_x": 1,
+          "site": "C0:FEF2"
+        },
+        {
+          "input_x": 3,
+          "site": "C2:13BD"
+        },
+        {
+          "input_x": 3,
+          "site": "C2:1726"
+        },
+        {
+          "input_x": 4,
+          "site": "C2:1A64"
+        },
+        {
+          "input_x": 5,
+          "site": "C2:1A6D"
+        },
+        {
+          "input_x": 0,
+          "site": "C3:0922"
+        }
+      ]
+    }
+  },
+  "proof_sha256": "4797e5c2ce5ab5737a39fef82028c1c3a0915e5ff1eff1df4e27fcf39833f5aa",
+  "raw_x_site_count": 67,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "runtime_observation_used_as_proof": false,
+  "transformed_sites": [
+    "C2:37A7",
+    "C3:236E"
+  ]
+}

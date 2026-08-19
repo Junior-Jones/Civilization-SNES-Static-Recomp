@@ -1,0 +1,28 @@
+{
+  "format": "civilization-v33-indirect-proof-risk-inventory-v1",
+  "legacy_second_method_priorities": [],
+  "legacy_second_method_priority_count": 0,
+  "method_note": "This report never widens proof. Version 33 closes the former legacy second-method backlog; remaining strengthening work is producer/value-set completeness, tracked separately by the generalized indirect-domain audit.",
+  "result": "PASS_INVENTORY_ONLY",
+  "second_method_recertified_count": 17,
+  "second_method_recertified_sites": [
+    "C0:0331",
+    "C0:81E7",
+    "C0:A8E9",
+    "C0:B420",
+    "C0:B88F",
+    "C0:C3F4",
+    "C0:E2E7",
+    "C0:E607",
+    "C0:EECF",
+    "C0:F058",
+    "C2:2475",
+    "C2:247A",
+    "C2:AD7A",
+    "C2:E992",
+    "C3:0AC0",
+    "D0:BB7C",
+    "D4:8D72"
+  ],
+  "site_count": 69
+}

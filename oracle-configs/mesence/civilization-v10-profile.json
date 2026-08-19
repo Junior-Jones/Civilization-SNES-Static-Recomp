@@ -1,0 +1,13 @@
+{
+  "format": "civilization-v10-mesence-oracle-profile-v1",
+  "emulator": "MesenCE 2.2.1",
+  "upstream_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb",
+  "trace_frontier": {
+    "pc": "C0:8088"
+  },
+  "observed_registers": ["$2100-$21FF", "$4200-$43FF"],
+  "typed_dma_events": true,
+  "optional_wram_writes": true,
+  "authority": "comparison-only after static implementation",
+  "runtime_comparison": "pending environment dependencies"
+}

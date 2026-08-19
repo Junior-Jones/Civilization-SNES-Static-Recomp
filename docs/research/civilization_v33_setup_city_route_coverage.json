@@ -1,0 +1,437 @@
+{
+  "claim": "Known setup/city menu-return and city-name dispatch surfaces are present in the exact-ROM closure; every declared target is re-read from immutable ROM and is a closed runtime context. This audit does not upgrade the legacy C3:0AC0 domain proof.",
+  "errors": [],
+  "format": "civilization-v33-setup-city-route-coverage-v1",
+  "future_strengthening": [
+    "C3:0AC0"
+  ],
+  "legacy_finite_site_count": 1,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "runtime_context_count": 103584,
+  "runtime_observation_used_as_proof": false,
+  "sites": [
+    {
+      "address": "C3:0194",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": 409,
+          "runtime_x": 0,
+          "target": "C3:01AB"
+        },
+        {
+          "effective_pointer": 411,
+          "runtime_x": 2,
+          "target": "C3:01FD"
+        },
+        {
+          "effective_pointer": 413,
+          "runtime_x": 4,
+          "target": "C3:02D1"
+        },
+        {
+          "effective_pointer": 415,
+          "runtime_x": 6,
+          "target": "C3:0363"
+        },
+        {
+          "effective_pointer": 417,
+          "runtime_x": 8,
+          "target": "C3:0499"
+        },
+        {
+          "effective_pointer": 419,
+          "runtime_x": 10,
+          "target": "C3:05B4"
+        },
+        {
+          "effective_pointer": 421,
+          "runtime_x": 12,
+          "target": "C3:05F5"
+        },
+        {
+          "effective_pointer": 423,
+          "runtime_x": 14,
+          "target": "C3:06F5"
+        },
+        {
+          "effective_pointer": 425,
+          "runtime_x": 16,
+          "target": "C3:077B"
+        }
+      ],
+      "proof_strength": "strong-current",
+      "status": "finite exact ROM hitbox-list/menu-return proof; v33 explicit runtime-X contract"
+    },
+    {
+      "address": "C3:0266",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 679,
+          "runtime_x": 0,
+          "target": "C3:02B3"
+        },
+        {
+          "effective_pointer": 681,
+          "runtime_x": 2,
+          "target": "C3:02B8"
+        },
+        {
+          "effective_pointer": 683,
+          "runtime_x": 4,
+          "target": "C3:02BD"
+        },
+        {
+          "effective_pointer": 685,
+          "runtime_x": 6,
+          "target": "C3:02C2"
+        },
+        {
+          "effective_pointer": 687,
+          "runtime_x": 8,
+          "target": "C3:02C7"
+        },
+        {
+          "effective_pointer": 689,
+          "runtime_x": 10,
+          "target": "C3:02CC"
+        }
+      ],
+      "proof_strength": "strong-current",
+      "status": "finite exact ROM hitbox-list/menu-return proof; v33 explicit runtime-X contract"
+    },
+    {
+      "address": "C3:0435",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": 1142,
+          "runtime_x": 0,
+          "target": "C3:0480"
+        },
+        {
+          "effective_pointer": 1144,
+          "runtime_x": 2,
+          "target": "C3:0485"
+        },
+        {
+          "effective_pointer": 1146,
+          "runtime_x": 4,
+          "target": "C3:048A"
+        },
+        {
+          "effective_pointer": 1148,
+          "runtime_x": 6,
+          "target": "C3:048F"
+        },
+        {
+          "effective_pointer": 1150,
+          "runtime_x": 8,
+          "target": "C3:0494"
+        }
+      ],
+      "proof_strength": "strong-current",
+      "status": "finite union of three exact ROM hitbox-list proofs; v33 explicit runtime-X contract"
+    },
+    {
+      "address": "C3:08B8",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 2276,
+          "runtime_x": 0,
+          "target": "C3:08F0"
+        },
+        {
+          "effective_pointer": 2278,
+          "runtime_x": 2,
+          "target": "C3:08FE"
+        },
+        {
+          "effective_pointer": 2280,
+          "runtime_x": 4,
+          "target": "C3:090C"
+        },
+        {
+          "effective_pointer": 2282,
+          "runtime_x": 6,
+          "target": "C3:091A"
+        },
+        {
+          "effective_pointer": 2284,
+          "runtime_x": 8,
+          "target": "C3:0928"
+        },
+        {
+          "effective_pointer": 2286,
+          "runtime_x": 10,
+          "target": "C3:0933"
+        }
+      ],
+      "proof_strength": "strong-current",
+      "status": "finite exact ROM hitbox-list/menu-return proof; v33 explicit runtime-X contract"
+    },
+    {
+      "address": "C3:0C9F",
+      "case_count": 21,
+      "cases": [
+        {
+          "effective_pointer": 3247,
+          "runtime_x": 0,
+          "target": "C3:0CD9"
+        },
+        {
+          "effective_pointer": 3249,
+          "runtime_x": 2,
+          "target": "C3:0CEC"
+        },
+        {
+          "effective_pointer": 3251,
+          "runtime_x": 4,
+          "target": "C3:0D36"
+        },
+        {
+          "effective_pointer": 3253,
+          "runtime_x": 6,
+          "target": "C3:0D74"
+        },
+        {
+          "effective_pointer": 3255,
+          "runtime_x": 8,
+          "target": "C3:0E1B"
+        },
+        {
+          "effective_pointer": 3257,
+          "runtime_x": 10,
+          "target": "C3:0EE0"
+        },
+        {
+          "effective_pointer": 3259,
+          "runtime_x": 12,
+          "target": "C3:0F1A"
+        },
+        {
+          "effective_pointer": 3261,
+          "runtime_x": 14,
+          "target": "C3:0F35"
+        },
+        {
+          "effective_pointer": 3263,
+          "runtime_x": 16,
+          "target": "C3:0F50"
+        },
+        {
+          "effective_pointer": 3265,
+          "runtime_x": 18,
+          "target": "C3:0F6B"
+        },
+        {
+          "effective_pointer": 3267,
+          "runtime_x": 20,
+          "target": "C3:0F86"
+        },
+        {
+          "effective_pointer": 3269,
+          "runtime_x": 22,
+          "target": "C3:0FA1"
+        },
+        {
+          "effective_pointer": 3271,
+          "runtime_x": 24,
+          "target": "C3:0FBC"
+        },
+        {
+          "effective_pointer": 3273,
+          "runtime_x": 26,
+          "target": "C3:0FD7"
+        },
+        {
+          "effective_pointer": 3275,
+          "runtime_x": 28,
+          "target": "C3:0FF2"
+        },
+        {
+          "effective_pointer": 3277,
+          "runtime_x": 30,
+          "target": "C3:110A"
+        },
+        {
+          "effective_pointer": 3279,
+          "runtime_x": 32,
+          "target": "C3:1125"
+        },
+        {
+          "effective_pointer": 3281,
+          "runtime_x": 34,
+          "target": "C3:123F"
+        },
+        {
+          "effective_pointer": 3283,
+          "runtime_x": 36,
+          "target": "C3:125C"
+        },
+        {
+          "effective_pointer": 3285,
+          "runtime_x": 38,
+          "target": "C3:12A5"
+        },
+        {
+          "effective_pointer": 3287,
+          "runtime_x": 40,
+          "target": "C3:11C1"
+        }
+      ],
+      "proof_strength": "strong-current",
+      "status": "finite complete-writer/caller and exact-ROM table proof; v33 explicit runtime-X contract"
+    },
+    {
+      "address": "C3:236E",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 9075,
+          "runtime_x": 9075,
+          "target": "C3:237B"
+        },
+        {
+          "effective_pointer": 9077,
+          "runtime_x": 9077,
+          "target": "C3:24D2"
+        },
+        {
+          "effective_pointer": 9079,
+          "runtime_x": 9079,
+          "target": "C3:25EE"
+        },
+        {
+          "effective_pointer": 9081,
+          "runtime_x": 9081,
+          "target": "C3:2732"
+        }
+      ],
+      "proof_strength": "strong-current",
+      "status": "finite complete closed-caller/writer/filter/stack-pointer proof; v33 producer-domain completeness checked"
+    },
+    {
+      "address": "C3:0AC0",
+      "case_count": 22,
+      "cases": [
+        {
+          "effective_pointer": 2757,
+          "runtime_x": 0,
+          "target": "C3:0AF1"
+        },
+        {
+          "effective_pointer": 2759,
+          "runtime_x": 2,
+          "target": "C3:0AF5"
+        },
+        {
+          "effective_pointer": 2761,
+          "runtime_x": 4,
+          "target": "C3:0AF9"
+        },
+        {
+          "effective_pointer": 2763,
+          "runtime_x": 6,
+          "target": "C3:0B03"
+        },
+        {
+          "effective_pointer": 2765,
+          "runtime_x": 8,
+          "target": "C3:0B0D"
+        },
+        {
+          "effective_pointer": 2767,
+          "runtime_x": 10,
+          "target": "C3:0B17"
+        },
+        {
+          "effective_pointer": 2769,
+          "runtime_x": 12,
+          "target": "C3:0B21"
+        },
+        {
+          "effective_pointer": 2771,
+          "runtime_x": 14,
+          "target": "C3:0B2B"
+        },
+        {
+          "effective_pointer": 2773,
+          "runtime_x": 16,
+          "target": "C3:0B35"
+        },
+        {
+          "effective_pointer": 2775,
+          "runtime_x": 18,
+          "target": "C3:0B3F"
+        },
+        {
+          "effective_pointer": 2777,
+          "runtime_x": 20,
+          "target": "C3:0B49"
+        },
+        {
+          "effective_pointer": 2779,
+          "runtime_x": 22,
+          "target": "C3:0B4D"
+        },
+        {
+          "effective_pointer": 2781,
+          "runtime_x": 24,
+          "target": "C3:0B51"
+        },
+        {
+          "effective_pointer": 2783,
+          "runtime_x": 26,
+          "target": "C3:0B99"
+        },
+        {
+          "effective_pointer": 2785,
+          "runtime_x": 28,
+          "target": "C3:0BAE"
+        },
+        {
+          "effective_pointer": 2787,
+          "runtime_x": 30,
+          "target": "C3:0BC3"
+        },
+        {
+          "effective_pointer": 2789,
+          "runtime_x": 32,
+          "target": "C3:0BD8"
+        },
+        {
+          "effective_pointer": 2791,
+          "runtime_x": 34,
+          "target": "C3:0BED"
+        },
+        {
+          "effective_pointer": 2793,
+          "runtime_x": 36,
+          "target": "C3:0C20"
+        },
+        {
+          "effective_pointer": 2795,
+          "runtime_x": 38,
+          "target": "C3:0C35"
+        },
+        {
+          "effective_pointer": 2797,
+          "runtime_x": 40,
+          "target": "C3:0C39"
+        },
+        {
+          "effective_pointer": 2799,
+          "runtime_x": 42,
+          "target": "C3:0C3D"
+        }
+      ],
+      "proof_strength": "legacy-finite-needs-second-method",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified"
+    }
+  ],
+  "strong_current_site_count": 6
+}

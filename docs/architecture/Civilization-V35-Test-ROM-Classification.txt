@@ -1,0 +1,28 @@
+Civilization Version 35 Test - ROM Classification Baseline
+===========================================================
+
+Result: PASS_BASELINE_TARGETS_CLASSIFICATION_INCOMPLETE
+Exact ROM SHA-256: de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32
+Runtime contexts: 103,584
+Unique CPU instruction addresses: 102,236
+Unique physical instruction starts: 102,235
+Additional context variants: 1,348
+Known physical instruction bytes: 246,517 (15.673% of ROM)
+Unclassified physical ROM bytes: 1,326,267
+High-confidence-shape padding candidates (still unconfirmed): 15,059
+Strictly unclassified after padding candidates: 1,311,208
+Merged physical classification ranges: 932
+Manifested call edges: 8,939
+Manifested return targets: 7,834
+Indirect sites/cases: 69/710
+Missing manifested targets: 0
+
+Interpretation
+--------------
+The existing fixed-point authority is internally closed for every target
+already present in its manifests. This is not yet a whole-ROM classification
+claim: all remaining bytes are deliberately marked UNCLASSIFIED instead of
+being guessed to be data. The next work is independent table/data/orphan-code
+classification and producer-completeness analysis, not gameplay exploration.
+
+See the JSON receipt for bank counts, aliases, overlaps, and exact next audits.

@@ -1,0 +1,71 @@
+Civilization V35 Test - C0 Compaction Experiment
+================================================
+
+Date: 2026-08-13
+Scope: exact static C0 bank only (59 generated shards)
+Compiler: GCC, C11, warnings suppressed for generated code
+
+Decision
+--------
+
+Do not promote the multi-instruction basic-block prototype. The first size
+result was attractive only because it allowed entry at block starts. That
+form was invalid for production: an interrupt, headless frame stop, snapshot
+boundary, or exact instruction budget can resume at any proved instruction
+context inside a block.
+
+The corrected prototype retains all 23,206 C0 contexts as legal resume points,
+samples interrupts and frame stops after every instruction, uses no runtime
+decoder, performs no runtime learning, and has no emulator fallback. It is
+architecturally interchangeable, but it is larger than the existing exact-PC
+static shards.
+
+Measurements
+------------
+
+Current exact-PC C0, -O1:
+  source: 7,590,017 bytes
+  objects: 5,407,033 bytes
+  parallel compile: 3,121 ms
+
+Rejected non-resumable prototype, -O1 (diagnostic only):
+  objects: 4,651,465 bytes
+  apparent reduction: 755,568 bytes (13.9738%)
+  parallel compile: 3,391 ms
+  result: invalid because middle-of-block resume contexts were absent
+
+Correct resumable prototype, -O1:
+  source: 8,088,414 bytes across 59 shards
+  objects: 6,187,863 bytes
+  object increase: 780,830 bytes (14.4410%)
+  parallel compile: 3,884 ms
+  result: correct but rejected on size
+
+Current exact-PC C0, -Os:
+  objects: 4,748,529 bytes
+  reduction from current -O1: 658,504 bytes (12.1787%)
+  parallel compile: 5,246 ms
+  result: safe build-time size option; static authority is unchanged
+
+Architecture comparison
+-----------------------
+
+The completed Top Gear and SimCity references also retain exact instruction
+dispatch and instruction-boundary scheduling. They are smaller primarily
+because their proved context surfaces are smaller, not because they merge
+arbitrary instructions across interrupt boundaries. Civilization currently
+has 103,584 exact PBR:PC:E:M:X contexts; Top Gear's field guide identifies
+8,685 normalized generated ROM contexts, while its later re-entry/interrupt
+layers are separate. SimCity's reference V35 route is also exact-PC sharded.
+
+The safe compact direction is therefore:
+
+1. keep the closed 103,584-context graph and 1 KiB shard layout;
+2. compile generated authority for size (-Os) after equivalence testing;
+3. factor repeated instruction semantics into typed static helper calls only
+   where source and object measurements prove a reduction;
+4. never remove exact resume contexts or instruction-boundary scheduling;
+5. retain fail-closed indirect and return target tables.
+
+The experimental files remain outside the production CMake source list as a
+reproducible negative result. No frozen Current source or app was modified.

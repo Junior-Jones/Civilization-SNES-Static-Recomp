@@ -1,0 +1,74 @@
+Civilization Architecture Improvement Part 4
+==============================================
+
+Status: COMPLETE - 2026-08-19
+
+Objective
+---------
+Separate the stable application contract from research, tracing and static-core
+certification facilities. Frontends must not require the private CivRecomp
+layout merely to report diagnostics.
+
+Stable application header
+-------------------------
+civilization_static_recomp.h retains the opaque lifecycle, exact-ROM attach,
+reset, execution and frame queries, input, rendering, SRAM, snapshots, failure
+text, audio synchronization and the host PCM sink. A small pcm-frame query lets
+the ordinary frontend decide when audio has started without importing the full
+certification status structure.
+
+Opt-in diagnostics header
+-------------------------
+The new civilization_diagnostics.h contains:
+
+- copied CPU, PPU, timing, controller, interrupt and proof state;
+- bounded read-only WRAM access;
+- WRAM, SRAM, complete guest-state and framebuffer hashes;
+- video checkpoints and DMA/write counters;
+- detailed Full Static S-SMP/S-DSP/AOT/PCM status;
+- WAV/capture inspection and ARAM/DSP peek operations; and
+- development audio-state inspection used by the current snapshot format.
+
+civ_diagnostics_capture() copies the diagnostic view. It does not expose a
+pointer into the mutable machine. civ_diagnostics_read_wram() validates both the
+start and length before copying bytes and rejects every out-of-range request.
+
+Frontend migration
+------------------
+The common frontend uses only the stable header. The headless research frontend
+explicitly includes civilization_diagnostics.h and now uses copied state for
+status, per-instruction traces, PPU reports, framebuffer hashes and input
+reports. Its peek-wram command uses the bounded copy interface.
+
+The Windows screenshot diagnostic writer also includes only the stable and
+diagnostics headers. Hash computation moved into the core diagnostics module,
+so it no longer reads CPU, WRAM, SRAM, VRAM, CGRAM or OAM arrays directly.
+
+No source under frontend/ includes civilization_internal.h, and the launcher,
+headless and screenshot-diagnostic targets no longer receive the private
+internal include directory.
+
+Regression protection
+---------------------
+arch-diagnostics-api creates an opaque instance using public headers only,
+captures its reset CPU/PPU state, verifies zeroed WRAM and checks rejection of
+an out-of-range WRAM request.
+
+arch-diagnostics-api-separation rejects diagnostic declarations in the stable
+header, requires them in the opt-in header, and rejects private-header includes
+from all frontend layers.
+
+Verification
+------------
+
+- Core, headless and diagnostic adapters build with strict warnings: PASS.
+- Native Windows Launcher.exe with static SDL: PASS.
+- Full CTest suite: 49/49 PASS.
+- Persistent headless snapshots, screenshot logs, audio ownership, rendering,
+  fail-closed dispatch and all static-authority proofs: PASS.
+
+Next improvement
+----------------
+Part 5 creates one authoritative frame operation used by both headed and
+headless hosts. It will add explicit frame-complete, failure, diagnostic and PCM
+hooks, removing the remaining duplicate host-side frame orchestration.

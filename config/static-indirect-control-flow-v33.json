@@ -1,0 +1,5175 @@
+{
+  "format": "civilization-static-indirect-control-flow-v33-explicit-runtime-x-v3-second-method-recertified",
+  "policy": "Every finite indexed-indirect case records semantic selector offset, raw CPU X, effective pointer, and exact ROM target. Runtime observation is never proof authority.",
+  "proof_receipts": [
+    "docs/research/civilization_v33_name_state_machine.proof.json",
+    "docs/research/civilization_v33_indirect_transition_consistency.json",
+    "docs/research/civilization_v33_indirect_effective_address.json",
+    "docs/research/civilization_v33_indirect_domain_completeness.json",
+    "docs/research/civilization_v33_legacy_indirect_second_method.json",
+    "docs/research/civilization_v33_generalized_indirect_domains.json",
+    "docs/research/civilization_v33_special_return_reentry.json",
+    "docs/research/civilization_v33_earth_city_lifecycle_clusters.json"
+  ],
+  "proved_sites": [
+    {
+      "address": "C0:0331",
+      "cases": [
+        {
+          "effective_pointer": 822,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 824,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:036F"
+        },
+        {
+          "effective_pointer": 826,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 828,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:0417"
+        },
+        {
+          "effective_pointer": 830,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:049A"
+        },
+        {
+          "effective_pointer": 832,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 834,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:049A"
+        },
+        {
+          "effective_pointer": 836,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 838,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:04BF"
+        },
+        {
+          "effective_pointer": 840,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:04BF"
+        },
+        {
+          "effective_pointer": 842,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 844,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 846,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:043C"
+        }
+      ],
+      "encoded_operand": 822,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:0336"
+    },
+    {
+      "address": "C0:24F9",
+      "cases": [
+        {
+          "effective_pointer": 9572,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:2B45"
+        },
+        {
+          "effective_pointer": 9576,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:2B47"
+        },
+        {
+          "effective_pointer": 9578,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:2BFC"
+        },
+        {
+          "effective_pointer": 9580,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:2C37"
+        },
+        {
+          "effective_pointer": 9582,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:2C54"
+        },
+        {
+          "effective_pointer": 9584,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:2C6E"
+        },
+        {
+          "effective_pointer": 9586,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:2C61"
+        }
+      ],
+      "encoded_operand": 9572,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C0:270E has a single PLP/RTS exit. Its direct predecessor paths return A={0,2,3,4,6}; the C0:2969 path calls C0:2A79, whose finite return set is {0,4,5}. C0:24E3 optionally remaps selector 5 to 7. Therefore the dispatch selector is exactly a subset of {0,2,3,4,5,6,7}, yielding X={0,4,6,8,10,12,14}.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite interprocedural return-value proof; v33 explicit runtime-X contract",
+      "table_base": "C0:2564"
+    },
+    {
+      "address": "C0:41C2",
+      "cases": [
+        {
+          "effective_pointer": 16858,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:41F4"
+        },
+        {
+          "effective_pointer": 16860,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:4217"
+        },
+        {
+          "effective_pointer": 16862,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:423A"
+        },
+        {
+          "effective_pointer": 16864,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:427B"
+        },
+        {
+          "effective_pointer": 16866,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:42DD"
+        },
+        {
+          "effective_pointer": 16868,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:4335"
+        },
+        {
+          "effective_pointer": 16870,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:436E"
+        },
+        {
+          "effective_pointer": 16872,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:43CE"
+        },
+        {
+          "effective_pointer": 16876,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:43F1"
+        }
+      ],
+      "encoded_operand": 16846,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The sole nonzero writer of per-slot selector byte $12D5,X is C0:4443. Every exact ROM caller of C0:4422 passes an immediate selector; the complete caller set passes only {7,8,9,10,11,12,13,14,16}. C0:44D2 can only clear the byte to zero when deleting a slot, and C0:419E dispatches only an active slot ($12D3 != 0) after its countdown expires. At C0:41B9 the byte is masked to 8 bits, decremented, doubled, and moved to X, yielding exactly {12,14,16,18,20,22,24,26,30}; these offsets select the nine non-null proved entries of exact ROM table C0:41CE.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite complete-caller immediate-selector proof; v33 explicit runtime-X contract",
+      "table_base": "C0:41CE"
+    },
+    {
+      "address": "C0:81E7",
+      "cases": [
+        {
+          "effective_pointer": 33357,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:8277"
+        },
+        {
+          "effective_pointer": 33359,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:8278"
+        },
+        {
+          "effective_pointer": 33361,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:8281"
+        },
+        {
+          "effective_pointer": 33363,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:828E"
+        },
+        {
+          "effective_pointer": 33365,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:829B"
+        },
+        {
+          "effective_pointer": 33367,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:82A4"
+        },
+        {
+          "effective_pointer": 33369,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:82AD"
+        },
+        {
+          "effective_pointer": 33371,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:82B2"
+        },
+        {
+          "effective_pointer": 33373,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:82BB"
+        },
+        {
+          "effective_pointer": 33375,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:82C4"
+        },
+        {
+          "effective_pointer": 33377,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:82D1"
+        },
+        {
+          "effective_pointer": 33379,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:82DA"
+        },
+        {
+          "effective_pointer": 33381,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:82E3"
+        },
+        {
+          "effective_pointer": 33383,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:82EC"
+        },
+        {
+          "effective_pointer": 33385,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:82F5"
+        },
+        {
+          "effective_pointer": 33387,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:82FA"
+        },
+        {
+          "effective_pointer": 33389,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:82FF"
+        },
+        {
+          "effective_pointer": 33391,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:8308"
+        },
+        {
+          "effective_pointer": 33393,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:8311"
+        },
+        {
+          "effective_pointer": 33395,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:831A"
+        },
+        {
+          "effective_pointer": 33397,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:8323"
+        }
+      ],
+      "encoded_operand": 33357,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof_receipt": "docs/research/civilization_v26_nmi_mode_domain.proof.json",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite Version 26 offline producer-domain proof; selectors outside 0000..0028 even remain fail-closed; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:824D"
+    },
+    {
+      "address": "C0:A8E9",
+      "cases": [
+        {
+          "effective_pointer": 43246,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43248,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43250,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43252,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43254,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43256,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43258,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43260,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43262,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43264,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43266,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43268,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43270,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43272,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43274,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:A962"
+        },
+        {
+          "effective_pointer": 43276,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:A980"
+        },
+        {
+          "effective_pointer": 43278,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43280,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43282,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43284,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43286,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43288,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43290,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43292,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43294,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43296,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C0:A9FC"
+        },
+        {
+          "effective_pointer": 43298,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43300,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C0:A926"
+        }
+      ],
+      "encoded_operand": 43246,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:A8EE"
+    },
+    {
+      "address": "C0:B420",
+      "cases": [
+        {
+          "effective_pointer": 46158,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:B486"
+        },
+        {
+          "effective_pointer": 46160,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46162,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46164,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46166,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46168,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46170,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46172,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46174,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46176,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46178,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46180,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46182,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46184,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46186,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:B570"
+        },
+        {
+          "effective_pointer": 46188,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:B5DA"
+        },
+        {
+          "effective_pointer": 46190,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46192,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46194,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46196,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46198,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46200,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46202,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46204,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46206,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46208,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C0:B763"
+        },
+        {
+          "effective_pointer": 46210,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C0:B7C3"
+        },
+        {
+          "effective_pointer": 46212,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C0:B859"
+        }
+      ],
+      "encoded_operand": 46158,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:B44E"
+    },
+    {
+      "address": "C0:B88F",
+      "cases": [
+        {
+          "effective_pointer": 52418,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:CCCA"
+        },
+        {
+          "effective_pointer": 52420,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:CCCB"
+        },
+        {
+          "effective_pointer": 52422,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:CCF4"
+        },
+        {
+          "effective_pointer": 52424,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:CD2C"
+        }
+      ],
+      "encoded_operand": 52418,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:CCC2"
+    },
+    {
+      "address": "C0:C3F4",
+      "cases": [
+        {
+          "effective_pointer": 50271,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:C46B"
+        },
+        {
+          "effective_pointer": 50273,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:C4C8"
+        },
+        {
+          "effective_pointer": 50275,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:C51E"
+        },
+        {
+          "effective_pointer": 50277,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:C628"
+        },
+        {
+          "effective_pointer": 50279,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:C74D"
+        },
+        {
+          "effective_pointer": 50281,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:C883"
+        }
+      ],
+      "encoded_operand": 50271,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:C45F"
+    },
+    {
+      "address": "C0:E2E7",
+      "cases": [
+        {
+          "effective_pointer": 58092,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:E2F2"
+        },
+        {
+          "effective_pointer": 58094,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:E3B2"
+        },
+        {
+          "effective_pointer": 58096,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:E3DB"
+        }
+      ],
+      "encoded_operand": 58092,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:E2EC"
+    },
+    {
+      "address": "C0:E607",
+      "cases": [
+        {
+          "effective_pointer": 58903,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:E61D"
+        },
+        {
+          "effective_pointer": 58905,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:E625"
+        },
+        {
+          "effective_pointer": 58907,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:E62D"
+        }
+      ],
+      "encoded_operand": 58903,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:E617"
+    },
+    {
+      "address": "C0:EECF",
+      "cases": [
+        {
+          "effective_pointer": 61145,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61147,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61149,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61151,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61153,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61155,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61157,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61159,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61161,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61163,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61165,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61167,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61169,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61171,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:EF74"
+        },
+        {
+          "effective_pointer": 61173,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61175,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61177,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61179,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61181,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:EF03"
+        },
+        {
+          "effective_pointer": 61183,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61185,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:EF8E"
+        }
+      ],
+      "encoded_operand": 61143,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:EED7"
+    },
+    {
+      "address": "C0:F058",
+      "cases": [
+        {
+          "effective_pointer": 61535,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:F08F"
+        },
+        {
+          "effective_pointer": 61537,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61539,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61541,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61543,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61545,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61547,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61549,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:F0FF"
+        },
+        {
+          "effective_pointer": 61551,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61553,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61555,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61557,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61559,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61561,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61563,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61565,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61567,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61569,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61571,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61573,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61575,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61577,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C0:F126"
+        },
+        {
+          "effective_pointer": 61579,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C0:F126"
+        },
+        {
+          "effective_pointer": 61581,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C0:F126"
+        }
+      ],
+      "encoded_operand": 61533,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C0:F05D"
+    },
+    {
+      "address": "C1:0DD7",
+      "cases": [
+        {
+          "effective_pointer": 3591,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:18DC"
+        },
+        {
+          "effective_pointer": 3593,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:1914"
+        }
+      ],
+      "encoded_operand": 3591,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The enclosing routine initializes $190B to zero before the dispatch loop. The only loop transition that changes this selector assigns the aligned value $0002; no other closed writer exists. Thus the indexed call uses only X=$0000 or $0002.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite local two-state loop proof; v33 explicit runtime-X contract",
+      "table_base": "C1:0E07"
+    },
+    {
+      "address": "C1:0EEA",
+      "cases": [
+        {
+          "effective_pointer": 3866,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:18DC"
+        },
+        {
+          "effective_pointer": 3868,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:1914"
+        },
+        {
+          "effective_pointer": 3870,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3872,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3874,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:0F7E"
+        },
+        {
+          "effective_pointer": 3876,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3878,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3880,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C1:12F6"
+        },
+        {
+          "effective_pointer": 3882,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C1:11DB"
+        },
+        {
+          "effective_pointer": 3884,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3886,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3888,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C1:0F78"
+        },
+        {
+          "effective_pointer": 3890,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C1:11DB"
+        },
+        {
+          "effective_pointer": 3892,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3894,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3896,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C1:0FA2"
+        }
+      ],
+      "encoded_operand": 3866,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Version 33 exact-ROM state-machine recertification: C1:0EAE initializes $190B=0 and C1:0EE7 dispatches through C1:0F1A. Exact handler writes prove the finite progression/cycle over all even selectors $0000-$001E; terminal $FFFF exits at C1:0EF7 before redispatch. $0107 starts at 0, advances by 2 in the shared handler, and state $001E sees only 8,10,12,14,16 before returning to state 2. $010B is only an event bitfield and $003D can only force the exact selector $0002. Independent transition-consistency checking rejects the old {0,2,4} domain and verifies this 16-state domain is closed.",
+      "proof_receipt": "docs/research/civilization_v33_name_state_machine.proof.json",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite Version 33 complete state-machine proof; explicit runtime-X contract",
+      "table_base": "C1:0F1A"
+    },
+    {
+      "address": "C1:5ADE",
+      "cases": [
+        {
+          "effective_pointer": 19182,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:8630"
+        },
+        {
+          "effective_pointer": 19184,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:A27B"
+        },
+        {
+          "effective_pointer": 19186,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:8C9E"
+        },
+        {
+          "effective_pointer": 19188,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:77DE"
+        },
+        {
+          "effective_pointer": 19190,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:5560"
+        },
+        {
+          "effective_pointer": 19192,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:74DB"
+        },
+        {
+          "effective_pointer": 19194,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:77DE"
+        }
+      ],
+      "encoded_operand": 19182,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "$1BD6 is the finite current-state selector. It is initialized from incoming X=1 or 2. In the C1:5AD8 state loop it is updated only from $1BD8 after the code rejects terminal values $00FF,$0008,$0009. Writer/table audit of nonterminal transitions is contained by states 1..7; the adjacent ROM dispatch tables are exactly seven 16-bit entries before the next table/data object. Therefore X=(state-1)*2 is confined to even offsets $0000..$000C.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite seven-state machine proof; writer set revalidated after closure expansion; v33 explicit runtime-X contract",
+      "table_base": "C1:4AEE"
+    },
+    {
+      "address": "C1:5B12",
+      "cases": [
+        {
+          "effective_pointer": 19196,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:5C52"
+        },
+        {
+          "effective_pointer": 19198,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:7CAC"
+        },
+        {
+          "effective_pointer": 19200,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:91E3"
+        },
+        {
+          "effective_pointer": 19202,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:72C4"
+        },
+        {
+          "effective_pointer": 19204,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:5CF2"
+        },
+        {
+          "effective_pointer": 19206,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:72C4"
+        },
+        {
+          "effective_pointer": 19208,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:72C4"
+        }
+      ],
+      "encoded_operand": 19196,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "$1BD6 is the finite current-state selector. It is initialized from incoming X=1 or 2. In the C1:5AD8 state loop it is updated only from $1BD8 after the code rejects terminal values $00FF,$0008,$0009. Writer/table audit of nonterminal transitions is contained by states 1..7; the adjacent ROM dispatch tables are exactly seven 16-bit entries before the next table/data object. Therefore X=(state-1)*2 is confined to even offsets $0000..$000C.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite seven-state machine proof; writer set revalidated after closure expansion; v33 explicit runtime-X contract",
+      "table_base": "C1:4AFC"
+    },
+    {
+      "address": "C1:5ED5",
+      "cases": [
+        {
+          "effective_pointer": 18992,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:5EDD"
+        },
+        {
+          "effective_pointer": 18994,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:5F74"
+        },
+        {
+          "effective_pointer": 18996,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:6106"
+        },
+        {
+          "effective_pointer": 18998,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:63A2"
+        },
+        {
+          "effective_pointer": 19000,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:6210"
+        },
+        {
+          "effective_pointer": 19002,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:63A2"
+        },
+        {
+          "effective_pointer": 19004,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:63A2"
+        }
+      ],
+      "encoded_operand": 18992,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "$1BD6 is the finite current-state selector. It is initialized from incoming X=1 or 2. In the C1:5AD8 state loop it is updated only from $1BD8 after the code rejects terminal values $00FF,$0008,$0009. Writer/table audit of nonterminal transitions is contained by states 1..7; the adjacent ROM dispatch tables are exactly seven 16-bit entries before the next table/data object. Therefore X=(state-1)*2 is confined to even offsets $0000..$000C.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite seven-state machine proof; writer set revalidated after closure expansion; v33 explicit runtime-X contract",
+      "table_base": "C1:4A30"
+    },
+    {
+      "address": "C1:A13A",
+      "cases": [
+        {
+          "effective_pointer": 19210,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:A3CF"
+        },
+        {
+          "effective_pointer": 19212,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:A1BD"
+        },
+        {
+          "effective_pointer": 19214,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:92A2"
+        },
+        {
+          "effective_pointer": 19216,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:75CE"
+        },
+        {
+          "effective_pointer": 19218,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:5495"
+        },
+        {
+          "effective_pointer": 19220,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:7360"
+        },
+        {
+          "effective_pointer": 19222,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:75CE"
+        }
+      ],
+      "encoded_operand": 19210,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "$1BD6 is the finite current-state selector. It is initialized from incoming X=1 or 2. In the C1:5AD8 state loop it is updated only from $1BD8 after the code rejects terminal values $00FF,$0008,$0009. Writer/table audit of nonterminal transitions is contained by states 1..7; the adjacent ROM dispatch tables are exactly seven 16-bit entries before the next table/data object. Therefore X=(state-1)*2 is confined to even offsets $0000..$000C.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite seven-state machine proof; writer set revalidated after closure expansion; v33 explicit runtime-X contract",
+      "table_base": "C1:4B0A"
+    },
+    {
+      "address": "C2:2475",
+      "cases": [
+        {
+          "effective_pointer": 9346,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:2496"
+        },
+        {
+          "effective_pointer": 9348,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:25BA"
+        },
+        {
+          "effective_pointer": 9350,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:26A3"
+        },
+        {
+          "effective_pointer": 9352,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:2706"
+        },
+        {
+          "effective_pointer": 9354,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:2877"
+        }
+      ],
+      "encoded_operand": 9346,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C2:2482"
+    },
+    {
+      "address": "C2:247A",
+      "cases": [
+        {
+          "effective_pointer": 9356,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:2542"
+        },
+        {
+          "effective_pointer": 9358,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:264B"
+        },
+        {
+          "effective_pointer": 9360,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:26DF"
+        },
+        {
+          "effective_pointer": 9362,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:27CE"
+        },
+        {
+          "effective_pointer": 9364,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:28AF"
+        }
+      ],
+      "encoded_operand": 9356,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C2:248C"
+    },
+    {
+      "address": "C2:37A7",
+      "cases": [
+        {
+          "effective_pointer": 14252,
+          "runtime_x": 14252,
+          "selector_offset": 0,
+          "target": "C2:37BA"
+        },
+        {
+          "effective_pointer": 14254,
+          "runtime_x": 14254,
+          "selector_offset": 2,
+          "target": "C2:37FE"
+        },
+        {
+          "effective_pointer": 14256,
+          "runtime_x": 14256,
+          "selector_offset": 4,
+          "target": "C2:385F"
+        },
+        {
+          "effective_pointer": 14258,
+          "runtime_x": 14258,
+          "selector_offset": 6,
+          "target": "C2:3A37"
+        },
+        {
+          "effective_pointer": 14260,
+          "runtime_x": 14260,
+          "selector_offset": 8,
+          "target": "C2:37D6"
+        }
+      ],
+      "encoded_operand": 0,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "producer_completeness_contract": "c2-378f-direct-caller-a-domain",
+      "proof": "After the first proof expansion a fifth direct caller C0:24C9 became reachable and passes immediate A=3. All currently closed callers pass A in {1,2,3,4,5}; local mask/decrement/double maps these to X={0,2,4,6,8}. Revalidate after every closure expansion.",
+      "runtime_x_bias": 14252,
+      "runtime_x_contract": "raw-x-prebiased-table-pointer",
+      "status": "finite complete caller/immediate-selector proof; v33 producer-domain completeness checked",
+      "table_base": "C2:37AC"
+    },
+    {
+      "address": "C2:414C",
+      "cases": [
+        {
+          "effective_pointer": 16767,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:4183"
+        },
+        {
+          "effective_pointer": 16769,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:418F"
+        }
+      ],
+      "encoded_operand": 16767,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The enclosing routine initializes $190B to zero before the dispatch loop. The only loop transition that changes this selector assigns the aligned value $0002; no other closed writer exists. Thus the indexed call uses only X=$0000 or $0002.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite local two-state loop proof; v33 explicit runtime-X contract",
+      "table_base": "C2:417F"
+    },
+    {
+      "address": "C2:4F5C",
+      "cases": [
+        {
+          "effective_pointer": 20510,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:50D4"
+        },
+        {
+          "effective_pointer": 20512,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:515E"
+        },
+        {
+          "effective_pointer": 20514,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:51C1"
+        },
+        {
+          "effective_pointer": 20516,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:517A"
+        },
+        {
+          "effective_pointer": 20518,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:5164"
+        },
+        {
+          "effective_pointer": 20520,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:5180"
+        }
+      ],
+      "encoded_operand": 20510,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "After first proof expansion C2:5176 becomes reachable and stores X=$0004. All closed writers to $196A are STZ or STX with finite values {0,2,4,6,8,10}. Revalidate writer set after every closure expansion.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite WRAM-writer proof; revalidate after closure expansion; v33 explicit runtime-X contract",
+      "table_base": "C2:501E"
+    },
+    {
+      "address": "C2:5016",
+      "cases": [
+        {
+          "effective_pointer": 21701,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21703,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21705,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21707,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21709,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21711,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21713,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21715,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21717,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21719,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21721,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21723,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21725,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21727,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21729,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C2:5562"
+        },
+        {
+          "effective_pointer": 21731,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C2:5589"
+        },
+        {
+          "effective_pointer": 21733,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21735,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21737,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21739,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21741,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C2:5571"
+        },
+        {
+          "effective_pointer": 21743,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21745,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21747,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21749,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C2:5653"
+        },
+        {
+          "effective_pointer": 21751,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21753,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C2:55A1"
+        },
+        {
+          "effective_pointer": 21755,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21757,
+          "runtime_x": 56,
+          "selector_offset": 56,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21759,
+          "runtime_x": 58,
+          "selector_offset": 58,
+          "target": "C2:566A"
+        },
+        {
+          "effective_pointer": 21761,
+          "runtime_x": 60,
+          "selector_offset": 60,
+          "target": "C2:5681"
+        },
+        {
+          "effective_pointer": 21763,
+          "runtime_x": 62,
+          "selector_offset": 62,
+          "target": "C2:5698"
+        },
+        {
+          "effective_pointer": 21765,
+          "runtime_x": 64,
+          "selector_offset": 64,
+          "target": "C2:56AF"
+        },
+        {
+          "effective_pointer": 21767,
+          "runtime_x": 66,
+          "selector_offset": 66,
+          "target": "C2:56CA"
+        },
+        {
+          "effective_pointer": 21769,
+          "runtime_x": 68,
+          "selector_offset": 68,
+          "target": "C2:56E1"
+        }
+      ],
+      "encoded_operand": 21701,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The selector is forced even by ASL immediately before TAX. CPX #$0044 / BCC keeps values below $44 and all out-of-range unsigned values are replaced with X=$0044, proving exactly even X=$0000..$0044.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite local structural proof; v33 explicit runtime-X contract",
+      "table_base": "C2:54C5"
+    },
+    {
+      "address": "C2:5297",
+      "cases": [
+        {
+          "effective_pointer": 21340,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:53B6"
+        },
+        {
+          "effective_pointer": 21342,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:540A"
+        },
+        {
+          "effective_pointer": 21344,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:543E"
+        },
+        {
+          "effective_pointer": 21346,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:541A"
+        }
+      ],
+      "encoded_operand": 21340,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C2:5288 initializes and owns parser state $196A for this dispatch family. Its in-family stores before re-dispatch are STZ $196A at C2:53B0 and immediate X values #$0006 at C2:5302/C2:530F, #$0002 at C2:5403, and #$0004 at C2:5413. Thus the only selector values presented to C2:5297 are X={0,2,4,6}; exact ROM table C2:535C contains exactly four corresponding u16 targets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite procedure-local producer/range and exact-ROM table proof; v33 explicit runtime-X contract",
+      "table_base": "C2:535C"
+    },
+    {
+      "address": "C2:5354",
+      "cases": [
+        {
+          "effective_pointer": 21701,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21703,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21705,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21707,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21709,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21711,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21713,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21715,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21717,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21719,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21721,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21723,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21725,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21727,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21729,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C2:5562"
+        },
+        {
+          "effective_pointer": 21731,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C2:5589"
+        },
+        {
+          "effective_pointer": 21733,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21735,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21737,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21739,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21741,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C2:5571"
+        },
+        {
+          "effective_pointer": 21743,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21745,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21747,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21749,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C2:5653"
+        },
+        {
+          "effective_pointer": 21751,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21753,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C2:55A1"
+        },
+        {
+          "effective_pointer": 21755,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21757,
+          "runtime_x": 56,
+          "selector_offset": 56,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21759,
+          "runtime_x": 58,
+          "selector_offset": 58,
+          "target": "C2:566A"
+        },
+        {
+          "effective_pointer": 21761,
+          "runtime_x": 60,
+          "selector_offset": 60,
+          "target": "C2:5681"
+        },
+        {
+          "effective_pointer": 21763,
+          "runtime_x": 62,
+          "selector_offset": 62,
+          "target": "C2:5698"
+        },
+        {
+          "effective_pointer": 21765,
+          "runtime_x": 64,
+          "selector_offset": 64,
+          "target": "C2:56AF"
+        },
+        {
+          "effective_pointer": 21767,
+          "runtime_x": 66,
+          "selector_offset": 66,
+          "target": "C2:56CA"
+        },
+        {
+          "effective_pointer": 21769,
+          "runtime_x": 68,
+          "selector_offset": 68,
+          "target": "C2:56E1"
+        }
+      ],
+      "encoded_operand": 21701,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Within C2:5288, the selector is constructed by byte-derived DEC/ADC/DEC/ASL arithmetic and TAX at C2:5342, so it is even. Immediately before C2:5354, CPX #$0044 / BCC followed by LDX #$0044 clamps all larger results to $0044. Therefore legal X is exactly the finite even set $0000..$0044. The exact ROM table C2:54C5 has 35 u16 entries covering precisely that range.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite arithmetic/clamp and exact-ROM table proof; v33 explicit runtime-X contract",
+      "table_base": "C2:54C5"
+    },
+    {
+      "address": "C2:5937",
+      "cases": [
+        {
+          "effective_pointer": 22904,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:5BB7"
+        },
+        {
+          "effective_pointer": 22906,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5FF4"
+        },
+        {
+          "effective_pointer": 22908,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5BDF"
+        },
+        {
+          "effective_pointer": 22910,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5C26"
+        }
+      ],
+      "encoded_operand": 22904,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C2:592E initializes $190B to 0 before the dispatch loop. All writes to $190B reachable in the handler family before a subsequent dispatch are finite immediate STX values: 2/4/6 at C2:5BDB, 6 at C2:5C22, 4 at C2:60B2/C2:625E, 6 at C2:6337, or $FFFF at C2:5C9F/C2:5E0F. $FFFF is followed by LDX $190B / INX / BNE at C2:5947-C2:594B, which becomes zero and exits instead of redispatching. Thus dispatched X is only {0,2,4,6}; exact ROM table C2:5978 has four entries.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite loop-state producer/range and exact-ROM table proof; v33 explicit runtime-X contract",
+      "table_base": "C2:5978"
+    },
+    {
+      "address": "C2:5C29",
+      "cases": [
+        {
+          "effective_pointer": 23597,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:5C35"
+        },
+        {
+          "effective_pointer": 23599,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5CA3"
+        },
+        {
+          "effective_pointer": 23601,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5D4B"
+        },
+        {
+          "effective_pointer": 23603,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5DEA"
+        }
+      ],
+      "encoded_operand": 23597,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "This nested dispatcher executes only after outer state $190B reaches 6. $190B is initialized at C2:592E. A direct 0->6 transition preserves $190D=0. The state-2 handlers that can promote $190B to 4 store $190D=0 on the promoting path; non-promoting paths may store larger inner states but leave $190B=2. State 4 then promotes to 6 without changing $190D. Once state 6 is active, its four exact ROM handlers advance $190D only through 0,2,4,6; $FFFF exits the outer loop rather than dispatching. Therefore C2:5C29 sees only the four offsets of table C2:5C2D.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite nested-state-machine proof; v33 explicit runtime-X contract",
+      "table_base": "C2:5C2D"
+    },
+    {
+      "address": "C2:5FF7",
+      "cases": [
+        {
+          "effective_pointer": 24571,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:600F"
+        },
+        {
+          "effective_pointer": 24573,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:604F"
+        },
+        {
+          "effective_pointer": 24575,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:6268"
+        },
+        {
+          "effective_pointer": 24577,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:6291"
+        },
+        {
+          "effective_pointer": 24579,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:62F4"
+        },
+        {
+          "effective_pointer": 24581,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:630A"
+        },
+        {
+          "effective_pointer": 24583,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:60C6"
+        },
+        {
+          "effective_pointer": 24585,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:60FF"
+        },
+        {
+          "effective_pointer": 24587,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:6199"
+        },
+        {
+          "effective_pointer": 24589,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:6231"
+        }
+      ],
+      "encoded_operand": 24571,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The state-2 handler dispatches on $190D, initialized to 0 at C2:5931. Exact writes in this finite handler family assign only even immediate values 0,2,4,6,8,10,12,14,16,18 (sites C2:604B,60C2,60FB,6179,6211,6264,628D,62D4,6306,633D and initialization). No increment/decrement of $190D occurs. Thus the selector is exactly bounded to the ten even offsets represented by the ten-entry ROM table C2:5FFB.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite nested-state producer/range proof; v33 explicit runtime-X contract",
+      "table_base": "C2:5FFB"
+    },
+    {
+      "address": "C2:AD7A",
+      "cases": [
+        {
+          "effective_pointer": 44415,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:ADA3"
+        },
+        {
+          "effective_pointer": 44417,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:ADD3"
+        },
+        {
+          "effective_pointer": 44419,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:AE30"
+        },
+        {
+          "effective_pointer": 44421,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:AE60"
+        },
+        {
+          "effective_pointer": 44423,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:AE90"
+        },
+        {
+          "effective_pointer": 44425,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:AEC0"
+        },
+        {
+          "effective_pointer": 44427,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:AEF0"
+        },
+        {
+          "effective_pointer": 44429,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:AF20"
+        },
+        {
+          "effective_pointer": 44431,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:AF50"
+        },
+        {
+          "effective_pointer": 44433,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:AF80"
+        },
+        {
+          "effective_pointer": 44435,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C2:AFEE"
+        },
+        {
+          "effective_pointer": 44437,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C2:AFF5"
+        },
+        {
+          "effective_pointer": 44439,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C2:B025"
+        },
+        {
+          "effective_pointer": 44441,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C2:B055"
+        },
+        {
+          "effective_pointer": 44443,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C2:B085"
+        },
+        {
+          "effective_pointer": 44445,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C2:B0B5"
+        },
+        {
+          "effective_pointer": 44447,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C2:B0E5"
+        },
+        {
+          "effective_pointer": 44449,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C2:B115"
+        }
+      ],
+      "encoded_operand": 44415,
+      "kind": "JSR (abs,X)",
+      "proof_receipt": "docs/research/civilization_v26_new_indirects.proof.json",
+      "reason": "X=2*$1BE1.  The active NMI-$0E state machine uses $1BE1 as an enum bounded 0..17; exact direct producers are 0,1,3..17 and the immutable table has handler entries for the full bounded enum.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C2:AD7F"
+    },
+    {
+      "address": "C2:E992",
+      "cases": [
+        {
+          "effective_pointer": 59810,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:E9AA"
+        },
+        {
+          "effective_pointer": 59812,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:EA34"
+        },
+        {
+          "effective_pointer": 59814,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:EA6A"
+        },
+        {
+          "effective_pointer": 59816,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:EAA0"
+        }
+      ],
+      "encoded_operand": 59810,
+      "kind": "JSR (abs,X)",
+      "proof_receipt": "docs/research/civilization_v26_new_indirects.proof.json",
+      "reason": "NMI-$10 setup clears $0135 before enabling mode $0010; while that mode is active its exact state transitions write only $0002,$0004,$0006 before mode teardown.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C2:E9A2"
+    },
+    {
+      "address": "C2:EC97",
+      "cases": [
+        {
+          "effective_pointer": 60572,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:ECA6"
+        },
+        {
+          "effective_pointer": 60574,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:ED12"
+        },
+        {
+          "effective_pointer": 60576,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:ED3F"
+        },
+        {
+          "effective_pointer": 60578,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:EE03"
+        },
+        {
+          "effective_pointer": 60580,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:ED6C"
+        }
+      ],
+      "encoded_operand": 60572,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C2:EAD6 stores bank C2 and pointer $F3E1 in $1BEC:$1BEA, then C2:A2F9 copies that exact pointer into the common hit-test $9A through C0:0549. The ROM object at C2:F3E1 contains exactly four 4-byte rectangles followed by $FFFF at C2:F3F1. Therefore C0:12E2-C0:1334 constrains $00A1 to 0..4. C2:EC8D masks to 8 bits and ASL/TAX, yielding X=$0000,$0002,$0004,$0006,$0008 only.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM hitbox-list/input-selector proof; v33 explicit runtime-X contract",
+      "table_base": "C2:EC9C"
+    },
+    {
+      "address": "C3:0194",
+      "cases": [
+        {
+          "effective_pointer": 409,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:01AB"
+        },
+        {
+          "effective_pointer": 411,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:01FD"
+        },
+        {
+          "effective_pointer": 413,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:02D1"
+        },
+        {
+          "effective_pointer": 415,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:0363"
+        },
+        {
+          "effective_pointer": 417,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0499"
+        },
+        {
+          "effective_pointer": 419,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:05B4"
+        },
+        {
+          "effective_pointer": 421,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:05F5"
+        },
+        {
+          "effective_pointer": 423,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:06F5"
+        },
+        {
+          "effective_pointer": 425,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:077B"
+        }
+      ],
+      "encoded_operand": 409,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C3:00FF sets the input hitbox pointer to exact ROM C5:FBBD through C0:0549. That list has exactly 9 four-byte rectangles followed by $FFFF. C0:12E2-C0:1334 therefore constrains $A1 to 0..9. C0:8946 returns $FFFF on cancel and otherwise returns a nonzero $A1. C3:0132 rejects $FFFF before calling C3:018E; C3:018E DEC/ASL therefore maps returned selections 1..9 to X=$0000..$0010 exactly.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM hitbox-list/menu-return proof; v33 explicit runtime-X contract",
+      "table_base": "C3:0199"
+    },
+    {
+      "address": "C3:0266",
+      "cases": [
+        {
+          "effective_pointer": 679,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:02B3"
+        },
+        {
+          "effective_pointer": 681,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:02B8"
+        },
+        {
+          "effective_pointer": 683,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:02BD"
+        },
+        {
+          "effective_pointer": 685,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:02C2"
+        },
+        {
+          "effective_pointer": 687,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:02C7"
+        },
+        {
+          "effective_pointer": 689,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:02CC"
+        }
+      ],
+      "encoded_operand": 679,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C3:020A points the common input hit-test at exact ROM C5:FC27. That list has exactly 6 rectangles followed by $FFFF. C0:8946 returns $FFFF on cancel and otherwise a nonzero hit index 1..6. C3:023D branches around the dispatcher on $FFFF; C3:0263 DEC/ASL therefore yields exactly X=$0000..$000A.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM hitbox-list/menu-return proof; v33 explicit runtime-X contract",
+      "table_base": "C3:02A7"
+    },
+    {
+      "address": "C3:0435",
+      "cases": [
+        {
+          "effective_pointer": 1142,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:0480"
+        },
+        {
+          "effective_pointer": 1144,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:0485"
+        },
+        {
+          "effective_pointer": 1146,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:048A"
+        },
+        {
+          "effective_pointer": 1148,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:048F"
+        },
+        {
+          "effective_pointer": 1150,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0494"
+        }
+      ],
+      "encoded_operand": 1142,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C3:0363 selects one of three exact ROM hitbox lists based only on pre-menu state: C5:FC6E (3 rectangles), C5:FC92 (4), or C5:FCBD (5), each terminated by $FFFF. Thus the common hit-test can return only 0..3/4/5. C0:8946 returns $FFFF on cancel and otherwise a nonzero hit index; C3:040C rejects $FFFF. DEC/ASL at C3:0432 therefore yields a union exactly bounded by X=$0000..$0008, matching the five-entry table.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite union of three exact ROM hitbox-list proofs; v33 explicit runtime-X contract",
+      "table_base": "C3:0476"
+    },
+    {
+      "address": "C3:08B8",
+      "cases": [
+        {
+          "effective_pointer": 2276,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:08F0"
+        },
+        {
+          "effective_pointer": 2278,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:08FE"
+        },
+        {
+          "effective_pointer": 2280,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:090C"
+        },
+        {
+          "effective_pointer": 2282,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:091A"
+        },
+        {
+          "effective_pointer": 2284,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0928"
+        },
+        {
+          "effective_pointer": 2286,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:0933"
+        }
+      ],
+      "encoded_operand": 2276,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C3:080C sets the input hitbox pointer to exact ROM C5:FD1E through C0:0549. That list has exactly 6 rectangles followed by $FFFF. The common hit-test constrains $A1 to 0..6; C0:8946 returns $FFFF for cancel and otherwise a nonzero $A1. C3:083F rejects $FFFF before C3:08A1; DEC/ASL at C3:08B5 maps selections 1..6 exactly to X=$0000..$000A.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM hitbox-list/menu-return proof; v33 explicit runtime-X contract",
+      "table_base": "C3:08E4"
+    },
+    {
+      "address": "C3:0AC0",
+      "cases": [
+        {
+          "effective_pointer": 2757,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:0AF1"
+        },
+        {
+          "effective_pointer": 2759,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:0AF5"
+        },
+        {
+          "effective_pointer": 2761,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:0AF9"
+        },
+        {
+          "effective_pointer": 2763,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:0B03"
+        },
+        {
+          "effective_pointer": 2765,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0B0D"
+        },
+        {
+          "effective_pointer": 2767,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:0B17"
+        },
+        {
+          "effective_pointer": 2769,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:0B21"
+        },
+        {
+          "effective_pointer": 2771,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:0B2B"
+        },
+        {
+          "effective_pointer": 2773,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:0B35"
+        },
+        {
+          "effective_pointer": 2775,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C3:0B3F"
+        },
+        {
+          "effective_pointer": 2777,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C3:0B49"
+        },
+        {
+          "effective_pointer": 2779,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C3:0B4D"
+        },
+        {
+          "effective_pointer": 2781,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C3:0B51"
+        },
+        {
+          "effective_pointer": 2783,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C3:0B99"
+        },
+        {
+          "effective_pointer": 2785,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C3:0BAE"
+        },
+        {
+          "effective_pointer": 2787,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C3:0BC3"
+        },
+        {
+          "effective_pointer": 2789,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C3:0BD8"
+        },
+        {
+          "effective_pointer": 2791,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C3:0BED"
+        },
+        {
+          "effective_pointer": 2793,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C3:0C20"
+        },
+        {
+          "effective_pointer": 2795,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C3:0C35"
+        },
+        {
+          "effective_pointer": 2797,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C3:0C39"
+        },
+        {
+          "effective_pointer": 2799,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C3:0C3D"
+        }
+      ],
+      "encoded_operand": 2757,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Reconstructed from the Version 25 closed call graph, exact ROM table bytes, and the bounded selector-producing code immediately preceding this site.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "C3:0AC5"
+    },
+    {
+      "address": "C3:0C9F",
+      "cases": [
+        {
+          "effective_pointer": 3247,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:0CD9"
+        },
+        {
+          "effective_pointer": 3249,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:0CEC"
+        },
+        {
+          "effective_pointer": 3251,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:0D36"
+        },
+        {
+          "effective_pointer": 3253,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:0D74"
+        },
+        {
+          "effective_pointer": 3255,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0E1B"
+        },
+        {
+          "effective_pointer": 3257,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:0EE0"
+        },
+        {
+          "effective_pointer": 3259,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:0F1A"
+        },
+        {
+          "effective_pointer": 3261,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:0F35"
+        },
+        {
+          "effective_pointer": 3263,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:0F50"
+        },
+        {
+          "effective_pointer": 3265,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C3:0F6B"
+        },
+        {
+          "effective_pointer": 3267,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C3:0F86"
+        },
+        {
+          "effective_pointer": 3269,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C3:0FA1"
+        },
+        {
+          "effective_pointer": 3271,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C3:0FBC"
+        },
+        {
+          "effective_pointer": 3273,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C3:0FD7"
+        },
+        {
+          "effective_pointer": 3275,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C3:0FF2"
+        },
+        {
+          "effective_pointer": 3277,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C3:110A"
+        },
+        {
+          "effective_pointer": 3279,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C3:1125"
+        },
+        {
+          "effective_pointer": 3281,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C3:123F"
+        },
+        {
+          "effective_pointer": 3283,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C3:125C"
+        },
+        {
+          "effective_pointer": 3285,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C3:12A5"
+        },
+        {
+          "effective_pointer": 3287,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C3:11C1"
+        }
+      ],
+      "encoded_operand": 3247,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C3:0C99 receives either immediate A=$0015 from C3:0A71 or a word from WRAM table $000886,X at C3:0A0E. The only writer of that WRAM table is C0:A873. Exhaustive exact-ROM caller enumeration for C0:A869 shows all 38 calls pass immediate values and their union is exactly 1..20, with no non-immediate caller. Therefore C3:0C99 input is exactly 1..21. DEC/ASL/TAX maps that to the 21 even offsets $0000..$0028, exactly matching ROM table C3:0CAF.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite complete-writer/caller and exact-ROM table proof; v33 explicit runtime-X contract",
+      "table_base": "C3:0CAF"
+    },
+    {
+      "address": "C3:236E",
+      "cases": [
+        {
+          "effective_pointer": 9075,
+          "runtime_x": 9075,
+          "selector_offset": 0,
+          "target": "C3:237B"
+        },
+        {
+          "effective_pointer": 9077,
+          "runtime_x": 9077,
+          "selector_offset": 2,
+          "target": "C3:24D2"
+        },
+        {
+          "effective_pointer": 9079,
+          "runtime_x": 9079,
+          "selector_offset": 4,
+          "target": "C3:25EE"
+        },
+        {
+          "effective_pointer": 9081,
+          "runtime_x": 9081,
+          "selector_offset": 6,
+          "target": "C3:2732"
+        }
+      ],
+      "encoded_operand": 0,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "producer_completeness_contract": "c1-3942-x-to-1a23-filter-to-c3-2334",
+      "proof": "Complete closed-caller proof: every reachable direct caller of C1:3942 sets X immediately to one of {0,1,2,3,4,5}; C1:394A stores X to $1A23. C1:3575 excludes 0 and 5, decrements survivors {1,2,3,4}, and JSL C3:2334. C3:2334 masks, doubles, adds table base $2373, preserves/restores the pointer into X, proving exactly selector offsets {0,2,4,6}, runtime X {$2373,$2375,$2377,$2379}, and exact ROM targets C3:237B,C3:24D2,C3:25EE,C3:2732.",
+      "runtime_x_bias": 9075,
+      "runtime_x_contract": "raw-x-prebiased-table-pointer",
+      "status": "finite complete closed-caller/writer/filter/stack-pointer proof; v33 producer-domain completeness checked",
+      "table_base": "C3:2373"
+    },
+    {
+      "address": "C3:5740",
+      "cases": [
+        {
+          "effective_pointer": 22459,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:57D5"
+        },
+        {
+          "effective_pointer": 22461,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:5814"
+        },
+        {
+          "effective_pointer": 22463,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:5831"
+        },
+        {
+          "effective_pointer": 22465,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:584E"
+        },
+        {
+          "effective_pointer": 22467,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:586B"
+        },
+        {
+          "effective_pointer": 22469,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:5888"
+        },
+        {
+          "effective_pointer": 22471,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:5900"
+        },
+        {
+          "effective_pointer": 22473,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:5975"
+        },
+        {
+          "effective_pointer": 22475,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:5992"
+        },
+        {
+          "effective_pointer": 22477,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C3:59D5"
+        },
+        {
+          "effective_pointer": 22479,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C3:5A2F"
+        },
+        {
+          "effective_pointer": 22481,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C3:5A71"
+        },
+        {
+          "effective_pointer": 22483,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C3:5AEE"
+        }
+      ],
+      "encoded_operand": 22459,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C3:55DF initializes $010D/$010B in one of two finite modes: X=$0000 with count 7, or X=$000E with count 6. Each loop iteration dispatches current $010D, then increments it twice and decrements the finite count. The first mode therefore dispatches X=$0000..$000C even; the second dispatches X=$000E..$0018 even. Union is the exact 13 even offsets $0000..$0018, matching the 13-entry ROM table C3:57BB.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite loop-counter and exact-ROM table proof; v33 explicit runtime-X contract",
+      "table_base": "C3:57BB"
+    },
+    {
+      "address": "C3:5BBC",
+      "cases": [
+        {
+          "effective_pointer": 23577,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:5C2B"
+        },
+        {
+          "effective_pointer": 23579,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:5C51"
+        },
+        {
+          "effective_pointer": 23581,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:5C83"
+        },
+        {
+          "effective_pointer": 23583,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:5CAB"
+        },
+        {
+          "effective_pointer": 23585,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:5CD3"
+        },
+        {
+          "effective_pointer": 23587,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:5D08"
+        },
+        {
+          "effective_pointer": 23589,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:5D33"
+        },
+        {
+          "effective_pointer": 23591,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:5D5B"
+        },
+        {
+          "effective_pointer": 23593,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:5D9C"
+        }
+      ],
+      "encoded_operand": 23577,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C3:55DF bounds $010D to the 13 even offsets 0..$18. At C3:5711 that value indexes exact ROM word table C3:6410, whose 13 entries are {0,2,4,6,8,0,0,10,12,14,12,16,0}; the selected word is stored in $01CE. C3:5BBC loads X from $01CE, so legal X is exactly the nine even offsets 0..$10. ROM table C3:5C19 contains exactly nine u16 targets before code begins at C3:5C2B.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite two-level exact-ROM table proof; v33 explicit runtime-X contract",
+      "table_base": "C3:5C19"
+    },
+    {
+      "address": "C3:5BE1",
+      "cases": [
+        {
+          "effective_pointer": 23577,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:5C2B"
+        },
+        {
+          "effective_pointer": 23579,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:5C51"
+        },
+        {
+          "effective_pointer": 23581,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:5C83"
+        },
+        {
+          "effective_pointer": 23583,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:5CAB"
+        },
+        {
+          "effective_pointer": 23585,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:5CD3"
+        },
+        {
+          "effective_pointer": 23587,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:5D08"
+        },
+        {
+          "effective_pointer": 23589,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:5D33"
+        },
+        {
+          "effective_pointer": 23591,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:5D5B"
+        },
+        {
+          "effective_pointer": 23593,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:5D9C"
+        }
+      ],
+      "encoded_operand": 23577,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Same selector authority as C3:5BBC: $01CE is generated only for this rendering loop from the exact C3:6410 13-word map indexed by the already-proved finite $010D sequence, yielding only {0,2,4,6,8,10,12,14,16}. The shared C3:5C19 table has exactly nine corresponding targets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite two-level exact-ROM table proof; v33 explicit runtime-X contract",
+      "table_base": "C3:5C19"
+    },
+    {
+      "address": "C6:015E",
+      "cases": [
+        {
+          "effective_pointer": 549,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0245"
+        },
+        {
+          "effective_pointer": 551,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:025D"
+        },
+        {
+          "effective_pointer": 553,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0275"
+        },
+        {
+          "effective_pointer": 555,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:028D"
+        },
+        {
+          "effective_pointer": 557,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:02A5"
+        },
+        {
+          "effective_pointer": 559,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:02BD"
+        },
+        {
+          "effective_pointer": 561,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:02D5"
+        },
+        {
+          "effective_pointer": 563,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:02ED"
+        },
+        {
+          "effective_pointer": 565,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0305"
+        },
+        {
+          "effective_pointer": 567,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:031D"
+        },
+        {
+          "effective_pointer": 569,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0335"
+        },
+        {
+          "effective_pointer": 571,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:034D"
+        }
+      ],
+      "encoded_operand": 547,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Every closed C6:00B8 caller sets $07/$09 to one of seven exact ROM records: C8:C3B3, C7:78A2, C9:0000, C7:88C2, D2:A6A7, C7:9DE0, D2:C9AF. C6:00D1 reads each record count and C6:00F5 reads the second byte array, masks to 8 bits and doubles each value before storing $7E6620. Exact ROM decoding of all seven arrays gives union selector bytes 1..12 only. C6:0157 loads that doubled value directly into X.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM record provenance proof; v33 explicit runtime-X contract",
+      "table_base": "C6:0223"
+    },
+    {
+      "address": "C6:0163",
+      "cases": [
+        {
+          "effective_pointer": 497,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:021E"
+        },
+        {
+          "effective_pointer": 499,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:021D"
+        },
+        {
+          "effective_pointer": 501,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:021C"
+        },
+        {
+          "effective_pointer": 503,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:021B"
+        },
+        {
+          "effective_pointer": 505,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:0216"
+        },
+        {
+          "effective_pointer": 507,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0215"
+        },
+        {
+          "effective_pointer": 509,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:0214"
+        },
+        {
+          "effective_pointer": 511,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0213"
+        },
+        {
+          "effective_pointer": 513,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:0212"
+        },
+        {
+          "effective_pointer": 515,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C6:0211"
+        },
+        {
+          "effective_pointer": 517,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C6:0210"
+        },
+        {
+          "effective_pointer": 519,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C6:020F"
+        }
+      ],
+      "encoded_operand": 489,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "Every closed C6:00B8 caller sets $07/$09 to one of seven exact ROM records: C8:C3B3, C7:78A2, C9:0000, C7:88C2, D2:A6A7, C7:9DE0, D2:C9AF. C6:00D1 reads each record count and C6:00F5 reads the second byte array, masks to 8 bits and doubles each value before storing $7E6620. Exact ROM decoding of all seven arrays gives union selector bytes 1..12 only. C6:014B computes $55=$0020-$7E6620 and C6:0161 loads $55 into X, yielding the finite even set $0008..$001E.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM record provenance proof; v33 explicit runtime-X contract",
+      "table_base": "C6:01E9"
+    },
+    {
+      "address": "C6:01C1",
+      "cases": [
+        {
+          "effective_pointer": 491,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0221"
+        },
+        {
+          "effective_pointer": 493,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0220"
+        },
+        {
+          "effective_pointer": 495,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:021F"
+        },
+        {
+          "effective_pointer": 497,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:021E"
+        },
+        {
+          "effective_pointer": 499,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:021D"
+        },
+        {
+          "effective_pointer": 501,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:021C"
+        },
+        {
+          "effective_pointer": 503,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:021B"
+        },
+        {
+          "effective_pointer": 505,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:0216"
+        },
+        {
+          "effective_pointer": 507,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0215"
+        },
+        {
+          "effective_pointer": 509,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:0214"
+        },
+        {
+          "effective_pointer": 511,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0213"
+        },
+        {
+          "effective_pointer": 513,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:0212"
+        }
+      ],
+      "encoded_operand": 489,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C6:01B8 loads $7E6620,X into $78; exact record provenance proves those stored values are twice selector bytes 1..12, hence even $0002..$0018. C6:01BE TAX transfers exactly that value to X before C6:01C1.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:01E9"
+    },
+    {
+      "address": "C6:01CC",
+      "cases": [
+        {
+          "effective_pointer": 549,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0245"
+        },
+        {
+          "effective_pointer": 551,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:025D"
+        },
+        {
+          "effective_pointer": 553,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0275"
+        },
+        {
+          "effective_pointer": 555,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:028D"
+        },
+        {
+          "effective_pointer": 557,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:02A5"
+        },
+        {
+          "effective_pointer": 559,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:02BD"
+        },
+        {
+          "effective_pointer": 561,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:02D5"
+        },
+        {
+          "effective_pointer": 563,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:02ED"
+        },
+        {
+          "effective_pointer": 565,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0305"
+        },
+        {
+          "effective_pointer": 567,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:031D"
+        },
+        {
+          "effective_pointer": 569,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0335"
+        },
+        {
+          "effective_pointer": 571,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:034D"
+        }
+      ],
+      "encoded_operand": 547,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C6:01C8 reloads X from $78, which is exactly a doubled ROM-record selector in $0002..$0018. This is the same finite selector set as C6:015E.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:0223"
+    },
+    {
+      "address": "C6:0246",
+      "cases": [
+        {
+          "effective_pointer": 589,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04D1"
+        },
+        {
+          "effective_pointer": 591,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04CB"
+        },
+        {
+          "effective_pointer": 593,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": 595,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 597,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 599,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 601,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 603,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04A6"
+        }
+      ],
+      "encoded_operand": 589,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:024D"
+    },
+    {
+      "address": "C6:025E",
+      "cases": [
+        {
+          "effective_pointer": 613,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04CB"
+        },
+        {
+          "effective_pointer": 615,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": 617,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 619,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 621,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 623,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 625,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 627,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04AA"
+        }
+      ],
+      "encoded_operand": 613,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:0265"
+    },
+    {
+      "address": "C6:0276",
+      "cases": [
+        {
+          "effective_pointer": 637,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": 639,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 641,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 643,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 645,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 647,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 649,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 651,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04AF"
+        }
+      ],
+      "encoded_operand": 637,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:027D"
+    },
+    {
+      "address": "C6:028E",
+      "cases": [
+        {
+          "effective_pointer": 661,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 663,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 665,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 667,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 669,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 671,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 673,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 675,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04B5"
+        }
+      ],
+      "encoded_operand": 661,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:0295"
+    },
+    {
+      "address": "C6:02A6",
+      "cases": [
+        {
+          "effective_pointer": 685,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 687,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 689,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 691,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 693,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 695,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 697,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 699,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:046A"
+        }
+      ],
+      "encoded_operand": 685,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:02AD"
+    },
+    {
+      "address": "C6:02BE",
+      "cases": [
+        {
+          "effective_pointer": 709,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 711,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 713,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 715,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 717,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 719,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 721,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 723,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0464"
+        }
+      ],
+      "encoded_operand": 709,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:02C5"
+    },
+    {
+      "address": "C6:02D6",
+      "cases": [
+        {
+          "effective_pointer": 733,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 735,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 737,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 739,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 741,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 743,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 745,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 747,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:045F"
+        }
+      ],
+      "encoded_operand": 733,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:02DD"
+    },
+    {
+      "address": "C6:02EE",
+      "cases": [
+        {
+          "effective_pointer": 757,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 759,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 761,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 763,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 765,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 767,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 769,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 771,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:045B"
+        }
+      ],
+      "encoded_operand": 757,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:02F5"
+    },
+    {
+      "address": "C6:0306",
+      "cases": [
+        {
+          "effective_pointer": 781,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0482"
+        },
+        {
+          "effective_pointer": 783,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0479"
+        },
+        {
+          "effective_pointer": 785,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": 787,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 789,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 791,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 793,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 795,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0458"
+        }
+      ],
+      "encoded_operand": 781,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:030D"
+    },
+    {
+      "address": "C6:031E",
+      "cases": [
+        {
+          "effective_pointer": 805,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0479"
+        },
+        {
+          "effective_pointer": 807,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": 809,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 811,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 813,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 815,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 817,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": 819,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0445"
+        }
+      ],
+      "encoded_operand": 805,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:0325"
+    },
+    {
+      "address": "C6:0336",
+      "cases": [
+        {
+          "effective_pointer": 829,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": 831,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 833,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 835,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 837,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 839,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": 841,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0445"
+        },
+        {
+          "effective_pointer": 843,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0430"
+        }
+      ],
+      "encoded_operand": 829,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:033D"
+    },
+    {
+      "address": "C6:034E",
+      "cases": [
+        {
+          "effective_pointer": 853,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 855,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 857,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 859,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 861,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": 863,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0445"
+        },
+        {
+          "effective_pointer": 865,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0430"
+        },
+        {
+          "effective_pointer": 867,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0419"
+        }
+      ],
+      "encoded_operand": 853,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The outer record selector chooses this routine, but the routine begins TAX. Its incoming A is $76, initialized to zero and updated only as ($76 + $7E6620[index]) modulo $0010. $7E6620 values are all even (twice exact record selector bytes), so $76 is always one of the even values $0000..$000E. The nested table has exactly eight 16-bit entries for those offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite modulo-phase + exact-ROM record proof; v33 explicit runtime-X contract",
+      "table_base": "C6:0355"
+    },
+    {
+      "address": "C6:DF97",
+      "cases": [
+        {
+          "effective_pointer": 57293,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:E344"
+        },
+        {
+          "effective_pointer": 57295,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:E23E"
+        },
+        {
+          "effective_pointer": 57297,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:E1BA"
+        },
+        {
+          "effective_pointer": 57303,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:E068"
+        },
+        {
+          "effective_pointer": 57305,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:E0EC"
+        },
+        {
+          "effective_pointer": 57307,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:DFE2"
+        }
+      ],
+      "encoded_operand": 57289,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "C6:E4F2 classifies each source byte and returns only low-byte classes {80,81,02,03,04,85,86,07,08,09,8A,8B}. C6:DF40 stores that low byte to $7F0000,X. C6:DF7F masks bit7 and skips the dispatcher for every high-bit class. Therefore the dispatcher can see only low classes {02,03,04,07,08,09}; C6:DF92 AND #$007F, ASL, TAX maps them exactly to X={4,6,8,14,16,18}.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite producer/classification proof; v33 explicit runtime-X contract",
+      "table_base": "C6:DFC9"
+    },
+    {
+      "address": "D0:BB7C",
+      "cases": [
+        {
+          "effective_pointer": 48017,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:BB9F"
+        },
+        {
+          "effective_pointer": 48019,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:BC24"
+        },
+        {
+          "effective_pointer": 48021,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:BC54"
+        },
+        {
+          "effective_pointer": 48023,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:BC84"
+        },
+        {
+          "effective_pointer": 48025,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:BCB4"
+        },
+        {
+          "effective_pointer": 48027,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:BCE4"
+        },
+        {
+          "effective_pointer": 48029,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:BC23"
+        }
+      ],
+      "encoded_operand": 48017,
+      "kind": "JSR (abs,X)",
+      "proof_receipt": "docs/research/civilization_v26_new_indirects.proof.json",
+      "reason": "NMI-$08 setup writes $000C to $010C before enabling mode $0008; its animation routine cycles $0002,$0004,$0006,$0008,$000A,$0000, and $000C dispatches to the explicit RTS/no-op table entry.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM domain; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "D0:BB91"
+    },
+    {
+      "address": "D0:CF4A",
+      "cases": [
+        {
+          "effective_pointer": 53125,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 53127,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:CF97"
+        },
+        {
+          "effective_pointer": 53129,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:CFE2"
+        },
+        {
+          "effective_pointer": 53131,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D02D"
+        },
+        {
+          "effective_pointer": 53133,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:D078"
+        },
+        {
+          "effective_pointer": 53135,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:D0C3"
+        },
+        {
+          "effective_pointer": 53137,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:D10E"
+        },
+        {
+          "effective_pointer": 53139,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D0:D159"
+        },
+        {
+          "effective_pointer": 53141,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D0:D1A4"
+        }
+      ],
+      "encoded_operand": 53125,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The common input hit-test C0:12E2-C0:1334 initializes $00A1=0, scans 4-byte rectangles from [$9A], increments $065D once per nonmatching record, and stores $00A1=$065D+1 only on a hit. The setup routine used before this dispatcher points $9A at exact ROM list CD:FA8F, which contains 8 rectangle records followed immediately by $FFFF. Therefore $00A1 is exactly bounded to 0..8; AND #$00FF, ASL, TAX maps it to the 9 even table offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM rectangle-list/input-selector proof; v33 explicit runtime-X contract",
+      "table_base": "D0:CF85"
+    },
+    {
+      "address": "D0:D441",
+      "cases": [
+        {
+          "effective_pointer": 54396,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 54398,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D488"
+        },
+        {
+          "effective_pointer": 54400,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D4D3"
+        },
+        {
+          "effective_pointer": 54402,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D51E"
+        },
+        {
+          "effective_pointer": 54404,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:D569"
+        },
+        {
+          "effective_pointer": 54406,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:D5B4"
+        }
+      ],
+      "encoded_operand": 54396,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The common input hit-test C0:12E2-C0:1334 initializes $00A1=0, scans 4-byte rectangles from [$9A], increments $065D once per nonmatching record, and stores $00A1=$065D+1 only on a hit. The setup routine used before this dispatcher points $9A at exact ROM list CD:FA79, which contains 5 rectangle records followed immediately by $FFFF. Therefore $00A1 is exactly bounded to 0..5; AND #$00FF, ASL, TAX maps it to the 6 even table offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM rectangle-list/input-selector proof; v33 explicit runtime-X contract",
+      "table_base": "D0:D47C"
+    },
+    {
+      "address": "D0:D732",
+      "cases": [
+        {
+          "effective_pointer": 55149,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55151,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D96A"
+        },
+        {
+          "effective_pointer": 55153,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D995"
+        },
+        {
+          "effective_pointer": 55155,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D9C0"
+        }
+      ],
+      "encoded_operand": 55149,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The common input hit-test C0:12E2-C0:1334 initializes $00A1=0, scans 4-byte rectangles from [$9A], increments $065D once per nonmatching record, and stores $00A1=$065D+1 only on a hit. The setup routine used before this dispatcher points $9A at exact ROM list CD:FA6B, which contains 3 rectangle records followed immediately by $FFFF. Therefore $00A1 is exactly bounded to 0..3; AND #$00FF, ASL, TAX maps it to the 4 even table offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM rectangle-list/input-selector proof; v33 explicit runtime-X contract",
+      "table_base": "D0:D76D"
+    },
+    {
+      "address": "D0:D802",
+      "cases": [
+        {
+          "effective_pointer": 55357,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55359,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D96A"
+        },
+        {
+          "effective_pointer": 55361,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:DA2B"
+        },
+        {
+          "effective_pointer": 55363,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:DA2B"
+        }
+      ],
+      "encoded_operand": 55357,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The common input hit-test C0:12E2-C0:1334 initializes $00A1=0, scans 4-byte rectangles from [$9A], increments $065D once per nonmatching record, and stores $00A1=$065D+1 only on a hit. The setup routine used before this dispatcher points $9A at exact ROM list CD:FA6B, which contains 3 rectangle records followed immediately by $FFFF. Therefore $00A1 is exactly bounded to 0..3; AND #$00FF, ASL, TAX maps it to the 4 even table offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM rectangle-list/input-selector proof; v33 explicit runtime-X contract",
+      "table_base": "D0:D83D"
+    },
+    {
+      "address": "D0:D86E",
+      "cases": [
+        {
+          "effective_pointer": 55465,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55467,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D9EB"
+        },
+        {
+          "effective_pointer": 55469,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D9EB"
+        },
+        {
+          "effective_pointer": 55471,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D9C0"
+        }
+      ],
+      "encoded_operand": 55465,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The common input hit-test C0:12E2-C0:1334 initializes $00A1=0, scans 4-byte rectangles from [$9A], increments $065D once per nonmatching record, and stores $00A1=$065D+1 only on a hit. The setup routine used before this dispatcher points $9A at exact ROM list CD:FA6B, which contains 3 rectangle records followed immediately by $FFFF. Therefore $00A1 is exactly bounded to 0..3; AND #$00FF, ASL, TAX maps it to the 4 even table offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM rectangle-list/input-selector proof; v33 explicit runtime-X contract",
+      "table_base": "D0:D8A9"
+    },
+    {
+      "address": "D0:D91D",
+      "cases": [
+        {
+          "effective_pointer": 55640,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55642,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55644,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D995"
+        },
+        {
+          "effective_pointer": 55646,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D9C0"
+        }
+      ],
+      "encoded_operand": 55640,
+      "kind": "JSR (abs,X)",
+      "opcode": "FC",
+      "proof": "The common input hit-test C0:12E2-C0:1334 initializes $00A1=0, scans 4-byte rectangles from [$9A], increments $065D once per nonmatching record, and stores $00A1=$065D+1 only on a hit. The setup routine used before this dispatcher points $9A at exact ROM list CD:FA6B, which contains 3 rectangle records followed immediately by $FFFF. Therefore $00A1 is exactly bounded to 0..3; AND #$00FF, ASL, TAX maps it to the 4 even table offsets.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact ROM rectangle-list/input-selector proof; v33 explicit runtime-X contract",
+      "table_base": "D0:D958"
+    },
+    {
+      "address": "D0:F66B",
+      "cases": [
+        {
+          "effective_pointer": 64231,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:F8A1"
+        },
+        {
+          "effective_pointer": 64233,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:F8DF"
+        },
+        {
+          "effective_pointer": 64235,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64237,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64239,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64241,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64243,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64245,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64247,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64249,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64251,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64253,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64255,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64257,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64259,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "D0:F8F5"
+        },
+        {
+          "effective_pointer": 64261,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64263,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64265,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64267,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64269,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64271,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64273,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64275,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64277,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "D0:F93C"
+        },
+        {
+          "effective_pointer": 64279,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64281,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "D0:F93F"
+        },
+        {
+          "effective_pointer": 64283,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "D0:F968"
+        },
+        {
+          "effective_pointer": 64285,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "D0:FA2B"
+        }
+      ],
+      "encoded_operand": 64231,
+      "kind": "JMP (abs,X)",
+      "opcode": "7C",
+      "proof": "The only writers of the $1B2C,X record array are C1:4675, C1:4827, and C1:4926. C1:4675 loops $1B20 over 0..27, increments it and ORs #$80, therefore the negative class consumed by D0:F657 is exactly $81..$9C. D0:F660 masks #$003F, decrements and doubles, yielding exactly X=$0000..$0036 in even steps (28 table entries). The other two writers cannot reach this negative branch.",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact producer/range proof from closed ROM writers; v33 explicit runtime-X contract",
+      "table_base": "D0:FAE7"
+    },
+    {
+      "address": "D0:FB55",
+      "cases": [
+        {
+          "effective_pointer": 65146,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": 65148,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:FC44"
+        },
+        {
+          "effective_pointer": 65150,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:FC58"
+        },
+        {
+          "effective_pointer": 65152,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:FC7B"
+        },
+        {
+          "effective_pointer": 65154,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:FC92"
+        },
+        {
+          "effective_pointer": 65156,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:FCAF"
+        },
+        {
+          "effective_pointer": 65158,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:FCE0"
+        },
+        {
+          "effective_pointer": 65160,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D0:FCFD"
+        },
+        {
+          "effective_pointer": 65162,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D0:FD38"
+        },
+        {
+          "effective_pointer": 65164,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "D0:FCAF"
+        },
+        {
+          "effective_pointer": 65166,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "D0:FD7D"
+        },
+        {
+          "effective_pointer": 65168,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "D0:FD94"
+        },
+        {
+          "effective_pointer": 65170,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": 65172,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "D0:FDAE"
+        },
+        {
+          "effective_pointer": 65174,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "D0:FDC5"
+        },
+        {
+          "effective_pointer": 65176,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": 65178,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": 65180,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": 65182,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "D0:FDFD"
+        },
+        {
+          "effective_pointer": 65184,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "D0:FDC5"
+        },
+        {
+          "effective_pointer": 65186,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": 65188,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "D0:FE2E"
+        },
+        {
+          "effective_pointer": 65190,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "D0:FE77"
+        },
+        {
+          "effective_pointer": 65192,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "D0:FE77"
+        }
+      ],
+      "encoded_operand": 65146,
+      "kind": "JMP (abs,X)",
+      "opcode": "7C",
+      "proof": "D0:F5F3 reads entries built only by C1:4675, C1:4827, and C1:4926. The negative $80 class branches to D0:F657, and the $40 class is rejected by BIT #$40/BNE before D0:FB41. Thus D0:FB41 sees only C1:4827 entries. That writer loops $1B28 from 0 through 23 and stores INC A, so values are exactly 1..24. AND #$003F, DEC, ASL maps them exactly to X=$0000..$002E in even steps (24 table entries).",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact producer/range proof from closed ROM writers; v33 explicit runtime-X contract",
+      "table_base": "D0:FE7A"
+    },
+    {
+      "address": "D4:8D72",
+      "cases": [
+        {
+          "effective_pointer": 36213,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D4:8D8B"
+        },
+        {
+          "effective_pointer": 36215,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36217,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D4:8EB5"
+        },
+        {
+          "effective_pointer": 36219,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D4:8F5F"
+        },
+        {
+          "effective_pointer": 36221,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36223,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D4:8FB2"
+        },
+        {
+          "effective_pointer": 36225,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36227,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D4:B40F"
+        },
+        {
+          "effective_pointer": 36229,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D4:8D58"
+        },
+        {
+          "effective_pointer": 36231,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36233,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "D4:8D64"
+        }
+      ],
+      "encoded_operand": 36213,
+      "kind": "JMP (abs,X)",
+      "opcode": "7C",
+      "runtime_x_bias": 0,
+      "runtime_x_contract": "raw-x-is-selector-offset",
+      "status": "finite exact-ROM state/table proof; v33 explicit runtime-X contract; Version 33 independent second-method recertified",
+      "table_base": "D4:8D75"
+    }
+  ],
+  "provenance": "Version 33 current finite control-flow proof. All 69 indexed-indirect sites retain explicit selector/runtime-X/effective-pointer contracts; all 17 former legacy-risk sites are independently second-method recertified, transformed-X domains remain producer-complete, and runtime observations are never proof authority."
+}

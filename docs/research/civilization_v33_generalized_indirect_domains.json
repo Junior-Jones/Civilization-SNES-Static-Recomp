@@ -1,0 +1,4967 @@
+{
+  "claim": "Every finite indirect site now has one normalized semantic-selector/raw-X/effective-pointer contract and every target is independently recomputed from exact ROM bytes. Producer/value-set completeness is separately classified; lack of that stronger class never widens runtime authority.",
+  "errors": [],
+  "format": "civilization-v33-generalized-indirect-domain-audit-v1",
+  "prebiased_runtime_x_sites": [
+    "C2:37A7",
+    "C3:236E"
+  ],
+  "producer_value_set_complete_site_count": 69,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "runtime_observation_used_as_proof": false,
+  "site_count": 69,
+  "sites": [
+    {
+      "address": "C0:0331",
+      "case_count": 13,
+      "cases": [
+        {
+          "effective_pointer": 822,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 824,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:036F"
+        },
+        {
+          "effective_pointer": 826,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 828,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:0417"
+        },
+        {
+          "effective_pointer": 830,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:049A"
+        },
+        {
+          "effective_pointer": 832,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 834,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:049A"
+        },
+        {
+          "effective_pointer": 836,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 838,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:04BF"
+        },
+        {
+          "effective_pointer": 840,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:04BF"
+        },
+        {
+          "effective_pointer": 842,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 844,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:0350"
+        },
+        {
+          "effective_pointer": 846,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:043C"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:24F9",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": 9572,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:2B45"
+        },
+        {
+          "effective_pointer": 9576,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:2B47"
+        },
+        {
+          "effective_pointer": 9578,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:2BFC"
+        },
+        {
+          "effective_pointer": 9580,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:2C37"
+        },
+        {
+          "effective_pointer": 9582,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:2C54"
+        },
+        {
+          "effective_pointer": 9584,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:2C6E"
+        },
+        {
+          "effective_pointer": 9586,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:2C61"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:41C2",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": 16858,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:41F4"
+        },
+        {
+          "effective_pointer": 16860,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:4217"
+        },
+        {
+          "effective_pointer": 16862,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:423A"
+        },
+        {
+          "effective_pointer": 16864,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:427B"
+        },
+        {
+          "effective_pointer": 16866,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:42DD"
+        },
+        {
+          "effective_pointer": 16868,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:4335"
+        },
+        {
+          "effective_pointer": 16870,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:436E"
+        },
+        {
+          "effective_pointer": 16872,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:43CE"
+        },
+        {
+          "effective_pointer": 16876,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:43F1"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:81E7",
+      "case_count": 21,
+      "cases": [
+        {
+          "effective_pointer": 33357,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:8277"
+        },
+        {
+          "effective_pointer": 33359,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:8278"
+        },
+        {
+          "effective_pointer": 33361,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:8281"
+        },
+        {
+          "effective_pointer": 33363,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:828E"
+        },
+        {
+          "effective_pointer": 33365,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:829B"
+        },
+        {
+          "effective_pointer": 33367,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:82A4"
+        },
+        {
+          "effective_pointer": 33369,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:82AD"
+        },
+        {
+          "effective_pointer": 33371,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:82B2"
+        },
+        {
+          "effective_pointer": 33373,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:82BB"
+        },
+        {
+          "effective_pointer": 33375,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:82C4"
+        },
+        {
+          "effective_pointer": 33377,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:82D1"
+        },
+        {
+          "effective_pointer": 33379,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:82DA"
+        },
+        {
+          "effective_pointer": 33381,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:82E3"
+        },
+        {
+          "effective_pointer": 33383,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:82EC"
+        },
+        {
+          "effective_pointer": 33385,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:82F5"
+        },
+        {
+          "effective_pointer": 33387,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:82FA"
+        },
+        {
+          "effective_pointer": 33389,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:82FF"
+        },
+        {
+          "effective_pointer": 33391,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:8308"
+        },
+        {
+          "effective_pointer": 33393,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:8311"
+        },
+        {
+          "effective_pointer": 33395,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:831A"
+        },
+        {
+          "effective_pointer": 33397,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:8323"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:A8E9",
+      "case_count": 28,
+      "cases": [
+        {
+          "effective_pointer": 43246,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43248,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43250,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43252,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43254,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43256,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43258,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43260,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43262,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43264,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43266,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43268,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43270,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43272,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43274,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:A962"
+        },
+        {
+          "effective_pointer": 43276,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:A980"
+        },
+        {
+          "effective_pointer": 43278,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43280,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43282,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43284,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43286,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43288,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43290,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C0:A9D8"
+        },
+        {
+          "effective_pointer": 43292,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43294,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C0:A9B4"
+        },
+        {
+          "effective_pointer": 43296,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C0:A9FC"
+        },
+        {
+          "effective_pointer": 43298,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C0:A926"
+        },
+        {
+          "effective_pointer": 43300,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C0:A926"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:B420",
+      "case_count": 28,
+      "cases": [
+        {
+          "effective_pointer": 46158,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:B486"
+        },
+        {
+          "effective_pointer": 46160,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46162,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46164,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46166,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46168,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46170,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46172,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46174,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46176,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46178,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46180,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46182,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46184,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:B4EF"
+        },
+        {
+          "effective_pointer": 46186,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:B570"
+        },
+        {
+          "effective_pointer": 46188,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:B5DA"
+        },
+        {
+          "effective_pointer": 46190,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46192,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46194,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46196,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46198,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46200,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46202,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C0:B70D"
+        },
+        {
+          "effective_pointer": 46204,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46206,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C0:B6B6"
+        },
+        {
+          "effective_pointer": 46208,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C0:B763"
+        },
+        {
+          "effective_pointer": 46210,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C0:B7C3"
+        },
+        {
+          "effective_pointer": 46212,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C0:B859"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:B88F",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 52418,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:CCCA"
+        },
+        {
+          "effective_pointer": 52420,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:CCCB"
+        },
+        {
+          "effective_pointer": 52422,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:CCF4"
+        },
+        {
+          "effective_pointer": 52424,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:CD2C"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:C3F4",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 50271,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:C46B"
+        },
+        {
+          "effective_pointer": 50273,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:C4C8"
+        },
+        {
+          "effective_pointer": 50275,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:C51E"
+        },
+        {
+          "effective_pointer": 50277,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:C628"
+        },
+        {
+          "effective_pointer": 50279,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:C74D"
+        },
+        {
+          "effective_pointer": 50281,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:C883"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:E2E7",
+      "case_count": 3,
+      "cases": [
+        {
+          "effective_pointer": 58092,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:E2F2"
+        },
+        {
+          "effective_pointer": 58094,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:E3B2"
+        },
+        {
+          "effective_pointer": 58096,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:E3DB"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:E607",
+      "case_count": 3,
+      "cases": [
+        {
+          "effective_pointer": 58903,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C0:E61D"
+        },
+        {
+          "effective_pointer": 58905,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:E625"
+        },
+        {
+          "effective_pointer": 58907,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:E62D"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:EECF",
+      "case_count": 21,
+      "cases": [
+        {
+          "effective_pointer": 61145,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61147,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61149,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61151,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61153,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61155,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61157,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61159,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61161,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61163,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61165,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61167,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61169,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61171,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:EF74"
+        },
+        {
+          "effective_pointer": 61173,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61175,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61177,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61179,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61181,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:EF03"
+        },
+        {
+          "effective_pointer": 61183,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:EF8E"
+        },
+        {
+          "effective_pointer": 61185,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:EF8E"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C0:F058",
+      "case_count": 24,
+      "cases": [
+        {
+          "effective_pointer": 61535,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C0:F08F"
+        },
+        {
+          "effective_pointer": 61537,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61539,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61541,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61543,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61545,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61547,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61549,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C0:F0FF"
+        },
+        {
+          "effective_pointer": 61551,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61553,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61555,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61557,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61559,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61561,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61563,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61565,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61567,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61569,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61571,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61573,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61575,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C0:F122"
+        },
+        {
+          "effective_pointer": 61577,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C0:F126"
+        },
+        {
+          "effective_pointer": 61579,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C0:F126"
+        },
+        {
+          "effective_pointer": 61581,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C0:F126"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C1:0DD7",
+      "case_count": 2,
+      "cases": [
+        {
+          "effective_pointer": 3591,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:18DC"
+        },
+        {
+          "effective_pointer": 3593,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:1914"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C1:0EEA",
+      "case_count": 16,
+      "cases": [
+        {
+          "effective_pointer": 3866,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:18DC"
+        },
+        {
+          "effective_pointer": 3868,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:1914"
+        },
+        {
+          "effective_pointer": 3870,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3872,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3874,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:0F7E"
+        },
+        {
+          "effective_pointer": 3876,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3878,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3880,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C1:12F6"
+        },
+        {
+          "effective_pointer": 3882,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C1:11DB"
+        },
+        {
+          "effective_pointer": 3884,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3886,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3888,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C1:0F78"
+        },
+        {
+          "effective_pointer": 3890,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C1:11DB"
+        },
+        {
+          "effective_pointer": 3892,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C1:0F3A"
+        },
+        {
+          "effective_pointer": 3894,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C1:108D"
+        },
+        {
+          "effective_pointer": 3896,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C1:0FA2"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C1:5ADE",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": 19182,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:8630"
+        },
+        {
+          "effective_pointer": 19184,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:A27B"
+        },
+        {
+          "effective_pointer": 19186,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:8C9E"
+        },
+        {
+          "effective_pointer": 19188,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:77DE"
+        },
+        {
+          "effective_pointer": 19190,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:5560"
+        },
+        {
+          "effective_pointer": 19192,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:74DB"
+        },
+        {
+          "effective_pointer": 19194,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:77DE"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C1:5B12",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": 19196,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:5C52"
+        },
+        {
+          "effective_pointer": 19198,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:7CAC"
+        },
+        {
+          "effective_pointer": 19200,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:91E3"
+        },
+        {
+          "effective_pointer": 19202,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:72C4"
+        },
+        {
+          "effective_pointer": 19204,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:5CF2"
+        },
+        {
+          "effective_pointer": 19206,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:72C4"
+        },
+        {
+          "effective_pointer": 19208,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:72C4"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C1:5ED5",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": 18992,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:5EDD"
+        },
+        {
+          "effective_pointer": 18994,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:5F74"
+        },
+        {
+          "effective_pointer": 18996,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:6106"
+        },
+        {
+          "effective_pointer": 18998,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:63A2"
+        },
+        {
+          "effective_pointer": 19000,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:6210"
+        },
+        {
+          "effective_pointer": 19002,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:63A2"
+        },
+        {
+          "effective_pointer": 19004,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:63A2"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C1:A13A",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": 19210,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C1:A3CF"
+        },
+        {
+          "effective_pointer": 19212,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C1:A1BD"
+        },
+        {
+          "effective_pointer": 19214,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C1:92A2"
+        },
+        {
+          "effective_pointer": 19216,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C1:75CE"
+        },
+        {
+          "effective_pointer": 19218,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C1:5495"
+        },
+        {
+          "effective_pointer": 19220,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C1:7360"
+        },
+        {
+          "effective_pointer": 19222,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C1:75CE"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:2475",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": 9346,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:2496"
+        },
+        {
+          "effective_pointer": 9348,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:25BA"
+        },
+        {
+          "effective_pointer": 9350,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:26A3"
+        },
+        {
+          "effective_pointer": 9352,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:2706"
+        },
+        {
+          "effective_pointer": 9354,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:2877"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:247A",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": 9356,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:2542"
+        },
+        {
+          "effective_pointer": 9358,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:264B"
+        },
+        {
+          "effective_pointer": 9360,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:26DF"
+        },
+        {
+          "effective_pointer": 9362,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:27CE"
+        },
+        {
+          "effective_pointer": 9364,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:28AF"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:37A7",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": 14252,
+          "runtime_x": 14252,
+          "selector_offset": 0,
+          "target": "C2:37BA"
+        },
+        {
+          "effective_pointer": 14254,
+          "runtime_x": 14254,
+          "selector_offset": 2,
+          "target": "C2:37FE"
+        },
+        {
+          "effective_pointer": 14256,
+          "runtime_x": 14256,
+          "selector_offset": 4,
+          "target": "C2:385F"
+        },
+        {
+          "effective_pointer": 14258,
+          "runtime_x": 14258,
+          "selector_offset": 6,
+          "target": "C2:3A37"
+        },
+        {
+          "effective_pointer": 14260,
+          "runtime_x": 14260,
+          "selector_offset": 8,
+          "target": "C2:37D6"
+        }
+      ],
+      "contract": "raw-x-prebiased-table-pointer",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:414C",
+      "case_count": 2,
+      "cases": [
+        {
+          "effective_pointer": 16767,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:4183"
+        },
+        {
+          "effective_pointer": 16769,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:418F"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:4F5C",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 20510,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:50D4"
+        },
+        {
+          "effective_pointer": 20512,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:515E"
+        },
+        {
+          "effective_pointer": 20514,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:51C1"
+        },
+        {
+          "effective_pointer": 20516,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:517A"
+        },
+        {
+          "effective_pointer": 20518,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:5164"
+        },
+        {
+          "effective_pointer": 20520,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:5180"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:5016",
+      "case_count": 35,
+      "cases": [
+        {
+          "effective_pointer": 21701,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21703,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21705,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21707,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21709,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21711,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21713,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21715,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21717,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21719,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21721,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21723,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21725,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21727,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21729,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C2:5562"
+        },
+        {
+          "effective_pointer": 21731,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C2:5589"
+        },
+        {
+          "effective_pointer": 21733,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21735,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21737,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21739,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21741,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C2:5571"
+        },
+        {
+          "effective_pointer": 21743,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21745,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21747,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21749,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C2:5653"
+        },
+        {
+          "effective_pointer": 21751,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21753,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C2:55A1"
+        },
+        {
+          "effective_pointer": 21755,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21757,
+          "runtime_x": 56,
+          "selector_offset": 56,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21759,
+          "runtime_x": 58,
+          "selector_offset": 58,
+          "target": "C2:566A"
+        },
+        {
+          "effective_pointer": 21761,
+          "runtime_x": 60,
+          "selector_offset": 60,
+          "target": "C2:5681"
+        },
+        {
+          "effective_pointer": 21763,
+          "runtime_x": 62,
+          "selector_offset": 62,
+          "target": "C2:5698"
+        },
+        {
+          "effective_pointer": 21765,
+          "runtime_x": 64,
+          "selector_offset": 64,
+          "target": "C2:56AF"
+        },
+        {
+          "effective_pointer": 21767,
+          "runtime_x": 66,
+          "selector_offset": 66,
+          "target": "C2:56CA"
+        },
+        {
+          "effective_pointer": 21769,
+          "runtime_x": 68,
+          "selector_offset": 68,
+          "target": "C2:56E1"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:5297",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 21340,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:53B6"
+        },
+        {
+          "effective_pointer": 21342,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:540A"
+        },
+        {
+          "effective_pointer": 21344,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:543E"
+        },
+        {
+          "effective_pointer": 21346,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:541A"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:5354",
+      "case_count": 35,
+      "cases": [
+        {
+          "effective_pointer": 21701,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21703,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21705,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21707,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21709,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21711,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:5525"
+        },
+        {
+          "effective_pointer": 21713,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21715,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:55B9"
+        },
+        {
+          "effective_pointer": 21717,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21719,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21721,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C2:5632"
+        },
+        {
+          "effective_pointer": 21723,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21725,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21727,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21729,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C2:5562"
+        },
+        {
+          "effective_pointer": 21731,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C2:5589"
+        },
+        {
+          "effective_pointer": 21733,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C2:5723"
+        },
+        {
+          "effective_pointer": 21735,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C2:553F"
+        },
+        {
+          "effective_pointer": 21737,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21739,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21741,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C2:5571"
+        },
+        {
+          "effective_pointer": 21743,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21745,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21747,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21749,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "C2:5653"
+        },
+        {
+          "effective_pointer": 21751,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21753,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "C2:55A1"
+        },
+        {
+          "effective_pointer": 21755,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "C2:5603"
+        },
+        {
+          "effective_pointer": 21757,
+          "runtime_x": 56,
+          "selector_offset": 56,
+          "target": "C2:550B"
+        },
+        {
+          "effective_pointer": 21759,
+          "runtime_x": 58,
+          "selector_offset": 58,
+          "target": "C2:566A"
+        },
+        {
+          "effective_pointer": 21761,
+          "runtime_x": 60,
+          "selector_offset": 60,
+          "target": "C2:5681"
+        },
+        {
+          "effective_pointer": 21763,
+          "runtime_x": 62,
+          "selector_offset": 62,
+          "target": "C2:5698"
+        },
+        {
+          "effective_pointer": 21765,
+          "runtime_x": 64,
+          "selector_offset": 64,
+          "target": "C2:56AF"
+        },
+        {
+          "effective_pointer": 21767,
+          "runtime_x": 66,
+          "selector_offset": 66,
+          "target": "C2:56CA"
+        },
+        {
+          "effective_pointer": 21769,
+          "runtime_x": 68,
+          "selector_offset": 68,
+          "target": "C2:56E1"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:5937",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 22904,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:5BB7"
+        },
+        {
+          "effective_pointer": 22906,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5FF4"
+        },
+        {
+          "effective_pointer": 22908,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5BDF"
+        },
+        {
+          "effective_pointer": 22910,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5C26"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:5C29",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 23597,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:5C35"
+        },
+        {
+          "effective_pointer": 23599,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:5CA3"
+        },
+        {
+          "effective_pointer": 23601,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:5D4B"
+        },
+        {
+          "effective_pointer": 23603,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:5DEA"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:5FF7",
+      "case_count": 10,
+      "cases": [
+        {
+          "effective_pointer": 24571,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:600F"
+        },
+        {
+          "effective_pointer": 24573,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:604F"
+        },
+        {
+          "effective_pointer": 24575,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:6268"
+        },
+        {
+          "effective_pointer": 24577,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:6291"
+        },
+        {
+          "effective_pointer": 24579,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:62F4"
+        },
+        {
+          "effective_pointer": 24581,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:630A"
+        },
+        {
+          "effective_pointer": 24583,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:60C6"
+        },
+        {
+          "effective_pointer": 24585,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:60FF"
+        },
+        {
+          "effective_pointer": 24587,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:6199"
+        },
+        {
+          "effective_pointer": 24589,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:6231"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:AD7A",
+      "case_count": 18,
+      "cases": [
+        {
+          "effective_pointer": 44415,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:ADA3"
+        },
+        {
+          "effective_pointer": 44417,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:ADD3"
+        },
+        {
+          "effective_pointer": 44419,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:AE30"
+        },
+        {
+          "effective_pointer": 44421,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:AE60"
+        },
+        {
+          "effective_pointer": 44423,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:AE90"
+        },
+        {
+          "effective_pointer": 44425,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C2:AEC0"
+        },
+        {
+          "effective_pointer": 44427,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C2:AEF0"
+        },
+        {
+          "effective_pointer": 44429,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C2:AF20"
+        },
+        {
+          "effective_pointer": 44431,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C2:AF50"
+        },
+        {
+          "effective_pointer": 44433,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C2:AF80"
+        },
+        {
+          "effective_pointer": 44435,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C2:AFEE"
+        },
+        {
+          "effective_pointer": 44437,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C2:AFF5"
+        },
+        {
+          "effective_pointer": 44439,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C2:B025"
+        },
+        {
+          "effective_pointer": 44441,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C2:B055"
+        },
+        {
+          "effective_pointer": 44443,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C2:B085"
+        },
+        {
+          "effective_pointer": 44445,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C2:B0B5"
+        },
+        {
+          "effective_pointer": 44447,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C2:B0E5"
+        },
+        {
+          "effective_pointer": 44449,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C2:B115"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:E992",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 59810,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:E9AA"
+        },
+        {
+          "effective_pointer": 59812,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:EA34"
+        },
+        {
+          "effective_pointer": 59814,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:EA6A"
+        },
+        {
+          "effective_pointer": 59816,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:EAA0"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C2:EC97",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": 60572,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C2:ECA6"
+        },
+        {
+          "effective_pointer": 60574,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C2:ED12"
+        },
+        {
+          "effective_pointer": 60576,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C2:ED3F"
+        },
+        {
+          "effective_pointer": 60578,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C2:EE03"
+        },
+        {
+          "effective_pointer": 60580,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C2:ED6C"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:0194",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": 409,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:01AB"
+        },
+        {
+          "effective_pointer": 411,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:01FD"
+        },
+        {
+          "effective_pointer": 413,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:02D1"
+        },
+        {
+          "effective_pointer": 415,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:0363"
+        },
+        {
+          "effective_pointer": 417,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0499"
+        },
+        {
+          "effective_pointer": 419,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:05B4"
+        },
+        {
+          "effective_pointer": 421,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:05F5"
+        },
+        {
+          "effective_pointer": 423,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:06F5"
+        },
+        {
+          "effective_pointer": 425,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:077B"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:0266",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 679,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:02B3"
+        },
+        {
+          "effective_pointer": 681,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:02B8"
+        },
+        {
+          "effective_pointer": 683,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:02BD"
+        },
+        {
+          "effective_pointer": 685,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:02C2"
+        },
+        {
+          "effective_pointer": 687,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:02C7"
+        },
+        {
+          "effective_pointer": 689,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:02CC"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:0435",
+      "case_count": 5,
+      "cases": [
+        {
+          "effective_pointer": 1142,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:0480"
+        },
+        {
+          "effective_pointer": 1144,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:0485"
+        },
+        {
+          "effective_pointer": 1146,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:048A"
+        },
+        {
+          "effective_pointer": 1148,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:048F"
+        },
+        {
+          "effective_pointer": 1150,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0494"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:08B8",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 2276,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:08F0"
+        },
+        {
+          "effective_pointer": 2278,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:08FE"
+        },
+        {
+          "effective_pointer": 2280,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:090C"
+        },
+        {
+          "effective_pointer": 2282,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:091A"
+        },
+        {
+          "effective_pointer": 2284,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0928"
+        },
+        {
+          "effective_pointer": 2286,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:0933"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:0AC0",
+      "case_count": 22,
+      "cases": [
+        {
+          "effective_pointer": 2757,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:0AF1"
+        },
+        {
+          "effective_pointer": 2759,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:0AF5"
+        },
+        {
+          "effective_pointer": 2761,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:0AF9"
+        },
+        {
+          "effective_pointer": 2763,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:0B03"
+        },
+        {
+          "effective_pointer": 2765,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0B0D"
+        },
+        {
+          "effective_pointer": 2767,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:0B17"
+        },
+        {
+          "effective_pointer": 2769,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:0B21"
+        },
+        {
+          "effective_pointer": 2771,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:0B2B"
+        },
+        {
+          "effective_pointer": 2773,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:0B35"
+        },
+        {
+          "effective_pointer": 2775,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C3:0B3F"
+        },
+        {
+          "effective_pointer": 2777,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C3:0B49"
+        },
+        {
+          "effective_pointer": 2779,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C3:0B4D"
+        },
+        {
+          "effective_pointer": 2781,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C3:0B51"
+        },
+        {
+          "effective_pointer": 2783,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C3:0B99"
+        },
+        {
+          "effective_pointer": 2785,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C3:0BAE"
+        },
+        {
+          "effective_pointer": 2787,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C3:0BC3"
+        },
+        {
+          "effective_pointer": 2789,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C3:0BD8"
+        },
+        {
+          "effective_pointer": 2791,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C3:0BED"
+        },
+        {
+          "effective_pointer": 2793,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C3:0C20"
+        },
+        {
+          "effective_pointer": 2795,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C3:0C35"
+        },
+        {
+          "effective_pointer": 2797,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C3:0C39"
+        },
+        {
+          "effective_pointer": 2799,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "C3:0C3D"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:0C9F",
+      "case_count": 21,
+      "cases": [
+        {
+          "effective_pointer": 3247,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:0CD9"
+        },
+        {
+          "effective_pointer": 3249,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:0CEC"
+        },
+        {
+          "effective_pointer": 3251,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:0D36"
+        },
+        {
+          "effective_pointer": 3253,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:0D74"
+        },
+        {
+          "effective_pointer": 3255,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:0E1B"
+        },
+        {
+          "effective_pointer": 3257,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:0EE0"
+        },
+        {
+          "effective_pointer": 3259,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:0F1A"
+        },
+        {
+          "effective_pointer": 3261,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:0F35"
+        },
+        {
+          "effective_pointer": 3263,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:0F50"
+        },
+        {
+          "effective_pointer": 3265,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C3:0F6B"
+        },
+        {
+          "effective_pointer": 3267,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C3:0F86"
+        },
+        {
+          "effective_pointer": 3269,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C3:0FA1"
+        },
+        {
+          "effective_pointer": 3271,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C3:0FBC"
+        },
+        {
+          "effective_pointer": 3273,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C3:0FD7"
+        },
+        {
+          "effective_pointer": 3275,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C3:0FF2"
+        },
+        {
+          "effective_pointer": 3277,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C3:110A"
+        },
+        {
+          "effective_pointer": 3279,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "C3:1125"
+        },
+        {
+          "effective_pointer": 3281,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "C3:123F"
+        },
+        {
+          "effective_pointer": 3283,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "C3:125C"
+        },
+        {
+          "effective_pointer": 3285,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "C3:12A5"
+        },
+        {
+          "effective_pointer": 3287,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "C3:11C1"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:236E",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 9075,
+          "runtime_x": 9075,
+          "selector_offset": 0,
+          "target": "C3:237B"
+        },
+        {
+          "effective_pointer": 9077,
+          "runtime_x": 9077,
+          "selector_offset": 2,
+          "target": "C3:24D2"
+        },
+        {
+          "effective_pointer": 9079,
+          "runtime_x": 9079,
+          "selector_offset": 4,
+          "target": "C3:25EE"
+        },
+        {
+          "effective_pointer": 9081,
+          "runtime_x": 9081,
+          "selector_offset": 6,
+          "target": "C3:2732"
+        }
+      ],
+      "contract": "raw-x-prebiased-table-pointer",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:5740",
+      "case_count": 13,
+      "cases": [
+        {
+          "effective_pointer": 22459,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:57D5"
+        },
+        {
+          "effective_pointer": 22461,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:5814"
+        },
+        {
+          "effective_pointer": 22463,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:5831"
+        },
+        {
+          "effective_pointer": 22465,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:584E"
+        },
+        {
+          "effective_pointer": 22467,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:586B"
+        },
+        {
+          "effective_pointer": 22469,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:5888"
+        },
+        {
+          "effective_pointer": 22471,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:5900"
+        },
+        {
+          "effective_pointer": 22473,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:5975"
+        },
+        {
+          "effective_pointer": 22475,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:5992"
+        },
+        {
+          "effective_pointer": 22477,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C3:59D5"
+        },
+        {
+          "effective_pointer": 22479,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C3:5A2F"
+        },
+        {
+          "effective_pointer": 22481,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C3:5A71"
+        },
+        {
+          "effective_pointer": 22483,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C3:5AEE"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:5BBC",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": 23577,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:5C2B"
+        },
+        {
+          "effective_pointer": 23579,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:5C51"
+        },
+        {
+          "effective_pointer": 23581,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:5C83"
+        },
+        {
+          "effective_pointer": 23583,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:5CAB"
+        },
+        {
+          "effective_pointer": 23585,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:5CD3"
+        },
+        {
+          "effective_pointer": 23587,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:5D08"
+        },
+        {
+          "effective_pointer": 23589,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:5D33"
+        },
+        {
+          "effective_pointer": 23591,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:5D5B"
+        },
+        {
+          "effective_pointer": 23593,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:5D9C"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C3:5BE1",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": 23577,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C3:5C2B"
+        },
+        {
+          "effective_pointer": 23579,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C3:5C51"
+        },
+        {
+          "effective_pointer": 23581,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C3:5C83"
+        },
+        {
+          "effective_pointer": 23583,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C3:5CAB"
+        },
+        {
+          "effective_pointer": 23585,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C3:5CD3"
+        },
+        {
+          "effective_pointer": 23587,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C3:5D08"
+        },
+        {
+          "effective_pointer": 23589,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C3:5D33"
+        },
+        {
+          "effective_pointer": 23591,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C3:5D5B"
+        },
+        {
+          "effective_pointer": 23593,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C3:5D9C"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:015E",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": 549,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0245"
+        },
+        {
+          "effective_pointer": 551,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:025D"
+        },
+        {
+          "effective_pointer": 553,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0275"
+        },
+        {
+          "effective_pointer": 555,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:028D"
+        },
+        {
+          "effective_pointer": 557,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:02A5"
+        },
+        {
+          "effective_pointer": 559,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:02BD"
+        },
+        {
+          "effective_pointer": 561,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:02D5"
+        },
+        {
+          "effective_pointer": 563,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:02ED"
+        },
+        {
+          "effective_pointer": 565,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0305"
+        },
+        {
+          "effective_pointer": 567,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:031D"
+        },
+        {
+          "effective_pointer": 569,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0335"
+        },
+        {
+          "effective_pointer": 571,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:034D"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:0163",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": 497,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:021E"
+        },
+        {
+          "effective_pointer": 499,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:021D"
+        },
+        {
+          "effective_pointer": 501,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:021C"
+        },
+        {
+          "effective_pointer": 503,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:021B"
+        },
+        {
+          "effective_pointer": 505,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:0216"
+        },
+        {
+          "effective_pointer": 507,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0215"
+        },
+        {
+          "effective_pointer": 509,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:0214"
+        },
+        {
+          "effective_pointer": 511,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0213"
+        },
+        {
+          "effective_pointer": 513,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:0212"
+        },
+        {
+          "effective_pointer": 515,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "C6:0211"
+        },
+        {
+          "effective_pointer": 517,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "C6:0210"
+        },
+        {
+          "effective_pointer": 519,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "C6:020F"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:01C1",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": 491,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0221"
+        },
+        {
+          "effective_pointer": 493,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0220"
+        },
+        {
+          "effective_pointer": 495,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:021F"
+        },
+        {
+          "effective_pointer": 497,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:021E"
+        },
+        {
+          "effective_pointer": 499,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:021D"
+        },
+        {
+          "effective_pointer": 501,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:021C"
+        },
+        {
+          "effective_pointer": 503,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:021B"
+        },
+        {
+          "effective_pointer": 505,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:0216"
+        },
+        {
+          "effective_pointer": 507,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0215"
+        },
+        {
+          "effective_pointer": 509,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:0214"
+        },
+        {
+          "effective_pointer": 511,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0213"
+        },
+        {
+          "effective_pointer": 513,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:0212"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:01CC",
+      "case_count": 12,
+      "cases": [
+        {
+          "effective_pointer": 549,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0245"
+        },
+        {
+          "effective_pointer": 551,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:025D"
+        },
+        {
+          "effective_pointer": 553,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0275"
+        },
+        {
+          "effective_pointer": 555,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:028D"
+        },
+        {
+          "effective_pointer": 557,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:02A5"
+        },
+        {
+          "effective_pointer": 559,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:02BD"
+        },
+        {
+          "effective_pointer": 561,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:02D5"
+        },
+        {
+          "effective_pointer": 563,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:02ED"
+        },
+        {
+          "effective_pointer": 565,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:0305"
+        },
+        {
+          "effective_pointer": 567,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "C6:031D"
+        },
+        {
+          "effective_pointer": 569,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "C6:0335"
+        },
+        {
+          "effective_pointer": 571,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "C6:034D"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:0246",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 589,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04D1"
+        },
+        {
+          "effective_pointer": 591,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04CB"
+        },
+        {
+          "effective_pointer": 593,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": 595,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 597,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 599,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 601,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 603,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04A6"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:025E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 613,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04CB"
+        },
+        {
+          "effective_pointer": 615,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": 617,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 619,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 621,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 623,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 625,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 627,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04AA"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:0276",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 637,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04C4"
+        },
+        {
+          "effective_pointer": 639,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 641,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 643,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 645,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 647,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 649,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 651,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04AF"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:028E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 661,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:049E"
+        },
+        {
+          "effective_pointer": 663,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 665,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 667,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 669,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 671,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 673,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 675,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:04B5"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:02A6",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 685,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0497"
+        },
+        {
+          "effective_pointer": 687,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 689,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 691,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 693,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 695,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 697,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 699,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:046A"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:02BE",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 709,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0491"
+        },
+        {
+          "effective_pointer": 711,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 713,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 715,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 717,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 719,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 721,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 723,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0464"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:02D6",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 733,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:048C"
+        },
+        {
+          "effective_pointer": 735,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 737,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 739,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 741,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 743,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 745,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 747,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:045F"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:02EE",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 757,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:04A6"
+        },
+        {
+          "effective_pointer": 759,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:04AA"
+        },
+        {
+          "effective_pointer": 761,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:04AF"
+        },
+        {
+          "effective_pointer": 763,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:04B5"
+        },
+        {
+          "effective_pointer": 765,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 767,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 769,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 771,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:045B"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:0306",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 781,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0482"
+        },
+        {
+          "effective_pointer": 783,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0479"
+        },
+        {
+          "effective_pointer": 785,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": 787,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 789,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 791,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 793,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 795,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0458"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:031E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 805,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0479"
+        },
+        {
+          "effective_pointer": 807,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": 809,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 811,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 813,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 815,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 817,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": 819,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0445"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:0336",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 829,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:0471"
+        },
+        {
+          "effective_pointer": 831,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 833,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 835,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 837,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 839,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": 841,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0445"
+        },
+        {
+          "effective_pointer": 843,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0430"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:034E",
+      "case_count": 8,
+      "cases": [
+        {
+          "effective_pointer": 853,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "C6:046A"
+        },
+        {
+          "effective_pointer": 855,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "C6:0464"
+        },
+        {
+          "effective_pointer": 857,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:045F"
+        },
+        {
+          "effective_pointer": 859,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:045B"
+        },
+        {
+          "effective_pointer": 861,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:0458"
+        },
+        {
+          "effective_pointer": 863,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "C6:0445"
+        },
+        {
+          "effective_pointer": 865,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "C6:0430"
+        },
+        {
+          "effective_pointer": 867,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:0419"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "C6:DF97",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 57293,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "C6:E344"
+        },
+        {
+          "effective_pointer": 57295,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "C6:E23E"
+        },
+        {
+          "effective_pointer": 57297,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "C6:E1BA"
+        },
+        {
+          "effective_pointer": 57303,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "C6:E068"
+        },
+        {
+          "effective_pointer": 57305,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "C6:E0EC"
+        },
+        {
+          "effective_pointer": 57307,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "C6:DFE2"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:BB7C",
+      "case_count": 7,
+      "cases": [
+        {
+          "effective_pointer": 48017,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:BB9F"
+        },
+        {
+          "effective_pointer": 48019,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:BC24"
+        },
+        {
+          "effective_pointer": 48021,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:BC54"
+        },
+        {
+          "effective_pointer": 48023,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:BC84"
+        },
+        {
+          "effective_pointer": 48025,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:BCB4"
+        },
+        {
+          "effective_pointer": 48027,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:BCE4"
+        },
+        {
+          "effective_pointer": 48029,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:BC23"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:CF4A",
+      "case_count": 9,
+      "cases": [
+        {
+          "effective_pointer": 53125,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 53127,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:CF97"
+        },
+        {
+          "effective_pointer": 53129,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:CFE2"
+        },
+        {
+          "effective_pointer": 53131,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D02D"
+        },
+        {
+          "effective_pointer": 53133,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:D078"
+        },
+        {
+          "effective_pointer": 53135,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:D0C3"
+        },
+        {
+          "effective_pointer": 53137,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:D10E"
+        },
+        {
+          "effective_pointer": 53139,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D0:D159"
+        },
+        {
+          "effective_pointer": 53141,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D0:D1A4"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:D441",
+      "case_count": 6,
+      "cases": [
+        {
+          "effective_pointer": 54396,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 54398,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D488"
+        },
+        {
+          "effective_pointer": 54400,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D4D3"
+        },
+        {
+          "effective_pointer": 54402,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D51E"
+        },
+        {
+          "effective_pointer": 54404,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:D569"
+        },
+        {
+          "effective_pointer": 54406,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:D5B4"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:D732",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 55149,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55151,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D96A"
+        },
+        {
+          "effective_pointer": 55153,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D995"
+        },
+        {
+          "effective_pointer": 55155,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D9C0"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:D802",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 55357,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55359,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D96A"
+        },
+        {
+          "effective_pointer": 55361,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:DA2B"
+        },
+        {
+          "effective_pointer": 55363,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:DA2B"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:D86E",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 55465,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55467,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D9EB"
+        },
+        {
+          "effective_pointer": 55469,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D9EB"
+        },
+        {
+          "effective_pointer": 55471,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D9C0"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:D91D",
+      "case_count": 4,
+      "cases": [
+        {
+          "effective_pointer": 55640,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55642,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:D960"
+        },
+        {
+          "effective_pointer": 55644,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:D995"
+        },
+        {
+          "effective_pointer": 55646,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:D9C0"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JSR (abs,X)",
+      "producer_evidence_class": "exact-explicit-source-proof",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:F66B",
+      "case_count": 28,
+      "cases": [
+        {
+          "effective_pointer": 64231,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:F8A1"
+        },
+        {
+          "effective_pointer": 64233,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:F8DF"
+        },
+        {
+          "effective_pointer": 64235,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64237,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64239,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64241,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64243,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64245,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64247,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64249,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64251,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64253,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64255,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64257,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64259,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "D0:F8F5"
+        },
+        {
+          "effective_pointer": 64261,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64263,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64265,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64267,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64269,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64271,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64273,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64275,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64277,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "D0:F93C"
+        },
+        {
+          "effective_pointer": 64279,
+          "runtime_x": 48,
+          "selector_offset": 48,
+          "target": "D0:F8F2"
+        },
+        {
+          "effective_pointer": 64281,
+          "runtime_x": 50,
+          "selector_offset": 50,
+          "target": "D0:F93F"
+        },
+        {
+          "effective_pointer": 64283,
+          "runtime_x": 52,
+          "selector_offset": 52,
+          "target": "D0:F968"
+        },
+        {
+          "effective_pointer": 64285,
+          "runtime_x": 54,
+          "selector_offset": 54,
+          "target": "D0:FA2B"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JMP (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D0:FB55",
+      "case_count": 24,
+      "cases": [
+        {
+          "effective_pointer": 65146,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": 65148,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D0:FC44"
+        },
+        {
+          "effective_pointer": 65150,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D0:FC58"
+        },
+        {
+          "effective_pointer": 65152,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D0:FC7B"
+        },
+        {
+          "effective_pointer": 65154,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D0:FC92"
+        },
+        {
+          "effective_pointer": 65156,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D0:FCAF"
+        },
+        {
+          "effective_pointer": 65158,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D0:FCE0"
+        },
+        {
+          "effective_pointer": 65160,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D0:FCFD"
+        },
+        {
+          "effective_pointer": 65162,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D0:FD38"
+        },
+        {
+          "effective_pointer": 65164,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "D0:FCAF"
+        },
+        {
+          "effective_pointer": 65166,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "D0:FD7D"
+        },
+        {
+          "effective_pointer": 65168,
+          "runtime_x": 22,
+          "selector_offset": 22,
+          "target": "D0:FD94"
+        },
+        {
+          "effective_pointer": 65170,
+          "runtime_x": 24,
+          "selector_offset": 24,
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": 65172,
+          "runtime_x": 26,
+          "selector_offset": 26,
+          "target": "D0:FDAE"
+        },
+        {
+          "effective_pointer": 65174,
+          "runtime_x": 28,
+          "selector_offset": 28,
+          "target": "D0:FDC5"
+        },
+        {
+          "effective_pointer": 65176,
+          "runtime_x": 30,
+          "selector_offset": 30,
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": 65178,
+          "runtime_x": 32,
+          "selector_offset": 32,
+          "target": "D0:FC41"
+        },
+        {
+          "effective_pointer": 65180,
+          "runtime_x": 34,
+          "selector_offset": 34,
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": 65182,
+          "runtime_x": 36,
+          "selector_offset": 36,
+          "target": "D0:FDFD"
+        },
+        {
+          "effective_pointer": 65184,
+          "runtime_x": 38,
+          "selector_offset": 38,
+          "target": "D0:FDC5"
+        },
+        {
+          "effective_pointer": 65186,
+          "runtime_x": 40,
+          "selector_offset": 40,
+          "target": "D0:FDE0"
+        },
+        {
+          "effective_pointer": 65188,
+          "runtime_x": 42,
+          "selector_offset": 42,
+          "target": "D0:FE2E"
+        },
+        {
+          "effective_pointer": 65190,
+          "runtime_x": 44,
+          "selector_offset": 44,
+          "target": "D0:FE77"
+        },
+        {
+          "effective_pointer": 65192,
+          "runtime_x": 46,
+          "selector_offset": 46,
+          "target": "D0:FE77"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JMP (abs,X)",
+      "producer_evidence_class": "prior-explicit-producer-contract",
+      "producer_value_set_complete": true
+    },
+    {
+      "address": "D4:8D72",
+      "case_count": 11,
+      "cases": [
+        {
+          "effective_pointer": 36213,
+          "runtime_x": 0,
+          "selector_offset": 0,
+          "target": "D4:8D8B"
+        },
+        {
+          "effective_pointer": 36215,
+          "runtime_x": 2,
+          "selector_offset": 2,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36217,
+          "runtime_x": 4,
+          "selector_offset": 4,
+          "target": "D4:8EB5"
+        },
+        {
+          "effective_pointer": 36219,
+          "runtime_x": 6,
+          "selector_offset": 6,
+          "target": "D4:8F5F"
+        },
+        {
+          "effective_pointer": 36221,
+          "runtime_x": 8,
+          "selector_offset": 8,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36223,
+          "runtime_x": 10,
+          "selector_offset": 10,
+          "target": "D4:8FB2"
+        },
+        {
+          "effective_pointer": 36225,
+          "runtime_x": 12,
+          "selector_offset": 12,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36227,
+          "runtime_x": 14,
+          "selector_offset": 14,
+          "target": "D4:B40F"
+        },
+        {
+          "effective_pointer": 36229,
+          "runtime_x": 16,
+          "selector_offset": 16,
+          "target": "D4:8D58"
+        },
+        {
+          "effective_pointer": 36231,
+          "runtime_x": 18,
+          "selector_offset": 18,
+          "target": "D4:B42D"
+        },
+        {
+          "effective_pointer": 36233,
+          "runtime_x": 20,
+          "selector_offset": 20,
+          "target": "D4:8D64"
+        }
+      ],
+      "contract": "raw-x-is-selector-offset",
+      "kind": "JMP (abs,X)",
+      "producer_evidence_class": "independent-legacy-second-method",
+      "producer_value_set_complete": true
+    }
+  ],
+  "structurally_exact_fail_closed_site_count": 0
+}

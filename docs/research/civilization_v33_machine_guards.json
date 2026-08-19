@@ -1,0 +1,49 @@
+{
+  "analysis_sha256": "63b93e56167b3cdd16929ece18652e3f0b30b601a14928da720a6673e84cb046",
+  "decimal_mode_source_reachable": false,
+  "format": "civilization-v33-machine-guard-audit-v1",
+  "hdma_domain": "proved separately by civilization_v33_hdma_channel2.proof.json",
+  "manual_dma_direction": "A-bus to B-bus only",
+  "manual_dma_dmap_domain": {
+    "0": [
+      0,
+      1,
+      2,
+      9
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      9
+    ],
+    "7": [
+      1
+    ]
+  },
+  "manual_dma_mode_domain": {
+    "0": [
+      0,
+      1,
+      2
+    ],
+    "1": [
+      0,
+      1,
+      2
+    ],
+    "7": [
+      1
+    ]
+  },
+  "mdmaen_domain": [
+    0,
+    1,
+    2,
+    128
+  ],
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "unsupported_stop_or_software_interrupt_mnemonics": [],
+  "vram_mapping_domain": "proved separately by civilization_v33_ppu_domains.json"
+}

@@ -1,0 +1,82 @@
+Civilization Architecture Improvement Part 3
+==============================================
+
+Status: COMPLETE - 2026-08-19
+
+Objective
+---------
+Stop public callers from allocating, embedding or editing CivRecomp directly.
+Give each core instance an explicit creation, reset and destruction lifecycle.
+
+Public API result
+-----------------
+civilization_static_recomp.h now exposes CivRecomp as an incomplete handle to
+normal callers. Its machine definition is available only when the private
+CIVILIZATION_CORE_INTERNAL build interface is selected.
+
+The lifecycle now consists of:
+
+- civ_create(), which allocates and deterministically resets the core;
+- civ_reset(), which performs a hardware reset while preserving battery SRAM;
+- civ_destroy(), which releases any Full Static audio ownership, clears the
+  machine allocation and frees it; and
+- null-safe destruction for simple failure cleanup.
+
+The core also owns public queries for frame, instruction and master-clock
+counters, failure state and audio activity. civ_run_to_frame() contains the
+cooperative stop setup and cleanup that the common and Windows frontends used
+to perform by writing private scheduler fields.
+
+Frontend migration
+------------------
+CivFrontend now stores CivRecomp *core rather than embedding the full machine.
+civ_frontend_init_empty() creates that handle, and civ_frontend_shutdown()
+destroys it. ROM load and hardware reset reuse the valid handle. SRAM,
+snapshots, input, rendering and audio calls now pass the handle without taking
+the address of frontend-owned machine storage.
+
+The Windows application adapter uses the same lifecycle and closes it on every
+destroy path. The headless frontend closes it both normally and on early ROM,
+persistence or script-open failures.
+
+Defect exposed by migration
+---------------------------
+The headless frontend had relied on civ_frontend_load_rom() secretly clearing
+and initializing the complete frontend object. Once loading stopped being an
+allocator, headless attempted ROM load with no core handle and emitted an
+uninitialized error string. It now performs explicit frontend initialization
+before loading. The real persistent-snapshot headless test catches this path
+and passes.
+
+Internal and diagnostic access
+------------------------------
+Generated exact-context code, machine subsystems and structural machine tests
+include civilization_internal.h before the public header. They retain the
+complete type required to execute and certify the static core. The headless
+research commands and Windows screenshot diagnostic writer temporarily opt in
+to that private definition; Part 4 will replace this with a deliberate,
+separate diagnostics API.
+
+Regression protection
+---------------------
+arch-public-api-surface now creates, queries, resets and destroys a real opaque
+instance using only the public header. The new arch-opaque-core-lifecycle gate
+checks that the full layout remains behind the internal guard, the common
+frontend owns a pointer, no old embedded-field expressions return, and frontend
+shutdown calls civ_destroy().
+
+Verification
+------------
+
+- Clean core/headless build: PASS.
+- Native Windows Launcher.exe target build with static SDL: PASS.
+- Full CTest suite: 47/47 PASS.
+- Parallel renderer, exclusive audio ownership, fail-closed generated dispatch,
+  corrupt snapshot rollback and persistent headless snapshot tests: PASS.
+
+Next improvement
+----------------
+Part 4 separates the stable application API from research and certification
+operations. CPU and WRAM inspection, proof counters, ARAM/DSP peeks and detailed
+diagnostic checkpoints will move to an opt-in diagnostics header so ordinary
+frontends cannot accidentally depend on internal proof state.

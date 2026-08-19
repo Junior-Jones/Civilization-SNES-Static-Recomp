@@ -1,0 +1,11 @@
+{
+  "call_edge_count": 8939,
+  "claim": "Every normal RTS/RTL finite return set is exactly the union of statically closed caller continuations for all owning procedure specializations. Every call site and continuation is itself inside the closed runtime-context inventory. Special threaded/D4 return mechanics remain separately handled by the generated return-table construction and existing machine regressions.",
+  "format": "civilization-v33-call-return-consistency-v1",
+  "multi_owner_return_site_count": 282,
+  "normal_return_site_count": 2109,
+  "normal_return_target_membership_count": 7834,
+  "procedure_count": 2425,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32"
+}

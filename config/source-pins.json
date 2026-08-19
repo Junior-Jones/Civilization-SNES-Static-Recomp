@@ -1,0 +1,42 @@
+{
+  "format": "civilization-source-pins-v33",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "sources": [
+    {
+      "name": "User-supplied SNES Static Recomp Handbook Version 54 General Edition",
+      "production_authority": false,
+      "role": "method/claims/testing/packaging reference"
+    },
+    {
+      "name": "User-supplied SimCity static recomp source",
+      "production_authority": "architecture only",
+      "role": "completed-core architecture reference; generic licensed Full Static audio ancestry only where provenance retained"
+    },
+    {
+      "name": "User-supplied Top Gear Version 27 source and handbook",
+      "production_authority": false,
+      "role": "static-core organization/fail-closed/oracle workflow reference"
+    },
+    {
+      "location": "https://www.westerndesigncenter.com/wdc/documentation/w65c816s.pdf",
+      "name": "Western Design Center W65C816S datasheet",
+      "production_authority": "documented hardware behavior only",
+      "role": "primary CPU architecture reference"
+    },
+    {
+      "location": "https://github.com/nesdev-org/MesenCE/releases/tag/2.2.1",
+      "name": "MesenCE 2.2.1",
+      "production_authority": false,
+      "role": "post-implementation SNES comparison oracle",
+      "tag_commit": "20ba206cef5ba207c21203176d02cb9f43dda9fb"
+    },
+    {
+      "location": "https://github.com/ares-emulator/ares/releases/tag/v148",
+      "name": "ares v148",
+      "production_authority": false,
+      "role": "secondary implementation cross-check when needed"
+    }
+  ],
+  "version": 33,
+  "version33_note": "Version 33 retains the 103,576-context exact-ROM fixed point while strengthening all 69 finite indirect structural checks, independently recertifying the 17 formerly older-method sites and special return/re-entry classes, and adding separate battery-SRAM plus persistent snapshot support through the shared frontend. Runtime observation, emulator endpoints and other-game code remain non-authoritative."
+}

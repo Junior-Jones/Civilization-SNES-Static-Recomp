@@ -1,0 +1,10 @@
+{
+  "format": "civilization-v06-mesence-profile-v1",
+  "emulator": "MesenCE 2.2.1",
+  "role": "comparison only after independent static implementation",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "trace_frontier": {"pc":"D4:8D72","x":"0004"},
+  "expected_static_route": {"generated_contexts":831,"irq_accepts":41,"completed_rtis":40,"completed_stage_dispatches":21,"dma_runs":14,"dma_bytes":138376,"stage_index":2},
+  "audio_major_1": {"bootstrap":"C0:04E4","upload_bytes":2146,"aram_destination":"0800","entry":"0800"},
+  "runtime_comparison_status": "pending environment dependencies"
+}

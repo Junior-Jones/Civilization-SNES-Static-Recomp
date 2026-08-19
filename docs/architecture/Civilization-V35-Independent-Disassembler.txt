@@ -1,0 +1,32 @@
+Civilization V35 Test - Independent Disassembler Reconciliation
+================================================================
+
+ROM SHA-256: de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32
+Policy: external disassembly is candidate generation only.
+External unique starts: 51,803
+Current unique starts: 102,235
+Common starts: 50,646
+External-only starts: 1,157
+  Inside current instruction bytes: 562
+  SNES header/vector: 13
+  Padding candidates: 0
+  Strict unclassified candidates: 582
+Current-only starts: 51,589
+Strict candidate clusters: 17
+
+Result
+------
+No external-only address is promoted automatically. Strict candidates move
+to context-aware static review; the bounded Mesen run only checks whether any
+appear during the short boot oracle window.
+
+External diagnostic
+-------------------
+65816disasm.exe : cannot disassemble at $24A919 as it is past ROM (size $180000 bytes)
+At line:2 char:318
++ ... 6disasm-auto.err.txt'; 'doauto' | & $exe $rom highrom 2> $err | Set-C ...
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (cannot disassem... $180000 bytes):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+finished auto-analyzing vectors

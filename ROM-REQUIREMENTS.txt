@@ -1,0 +1,8 @@
+Required external ROM: Civilization (USA), unheadered, 1,572,864 bytes
+SHA-256: de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32
+CRC32:   41fdba82
+Internal title: CIVILIZATION
+Mapping: FastROM HiROM (map mode $31)
+Reset vector: $00:804A
+
+The source package does not include the ROM.

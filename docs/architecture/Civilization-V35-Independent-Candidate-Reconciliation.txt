@@ -1,0 +1,21 @@
+Civilization V35 - Independent Candidate Reconciliation
+========================================================
+
+Result: PASS
+Strict candidates: 582
+Classified candidates: 582
+Unresolved candidates: 0
+
+BITPLANE_GRAPHICS_ASSET_DATA: 50
+DORMANT_CODE_AFTER_NONRETURNING_CALL: 4
+GAME_TEXT_DATA: 466
+GRAPHICS_OR_COMPRESSED_ASSET_DATA: 3
+LOOKUP_AND_RESOURCE_INDEX_DATA: 30
+PACKED_LOOKUP_TABLE_DATA: 9
+RESERVED_VECTOR_FILL_DATA: 7
+SERIALIZED_ADDRESS_RECORD_DATA: 13
+
+The two dormant instruction sequences are exact code bytes following
+source-proved nonreturning calls. They are classified but are not promoted
+into the reachable generated core. All remaining candidates are data/assets.
+The bounded Mesen result is confirmation only, never static authority.

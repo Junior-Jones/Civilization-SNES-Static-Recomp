@@ -1,0 +1,40 @@
+/* AUTO-GENERATED compact exact-context AOT shard. */
+#include "civilization_internal.h"
+#include "civilization_generated_core.h"
+#include "civilization_compact_aot.h"
+
+typedef struct CivCompactRecord {uint32_t key;uint16_t parameter_offset;uint16_t template_id;} CivCompactRecord;
+static const CivCompactRecord records[16]={
+  {0x000081B0u,0x0000u,0x07Bu},
+  {0x000081B5u,0x0003u,0x07Bu},
+  {0x000081B9u,0x0006u,0x07Bu},
+  {0x020081B0u,0x0009u,0x07Bu},
+  {0x020081B5u,0x000Cu,0x07Bu},
+  {0x020081B9u,0x000Fu,0x07Bu},
+  {0x040081B0u,0x0012u,0x07Bu},
+  {0x040081B5u,0x0015u,0x07Bu},
+  {0x040081B9u,0x0018u,0x07Bu},
+  {0x0600804Du,0x001Bu,0x07Bu},
+  {0x060081B0u,0x001Eu,0x07Bu},
+  {0x060081B5u,0x0021u,0x07Bu},
+  {0x060081B9u,0x0024u,0x07Bu},
+  {0x0700804Au,0x0027u,0x09Fu},
+  {0x0700804Bu,0x0028u,0x012u},
+  {0x0700804Cu,0x0029u,0x0FFu},
+};
+static const uint32_t parameters[42]={
+  0x00D48148u,0x000000D4u,0x00008148u,0x00C081B5u,0x000000C0u,0x000081B5u,0x00C081BDu,0x000000C0u,
+  0x000081BDu,0x00D48148u,0x000000D4u,0x00008148u,0x00C081B5u,0x000000C0u,0x000081B5u,0x00C081BDu,
+  0x000000C0u,0x000081BDu,0x00D48148u,0x000000D4u,0x00008148u,0x00C081B5u,0x000000C0u,0x000081B5u,
+  0x00C081BDu,0x000000C0u,0x000081BDu,0x00D48000u,0x000000D4u,0x00008000u,0x00D48148u,0x000000D4u,
+  0x00008148u,0x00C081B5u,0x000000C0u,0x000081B5u,0x00C081BDu,0x000000C0u,0x000081BDu,0x0000804Bu,
+  0x0000804Cu,0x0000804Du,
+};
+int civilization_core_group_00020(CivRecomp *i,uint32_t key){
+  unsigned lo=0u,hi=16u;
+  while(lo<hi){unsigned mid=lo+(hi-lo)/2u;uint32_t found=records[mid].key;
+    if(key<found)hi=mid;else if(key>found)lo=mid+1u;
+    else return civ_compact_aot_execute(i,records[mid].template_id,parameters+records[mid].parameter_offset);
+  }
+  return -1;
+}

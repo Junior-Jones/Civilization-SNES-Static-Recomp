@@ -1,0 +1,24 @@
+{
+  "comparison_only": true,
+  "exact_rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "forbidden_outputs": [
+    "generated source",
+    "dispatch contexts",
+    "game constants",
+    "dynamic target imports",
+    "production endpoint state"
+  ],
+  "primary_checks": [
+    "reset starts at 00:804A",
+    "native transition and JML D4:8000",
+    "write $4200=$00",
+    "write $2100=$80",
+    "write $420D=$01",
+    "compare only through independently implemented pre-MVN boundary"
+  ],
+  "stop_before_unimplemented": [
+    "MVN at D4:802E or D4:8050"
+  ],
+  "tool": "MesenCE",
+  "version": "2.2.1"
+}

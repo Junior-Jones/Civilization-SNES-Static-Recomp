@@ -1,0 +1,369 @@
+{
+  "analysis_sha256": "16eca421b199951f13e8133ea58c5d84e8b6cdeaffa0921efb053257b5fb7daf",
+  "claim": "All 69 indexed-indirect sites have exact producer/value-set completeness assembled from independent strong proofs, the legacy second-method audit, or exact source-window/writer/record-format checks. Every case is re-read from exact ROM and every target belongs to the closed graph.",
+  "errors": [],
+  "exact_explicit_site_count": 19,
+  "explicit_proofs": [
+    {
+      "address": "C0:24F9",
+      "case_count": 7,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ],
+      "selector_window": "C0:24E3+25",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C2:4F5C",
+      "case_count": 6,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "selector_window": "C2:4F52+13",
+      "writer_identity_count": 11
+    },
+    {
+      "address": "C2:5016",
+      "case_count": 35,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "selector_window": "C2:500E+11",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C2:5354",
+      "case_count": 35,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "selector_window": "C2:534C+11",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C2:5937",
+      "case_count": 4,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "selector_window": "C2:592B+15",
+      "writer_identity_count": 8
+    },
+    {
+      "address": "C2:5FF7",
+      "case_count": 10,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "selector_window": "C2:5FF4+6",
+      "writer_identity_count": 11
+    },
+    {
+      "address": "C2:EC97",
+      "case_count": 5,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "selector_window": "C2:EC8D+13",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C3:0194",
+      "case_count": 9,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "selector_window": "C3:018E+9",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C3:0266",
+      "case_count": 6,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "selector_window": "C3:0260+9",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C3:0435",
+      "case_count": 5,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "selector_window": "C3:042F+9",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C3:08B8",
+      "case_count": 6,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "selector_window": "C3:08B2+9",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "C3:5BBC",
+      "case_count": 9,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "selector_window": "C3:5BB4+11",
+      "writer_identity_count": 1
+    },
+    {
+      "address": "C3:5BE1",
+      "case_count": 9,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "selector_window": "C3:5BD9+11",
+      "writer_identity_count": 1
+    },
+    {
+      "address": "D0:CF4A",
+      "case_count": 9,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "selector_window": "D0:CF40+13",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "D0:D441",
+      "case_count": 6,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "selector_window": "D0:D437+13",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "D0:D732",
+      "case_count": 4,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "selector_window": "D0:D728+13",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "D0:D802",
+      "case_count": 4,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "selector_window": "D0:D7F8+13",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "D0:D86E",
+      "case_count": 4,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "selector_window": "D0:D864+13",
+      "writer_identity_count": 0
+    },
+    {
+      "address": "D0:D91D",
+      "case_count": 4,
+      "producer_value_set_complete": true,
+      "runtime_x": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "selector_window": "D0:D913+13",
+      "writer_identity_count": 0
+    }
+  ],
+  "format": "civilization-v35-indirect-producer-completeness-v1",
+  "generalized_audit_sha256": "2a91c5aeaf57d9d33b38b608d5520b0074d1f1b3ecce21c701c3edd88ef42ace",
+  "independent_legacy_site_count": 17,
+  "legacy_audit_sha256": "f65dd391f13ac79c60340539a17232cbf3b5272413447a5b0a4b08f4b7548908",
+  "prior_strong_site_count": 69,
+  "producer_value_set_complete_site_count": 69,
+  "proof_sha256": "4797e5c2ce5ab5737a39fef82028c1c3a0915e5ff1eff1df4e27fcf39833f5aa",
+  "rectangle_list_count": 13,
+  "result": "PASS",
+  "rom_sha256": "de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32",
+  "runtime_observation_used_as_proof": false,
+  "site_count": 69,
+  "uncovered_sites": []
+}
