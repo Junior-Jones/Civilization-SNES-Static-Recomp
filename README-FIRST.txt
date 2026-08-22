@@ -1,4 +1,4 @@
-Civilization (SNES) Static Recomp 1.1.0
+Civilization (SNES) Static Recomp 1.1.1
 
 This is a native Windows static recompilation frontend and game-specific core
 for Civilization on the Super Nintendo Entertainment System.
@@ -8,7 +8,9 @@ Rom folder beside Launcher.exe, then use Browse and Run. Required SHA-256:
 
   de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32
 
-Version 1.1.0 completes the architecture improvement roadmap: opaque lifecycle,
+Version 1.1.1 retains the completed architecture improvement roadmap and adds a
+non-locking accessible information window plus Help-menu access to Getting
+Started, launcher shortcuts and About. The core continues to provide opaque lifecycle,
 one headed/headless frame path, explicit host hooks, per-scanline presentation,
 checked Full Static audio ownership, canonical SHA-256 snapshots, reduced core
 state, separated machine subsystems, optional test dependencies and integrated

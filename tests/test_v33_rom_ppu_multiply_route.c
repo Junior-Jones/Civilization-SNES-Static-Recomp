@@ -32,7 +32,8 @@ int main(int argc,char **argv)
     /* Exact closed context C2:4353 E0M1X0.  Choose A=5 and $1926=$90 so
        the ROM sequence computes (($90>>4)-2) + (5*13) = 7+65 = 72. */
     c.cpu.pbr=0xC2u; c.cpu.pc=0x4353u; c.cpu.dbr=0u; c.cpu.e=0u;
-    c.cpu.p=(uint8_t)((c.cpu.p|CIV_P_M)&(uint8_t)~CIV_P_X);
+    c.cpu.p=(uint8_t)(c.cpu.p|CIV_P_M);
+    c.cpu.p=(uint8_t)(c.cpu.p&(UINT8_MAX^CIV_P_X));
     c.cpu.a=0x0005u; c.cpu.x=0u; c.wram[0x1926u]=0x90u;
     while(!c.failed && !(c.cpu.pbr==0xC2u&&c.cpu.pc==0x4370u) && steps<32u) {
         if(!civ_generated_core_step(&c)){free(rom);return 5;}

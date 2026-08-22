@@ -1,4 +1,4 @@
-# Civilization 1.1.0 provenance
+# Civilization 1.1.1 provenance
 
 The exact target ROM is 1,572,864 bytes with SHA-256
 `de2d5a952096c5f50368b9270d342aa6e7a39007ffbec27117e182e30ef4cf32`.
@@ -29,4 +29,4 @@ architecture reference. Full Static audio provenance/licenses remain under
 `static-recomp/static-audio/civilization-bapu-aot/`.
 
 Historical milestone receipts remain documentation only and are superseded by
-the current 1.1.0 closure and audit reports.
+the current 1.1.1 closure and audit reports.

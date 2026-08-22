@@ -1,4 +1,4 @@
-# Civilization (SNES) Static Recomp 1.1.0
+# Civilization (SNES) Static Recomp 1.1.1
 
 Native Windows static recompilation frontend and game-specific core for
 Civilization on the Super Nintendo Entertainment System.
@@ -24,7 +24,7 @@ The launcher links SDL statically, so no SDL DLL is required beside
 `Launcher.exe`. Tests, Python and the exact ROM are not production runtime
 dependencies.
 
-Version 1.1.0 retains 103,584 exact generated CPU contexts, checked Full Static
+Version 1.1.1 retains 103,584 exact generated CPU contexts, checked Full Static
 audio authority and fail-closed dispatch. See
 `docs/PART-05-THROUGH-12-COMPLETION-REPORT.txt` for the completed architecture
 work and validation evidence.

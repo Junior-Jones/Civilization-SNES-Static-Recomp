@@ -344,7 +344,7 @@ int civilization_recomp_write_diagnostic_log(
         return 0;
     }
     (void)fprintf(file,
-        "Civilization Static Recomp 1.1.0 - Screenshot Static-Core Log\r\n"
+        "Civilization Static Recomp 1.1.1 - Screenshot Static-Core Log\r\n"
         "format=civilization-v35-screenshot-static-log-v1\r\n"
         "screenshot=%s\r\n"
         "authority=closed-exact-ROM-static-PBR-PC-E-M-X\r\n"

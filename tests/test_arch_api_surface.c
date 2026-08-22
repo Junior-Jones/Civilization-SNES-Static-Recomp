@@ -3,6 +3,11 @@
 #include <stddef.h>
 #include <stdint.h>
 
+_Static_assert(CIV_ROM_SIZE == 1572864u, "unexpected ROM size");
+_Static_assert(CIV_FRAME_WIDTH == 256u, "unexpected frame width");
+_Static_assert(CIV_FRAME_HEIGHT == 224u, "unexpected frame height");
+_Static_assert(CIV_SRAM_SIZE == 32768u, "unexpected SRAM size");
+
 int main(void)
 {
     CivRecomp *instance;
@@ -19,22 +24,20 @@ int main(void)
     void (*input)(CivRecomp *, unsigned, uint16_t) = civ_set_controller_input;
     void (*pcm)(CivRecomp *, CivHostPcmSink, void *) = civ_v20_set_host_pcm_sink;
 
-    if (CIV_ROM_SIZE != 1572864u || CIV_FRAME_WIDTH != 256u ||
-        CIV_FRAME_HEIGHT != 224u || CIV_SRAM_SIZE != 32768u) return 1;
     if (!(verify && create && destroy && attach && reset && run && render &&
-          framebuffer && save && load && input && pcm)) return 2;
+          framebuffer && save && load && input && pcm)) return 1;
     instance = civ_create(NULL, 0u);
     if (!instance || civ_frame_count(instance) != 0u ||
         civ_instruction_count(instance) != 0u || civ_master_clock(instance) != 0u ||
         civ_has_failed(instance) || civ_audio_active(instance) ||
         !civ_run_to_frame(instance, 0u, 0u)) {
         civ_destroy(instance);
-        return 3;
+        return 2;
     }
     civ_reset(instance);
     if (civ_frame_count(instance) != 0u || civ_has_failed(instance)) {
         civ_destroy(instance);
-        return 4;
+        return 3;
     }
     civ_destroy(instance);
     civ_destroy(NULL);
