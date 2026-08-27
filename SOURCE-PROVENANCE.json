@@ -1,5 +1,6 @@
 {
   "files": {
+    ".github/workflows/windows-ci.yml": "83b06059aee6f72c80cfb88d9df2b797b0d41083f7a0c7a93a258e3280e34ead",
     ".gitignore": "3fff922ef528175c5319a70df52bfcbddbe494694532fbd68722b5ab570e1879",
     "CMakeLists.txt": "edeaeed55083d44ad0f44726f17ff897d137d89c0b95664ef7d3c9ecd96cc5d9",
     "README-FIRST.txt": "344fff3c962bc99ef75fcc614eccbbc1f425c438acb53118fdd1e2051928ffad",
