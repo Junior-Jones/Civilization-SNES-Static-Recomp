@@ -83,6 +83,12 @@ if(WIN32 AND CIVILIZATION_BUILD_WINDOWS_LAUNCHER)
         COMMAND "${CMAKE_COMMAND}" -E copy_if_different
             "${CIVILIZATION_SDL_SOURCE_DIR}/LICENSE.txt"
             "$<TARGET_FILE_DIR:civilization-launcher>/SDL-LICENSE.txt"
+        COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+            "${CMAKE_CURRENT_SOURCE_DIR}/third_party/SDL_GameControllerDB-LICENSE.txt"
+            "$<TARGET_FILE_DIR:civilization-launcher>/SDL_GameControllerDB-LICENSE.txt"
+        COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+            "${CMAKE_CURRENT_SOURCE_DIR}/THIRD-PARTY-NOTICES.txt"
+            "$<TARGET_FILE_DIR:civilization-launcher>/THIRD-PARTY-NOTICES.txt"
         VERBATIM)
 endif()
 
