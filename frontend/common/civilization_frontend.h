@@ -32,7 +32,7 @@ void civ_frontend_play(CivFrontend *f);
 void civ_frontend_set_controller1(CivFrontend *f,uint16_t mask);
 int civ_frontend_run(CivFrontend *f,uint64_t instructions);
 int civ_frontend_run_to_frame(CivFrontend *f,uint64_t target_frame,uint64_t instruction_budget);
-/* Persistent slots are intentionally 1-based, matching the SimCity launcher. */
+/* Persistent slots are intentionally 1-based to match the user-facing slots 1-5. */
 int civ_frontend_snapshot_save(CivFrontend *f,unsigned slot);
 int civ_frontend_snapshot_load(CivFrontend *f,unsigned slot);
 int civ_frontend_snapshot_exists(const CivFrontend *f,unsigned slot);

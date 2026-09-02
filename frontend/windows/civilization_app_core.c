@@ -16,6 +16,7 @@ struct CivilizationRecomp {
     size_t pcm_read;
     size_t pcm_count;
     int audio_overflow;
+    uint64_t audio_frames_dropped;
     char error[192];
 };
 
@@ -48,6 +49,7 @@ static void pcm_sink(void *context, int16_t left, int16_t right)
             (instance->pcm_read + 1u) % APP_PCM_CAPACITY_FRAMES;
         instance->pcm_count--;
         instance->audio_overflow = 1;
+        instance->audio_frames_dropped++;
     }
     write = (instance->pcm_read + instance->pcm_count) %
             APP_PCM_CAPACITY_FRAMES;
@@ -72,8 +74,21 @@ static uint64_t frame_budget(uint32_t frames)
            UINT64_C(2000000);
 }
 
+static int drain_static_audio(CivilizationRecomp *instance)
+{
+    int16_t samples[512u*2u];uint8_t known[512u];size_t available;
+    if(!instance)return 0;
+    while((available=civ_audio_available(instance->frontend.core))!=0u){
+        size_t request=available<512u?available:512u;
+        if(civ_audio_read(instance->frontend.core,samples,known,request)!=request)return 0;
+    }
+    return civ_audio_overflow_count(instance->frontend.core)==0u;
+}
+
 static int advance_frames(CivilizationRecomp *instance, uint16_t input_mask,
                           uint32_t frame_count,
+                          CivilizationRecompAudioProgressCallback progress,
+                          void *progress_opaque,
                           CivilizationRecompFrameResult *result,
                           int render)
 {
@@ -90,7 +105,9 @@ static int advance_frames(CivilizationRecomp *instance, uint16_t input_mask,
     ok=1;
     for(completed=0u;completed<frame_count;++completed){
         if(!civ_run_frame(instance->frontend.core,instance->frontend.controller1,
-                          frame_budget(1u),render,&frame)){ok=0;break;}
+                          frame_budget(1u),render,&frame)||
+           !drain_static_audio(instance)){ok=0;break;}
+        if(progress)progress(instance,progress_opaque);
     }
     result->route_continued = (uint8_t)(ok != 0);
     result->end_frame = (uint32_t)civ_frame_count(instance->frontend.core);
@@ -179,7 +196,15 @@ int civilization_recomp_advance(CivilizationRecomp *instance,
                                  uint16_t input_mask, uint32_t frame_count,
                                  CivilizationRecompFrameResult *result)
 {
-    return advance_frames(instance, input_mask, frame_count, result, 1);
+    return advance_frames(instance,input_mask,frame_count,NULL,NULL,result,1);
+}
+
+int civilization_recomp_advance_streamed(
+    CivilizationRecomp *instance,uint16_t input_mask,uint32_t frame_count,
+    CivilizationRecompAudioProgressCallback progress,void *opaque,
+    CivilizationRecompFrameResult *result)
+{
+    return advance_frames(instance,input_mask,frame_count,progress,opaque,result,1);
 }
 
 int civilization_recomp_advance_headless(CivilizationRecomp *instance,
@@ -187,13 +212,18 @@ int civilization_recomp_advance_headless(CivilizationRecomp *instance,
                                           uint32_t frame_count,
                                           CivilizationRecompFrameResult *result)
 {
-    return advance_frames(instance, input_mask, frame_count, result, 0);
+    return advance_frames(instance,input_mask,frame_count,NULL,NULL,result,0);
 }
 
 const uint32_t *civilization_recomp_frame_bgra(
     const CivilizationRecomp *instance)
 {
     return instance ? civ_get_framebuffer_rgba(instance->frontend.core) : NULL;
+}
+
+uint32_t civilization_recomp_frame_width(const CivilizationRecomp *instance)
+{
+    return instance?CIVILIZATION_RECOMP_FRAME_WIDTH:0u;
 }
 
 uint32_t civilization_recomp_current_frame(const CivilizationRecomp *instance)
@@ -250,6 +280,11 @@ int civilization_recomp_audio_overflowed(
 void civilization_recomp_audio_clear_overflow(CivilizationRecomp *instance)
 {
     if (instance) instance->audio_overflow = 0;
+}
+
+uint64_t civilization_recomp_audio_dropped_frames(const CivilizationRecomp *instance)
+{
+    return instance?instance->audio_frames_dropped:0u;
 }
 
 int civilization_recomp_snapshot_save(const CivilizationRecomp *instance,
@@ -344,7 +379,7 @@ int civilization_recomp_write_diagnostic_log(
         return 0;
     }
     (void)fprintf(file,
-        "Civilization Static Recomp 1.1.1 - Screenshot Static-Core Log\r\n"
+        "Civilization Static Recomp 1.2.0 - Screenshot Static-Core Log\r\n"
         "format=civilization-v35-screenshot-static-log-v1\r\n"
         "screenshot=%s\r\n"
         "authority=closed-exact-ROM-static-PBR-PC-E-M-X\r\n"

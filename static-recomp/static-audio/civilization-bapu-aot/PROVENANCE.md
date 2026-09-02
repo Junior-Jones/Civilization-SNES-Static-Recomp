@@ -1,26 +1,10 @@
 # Civilization Full Static S-SMP / S-DSP provenance
 
-This directory is the current Version 30 **Full Static** audio lane for Civilization (SNES).
-It was adapted from the complete SimCity static-recomp reference supplied with the
-project.  The hardware implementation is a separately namespaced copy of the
-Snes9x BAPU S-SMP and Shay Green `snes_spc` S-DSP sources retained under their
-original licenses.
+Civilization's production audio lane contains two statically owned parts:
 
-The production build defines `SC_SMP_AOT` and `SC_STATIC_SDSP_PRIMITIVES`.
-The generic SPC700 opcode switch is therefore excluded: execution is admitted only
-when the exact current PC/opcode pair is present in the generated Civilization
-initial-driver AOT authority, and the dispatcher contains only opcode bodies used
-by that authority. Unknown PCs, opcode mismatches, unemitted opcodes, and writes to
-statically owned S-SMP code fail closed. There is no interpreter fallback.
+- The S-SMP executes only exact PC/opcode pairs in the generated Civilization authority. Unknown PCs, opcode mismatches, unemitted opcodes, writes to compiled code, and genuinely unknown ARAM reads fail closed. Its deterministic power-on model initializes all 64 KiB of ARAM to zero and marks that initialized state known, matching the inherited SimCity/Top Gear/Snes9x static lane. Its SPC700 instruction semantics were derived from the Snes9x BAPU implementation retained under `SNES9X-LICENSE.txt`; no generic opcode interpreter is compiled into production.
+- The S-DSP is the project's fixed 32-phase SNES hardware program in `civilization-project-dsp`. It was adapted from the project-owned Jungle Strike static DSP, operates directly on Civilization ARAM/register state, tracks ARAM and output knownness, and produces PCM into a core-owned bounded FIFO. The previous `snes_spc` runtime S-DSP files have been removed.
 
-The Civilization AOT authority is regenerated from
-`static-recomp/generated/civilization_v08_spc700_closure.json`, whose 948 driver
-instruction starts were proved from the exact Civilization USA ROM, plus the fixed
-64-byte SNES IPL ROM instruction starts needed to reach the uploaded epoch from
-power-on. The code-byte bitmap is generated only from proved Civilization driver
-instruction bytes, not from arbitrary uploaded data.
+The host advances both processors from the native SNES master-clock timeline and pulls stereo frames plus per-frame knownness through `civ_audio_read`. FIFO availability and overflow counts are explicit public diagnostics; the frontend is not permitted to invent or silently discard core timing.
 
-The S-DSP lane uses the static 32-phase synthesis program and static-only renamed
-hardware primitives from the supplied SimCity reference. It consumes the real
-Civilization ARAM and S-DSP register state reached by the AOT S-SMP and emits PCM;
-it does not emulate or interpret S-CPU program code.
+The checked-in exact S-SMP authority contains 948 Civilization uploaded-driver instruction starts and 32 fixed SNES IPL instruction starts. `tools/audio/rebuild_civilization_smp_authority.py` regenerates its governing manifest directly from the frozen lookup, dispatch, and code-byte bitmap and verifies those three authorities agree.

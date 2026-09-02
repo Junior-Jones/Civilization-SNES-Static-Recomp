@@ -1,6 +1,6 @@
-# Civilization 1.1.1 Windows build
+# Civilization 1.2.0 Windows build
 
-Civilization 1.1.1 builds with Visual Studio 2022 and the Windows 10/11 SDK.
+Civilization 1.2.0 builds with Visual Studio 2022 and the Windows 10/11 SDK.
 Warnings are errors. CMake downloads the pinned SDL 3.4.10 source used by the
 native presentation, audio and gamepad layers; the release links SDL statically.
 
@@ -25,6 +25,6 @@ cmake --build build-msvc --config Release --target civilization-headless --paral
 ```
 
 Configure with `CIVILIZATION_TEST_ROM` pointing to the exact external ROM to
-enable the complete Release test set. The current gate contains 52 tests. The
+enable the complete Release test set. The current gate contains 53 tests. The
 deterministic Mesen/static cold-boot-to-gameplay certification is documented in
 `CIVILIZATION-STATIC-CORE-AUDIT-2026-08-19.txt`.

@@ -13,6 +13,10 @@ typedef struct CivV20AudioStatus {
     uint64_t smp_instructions;
     uint64_t aot_validated_instructions;
     uint64_t pcm_frames;
+    uint64_t pcm_known_frames;
+    uint64_t pcm_unknown_frames;
+    uint64_t pcm_overflows;
+    size_t pcm_available;
     uint64_t pcm_fnv1a64;
     uint64_t nonzero_pcm_frames;
     uint64_t first_nonzero_pcm_frame;

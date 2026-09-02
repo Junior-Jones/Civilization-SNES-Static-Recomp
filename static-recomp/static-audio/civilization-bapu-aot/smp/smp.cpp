@@ -40,6 +40,11 @@ void SMP::reset(){
   sc_aot_reset_metrics();
 #endif
   for(unsigned n=0;n<=0xffff;n++)apuram[n]=0;
+  /* This static core defines power-on ARAM as all zero, as did the inherited
+     SimCity/Top Gear/Snes9x lane.  Those bytes are initialized state, not
+     unknown data.  Marking them unknown caused valid driver scratch reads
+     (first observed at $040C after Start) to fail closed incorrectly. */
+  std::memset(aram_known,0xff,8192u);
   opcode_number=0;opcode_cycle=0;instruction_count=0;regs.pc=0xffc0;regs.sp=0xef;
   regs.B.a=0;regs.x=0;regs.B.y=0;regs.p=0x02;
   status.iplrom_enable=true;status.dsp_addr=0;status.ram00f8=status.ram00f9=0;
@@ -48,6 +53,6 @@ void SMP::reset(){
   timer0.stage2_ticks=timer1.stage2_ticks=timer2.stage2_ticks=0;
   timer0.stage3_ticks=timer1.stage3_ticks=timer2.stage3_ticks=0;
 }
-SMP::SMP(){apuram=new uint8[64*1024];}
-SMP::~SMP(){delete[] apuram;}
+SMP::SMP(){apuram=new uint8[64*1024];aram_known=new uint8[8192];}
+SMP::~SMP(){delete[] aram_known;delete[] apuram;}
 }

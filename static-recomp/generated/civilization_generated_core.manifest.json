@@ -1,7 +1,7 @@
 {
   "analysis_manifest_sha256": "16eca421b199951f13e8133ea58c5d84e8b6cdeaffa0921efb053257b5fb7daf",
   "artificial_graph_cap": null,
-  "base_semantics_generator_sha256": "4a7980397932739be826f522f77b957b197ca9ee35e1f62364de6f3160bd42d8",
+  "base_semantics_generator_sha256": "2b1720dbe09ef0fc30b76a430e67aa7a468e02c69639e44064e5159b71498677",
   "compacted_identical_body_groups": 1304,
   "compacted_redundant_context_bodies": 1338,
   "dispatch_layout": "1KiB-address-shards + shared finite return tables + identical same-address body folding",
@@ -291,8 +291,8 @@
     "civilization_core_group_0352C.c": "c7beaf274c6eabaa022e47bb3b30db65e52582df433273ec020eb2f408f9f5bc",
     "civilization_core_group_0352D.c": "0fed111b2103c4d73c68104578cdc2d5a10ac815c4f7bc9ff6017df00632bca7"
   },
-  "generator_sha256": "b524ebb1aa0a4632b5b9f44532a84573344dbfbadede0226839a4af2f3de1d4d",
-  "indirect_proof_sha256": "4797e5c2ce5ab5737a39fef82028c1c3a0915e5ff1eff1df4e27fcf39833f5aa",
+  "generator_sha256": "4b0a5ed4f4c8b0340de2d10119869326e2e7787f3febff38bb4f6e8da83e5f96",
+  "indirect_proof_sha256": "c2644a2fb8124e32a9c9e22c94802c504fad16bd6ec85385e5f3e0a09a59428d",
   "indirect_proved_site_count": 69,
   "return_proof_site_count": 2117,
   "return_proof_target_count": 7889,
@@ -302,7 +302,7 @@
   "runtime_emulator_fallback": false,
   "runtime_learning": false,
   "runtime_opcode_decode": false,
-  "semantics_generator_sha256": "a62fae74fffb0dda1a3952e4174e7c4a3ee5b1e4723317b5fd0e2b75ccd57a4d",
+  "semantics_generator_sha256": "7f2054851bab49ed110dccdcbd0185a17a4d98fae774c00e963fa27406904440",
   "static_analysis_frontier_count": 0,
   "work_queue_empty": true
 }

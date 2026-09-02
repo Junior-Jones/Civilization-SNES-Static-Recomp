@@ -1,4 +1,4 @@
-# Civilization 1.1.1 Linux build and static gate
+# Civilization 1.2.0 Linux build and static gate
 
 The Civilization ROM is external and must match `ROM-REQUIREMENTS.txt`.
 
@@ -9,7 +9,7 @@ cmake --build build -j2
 ctest --test-dir build --output-on-failure
 ```
 
-The 1.1.1 release gate contains **52 tests**. It retains the target-bounded
+The 1.2.0 release gate contains **53 tests**. It retains the target-bounded
 machine, CPU, PPU, DMA/HDMA, controller, ROM-identity, lifecycle, bus-surface,
 Full Static audio and finite-state checks and adds the current proof/persistence
 acceptance gates:
@@ -32,10 +32,10 @@ acceptance gates:
   master-clock/framebuffer/Full-Static-audio state restored; corrupt snapshots
   are rejected.
 
-Both GCC and Clang Release builds must pass 52/52 before source freeze. A
+Both GCC and Clang Release builds must pass 53/53 before source freeze. A
 release source ZIP is then certified by clean extraction of that exact archive,
 internal source-hash verification, fresh GCC configure/build against the
-external ROM and another 52/52 CTest pass.
+external ROM and another 53/53 CTest pass.
 
 Build directories, binaries, object files, ROM/save/snapshot files, nested
 archives, Python caches and working-machine absolute paths are forbidden from

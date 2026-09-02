@@ -190,6 +190,22 @@ uint64_t civ_audio_pcm_frames(const CivRecomp *instance) {
     return instance ? instance->v20_pcm_frame_count : 0u;
 }
 
+size_t civ_audio_available(const CivRecomp *instance) {
+    return instance && instance->v20_full_static_audio_acquired ?
+           civ_v20_audio_available_internal(instance) : 0u;
+}
+
+size_t civ_audio_read(CivRecomp *instance,int16_t *out,uint8_t *known,
+                      size_t capacity) {
+    if(!instance||!instance->v20_full_static_audio_acquired)return 0u;
+    return civ_v20_audio_read_internal(instance,out,known,capacity);
+}
+
+uint64_t civ_audio_overflow_count(const CivRecomp *instance) {
+    return instance&&instance->v20_full_static_audio_acquired?
+           civ_v20_audio_overflow_internal(instance):0u;
+}
+
 int civ_run_to_frame(CivRecomp *instance, uint64_t target_frame,
                      uint64_t instruction_budget) {
     int ok;

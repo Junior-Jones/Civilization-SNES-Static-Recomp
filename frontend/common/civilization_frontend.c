@@ -15,6 +15,17 @@
 
 #define CIV_SRAM_FLUSH_INTERVAL_FRAMES 120u
 
+static int drain_core_pcm(CivRecomp *core)
+{
+    int16_t pcm[512u*2u];uint8_t known[512u];size_t available;
+    if(!core)return 0;
+    while((available=civ_audio_available(core))!=0u){
+        size_t request=available<512u?available:512u;
+        if(civ_audio_read(core,pcm,known,request)!=request)return 0;
+    }
+    return civ_audio_overflow_count(core)==0u;
+}
+
 static void frontend_error(CivFrontend *f,char *error,size_t error_cap,const char *text)
 {
     if(!text)text="";
@@ -189,6 +200,7 @@ int civ_frontend_run(CivFrontend *f, uint64_t instructions)
     if(!f||!f->loaded||f->paused)return 0;
     civ_set_controller_input(f->core,0u,f->controller1);
     ok=civ_run_static(f->core,instructions);
+    if(ok&&!drain_core_pcm(f->core))return 0;
     if(!maybe_flush_sram(f))return 0;
     return ok;
 }
@@ -198,7 +210,7 @@ int civ_frontend_run_to_frame(CivFrontend *f, uint64_t target_frame, uint64_t in
     CivFrameResult frame;
     if(!f||!f->loaded||f->paused)return 0;
     while(civ_frame_count(f->core)<target_frame&&!civ_has_failed(f->core))
-        if(!civ_run_frame(f->core,f->controller1,instruction_budget,0,&frame))return 0;
+        if(!civ_run_frame(f->core,f->controller1,instruction_budget,0,&frame)||!drain_core_pcm(f->core))return 0;
     if(!maybe_flush_sram(f))return 0;
     return !civ_has_failed(f->core)&&civ_frame_count(f->core)>=target_frame;
 }

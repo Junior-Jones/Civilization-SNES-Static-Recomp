@@ -42,15 +42,16 @@ set(CIVILIZATION_CURRENT_CORE_SOURCES
 
 # Full Static S-SMP/S-DSP is the only production audio authority.
 add_library(civilization-static-apu STATIC
+    static-audio/civilization-project-dsp/civilization_dsp.c
     static-audio/civilization-bapu-aot/sc_static_apu.cpp
     static-audio/civilization-bapu-aot/smp/smp.cpp
     static-audio/civilization-bapu-aot/dsp/sdsp.cpp)
 target_include_directories(civilization-static-apu PUBLIC
-    "${CMAKE_CURRENT_SOURCE_DIR}/static-audio/civilization-bapu-aot")
+    "${CMAKE_CURRENT_SOURCE_DIR}/static-audio/civilization-bapu-aot"
+    "${CMAKE_CURRENT_SOURCE_DIR}/static-audio/civilization-project-dsp/include")
 target_compile_definitions(civilization-static-apu PRIVATE
     SC_SMP_AOT=1
-    SC_STATIC_SDSP_PRIMITIVES=1
-    SCStaticSPC_DSP_CUSTOM_RUN=1)
+    SC_STATIC_SDSP_PRIMITIVES=1)
 if(NOT MSVC)
     target_compile_options(civilization-static-apu PRIVATE
         -Wall -Wextra -Wpedantic

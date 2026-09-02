@@ -1,6 +1,6 @@
-# Civilization 1.1.1 static-console boundaries
+# Civilization 1.2.0 static-console boundaries
 
-Civilization 1.1.1 is one static SNES console specialized to the exact Civilization
+Civilization 1.2.0 is one static SNES console specialized to the exact Civilization
 USA ROM. The boundary is not a screenshot, frame number or menu. Generated
 S-CPU authority is the complete current offline fixed point: 103,584 exact
 PBR:PC:E:M:X contexts, 69 finite indirect sites, zero analysis frontiers and an

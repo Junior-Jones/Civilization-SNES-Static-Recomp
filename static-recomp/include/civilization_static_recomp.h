@@ -429,6 +429,10 @@ uint64_t civ_master_clock(const CivRecomp *instance);
 int civ_has_failed(const CivRecomp *instance);
 int civ_audio_active(const CivRecomp *instance);
 uint64_t civ_audio_pcm_frames(const CivRecomp *instance);
+size_t civ_audio_available(const CivRecomp *instance);
+size_t civ_audio_read(CivRecomp *instance,int16_t *interleaved_stereo,
+                      uint8_t *frame_known,size_t capacity_frames);
+uint64_t civ_audio_overflow_count(const CivRecomp *instance);
 int civ_run_to_frame(CivRecomp *instance, uint64_t target_frame,
                      uint64_t instruction_budget);
 void civ_set_host_hooks(CivRecomp *instance,const CivHostHooks *hooks);

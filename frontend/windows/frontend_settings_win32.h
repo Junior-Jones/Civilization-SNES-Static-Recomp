@@ -11,10 +11,10 @@
 #define CIVILIZATION_INPUT_SOURCE_GAMEPAD 1
 
 typedef enum CivilizationWinBindingAction {
-    SC_WIN_BIND_UP = 0, SC_WIN_BIND_DOWN, SC_WIN_BIND_LEFT, SC_WIN_BIND_RIGHT,
-    SC_WIN_BIND_SNES_B, SC_WIN_BIND_SNES_A, SC_WIN_BIND_SNES_Y,
-    SC_WIN_BIND_SNES_X, SC_WIN_BIND_SNES_L, SC_WIN_BIND_SNES_R,
-    SC_WIN_BIND_START, SC_WIN_BIND_SELECT
+    CIVILIZATION_WIN_BIND_UP = 0, CIVILIZATION_WIN_BIND_DOWN, CIVILIZATION_WIN_BIND_LEFT, CIVILIZATION_WIN_BIND_RIGHT,
+    CIVILIZATION_WIN_BIND_SNES_B, CIVILIZATION_WIN_BIND_SNES_A, CIVILIZATION_WIN_BIND_SNES_Y,
+    CIVILIZATION_WIN_BIND_SNES_X, CIVILIZATION_WIN_BIND_SNES_L, CIVILIZATION_WIN_BIND_SNES_R,
+    CIVILIZATION_WIN_BIND_START, CIVILIZATION_WIN_BIND_SELECT
 } CivilizationWinBindingAction;
 
 typedef struct CivilizationFrontendSettingsWin32 {
@@ -22,11 +22,13 @@ typedef struct CivilizationFrontendSettingsWin32 {
     int pause_on_focus_loss;
     int auto_run_on_load;
     int fullscreen_on_play;
-    int show_status_text;
+    int show_fps_counter;
+    int ntsc_frame_lock;
+    int widescreen;
     int snapshot_slot;
     int input_source;
     int input_source_saved;
-    int getting_started_shown;
+    int welcome_shown;
     UINT bindings[CIVILIZATION_WIN_BINDING_COUNT];
     int gamepad_bindings[CIVILIZATION_WIN_BINDING_COUNT];
 } CivilizationFrontendSettingsWin32;

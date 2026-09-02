@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(civilization_snes_static_recomp_v1_1_0 C CXX)
+project(civilization_snes_static_recomp_v1_2_0 C CXX)
 
 option(CIVILIZATION_BUILD_WINDOWS_LAUNCHER
     "Build the native Windows Launcher and its SDL dependency" ON)
@@ -57,8 +57,8 @@ if(WIN32 AND CIVILIZATION_BUILD_WINDOWS_LAUNCHER)
         frontend/windows/civilization_app_win32.c
         frontend/windows/civilization_app_core.c
         frontend/windows/launcher_version.rc
-        frontend/windows/audio_output_winmm.c
-        frontend/windows/audio_recorder_win32.c
+        frontend/windows/civilization_audio_output_dsound_win32.c
+        frontend/windows/civilization_audio_resampler.c
         frontend/windows/frontend_settings_win32.c
         third_party/civilization-gamepad/gamepad_input_win32.c)
     target_include_directories(civilization-launcher PRIVATE
@@ -70,7 +70,7 @@ if(WIN32 AND CIVILIZATION_BUILD_WINDOWS_LAUNCHER)
         UNICODE _UNICODE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
     target_link_libraries(civilization-launcher PRIVATE
         civilization-frontend-common SDL3::SDL3-static
-        winmm user32 gdi32 comdlg32 comctl32 shell32)
+        user32 gdi32 comdlg32 comctl32 shell32 dsound dxguid winmm)
     if(MINGW)
         target_link_options(civilization-launcher PRIVATE -municode)
     endif()
@@ -239,6 +239,11 @@ add_test(NAME v33-static-audio-authority
     COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tools/testing/audit_v33_static_audio_authority.py"
             --project "${CMAKE_CURRENT_SOURCE_DIR}"
             --out "${CMAKE_CURRENT_BINARY_DIR}/v33-static-audio-authority.json")
+add_test(NAME civilization-smp-governing-manifest
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tools/audio/rebuild_civilization_smp_authority.py"
+            --project "${CMAKE_CURRENT_SOURCE_DIR}"
+            --out "${CMAKE_CURRENT_SOURCE_DIR}/static-recomp/generated/civilization_smp_authority.json"
+            --check)
 add_test(NAME arch-no-legacy-hybrid-audio-state
     COMMAND "${Python3_EXECUTABLE}"
             "${CMAKE_CURRENT_SOURCE_DIR}/tests/verify_no_legacy_audio_state.py"

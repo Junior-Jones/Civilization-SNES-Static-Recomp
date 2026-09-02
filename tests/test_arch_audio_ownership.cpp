@@ -2,7 +2,9 @@
 #include "civilization_diagnostics.h"
 
 #include <cstdint>
+#include <cstdio>
 #include <cstdlib>
+#include <vector>
 
 static void count_pcm(void *context, std::int16_t, std::int16_t)
 {
@@ -27,7 +29,20 @@ int main()
     if (!civ_v20_audio_begin(first)) return 2;
     civ_v20_set_host_pcm_sink(first, count_pcm, &first_pcm);
     first->master_clock = UINT64_C(500000);
-    if (!civ_v20_audio_sync(first) || first_pcm == 0u ||
+    if (!civ_v20_audio_sync(first) || first_pcm != 0u || civ_audio_available(first) == 0u) {
+        std::fprintf(stderr,"initial FIFO contract failed: failed=%d reason=%s available=%zu callback=%llu\n",
+                     first->failed,first->frontier_reason,civ_audio_available(first),(unsigned long long)first_pcm);
+        return 3;
+    }
+    {
+        std::vector<std::int16_t> pcm(civ_audio_available(first) * 2u);
+        std::vector<std::uint8_t> known(civ_audio_available(first));
+        if (civ_audio_read(first, pcm.data(), known.data(), known.size()) == 0u || first_pcm == 0u) {
+            std::fprintf(stderr,"FIFO read contract failed: available=%zu callback=%llu\n",civ_audio_available(first),(unsigned long long)first_pcm);
+            return 3;
+        }
+    }
+    if (
         !civ_v20_get_audio_status(first, &status)) return 3;
 
     before_transfer = first_pcm;

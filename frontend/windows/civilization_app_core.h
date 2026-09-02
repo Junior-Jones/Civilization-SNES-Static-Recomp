@@ -12,6 +12,7 @@ extern "C" {
 #define CIVILIZATION_RECOMP_FRAME_WIDTH 256u
 #define CIVILIZATION_RECOMP_FRAME_HEIGHT 224u
 #define CIVILIZATION_RECOMP_HOST_AUDIO_SAMPLE_RATE 32040u
+#define CIVILIZATION_RECOMP_AUDIO_SAMPLE_RATE 32040u
 #define CIVILIZATION_RECOMP_AUDIO_CHANNELS 2u
 #define CIVILIZATION_RECOMP_AUDIO_BITS_PER_SAMPLE 16u
 #define CIVILIZATION_RECOMP_PRESENTATION_FPS_NUMERATOR 39375000u
@@ -33,6 +34,8 @@ enum CivilizationRecompInput {
 };
 
 typedef struct CivilizationRecomp CivilizationRecomp;
+typedef void (*CivilizationRecompAudioProgressCallback)(
+    CivilizationRecomp *instance, void *opaque);
 
 typedef struct CivilizationRecompFrameResult {
     uint8_t route_continued;
@@ -52,12 +55,17 @@ int civilization_recomp_reset(CivilizationRecomp *instance,
 int civilization_recomp_advance(CivilizationRecomp *instance,
                                  uint16_t input_mask, uint32_t frame_count,
                                  CivilizationRecompFrameResult *result);
+int civilization_recomp_advance_streamed(
+    CivilizationRecomp *instance, uint16_t input_mask, uint32_t frame_count,
+    CivilizationRecompAudioProgressCallback audio_progress, void *opaque,
+    CivilizationRecompFrameResult *result);
 int civilization_recomp_advance_headless(CivilizationRecomp *instance,
                                           uint16_t input_mask,
                                           uint32_t frame_count,
                                           CivilizationRecompFrameResult *result);
 const uint32_t *civilization_recomp_frame_bgra(
     const CivilizationRecomp *instance);
+uint32_t civilization_recomp_frame_width(const CivilizationRecomp *instance);
 uint32_t civilization_recomp_current_frame(
     const CivilizationRecomp *instance);
 const char *civilization_recomp_last_error(
@@ -73,6 +81,8 @@ int civilization_recomp_audio_overflowed(
     const CivilizationRecomp *instance);
 void civilization_recomp_audio_clear_overflow(
     CivilizationRecomp *instance);
+uint64_t civilization_recomp_audio_dropped_frames(
+    const CivilizationRecomp *instance);
 
 int civilization_recomp_snapshot_save(const CivilizationRecomp *instance,
                                        const char *path, char *error,
