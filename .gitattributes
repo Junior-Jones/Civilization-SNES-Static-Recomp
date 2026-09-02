@@ -1,0 +1,6 @@
+# Integrity manifests hash repository bytes, so their inputs must be identical
+# on Windows and Unix checkouts.
+static-recomp/generated/compact-aot/** text eol=lf
+static-recomp/static-audio/civilization-bapu-aot/smp/*.inc text eol=lf
+static-recomp/generated/civilization_smp_authority.json text eol=lf
+tools/scpu/generate_v35_compact_aot_core.py text eol=lf

@@ -4904,9 +4904,9 @@
   "entry_count": 980,
   "format": "civilization-smp-exact-pc-authority-v1",
   "hashes": {
-    "static-recomp/static-audio/civilization-bapu-aot/smp/sc_smp_aot_code_bitmap.inc": "27eadeee5a9026f1aabf85514a2a9179f6f60dc918d5d40c567ba34cd8c08aba",
-    "static-recomp/static-audio/civilization-bapu-aot/smp/sc_smp_aot_dispatch.inc": "0d4e420be0e4cffe1990c9d00b76a214f8e6b9d3f1c7a2d86d2423861fb6bd7b",
-    "static-recomp/static-audio/civilization-bapu-aot/smp/sc_smp_aot_lookup.inc": "85be4a59e5c10cbc7f414e8d1504e21b5505247e48a5a3e140b91d09b7447b05"
+    "static-recomp/static-audio/civilization-bapu-aot/smp/sc_smp_aot_code_bitmap.inc": "c3190a19edcffc82259414460ae86d492117b0839e2fc4ee76dfb290d9cbe5b2",
+    "static-recomp/static-audio/civilization-bapu-aot/smp/sc_smp_aot_dispatch.inc": "64b033e0d35f6a27c94ba5ecc1c88e3c37ec5e5e6cac8a83bd690c8a0cbde2b3",
+    "static-recomp/static-audio/civilization-bapu-aot/smp/sc_smp_aot_lookup.inc": "b73005871e52916fe5d74baf7e9b08b59600c38598487c77e7bf08b66dfcff95"
   },
   "ipl_entry_count": 32,
   "origin": "recovered-from-frozen-production-authority",

@@ -7,3 +7,5 @@ build-*/
 *.state
 *.wav
 *.png
+__pycache__/
+*.py[cod]
