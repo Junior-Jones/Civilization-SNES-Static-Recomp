@@ -88,3 +88,21 @@ int civ_diagnostics_read_wram(const CivRecomp *instance, size_t offset,
     memcpy(destination, instance->wram + offset, size);
     return 1;
 }
+
+int civ_diagnostics_write_wram(CivRecomp *instance, size_t offset,
+                               const void *source, size_t size)
+{
+    if (!instance || !source || offset > CIV_WRAM_SIZE ||
+        size > CIV_WRAM_SIZE - offset) return 0;
+    memcpy(instance->wram + offset, source, size);
+    return 1;
+}
+
+int civ_diagnostics_read_oam(const CivRecomp *instance, size_t offset,
+                             void *destination, size_t size)
+{
+    if (!instance || !destination || offset > CIV_OAM_SIZE ||
+        size > CIV_OAM_SIZE - offset) return 0;
+    memcpy(destination, instance->oam + offset, size);
+    return 1;
+}

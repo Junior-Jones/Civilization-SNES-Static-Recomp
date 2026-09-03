@@ -1,4 +1,4 @@
-# Civilization (SNES) Static Recomp 1.2.0
+# Civilization (SNES) Static Recomp 1.3.0
 
 Native Windows static recompilation frontend and game-specific core for
 Civilization on the Super Nintendo Entertainment System.
@@ -29,6 +29,9 @@ The complete runtime includes:
 - NTSC scheduling, refresh, NMI, IRQ and controller timing.
 - Full Static S-SMP and S-DSP audio producing native PCM.
 - Deterministic input, framebuffer, snapshot and persistence handling.
+- Optional 398x224 Wide Screen world-map rendering with real generated terrain,
+  fog-of-war protection and extended cursor interaction across the additional
+  map area; menus and city screens retain the authentic 256x224 layout.
 - Exact-ROM SHA-256 validation and fail-closed runtime checks.
 - A native Windows launcher with accessible standard controls, keyboard
   operation and statically linked host libraries.
@@ -60,10 +63,11 @@ The launcher links SDL statically, so no SDL DLL is required beside
 `Launcher.exe`. Tests, Python and the exact ROM are not production runtime
 dependencies.
 
-Version 1.2.0 retains 103,584 exact generated CPU contexts, checked Full Static
+Version 1.3.0 retains 103,584 exact generated CPU contexts, checked Full Static
 audio authority and fail-closed dispatch. Its Windows frontend provides native
 DirectSound output and resampling, NTSC frame pacing, full-screen presentation
-and capture, keyboard/gamepad configuration, persistent SRAM, five snapshot
-slots and accessible dialogs with deterministic focus restoration. See
+and capture, a saved live Wide Screen map toggle, keyboard/gamepad configuration,
+persistent SRAM, five snapshot slots and accessible dialogs with deterministic
+focus restoration. See
 `docs/PART-05-THROUGH-12-COMPLETION-REPORT.txt` for the completed architecture
 work and validation evidence.

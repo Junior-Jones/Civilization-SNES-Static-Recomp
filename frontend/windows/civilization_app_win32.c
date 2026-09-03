@@ -53,6 +53,7 @@
 #define ID_FULLSCREEN 1020
 #define ID_SCREENSHOT 1021
 #define ID_AUTO_RUN 1022
+#define ID_WIDESCREEN 1023
 #define ID_SNAPSHOT_SAVE_CURRENT 1024
 #define ID_SNAPSHOT_LOAD_CURRENT 1025
 #define ID_SNAPSHOT_SLOT_BASE 5000
@@ -161,6 +162,7 @@ static HWND g_keys_button;
 static HWND g_audio_button;
 static HWND g_settings_button;
 static HWND g_fullscreen_checkbox;
+static HWND g_widescreen_checkbox;
 static HWND g_auto_run_checkbox;
 static HWND g_rom_path;
 static HWND g_status;
@@ -717,6 +719,7 @@ static void set_toolbar_visible(int visible) {
     ShowWindow(g_audio_button, command);
     ShowWindow(g_settings_button, command);
     ShowWindow(g_fullscreen_checkbox, command);
+    ShowWindow(g_widescreen_checkbox, command);
     ShowWindow(g_auto_run_checkbox, command);
     ShowWindow(g_status, command);
 }
@@ -814,6 +817,7 @@ static void update_controls(void) {
     EnableWindow(g_audio_button, !loading);
     EnableWindow(g_settings_button, !loading);
     EnableWindow(g_fullscreen_checkbox, !loading);
+    EnableWindow(g_widescreen_checkbox, !loading);
     EnableWindow(g_auto_run_checkbox, !loading);
     set_accessible_control_text(g_browse_button,
                                 rom_path_known() ? L"&Run" : L"&Browse", 1);
@@ -834,6 +838,9 @@ static void update_controls(void) {
                    MF_BYCOMMAND | (!loading ? MF_ENABLED : MF_GRAYED));
     CheckMenuItem(g_menu, ID_FULLSCREEN, MF_BYCOMMAND |
                   (SendMessageW(g_fullscreen_checkbox, BM_GETCHECK, 0, 0) ==
+                   BST_CHECKED ? MF_CHECKED : MF_UNCHECKED));
+    CheckMenuItem(g_menu, ID_WIDESCREEN, MF_BYCOMMAND |
+                  (SendMessageW(g_widescreen_checkbox, BM_GETCHECK, 0, 0) ==
                    BST_CHECKED ? MF_CHECKED : MF_UNCHECKED));
     CheckMenuItem(g_menu, ID_AUTO_RUN, MF_BYCOMMAND |
                   (SendMessageW(g_auto_run_checkbox, BM_GETCHECK, 0, 0) ==
@@ -1145,16 +1152,18 @@ static int capture_core_screenshot_to(const wchar_t *base_directory,
     wchar_t path[PATH_CAPACITY];
     SYSTEMTIME now;
     uint32_t frame = g_game ? civilization_recomp_current_frame(g_game) : 0u;
+    uint32_t frame_width = g_game ? civilization_recomp_frame_width(g_game) : 0u;
     if (saved_path && saved_capacity) saved_path[0] = L'\0';
     source = g_game ? civilization_recomp_frame_bgra(g_game) : NULL;
-    if (!source) return 0;
+    if (!source || (frame_width != CIVILIZATION_RECOMP_FRAME_WIDTH &&
+                    frame_width != CIVILIZATION_RECOMP_WIDESCREEN_WIDTH)) return 0;
     /* Match Mesen's screenshot ownership: copy the last completed emulator
        output buffer first, then encode the private copy.  Never sample the
        Windows desktop/window surface or a scanline still being composed. */
-    pixels = (uint32_t *)malloc((size_t)CIVILIZATION_RECOMP_FRAME_WIDTH *
+    pixels = (uint32_t *)malloc((size_t)frame_width *
                                 CIVILIZATION_RECOMP_FRAME_HEIGHT * sizeof(*pixels));
     if (!pixels) return 0;
-    memcpy(pixels, source, (size_t)CIVILIZATION_RECOMP_FRAME_WIDTH *
+    memcpy(pixels, source, (size_t)frame_width *
                            CIVILIZATION_RECOMP_FRAME_HEIGHT * sizeof(*pixels));
     if (base_directory && base_directory[0])
         join_wide_path(directory, PATH_CAPACITY, base_directory, L"Screenshots");
@@ -1173,9 +1182,9 @@ static int capture_core_screenshot_to(const wchar_t *base_directory,
                (unsigned)now.wSecond, (unsigned)now.wMilliseconds);
     path[PATH_CAPACITY - 1u] = L'\0';
     if (!save_bgra_bmp(path, (const uint8_t *)pixels,
-                       (int)CIVILIZATION_RECOMP_FRAME_WIDTH,
+                       (int)frame_width,
                        (int)CIVILIZATION_RECOMP_FRAME_HEIGHT,
-                       (int)CIVILIZATION_RECOMP_FRAME_WIDTH * 4)) {
+                       (int)frame_width * 4)) {
         free(pixels);
         return 0;
     }
@@ -1358,6 +1367,7 @@ static const wchar_t g_welcome_text[] =
 
 static void show_frontend_settings(void) {
     int resume_after = g_game && !g_paused;
+    int previous_widescreen=g_frontend_settings.widescreen;
     if (resume_after) pause_game(L"Paused while Settings is open.");
     if (civilization_frontend_settings_win32_dialog(
             g_window, g_instance, &g_frontend_settings)) {
@@ -1368,6 +1378,22 @@ static void show_frontend_settings(void) {
             SendMessageW(g_auto_run_checkbox, BM_SETCHECK,
                          g_frontend_settings.auto_run_on_load ?
                          BST_CHECKED : BST_UNCHECKED, 0);
+            SendMessageW(g_widescreen_checkbox,BM_SETCHECK,
+                         g_frontend_settings.widescreen?
+                         BST_CHECKED:BST_UNCHECKED,0);
+            if(g_game&&previous_widescreen!=g_frontend_settings.widescreen) {
+                char geometry_error[256];
+                memset(geometry_error,0,sizeof(geometry_error));
+                if(!civilization_recomp_set_widescreen(
+                       g_game,g_frontend_settings.widescreen,
+                       geometry_error,sizeof(geometry_error))) {
+                    g_frontend_settings.widescreen=previous_widescreen;
+                    SendMessageW(g_widescreen_checkbox,BM_SETCHECK,
+                        previous_widescreen?BST_CHECKED:BST_UNCHECKED,0);
+                    set_status_utf8(geometry_error[0]?geometry_error:
+                        "Unable to change widescreen geometry.");
+                }
+            }
             update_controls();
             InvalidateRect(g_window, NULL, TRUE);
     }
@@ -2377,7 +2403,8 @@ static void layout_controls(HWND window) {
     MoveWindow(g_settings_button, 328, 8, 82, 30, TRUE);
     MoveWindow(g_keys_button, 416, 8, 62, 30, TRUE);
     MoveWindow(g_fullscreen_checkbox, 488, 10, 112, 26, TRUE);
-    MoveWindow(g_auto_run_checkbox, 610, 10,
+    MoveWindow(g_widescreen_checkbox, 610, 10, 108, 26, TRUE);
+    MoveWindow(g_auto_run_checkbox, 724, 10,
                width > 820 ? 88 : 82, 26, TRUE);
     MoveWindow(g_status, 12, 48, width - 24, 24, TRUE);
 }
@@ -2398,13 +2425,28 @@ static void paint_window(HWND window) {
     if (g_game && pixels && render_area.bottom > render_area.top) {
         BITMAPINFO bitmap;
         int frame_width = (int)civilization_recomp_frame_width(g_game);
+        int widescreen_frame =
+            frame_width == (int)CIVILIZATION_RECOMP_WIDESCREEN_WIDTH;
         int available_width = render_area.right - render_area.left;
         int available_height = render_area.bottom - render_area.top;
         int draw_width = available_width;
-        int draw_height = draw_width * 3 / 4;
+        int draw_height = widescreen_frame ?
+            draw_width * (int)CIVILIZATION_RECOMP_FRAME_HEIGHT / frame_width :
+            draw_width * 3 / 4;
         int x;
         int y;
-        if (g_frontend_settings.integer_scale >= 1 &&
+        if(g_fullscreen_active&&widescreen_frame) {
+            /* Fill a 16:9 client while preserving the core's exact 398x224
+               geometry on 16:10, ultrawide and other display shapes. */
+            draw_width=available_width;
+            draw_height=draw_width*(int)CIVILIZATION_RECOMP_FRAME_HEIGHT/
+                frame_width;
+            if(draw_height>available_height) {
+                draw_height=available_height;
+                draw_width=draw_height*frame_width/
+                    (int)CIVILIZATION_RECOMP_FRAME_HEIGHT;
+            }
+        } else if (g_frontend_settings.integer_scale >= 1 &&
             g_frontend_settings.integer_scale <= 4) {
             int scale = g_frontend_settings.integer_scale;
             while (scale > 1 &&
@@ -2429,7 +2471,10 @@ static void paint_window(HWND window) {
             }
         } else if (draw_height > available_height) {
             draw_height = available_height;
-            draw_width = draw_height * 4 / 3;
+            draw_width = widescreen_frame ?
+                draw_height * frame_width /
+                    (int)CIVILIZATION_RECOMP_FRAME_HEIGHT :
+                draw_height * 4 / 3;
         }
         x = render_area.left + (available_width - draw_width) / 2;
         y = render_area.top + (available_height - draw_height) / 2;
@@ -3041,6 +3086,8 @@ static HMENU create_menu_bar(void) {
     AppendMenuW(settings, MF_SEPARATOR, 0, NULL);
     AppendMenuW(settings, MF_STRING, ID_FULLSCREEN,
                 L"Use &Full Screen When Playing");
+    AppendMenuW(settings, MF_STRING, ID_WIDESCREEN,
+                L"Use &Widescreen Map View");
     AppendMenuW(settings, MF_STRING, ID_AUTO_RUN,
                 L"&Auto-Run at Startup");
     AppendMenuW(settings, MF_SEPARATOR, 0, NULL);
@@ -3161,6 +3208,8 @@ static void initialize_paths_and_settings(void) {
     SendMessageW(g_fullscreen_checkbox, BM_SETCHECK,
                  g_frontend_settings.fullscreen_on_play ?
                  BST_CHECKED : BST_UNCHECKED, 0);
+    SendMessageW(g_widescreen_checkbox,BM_SETCHECK,
+                 g_frontend_settings.widescreen?BST_CHECKED:BST_UNCHECKED,0);
     update_controls();
 }
 
@@ -3202,7 +3251,9 @@ static void save_current_settings_on_exit(void) {
         g_frontend_settings.fullscreen_on_play =
             SendMessageW(g_fullscreen_checkbox, BM_GETCHECK, 0, 0) ==
             BST_CHECKED;
-    g_frontend_settings.widescreen = 0;
+    if(IsWindow(g_widescreen_checkbox))
+        g_frontend_settings.widescreen=
+            SendMessageW(g_widescreen_checkbox,BM_GETCHECK,0,0)==BST_CHECKED;
     (void)civilization_frontend_settings_win32_save(
         &g_frontend_settings, g_settings_ini_path);
     civilization_audio_settings_save(&g_audio_settings, g_settings_ini_path);
@@ -3255,10 +3306,15 @@ static LRESULT CALLBACK window_proc(HWND window, UINT message,
                 WS_CHILD | WS_VISIBLE | WS_TABSTOP | BS_AUTOCHECKBOX,
                 488, 10, 112, 26, window,
                 (HMENU)(INT_PTR)ID_FULLSCREEN, g_instance, NULL);
+            g_widescreen_checkbox=CreateWindowExW(
+                0,L"BUTTON",L"&Widescreen",
+                WS_CHILD|WS_VISIBLE|WS_TABSTOP|BS_AUTOCHECKBOX,
+                610,10,108,26,window,
+                (HMENU)(INT_PTR)ID_WIDESCREEN,g_instance,NULL);
             g_auto_run_checkbox = CreateWindowExW(
                 0, L"BUTTON", L"Auto-&Run",
                 WS_CHILD | WS_VISIBLE | WS_TABSTOP | BS_AUTOCHECKBOX,
-                610, 10, 88, 26, window,
+                724, 10, 88, 26, window,
                 (HMENU)(INT_PTR)ID_AUTO_RUN, g_instance, NULL);
             /* The ROM path remains internal. Status is exposed as native
                static text, not as an editable toolbar field. */
@@ -3279,10 +3335,12 @@ static LRESULT CALLBACK window_proc(HWND window, UINT message,
             set_control_font(g_audio_button);
             set_control_font(g_settings_button);
             set_control_font(g_fullscreen_checkbox);
+            set_control_font(g_widescreen_checkbox);
             set_control_font(g_auto_run_checkbox);
             set_control_font(g_rom_path);
             set_control_font(g_status);
             SendMessageW(g_fullscreen_checkbox, BM_SETCHECK, BST_UNCHECKED, 0);
+            SendMessageW(g_widescreen_checkbox,BM_SETCHECK,BST_CHECKED,0);
             SendMessageW(g_auto_run_checkbox, BM_SETCHECK, BST_UNCHECKED, 0);
             update_controls();
             return 0;
@@ -3337,6 +3395,39 @@ static LRESULT CALLBACK window_proc(HWND window, UINT message,
                         &g_frontend_settings, g_settings_ini_path);
                     update_controls();
                     return 0;
+                case ID_WIDESCREEN: {
+                    char error[256];
+                    if(lparam==0) {
+                        LRESULT checked=SendMessageW(g_widescreen_checkbox,
+                                                     BM_GETCHECK,0,0);
+                        SendMessageW(g_widescreen_checkbox,BM_SETCHECK,
+                            checked==BST_CHECKED?BST_UNCHECKED:BST_CHECKED,0);
+                    }
+                    g_frontend_settings.widescreen=
+                        SendMessageW(g_widescreen_checkbox,BM_GETCHECK,0,0)==
+                        BST_CHECKED;
+                    memset(error,0,sizeof(error));
+                    if(g_game&&!civilization_recomp_set_widescreen(
+                           g_game,g_frontend_settings.widescreen,
+                           error,sizeof(error))) {
+                        g_frontend_settings.widescreen=
+                            civilization_recomp_widescreen_enabled(g_game);
+                        SendMessageW(g_widescreen_checkbox,BM_SETCHECK,
+                            g_frontend_settings.widescreen?BST_CHECKED:
+                                                            BST_UNCHECKED,0);
+                        set_status_utf8(error[0]?error:
+                            "Unable to change widescreen geometry.");
+                    } else {
+                        (void)civilization_frontend_settings_win32_save(
+                            &g_frontend_settings,g_settings_ini_path);
+                        set_status(g_frontend_settings.widescreen?
+                            L"Widescreen map view enabled; menus remain at native width.":
+                            L"Widescreen disabled; authentic 256-pixel presentation restored.");
+                        InvalidateRect(g_window,NULL,TRUE);
+                    }
+                    update_controls();
+                    return 0;
+                }
                 case ID_AUTO_RUN:
                     if (lparam == 0) {
                         LRESULT checked = SendMessageW(g_auto_run_checkbox,
@@ -3364,7 +3455,7 @@ static LRESULT CALLBACK window_proc(HWND window, UINT message,
                         static const wchar_t about[] =
                             L"F1 - Open the Welcome window\r\n\r\n"
                             L"Civilization (SNES) Static Recompilation\r\n"
-                            L"Version 1.2.0\r\n\r\n"
+                            L"Version 1.3.0\r\n\r\n"
                             L"Title: Civilization\r\n"
                             L"Region: USA NTSC\r\n"
                             L"File type: .sfc";
@@ -3475,7 +3566,20 @@ static LRESULT CALLBACK window_proc(HWND window, UINT message,
             (void)flush_battery_sram_win32(1, NULL, 0u);
             civilization_recomp_destroy(g_game);
             g_game = result->game;
-            g_frontend_settings.widescreen = 0;
+            {
+                char geometry_error[256];
+                memset(geometry_error,0,sizeof(geometry_error));
+                if(!civilization_recomp_set_widescreen(
+                       g_game,g_frontend_settings.widescreen,
+                       geometry_error,sizeof(geometry_error))) {
+                    civilization_recomp_destroy(g_game);g_game=NULL;
+                    utf8_to_wide(geometry_error,result->error,
+                                 ARRAY_COUNT(result->error));
+                    MessageBoxW(window,result->error,APP_TITLE,
+                                MB_OK|MB_ICONERROR);
+                    free(result);(void)open_audio(1);update_controls();return 0;
+                }
+            }
             g_loaded_snapshot_slot = -1;
             g_sram_last_flush_frame = 0u;
             g_audio_last_fifo_dropped = 0u;

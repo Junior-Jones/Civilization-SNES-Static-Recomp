@@ -1,6 +1,6 @@
-# Civilization 1.2.0 Windows build
+# Civilization 1.3.0 Windows build
 
-Civilization 1.2.0 builds with Visual Studio 2022 and the Windows 10/11 SDK.
+Civilization 1.3.0 builds with Visual Studio 2022 and the Windows 10/11 SDK.
 Warnings are errors. CMake downloads the pinned SDL 3.4.10 source used by the
 native presentation, audio and gamepad layers; the release links SDL statically.
 

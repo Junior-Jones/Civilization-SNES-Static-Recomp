@@ -96,17 +96,37 @@ static void print_audio_status(const CivFrontend *f)
            (unsigned long long)a.capture_fnv1a64,a.aot_failed,a.code_write_barriers);
 }
 
-static int save_ppm(const char *path,const uint32_t *framebuffer)
+static int save_ppm_sized(const char *path,const uint32_t *framebuffer,
+                          unsigned width,unsigned height)
 {
     FILE *out;unsigned n;
     if(!path||!*path||!framebuffer)return 0;
     out=fopen(path,"wb");if(!out)return 0;
-    if(fprintf(out,"P6\n%u %u\n255\n",CIV_FRAME_WIDTH,CIV_FRAME_HEIGHT)<0){fclose(out);return 0;}
-    for(n=0;n<CIV_FRAME_PIXELS;++n){
+    if(fprintf(out,"P6\n%u %u\n255\n",width,height)<0){fclose(out);return 0;}
+    for(n=0;n<width*height;++n){
         unsigned char rgb[3]={(unsigned char)(framebuffer[n]>>16),(unsigned char)(framebuffer[n]>>8),(unsigned char)framebuffer[n]};
         if(fwrite(rgb,1,3,out)!=3u){fclose(out);return 0;}
     }
     return fclose(out)==0;
+}
+
+/* Temp-only discovery aid.  The world map has 80*40 entries at $7E:AF19;
+   bit 7 is the player's revealed/fog-of-war bit.  Preserve every other bit. */
+static int force_reveal_world(CivFrontend *frontend)
+{
+    enum { FOG_MAP_OFFSET=0xAF19u,FOG_MAP_BYTES=80u*40u };
+    uint8_t bytes[FOG_MAP_BYTES];unsigned index;
+    if(!frontend||!frontend->core||
+       !civ_diagnostics_read_wram(frontend->core,FOG_MAP_OFFSET,
+                                  bytes,sizeof(bytes)))return 0;
+    for(index=0u;index<FOG_MAP_BYTES;++index)bytes[index]|=0x80u;
+    return civ_diagnostics_write_wram(frontend->core,FOG_MAP_OFFSET,
+                                      bytes,sizeof(bytes));
+}
+
+static int save_ppm(const char *path,const uint32_t *framebuffer)
+{
+    return save_ppm_sized(path,framebuffer,CIV_FRAME_WIDTH,CIV_FRAME_HEIGHT);
 }
 
 static int trace_to_frame(CivFrontend *frontend,uint64_t target,const char *path)
@@ -191,14 +211,43 @@ static void print_frame_hash(CivFrontend *frontend)
 static void take_screenshot(CivFrontend *frontend,const char *path)
 {
     CivDiagnosticState d;const uint32_t *fb;
-    if(!civ_render_current_frame(frontend->core)||!civ_diagnostics_capture(frontend->core,&d)){
+    unsigned width;
+    if(!civ_render_present_frame(frontend->core)||!civ_diagnostics_capture(frontend->core,&d)){
         if(civ_diagnostics_capture(frontend->core,&d))printf("screenshot-current ok=0 mode=%u blank=%u\n",d.ppu.bg_mode,d.ppu.forced_blank);
         else puts("screenshot-current ok=0 diagnostics-unavailable");
         return;
     }
     fb=civ_get_framebuffer_rgba(frontend->core);
-    printf("screenshot-current ok=%d path=%s hash=%016llX frame=%llu\n",save_ppm(path,fb),path,
+    width=civ_frame_width(frontend->core);
+    printf("screenshot-current ok=%d path=%s width=%u hash=%016llX frame=%llu\n",
+           save_ppm_sized(path,fb,width,CIV_FRAME_HEIGHT),path,width,
            (unsigned long long)d.framebuffer_fnv1a64,(unsigned long long)d.frame_count);
+}
+
+static void take_widescreen_probe_screenshot(CivFrontend *frontend,const char *path)
+{
+    CivDiagnosticState d;const uint32_t *fb;
+    if(!civ_render_widescreen_probe_frame(frontend->core)||
+       !civ_diagnostics_capture(frontend->core,&d)){
+        puts("screenshot-wide-probe ok=0");
+        return;
+    }
+    fb=civ_get_framebuffer_rgba(frontend->core);
+    printf("screenshot-wide-probe ok=%d path=%s hash=%016llX frame=%llu\n",
+           save_ppm_sized(path,fb,CIV_WIDESCREEN_PROBE_WIDTH,CIV_FRAME_HEIGHT),path,
+           (unsigned long long)d.framebuffer_fnv1a64,
+           (unsigned long long)d.frame_count);
+}
+
+static void take_layer_probe_screenshot(CivFrontend *frontend,unsigned mask,const char *path)
+{
+    const uint32_t *fb;
+    if(!civ_render_layer_probe_frame(frontend->core,mask)){
+        puts("screenshot-layer-probe ok=0");return;
+    }
+    fb=civ_get_framebuffer_rgba(frontend->core);
+    printf("screenshot-layer-probe ok=%d mask=%02X path=%s\n",
+           save_ppm(path,fb),mask,path);
 }
 
 static void print_wram(const CivFrontend *frontend,unsigned offset,unsigned count)
@@ -214,9 +263,136 @@ static void print_wram(const CivFrontend *frontend,unsigned offset,unsigned coun
     putchar('\n');
 }
 
+static int dump_wram(const CivFrontend *frontend,const char *path)
+{
+    FILE *out;uint8_t bytes[4096];unsigned offset=0u;
+    if(!frontend||!path||!*path)return 0;
+    out=fopen(path,"wb");if(!out)return 0;
+    while(offset<CIV_WRAM_SIZE) {
+        unsigned chunk=CIV_WRAM_SIZE-offset;
+        if(chunk>sizeof(bytes))chunk=(unsigned)sizeof(bytes);
+        if(!civ_diagnostics_read_wram(frontend->core,offset,bytes,chunk)||
+           fwrite(bytes,1,chunk,out)!=chunk){fclose(out);return 0;}
+        offset+=chunk;
+    }
+    return fclose(out)==0;
+}
+
+static int dump_oam(const CivFrontend *frontend,const char *path)
+{
+    FILE *out;uint8_t oam[CIV_OAM_SIZE];
+    if(!frontend||!frontend->core||!path||!*path)return 0;
+    if(!civ_diagnostics_read_oam(frontend->core,0u,oam,sizeof(oam)))return 0;
+    out=fopen(path,"wb");if(!out)return 0;
+    if(fwrite(oam,1,sizeof(oam),out)!=sizeof(oam)){fclose(out);return 0;}
+    return fclose(out)==0;
+}
+
+static void print_oam(const CivFrontend *frontend)
+{
+    unsigned index;uint8_t oam[CIV_OAM_SIZE];
+    if(!frontend||!frontend->core||
+       !civ_diagnostics_read_oam(frontend->core,0u,oam,sizeof(oam))){puts("oam-list unavailable");return;}
+    puts("oam-list visible objects (native SNES coordinates)");
+    for(index=0u;index<128u;++index){
+        uint8_t packed=oam[0x200u+(index>>2)];
+        unsigned high=(packed>>((index&3u)*2u))&3u;
+        int x=(high&1u)?(int)oam[index*4u]-256:(int)oam[index*4u];
+        unsigned y=oam[index*4u+1u];
+        uint8_t tile=oam[index*4u+2u],attr=oam[index*4u+3u];
+        if(x>-64&&x<320&&y<240u)
+            printf("oam index=%u x=%d y=%u tile=%02X attr=%02X large=%u\n",
+                   index,x,y,tile,attr,(high>>1)&1u);
+    }
+}
+
+static void print_vram_dma_history(void)
+{
+    CivWidescreenProbeDmaEvent events[32];
+    size_t count=civ_widescreen_probe_vram_dma_history(events,32u),n;
+    printf("vram-dma-history count=%u\n",(unsigned)count);
+    for(n=0u;n<count;++n)
+        printf("vram-dma frame=%llu pc=%06X channel=%u mode=%u source=%06X bytes=%u vram=%04X\n",
+               (unsigned long long)events[n].frame,(unsigned)events[n].cpu_pc,
+               (unsigned)events[n].channel,(unsigned)events[n].mode,
+               (unsigned)events[n].cpu_address,(unsigned)events[n].byte_count,
+               (unsigned)events[n].vram_word_address);
+}
+
+static void print_tilemap_writers(void)
+{
+    CivWidescreenProbeWramWriter writers[64];
+    size_t count=civ_widescreen_probe_tilemap_writers(writers,64u),n;
+    printf("tilemap-writers count=%u\n",(unsigned)count);
+    for(n=0u;n<count;++n)
+        printf("tilemap-writer pc=%06X writes=%u first=%04X last=%04X\n",
+               (unsigned)writers[n].cpu_pc,(unsigned)writers[n].write_count,
+               (unsigned)writers[n].first_offset,(unsigned)writers[n].last_offset);
+}
+
+static void print_fog_readers(void)
+{
+    CivWidescreenProbeWramWriter readers[64];
+    size_t count=civ_widescreen_probe_fog_readers(readers,64u),n;
+    printf("fog-readers count=%u\n",(unsigned)count);
+    for(n=0u;n<count;++n)
+        printf("fog-reader pc=%06X reads=%u first-index=%04X last-index=%04X\n",
+               (unsigned)readers[n].cpu_pc,(unsigned)readers[n].write_count,
+               (unsigned)readers[n].first_offset,(unsigned)readers[n].last_offset);
+}
+
+static void print_terrain_entries(void)
+{
+    CivTerrainRenderEntry entries[256];
+    size_t count=civ_widescreen_probe_terrain_entries(entries,256u),n;
+    printf("terrain-entries count=%u\n",(unsigned)count);
+    for(n=0u;n<count;++n) {
+        const CivTerrainRenderEntry *e=&entries[n];
+        printf("terrain-entry frame=%llu pc=%02X:%04X p=%02X e=%u dbr=%02X d=%04X s=%04X a=%04X x=%04X y=%04X map=%u,%u ring=%u,%u tile=%u world=%u world-xy=%u,%u\n",
+               (unsigned long long)e->frame,e->cpu.pbr,e->cpu.pc,e->cpu.p,
+               e->cpu.e,e->cpu.dbr,e->cpu.d,e->cpu.s,e->cpu.a,e->cpu.x,e->cpu.y,
+               e->map_x,e->map_y,e->ring_x,e->ring_y,e->tile_number,
+               e->world_index,e->world_index%80u,e->world_index/80u);
+    }
+}
+
+static uint64_t hash_bytes(const uint8_t *bytes,size_t count)
+{
+    uint64_t hash=UINT64_C(1469598103934665603);size_t n;
+    for(n=0u;n<count;++n){hash^=bytes[n];hash*=UINT64_C(1099511628211);}
+    return hash;
+}
+
+static void generate_terrain_tile(CivFrontend *frontend,unsigned world_x,
+                                  unsigned world_y,unsigned ring_x,
+                                  unsigned ring_y)
+{
+    uint8_t graphics[128],cached[128];uint16_t attributes=0u;
+    char generation_error[256];
+    unsigned steps=0u,cell,destination;int ok,cache_ok=0;
+    ok=civ_widescreen_probe_generate_terrain_tile(frontend->core,world_x,
+                                                   world_y,graphics,
+                                                   &attributes,&steps,
+                                                   generation_error,
+                                                   sizeof(generation_error));
+    cell=ring_y*13u+ring_x;
+    destination=0x14080u+((((cell&~7u)*4u)+((cell&7u)*2u))*32u);
+    if(ok&&destination+0x240u<=CIV_WRAM_SIZE) {
+        cache_ok=civ_diagnostics_read_wram(frontend->core,destination,
+                                           cached,64u)&&
+                 civ_diagnostics_read_wram(frontend->core,destination+0x200u,
+                                           cached+64u,64u);
+    }
+    printf("terrain-generate ok=%d world=%u,%u ring=%u,%u steps=%u attr=%04X hash=%016llX cache-ok=%d cache-hash=%016llX match=%d error=%s\n",
+           ok,world_x,world_y,ring_x,ring_y,steps,attributes,
+           (unsigned long long)(ok?hash_bytes(graphics,sizeof(graphics)):0u),
+           cache_ok,(unsigned long long)(cache_ok?hash_bytes(cached,sizeof(cached)):0u),
+           ok&&cache_ok&&!memcmp(graphics,cached,sizeof(graphics)),generation_error);
+}
+
 static void print_help(void)
 {
-    puts("Civilization headless commands: help, status, checkpoint, play, pause, reset, run INSTRUCTIONS, frame-run FRAME, frame-step FRAMES, tap-snes SNES_MASK FRAMES, trace-frame FRAME PATH.csv, trace-pc FRAME PBR PC PATH.csv, input SERIAL_MASK, input-snes SNES_MASK, input-status, mouse PORT DX DY BUTTONS, video-state, ppu-state, frame-hash, screenshot PATH.ppm, screenshot-current PATH.ppm, audio-status, record-audio PATH.wav, peek-wram OFFSET COUNT, state-dir PATH, sram-status, sram-save, sram-load, snapshot-save SLOT, snapshot-load SLOT, snapshot-path SLOT, quit");
+    puts("Civilization headless commands: help, status, checkpoint, play, pause, reset, run INSTRUCTIONS, frame-run FRAME, frame-step FRAMES, tap-snes SNES_MASK FRAMES, trace-frame FRAME PATH.csv, trace-pc FRAME PBR PC PATH.csv, input SERIAL_MASK, input-snes SNES_MASK, input-status, mouse PORT DX DY BUTTONS, video-state, ppu-state, frame-hash, screenshot PATH.ppm, screenshot-current PATH.ppm, screenshot-wide-probe PATH.ppm, widescreen on|off|status, oam-list, dump-oam PATH, vram-dma-history, tilemap-writers, fog-readers, terrain-entries, terrain-generate WORLD_X WORLD_Y RING_X RING_Y, fog-off, fog-force-stop, fog-status, audio-status, record-audio PATH.wav, peek-wram OFFSET COUNT, dump-wram PATH, fill-wram OFFSET COUNT BYTE, or-wram OFFSET COUNT BYTE, state-dir PATH, sram-status, sram-save, sram-load, snapshot-save SLOT, snapshot-load SLOT, snapshot-path SLOT, quit");
     puts("snapshot slots are persistent and 1-based (1-5); state root defaults to the current directory or CIVILIZATION_STATE_DIR.");
     puts("serial mask: B=0x0001 Y=0x0002 Select=0x0004 Start=0x0008 Up=0x0010 Down=0x0020 Left=0x0040 Right=0x0080 A=0x0100 X=0x0200 L=0x0400 R=0x0800");
     puts("SNES mask: B=0x8000 Y=0x4000 Select=0x2000 Start=0x1000 Up=0x0800 Down=0x0400 Left=0x0200 Right=0x0100 A=0x0080 X=0x0040 L=0x0020 R=0x0010");
@@ -226,6 +402,7 @@ int main(int argc,char **argv)
 {
     unsigned char *rom;size_t rom_size;static CivFrontend frontend;
     char error[192],line[4096];FILE *input=stdin;int exit_code=0;
+    int force_fog_reveal=0;
     if(argc<2||argc>3){fprintf(stderr,"usage: %s ROM [script]\n",argv[0]);return 2;}
     rom=load_file(argv[1],&rom_size);if(!rom)return 3;
     civ_frontend_init_empty(&frontend);
@@ -271,11 +448,38 @@ int main(int argc,char **argv)
         else if(!strcmp(command,"ppu-state"))print_ppu_state(&frontend);
         else if(!strcmp(command,"frame-hash"))print_frame_hash(&frontend);
         else if(!strcmp(command,"screenshot")||!strcmp(command,"screenshot-current"))take_screenshot(&frontend,arguments);
+        else if(!strcmp(command,"screenshot-wide-probe"))take_widescreen_probe_screenshot(&frontend,arguments);
+        else if(!strcmp(command,"widescreen")){
+            if(!strcmp(arguments,"on"))civ_set_widescreen_enabled(frontend.core,1);
+            else if(!strcmp(arguments,"off"))civ_set_widescreen_enabled(frontend.core,0);
+            else if(strcmp(arguments,"status")){puts("error usage widescreen on|off|status");continue;}
+            printf("widescreen enabled=%d cursor-extension-x=%d cursor-extension-y=%d\n",
+                   civ_widescreen_enabled(frontend.core),
+                   civ_widescreen_cursor_extension_x(frontend.core),
+                   civ_widescreen_cursor_extension_y(frontend.core));
+        }
+        else if(!strcmp(command,"oam-list"))print_oam(&frontend);
+        else if(!strcmp(command,"dump-oam"))printf("dump-oam ok=%d path=%s\n",dump_oam(&frontend,arguments),arguments);
+        else if(!strcmp(command,"screenshot-layer-probe")){unsigned mask;char path[4096];if(sscanf(arguments,"%i %4095s",(int *)&mask,path)!=2)puts("error usage screenshot-layer-probe MASK PATH.ppm");else take_layer_probe_screenshot(&frontend,mask,path);}
+        else if(!strcmp(command,"vram-dma-history"))print_vram_dma_history();
+        else if(!strcmp(command,"tilemap-writers"))print_tilemap_writers();
+        else if(!strcmp(command,"fog-readers"))print_fog_readers();
+        else if(!strcmp(command,"terrain-entries"))print_terrain_entries();
+        else if(!strcmp(command,"terrain-generate")){unsigned wx,wy,rx,ry;if(sscanf(arguments,"%u %u %u %u",&wx,&wy,&rx,&ry)!=4||wx>=80u||wy>=40u||rx>=13u||ry>=13u)puts("error usage terrain-generate WORLD_X WORLD_Y RING_X RING_Y");else generate_terrain_tile(&frontend,wx,wy,rx,ry);}
+        else if(!strcmp(command,"fog-off")){force_fog_reveal=force_reveal_world(&frontend);printf("fog-off ok=%d forced=%d range=7E:AF19-7E:BB98 bit=80\n",force_fog_reveal,force_fog_reveal);if(!force_fog_reveal)exit_code=1;}
+        else if(!strcmp(command,"fog-force-stop")){force_fog_reveal=0;puts("fog-force-stop ok=1 note=reload-a-clean-snapshot-to-restore-existing-fog");}
+        else if(!strcmp(command,"fog-status"))printf("fog-status forced=%d range=7E:AF19-7E:BB98 bit=80\n",force_fog_reveal);
         else if(!strcmp(command,"audio-status"))print_audio_status(&frontend);
         else if(!strcmp(command,"record-audio"))printf("record-audio ok=%d path=%s\n",civ_v20_write_wav(frontend.core,arguments),arguments);
         else if(!strcmp(command,"peek-wram")){unsigned offset,count;if(sscanf(arguments,"%i %u",(int *)&offset,&count)!=2||offset>=CIV_WRAM_SIZE||count>CIV_WRAM_SIZE-offset)puts("error usage peek-wram OFFSET COUNT");else print_wram(&frontend,offset,count);}
+        else if(!strcmp(command,"dump-wram"))printf("dump-wram ok=%d path=%s\n",dump_wram(&frontend,arguments),arguments);
+        else if(!strcmp(command,"fill-wram")){unsigned offset,count,byte;uint8_t *bytes;if(sscanf(arguments,"%i %u %i",(int *)&offset,&count,(int *)&byte)!=3||offset>=CIV_WRAM_SIZE||count>CIV_WRAM_SIZE-offset||byte>0xFFu)puts("error usage fill-wram OFFSET COUNT BYTE");else if(!(bytes=(uint8_t *)malloc(count))){puts("error fill-wram allocation");}else{memset(bytes,(int)byte,count);printf("fill-wram ok=%d offset=%05X count=%u byte=%02X\n",civ_diagnostics_write_wram(frontend.core,offset,bytes,count),offset,count,byte);free(bytes);}}
+        else if(!strcmp(command,"or-wram")){unsigned offset,count,byte,index;uint8_t *bytes;if(sscanf(arguments,"%i %u %i",(int *)&offset,&count,(int *)&byte)!=3||offset>=CIV_WRAM_SIZE||count>CIV_WRAM_SIZE-offset||byte>0xFFu)puts("error usage or-wram OFFSET COUNT BYTE");else if(!(bytes=(uint8_t *)malloc(count))){puts("error or-wram allocation");}else if(!civ_diagnostics_read_wram(frontend.core,offset,bytes,count)){puts("error or-wram read");free(bytes);}else{for(index=0u;index<count;++index)bytes[index]|=(uint8_t)byte;printf("or-wram ok=%d offset=%05X count=%u byte=%02X\n",civ_diagnostics_write_wram(frontend.core,offset,bytes,count),offset,count,byte);free(bytes);}}
         else if(!strcmp(command,"quit"))break;
         else printf("error unknown-or-invalid-command %s\n",command);
+        if(force_fog_reveal&&!force_reveal_world(&frontend)){
+            puts("error fog-off-reapply-failed");exit_code=1;
+        }
         fflush(stdout);
     }
     if(!civ_frontend_flush_persistent_sram(&frontend,0)){fprintf(stderr,"SRAM flush failed: %s\n",civ_frontend_last_error(&frontend));exit_code=1;}

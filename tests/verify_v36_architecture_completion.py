@@ -15,7 +15,7 @@ win_frontend=(root/'frontend/windows/civilization_app_win32.c').read_text(encodi
 win_settings=(root/'frontend/windows/frontend_settings_win32.c').read_text(encoding='utf-8')
 win_resource=(root/'frontend/windows/launcher_version.rc').read_text(encoding='utf-8')
 win_core=(root/'frontend/windows/civilization_app_core.c').read_text(encoding='utf-8')
-release_version=(root/'VERSION.txt').read_text(encoding='utf-8').strip()
+release_version=(root/'VERSION.txt').read_text(encoding='utf-8').splitlines()[0]
 
 menu_actions=(
  'ID_BROWSE_MENU','ID_RUN','ID_PAUSE_PLAY','ID_RESET','ID_SNAPSHOT_SAVE_CURRENT',
@@ -25,7 +25,8 @@ menu_actions=(
 )
 settings_keys=(
  'IntegerScale','PauseOnFocusLoss','AutoRunOnLoad','FullScreenOnPlay',
- 'ShowFpsCounter','NtscFrameLock','SnapshotSlot','WelcomeShown','Source',
+ 'ShowFpsCounter','NtscFrameLock','Widescreen','SnapshotSlot','WelcomeShown',
+ 'Source',
 )
 
 checks={
@@ -39,11 +40,11 @@ checks={
  'input_subsystem_split': 'civ_controller_serial_read' in input_c and 'static uint8_t civ_mouse_scaled_axis' not in bus,
  'test_build_hygiene': 'include(CTest)' in cmake and 'if(BUILD_TESTING)' in cmake and cmake.index('find_package(Python3')>cmake.index('if(BUILD_TESTING)'),
  'no_global_handwritten_warning_suppression': '/wd4310 /wd4702' not in cmake,
- 'release_1_2_0_consistency': release_version=='1.2.0' and
-     'FILEVERSION 1,2,0,0' in win_resource and
-     'PRODUCTVERSION 1,2,0,0' in win_resource and
-     'L"Version 1.2.0\\r\\n\\r\\n"' in win_frontend and
-     'Civilization Static Recomp 1.2.0 - Screenshot Static-Core Log' in win_core,
+ 'release_1_3_0_consistency': release_version=='Civilization (SNES) Static Recomp 1.3.0' and
+     'FILEVERSION 1,3,0,0' in win_resource and
+     'PRODUCTVERSION 1,3,0,0' in win_resource and
+     'L"Version 1.3.0\\r\\n\\r\\n"' in win_frontend and
+     'Civilization Static Recomp 1.3.0 - Screenshot Static-Core Log' in win_core,
  'welcome_restores_parent_focus': all(x in win_frontend for x in (
      'g_getting_started_state.previous_focus = GetFocus();',
      'restore_main_window_focus(state->previous_focus);',

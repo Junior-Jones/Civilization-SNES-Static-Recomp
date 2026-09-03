@@ -1,5 +1,10 @@
 #include "civilization_internal.h"
+#include "civilization_diagnostics.h"
+#include "civilization_generated_core.h"
 
+#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 #include <string.h>
 
 typedef struct CivV20Pixel {
@@ -9,6 +14,141 @@ typedef struct CivV20Pixel {
     uint8_t obj_palette;
     uint8_t transparent;
 } CivV20Pixel;
+
+#define CIV_TERRAIN_ENTRY_CAPACITY 512u
+static CivTerrainRenderEntry g_terrain_entries[CIV_TERRAIN_ENTRY_CAPACITY];
+static size_t g_terrain_entry_count;
+static int g_generating_probe_tile;
+
+static uint16_t v20_wram_word(const CivRecomp *i,unsigned offset)
+{
+    return (uint16_t)(i->wram[offset]|((uint16_t)i->wram[offset+1u]<<8));
+}
+
+void civ_widescreen_probe_record_terrain_entry(CivRecomp *i)
+{
+    CivTerrainRenderEntry *entry;
+    size_t slot;
+    if(!i||g_generating_probe_tile)return;
+    slot=g_terrain_entry_count%CIV_TERRAIN_ENTRY_CAPACITY;
+    entry=&g_terrain_entries[slot];
+    memset(entry,0,sizeof(*entry));
+    entry->frame=i->frame_count;
+    entry->cpu.a=i->cpu.a;entry->cpu.x=i->cpu.x;entry->cpu.y=i->cpu.y;
+    entry->cpu.s=i->cpu.s;entry->cpu.d=i->cpu.d;entry->cpu.pc=i->cpu.pc;
+    entry->cpu.pbr=i->cpu.pbr;entry->cpu.dbr=i->cpu.dbr;
+    entry->cpu.p=i->cpu.p;entry->cpu.e=i->cpu.e;
+    entry->map_x=v20_wram_word(i,0x07E4u);
+    entry->map_y=v20_wram_word(i,0x07E6u);
+    entry->ring_x=v20_wram_word(i,0x07E0u);
+    entry->ring_y=v20_wram_word(i,0x07E2u);
+    entry->tile_number=v20_wram_word(i,0x07D4u);
+    entry->world_index=v20_wram_word(i,0x07E8u);
+    i->widescreen_terrain_cpu=i->cpu;
+    i->widescreen_terrain_cpu_valid=1u;
+    if(entry->world_index<CIV_WORLD_TILE_COUNT)
+        i->widescreen_terrain[entry->world_index].valid=0u;
+    ++g_terrain_entry_count;
+}
+
+static void v20_store_wram_word(CivRecomp *i,unsigned offset,uint16_t value)
+{
+    i->wram[offset]=(uint8_t)value;
+    i->wram[offset+1u]=(uint8_t)(value>>8);
+}
+
+static int v20_generate_terrain_tile_with_shadow(const CivRecomp *i,
+                                                  CivRecomp *shadow,
+                                                  unsigned world_x,
+                                                  unsigned world_y,
+                                                  uint8_t graphics[128],
+                                                  uint16_t *tile_attributes,
+                                                  unsigned *steps_out,
+                                                  char *error,
+                                                  size_t error_capacity)
+{
+    const CivCpuState *entry;
+    CivCpuState fallback_entry;
+    unsigned steps=0u;
+    int ok=0;
+    if(error&&error_capacity)error[0]='\0';
+    if(!i||!graphics||!tile_attributes||world_x>=80u||world_y>=40u)return 0;
+    if(i->widescreen_terrain_cpu_valid)entry=&i->widescreen_terrain_cpu;
+    else {
+        /* $C2:0712 has a stable direct-page/stack ABI. This seed permits an
+           old snapshot loaded in a fresh process to rebuild presentation-only
+           terrain before the next guest redraw records a newer entry. */
+        memset(&fallback_entry,0,sizeof(fallback_entry));
+        fallback_entry.s=0x05E6u;
+        entry=&fallback_entry;
+    }
+    if(!shadow)return 0;
+    memcpy(shadow,i,offsetof(CivRecomp,widescreen_terrain_cpu));
+    shadow->cpu.a=entry->a;shadow->cpu.x=entry->x;
+    shadow->cpu.y=entry->y;shadow->cpu.s=entry->s;
+    shadow->cpu.d=entry->d;shadow->cpu.pc=0x0712u;
+    shadow->cpu.pbr=0xC2u;shadow->cpu.dbr=entry->dbr;
+    shadow->cpu.p=entry->p;shadow->cpu.e=entry->e;
+    shadow->failed=0;
+    shadow->frontier_address[0]='\0';shadow->frontier_reason[0]='\0';
+    v20_store_wram_word(shadow,0x07E4u,(uint16_t)world_x);
+    v20_store_wram_word(shadow,0x07E6u,(uint16_t)world_y);
+    v20_store_wram_word(shadow,0x07E8u,(uint16_t)(world_y*80u+world_x));
+    /* JSL $C20712 at $C2:012D returns through RTL to $C2:0131. */
+    shadow->wram[(uint16_t)(shadow->cpu.s+1u)]=0x30u;
+    shadow->wram[(uint16_t)(shadow->cpu.s+2u)]=0x01u;
+    shadow->wram[(uint16_t)(shadow->cpu.s+3u)]=0xC2u;
+    g_generating_probe_tile=1;
+    while(steps<20000u) {
+        if(shadow->cpu.pbr==0xC2u&&shadow->cpu.pc==0x0131u){ok=1;break;}
+        if(!civ_generated_core_step(shadow))break;
+        ++steps;
+    }
+    g_generating_probe_tile=0;
+    if(ok) {
+        memcpy(graphics,shadow->wram+0x14000u,128u);
+        *tile_attributes=v20_wram_word(shadow,0x07D6u);
+    }
+    else if(error&&error_capacity) {
+        (void)snprintf(error,error_capacity,"pc=%02X:%04X failed=%d address=%s reason=%s",
+                       shadow->cpu.pbr,shadow->cpu.pc,shadow->failed,
+                       shadow->frontier_address,shadow->frontier_reason);
+    }
+    if(steps_out)*steps_out=steps;
+    return ok;
+}
+
+int civ_widescreen_probe_generate_terrain_tile(const CivRecomp *i,
+                                                unsigned world_x,
+                                                unsigned world_y,
+                                                uint8_t graphics[128],
+                                                uint16_t *tile_attributes,
+                                                unsigned *steps_out,
+                                                char *error,
+                                                size_t error_capacity)
+{
+    CivRecomp *shadow=(CivRecomp *)malloc(sizeof(*shadow));
+    int ok;
+    if(!shadow)return 0;
+    ok=v20_generate_terrain_tile_with_shadow(i,shadow,world_x,world_y,
+         graphics,tile_attributes,steps_out,error,error_capacity);
+    free(shadow);
+    return ok;
+}
+
+size_t civ_widescreen_probe_terrain_entries(CivTerrainRenderEntry *out,
+                                             size_t capacity)
+{
+    size_t available=g_terrain_entry_count<CIV_TERRAIN_ENTRY_CAPACITY?
+        g_terrain_entry_count:CIV_TERRAIN_ENTRY_CAPACITY;
+    size_t first=g_terrain_entry_count>available?g_terrain_entry_count-available:0u;
+    size_t count=available,n;
+    if(!out||capacity==0u)return available;
+    if(count>capacity){first+=count-capacity;count=capacity;}
+    for(n=0u;n<count;++n)
+        out[n]=g_terrain_entries[(first+n)%CIV_TERRAIN_ENTRY_CAPACITY];
+    return count;
+}
 
 static uint16_t v20_vram_word(const CivRecomp *i, uint32_t byte_address)
 {
@@ -343,8 +483,217 @@ int civ_render_current_frame(CivRecomp *i)
     i->ppu=saved_ppu;
     memcpy(i->ppu_regs,saved_regs,sizeof(saved_regs));
     i->v19_framebuffer_fnv1a64 = v20_frame_hash((const uint8_t *)i->v19_framebuffer_rgba,
-                                                 sizeof(i->v19_framebuffer_rgba));
+                                                 CIV_FRAME_PIXELS * sizeof(uint32_t));
     i->v19_framebuffer_ready = 1u;
+    i->v19_framebuffer_width = CIV_FRAME_WIDTH;
+    return 1;
+}
+
+static uint8_t v20_probe_generated_pixel(const uint8_t graphics[128],
+                                         unsigned x,unsigned y)
+{
+    unsigned tile=(y>>3)*2u+(x>>3);
+    unsigned row=y&7u,bit=7u-(x&7u),plane;
+    const uint8_t *data=graphics+tile*32u;
+    uint8_t color=0u;
+    for(plane=0u;plane<4u;++plane) {
+        unsigned address=(plane>>1)*16u+row*2u+(plane&1u);
+        color|=(uint8_t)(((data[address]>>bit)&1u)<<plane);
+    }
+    return color;
+}
+
+static int v20_probe_world_pixel(CivRecomp *i,CivRecomp *shadow,
+                                 int world_pixel_x,
+                                 int world_pixel_y,uint16_t *color)
+{
+    int wrapped_x=world_pixel_x%(80*16);
+    unsigned world_x,world_y,pixel_x,pixel_y,index;
+    CivWidescreenTerrainTile *tile;
+    uint8_t palette_index;
+    if(wrapped_x<0)wrapped_x+=80*16;
+    if(world_pixel_y<0||world_pixel_y>=40*16)return 0;
+    world_x=(unsigned)wrapped_x>>4;pixel_x=(unsigned)wrapped_x&15u;
+    world_y=(unsigned)world_pixel_y>>4;pixel_y=(unsigned)world_pixel_y&15u;
+    index=world_y*CIV_WORLD_WIDTH_TILES+world_x;
+    /* Never reveal unexplored terrain. Civilization stores one visibility
+       byte per world tile; bit 7 is set only after that tile is discovered. */
+    if((i->wram[0x0AF19u+index]&0x80u)==0u){*color=0u;return 1;}
+    tile=&i->widescreen_terrain[index];
+    if(!tile->valid) {
+        unsigned steps;
+        if(!v20_generate_terrain_tile_with_shadow(i,shadow,world_x,world_y,
+              tile->graphics,&tile->attributes,&steps,NULL,0u))return 0;
+        tile->valid=1u;
+    }
+    if(!tile->valid)return 0;
+    palette_index=v20_probe_generated_pixel(tile->graphics,pixel_x,pixel_y);
+    if(!palette_index)return 0;
+    *color=v20_cgram_color(i,((tile->attributes>>10)&7u)*16u+palette_index);
+    return 1;
+}
+
+static void v20_probe_overlay_cursor(CivRecomp *i,int extension_x,
+                                     int extension_y,int map_shift_y)
+{
+    uint8_t high=(uint8_t)(i->oam[0x200u]&3u);
+    int source_x=(high&1u)?(int)i->oam[0]-256:(int)i->oam[0];
+    int output_left=source_x+(int)CIV_WIDESCREEN_PROBE_MARGIN+extension_x;
+    int output_top=(int)i->oam[1]+map_shift_y+extension_y;
+    uint8_t tile_name=i->oam[2],attr=i->oam[3];
+    unsigned width=v20_sprite_width(i->ppu.oam_mode,(high>>1)&1u);
+    unsigned height=v20_sprite_height(i->ppu.oam_mode,(high>>1)&1u);
+    uint32_t chr_base=(uint32_t)i->ppu.oam_base_address*2u;
+    unsigned py,px;
+    if(attr&1u)chr_base+=(uint32_t)(((i->ppu_regs[1]>>3)&3u)+1u)<<13;
+    for(py=0u;py<height;++py) {
+        int output_y=output_top+1+(int)py;
+        unsigned sprite_y=(attr&0x80u)?height-1u-py:py;
+        if(output_y<0||output_y>=(int)CIV_FRAME_HEIGHT)continue;
+        for(px=0u;px<width;++px) {
+            unsigned sprite_x=(attr&0x40u)?width-1u-px:px;
+            unsigned tile_row=(((unsigned)tile_name>>4)+(sprite_y>>3))&15u;
+            unsigned tile_column=((unsigned)tile_name+(sprite_x>>3))&15u;
+            unsigned tile_index=(tile_row<<4)|tile_column;
+            int output_x=output_left+(int)px;
+            uint8_t color;
+            uint16_t rgb;
+            if(output_x<0||output_x>=(int)CIV_WIDESCREEN_PROBE_WIDTH)continue;
+            color=v20_tile_pixel(i,4u,chr_base,tile_index,
+                                  sprite_y&7u,sprite_x&7u);
+            if(!color)continue;
+            rgb=v20_cgram_color(i,128u+(((attr>>1)&7u)<<4)+color);
+            i->v19_framebuffer_rgba[(unsigned)output_y*
+                CIV_WIDESCREEN_PROBE_WIDTH+(unsigned)output_x]=
+                v20_rgba(rgb,i->ppu.brightness);
+        }
+    }
+}
+
+int civ_render_widescreen_probe_frame(CivRecomp *i)
+{
+    CivPpuDecodedState saved_ppu;
+    uint8_t saved_regs[CIV_PPU_WRITE_REG_COUNT];
+    CivRecomp *shadow;
+    uint32_t *native_frame;
+    unsigned camera_x,camera_y;
+    int map_origin_y,map_shift_y;
+    unsigned y;
+    int cursor_extension_x,cursor_extension_y;
+    uint8_t saved_cursor_y;
+
+    if (!i) return 0;
+    if(!civ_widescreen_live_map_state(i))return civ_render_current_frame(i);
+    cursor_extension_x=i->widescreen_enabled?
+        (int)i->widescreen_cursor_extension_x:0;
+    cursor_extension_y=i->widescreen_enabled?
+        (int)i->widescreen_cursor_extension_y:0;
+    saved_cursor_y=i->oam[1];
+    if(cursor_extension_x||cursor_extension_y)i->oam[1]=239u;
+    if(!civ_render_current_frame(i)) {i->oam[1]=saved_cursor_y;return 0;}
+    i->oam[1]=saved_cursor_y;
+    native_frame=(uint32_t *)malloc(CIV_FRAME_PIXELS*sizeof(uint32_t));
+    if(!native_frame)return 0;
+    shadow=(CivRecomp *)malloc(sizeof(*shadow));
+    if(!shadow){free(native_frame);return 0;}
+    memcpy(native_frame,i->v19_framebuffer_rgba,
+           CIV_FRAME_PIXELS*sizeof(uint32_t));
+    saved_ppu = i->ppu;
+    memcpy(saved_regs, i->ppu_regs, sizeof(saved_regs));
+    camera_x=v20_wram_word(i,0x06FCu)%80u;
+    camera_y=v20_wram_word(i,0x06FEu);
+    map_origin_y=(int)camera_y-1;
+    if(map_origin_y<0)map_origin_y=0;
+    if(map_origin_y>26)map_origin_y=26;
+    map_shift_y=((int)camera_y-map_origin_y)*16-16;
+
+    /* The output remains 398x224 (the near-exact 16:9 source geometry), but
+       live terrain now occupies the old top and bottom ornament bands too.
+       At the north/south world limits the 14-row output origin is clamped and
+       the native map rows/cursor are shifted so every pixel still represents
+       a real world coordinate. */
+    for (y = CIV_FRAME_HEIGHT; y-- > 0u;) {
+        uint32_t *wide_row = i->v19_framebuffer_rgba + y * CIV_WIDESCREEN_PROBE_WIDTH;
+        unsigned x;
+        int source_y=(int)y-map_shift_y;
+
+        if (i->scanline_state_valid[y]) {
+            i->ppu = i->scanline_ppu[y];
+            memcpy(i->ppu_regs, i->scanline_ppu_regs[y], CIV_PPU_WRITE_REG_COUNT);
+        }
+        for(x=0u;x<CIV_WIDESCREEN_PROBE_WIDTH;++x) {
+            const unsigned wide_right_border=CIV_WIDESCREEN_PROBE_WIDTH-32u;
+            const unsigned centered_left=32u+CIV_WIDESCREEN_PROBE_MARGIN;
+            const unsigned centered_right=centered_left+192u;
+            if(x<32u)wide_row[x]=native_frame[y*CIV_FRAME_WIDTH+x];
+            else if(x>=wide_right_border)
+                wide_row[x]=native_frame[y*CIV_FRAME_WIDTH+
+                    224u+(x-wide_right_border)];
+            else if(x>=centered_left&&x<centered_right&&
+                    source_y>=16&&source_y<208) {
+                wide_row[x]=native_frame[(unsigned)source_y*CIV_FRAME_WIDTH+
+                    x-CIV_WIDESCREEN_PROBE_MARGIN];
+            } else {
+                int source_x=(int)x-(int)CIV_WIDESCREEN_PROBE_MARGIN;
+                int world_pixel_x=(int)camera_x*16+source_x-32;
+                int world_pixel_y=map_origin_y*16+(int)y;
+                uint16_t color;
+                if(!v20_probe_world_pixel(i,shadow,
+                                          world_pixel_x,world_pixel_y,&color)) {
+                    CivV20Pixel bg1=v20_screen_pixel(i,0x01u,0u,128u,y,0u,0u);
+                    color=bg1.color;
+                }
+                wide_row[x]=v20_rgba(color,i->ppu.brightness);
+            }
+        }
+    }
+    i->ppu = saved_ppu;
+    memcpy(i->ppu_regs, saved_regs, sizeof(saved_regs));
+    if(cursor_extension_x||cursor_extension_y)
+        v20_probe_overlay_cursor(i,cursor_extension_x,cursor_extension_y,
+                                 map_shift_y);
+    i->v19_framebuffer_fnv1a64 = v20_frame_hash(
+        (const uint8_t *)i->v19_framebuffer_rgba,
+        CIV_WIDESCREEN_PROBE_PIXELS * sizeof(uint32_t));
+    i->v19_framebuffer_ready = 1u;
+    i->v19_framebuffer_width = CIV_WIDESCREEN_WIDTH;
+    free(shadow);
+    free(native_frame);
+    return 1;
+}
+
+int civ_render_present_frame(CivRecomp *i)
+{
+    if(civ_widescreen_frame_active(i))return civ_render_widescreen_probe_frame(i);
+    return civ_render_current_frame(i);
+}
+
+int civ_render_layer_probe_frame(CivRecomp *i,unsigned layer_mask)
+{
+    CivPpuDecodedState saved_ppu;
+    uint8_t saved_regs[CIV_PPU_WRITE_REG_COUNT];
+    unsigned y;
+    if(!i||layer_mask>0x1Fu)return 0;
+    saved_ppu=i->ppu;
+    memcpy(saved_regs,i->ppu_regs,sizeof(saved_regs));
+    for(y=0u;y<CIV_FRAME_HEIGHT;++y) {
+        unsigned x;
+        if(i->scanline_state_valid[y]) {
+            i->ppu=i->scanline_ppu[y];
+            memcpy(i->ppu_regs,i->scanline_ppu_regs[y],CIV_PPU_WRITE_REG_COUNT);
+        }
+        for(x=0u;x<CIV_FRAME_WIDTH;++x) {
+            CivV20Pixel pixel=v20_screen_pixel(i,layer_mask,0u,x,y,0u,0u);
+            i->v19_framebuffer_rgba[y*CIV_FRAME_WIDTH+x]=
+                v20_rgba(pixel.color,i->ppu.brightness);
+        }
+    }
+    i->ppu=saved_ppu;
+    memcpy(i->ppu_regs,saved_regs,sizeof(saved_regs));
+    i->v19_framebuffer_fnv1a64=v20_frame_hash(
+        (const uint8_t *)i->v19_framebuffer_rgba,
+        CIV_FRAME_PIXELS*sizeof(uint32_t));
+    i->v19_framebuffer_ready=1u;
     return 1;
 }
 

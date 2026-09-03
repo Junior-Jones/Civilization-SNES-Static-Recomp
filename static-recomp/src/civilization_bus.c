@@ -1,6 +1,74 @@
 #include "civilization_internal.h"
 #include "civilization_audio.h"
 
+#define CIV_PROBE_WRITER_CAPACITY 64u
+static CivWidescreenProbeWramWriter g_probe_writers[CIV_PROBE_WRITER_CAPACITY];
+static size_t g_probe_writer_count;
+static CivWidescreenProbeWramWriter g_probe_fog_readers[CIV_PROBE_WRITER_CAPACITY];
+static size_t g_probe_fog_reader_count;
+
+size_t civ_widescreen_probe_tilemap_writers(CivWidescreenProbeWramWriter *out,
+                                            size_t capacity)
+{
+    size_t count=g_probe_writer_count,n;
+    if(count>CIV_PROBE_WRITER_CAPACITY)count=CIV_PROBE_WRITER_CAPACITY;
+    if(!out||capacity==0u)return count;
+    if(count>capacity)count=capacity;
+    for(n=0u;n<count;++n)out[n]=g_probe_writers[n];
+    return count;
+}
+
+size_t civ_widescreen_probe_fog_readers(CivWidescreenProbeWramWriter *out,
+                                        size_t capacity)
+{
+    size_t count=g_probe_fog_reader_count,n;
+    if(count>CIV_PROBE_WRITER_CAPACITY)count=CIV_PROBE_WRITER_CAPACITY;
+    if(!out||capacity==0u)return count;
+    if(count>capacity)count=capacity;
+    for(n=0u;n<count;++n)out[n]=g_probe_fog_readers[n];
+    return count;
+}
+
+static void civ_probe_record_fog_reader(const CivRecomp *i,uint32_t off)
+{
+    uint32_t pc=((uint32_t)i->cpu.pbr<<16)|i->cpu.pc;
+    size_t n;
+    for(n=0u;n<g_probe_fog_reader_count&&n<CIV_PROBE_WRITER_CAPACITY;++n) {
+        if(g_probe_fog_readers[n].cpu_pc==pc) {
+            ++g_probe_fog_readers[n].write_count;
+            g_probe_fog_readers[n].last_offset=(uint16_t)(off-0xAF19u);
+            return;
+        }
+    }
+    if(g_probe_fog_reader_count<CIV_PROBE_WRITER_CAPACITY) {
+        CivWidescreenProbeWramWriter *reader=&g_probe_fog_readers[g_probe_fog_reader_count++];
+        reader->cpu_pc=pc;
+        reader->write_count=1u;
+        reader->first_offset=(uint16_t)(off-0xAF19u);
+        reader->last_offset=(uint16_t)(off-0xAF19u);
+    }
+}
+
+static void civ_probe_record_tilemap_writer(const CivRecomp *i,uint32_t off)
+{
+    uint32_t pc=((uint32_t)i->cpu.pbr<<16)|i->cpu.pc;
+    size_t n;
+    for(n=0u;n<g_probe_writer_count&&n<CIV_PROBE_WRITER_CAPACITY;++n) {
+        if(g_probe_writers[n].cpu_pc==pc) {
+            ++g_probe_writers[n].write_count;
+            g_probe_writers[n].last_offset=(uint16_t)off;
+            return;
+        }
+    }
+    if(g_probe_writer_count<CIV_PROBE_WRITER_CAPACITY) {
+        CivWidescreenProbeWramWriter *writer=&g_probe_writers[g_probe_writer_count++];
+        writer->cpu_pc=pc;
+        writer->write_count=1u;
+        writer->first_offset=(uint16_t)off;
+        writer->last_offset=(uint16_t)off;
+    }
+}
+
 static int wram_offset(uint32_t address, uint32_t *offset) {
     uint8_t bank=(uint8_t)(address>>16); uint16_t local=(uint16_t)address;
     if (bank==0x7Eu) { *offset=local; return 1; }
@@ -25,7 +93,10 @@ int civ_bus_read8(CivRecomp *i, uint32_t address, uint8_t *value) {
     if (!i||!value) return 0;
     address &= 0xFFFFFFu; bank=(uint8_t)(address>>16); local=(uint16_t)address;
     civ_cpu_data_access(i,address);
-    if (wram_offset(address,&off)) { *value=i->wram[off]; return 1; }
+    if (wram_offset(address,&off)) {
+        if(off>=0xAF19u&&off<0xBB99u)civ_probe_record_fog_reader(i,off);
+        *value=i->wram[off]; return 1;
+    }
     if (io_bank(bank) && local>=0x2134u && local<=0x2136u) {
         return civ_ppu_read_reached(i,local,value);
     }
@@ -118,7 +189,10 @@ int civ_bus_write8(CivRecomp *i, uint32_t address, uint8_t value) {
     if (!i) return 0;
     address &= 0xFFFFFFu; bank=(uint8_t)(address>>16); local=(uint16_t)address;
     civ_cpu_data_access(i,address);
-    if (wram_offset(address,&off)) { i->wram[off]=value; return 1; }
+    if (wram_offset(address,&off)) {
+        if(off>=0x2420u&&off<0x2C20u)civ_probe_record_tilemap_writer(i,off);
+        i->wram[off]=value; return 1;
+    }
     cartridge_result=civ_cartridge_write(i,address,value);
     if(cartridge_result>=0)return cartridge_result;
     if (io_bank(bank) && local==0x4016u) {

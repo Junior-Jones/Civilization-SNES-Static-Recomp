@@ -56,4 +56,6 @@ int civ_fail_frontier(CivRecomp *i, const char *reason, const char *address);
 int civ_headless_frame_stop(CivRecomp *i);
 void civ_video_begin_visible_frame_capture(CivRecomp *i);
 void civ_video_freeze_visible_frame(CivRecomp *i);
+void civ_widescreen_probe_record_terrain_entry(CivRecomp *i);
+int civ_widescreen_live_map_state(const CivRecomp *i);
 #endif

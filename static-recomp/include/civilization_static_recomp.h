@@ -17,6 +17,16 @@ extern "C" {
 #define CIV_FRAME_WIDTH 256u
 #define CIV_FRAME_HEIGHT 224u
 #define CIV_FRAME_PIXELS (CIV_FRAME_WIDTH*CIV_FRAME_HEIGHT)
+#define CIV_WIDESCREEN_MARGIN 71u
+#define CIV_WIDESCREEN_WIDTH (CIV_FRAME_WIDTH+(2u*CIV_WIDESCREEN_MARGIN))
+#define CIV_WIDESCREEN_PIXELS (CIV_WIDESCREEN_WIDTH*CIV_FRAME_HEIGHT)
+/* Compatibility names retained for the Temp diagnostic scripts. */
+#define CIV_WIDESCREEN_PROBE_MARGIN CIV_WIDESCREEN_MARGIN
+#define CIV_WIDESCREEN_PROBE_WIDTH CIV_WIDESCREEN_WIDTH
+#define CIV_WIDESCREEN_PROBE_PIXELS CIV_WIDESCREEN_PIXELS
+#define CIV_WORLD_WIDTH_TILES 80u
+#define CIV_WORLD_HEIGHT_TILES 40u
+#define CIV_WORLD_TILE_COUNT (CIV_WORLD_WIDTH_TILES*CIV_WORLD_HEIGHT_TILES)
 #define CIV_VRAM_SIZE 65536u
 #define CIV_CGRAM_SIZE 512u
 #define CIV_OAM_SIZE 544u
@@ -30,6 +40,21 @@ extern "C" {
 typedef struct CivRecomp CivRecomp;
 
 typedef void (*CivHostPcmSink)(void *context,int16_t left,int16_t right);
+typedef struct CivWidescreenProbeDmaEvent {
+    uint64_t frame;
+    uint32_t cpu_address;
+    uint16_t vram_word_address;
+    uint16_t byte_count;
+    uint32_t cpu_pc;
+    uint8_t channel;
+    uint8_t mode;
+} CivWidescreenProbeDmaEvent;
+typedef struct CivWidescreenProbeWramWriter {
+    uint32_t cpu_pc;
+    uint32_t write_count;
+    uint16_t first_offset;
+    uint16_t last_offset;
+} CivWidescreenProbeWramWriter;
 typedef void (*CivHostFrameSink)(void *context,uint64_t frame_number,
                                  const uint32_t *rgba_pixels);
 typedef void (*CivHostFailureSink)(void *context,const char *address,
@@ -138,6 +163,12 @@ typedef struct CivPpuDecodedState {
     uint8_t screen_interlace;
 } CivPpuDecodedState;
 
+typedef struct CivWidescreenTerrainTile {
+    uint16_t attributes;
+    uint8_t graphics[128];
+    uint8_t valid;
+} CivWidescreenTerrainTile;
+
 struct CivRecomp {
     CivCpuState cpu;
     uint8_t wram[CIV_WRAM_SIZE];
@@ -239,6 +270,16 @@ struct CivRecomp {
     uint8_t static_cpu_phase; /* 0=bootstrap, 1=post-audio bootstrap, 2=pre-continuation, 3=closed-graph continuation. */
     uint64_t headless_frame_stop_target;
     CivHostHooks host_hooks; /* Host-only; excluded from snapshots. */
+    /* Temp widescreen connector state. This is host presentation/input state,
+       deliberately excluded from the canonical SNES snapshot schema. */
+    uint8_t widescreen_enabled;
+    int16_t widescreen_cursor_extension_x;
+    int16_t widescreen_cursor_extension_y;
+    uint16_t widescreen_previous_input;
+    uint16_t widescreen_consumed_direction;
+    uint8_t widescreen_input_rebased;
+    uint8_t widescreen_clear_after_release;
+    uint16_t widescreen_rebase_words[9];
     uint16_t htime_raw;
     uint16_t vtime_raw;
     uint8_t auto_joypad_enable;
@@ -372,10 +413,10 @@ struct CivRecomp {
 
     /* Version 19 first authentic Mode-1 presentation surface.  The renderer is
        target-native core code; host frontends only consume this RGBA buffer. */
-    uint32_t v19_framebuffer_rgba[CIV_FRAME_PIXELS];
+    uint32_t v19_framebuffer_rgba[CIV_WIDESCREEN_PIXELS];
     uint64_t v19_framebuffer_fnv1a64;
     uint8_t v19_framebuffer_ready;
-
+    uint16_t v19_framebuffer_width;
     /* Version 09 deterministic functional frame boundary.  This counts NTSC
        H/V counter wraps only; it is not by itself a rendered-frame claim. */
     uint64_t frame_count;
@@ -396,6 +437,12 @@ struct CivRecomp {
     int failed;
     char frontier_address[16];
     char frontier_reason[192];
+
+    /* Host presentation cache. Keep this last so a terrain-generation shadow
+       can copy every canonical/core field without copying the cache itself. */
+    CivCpuState widescreen_terrain_cpu;
+    uint8_t widescreen_terrain_cpu_valid;
+    CivWidescreenTerrainTile widescreen_terrain[CIV_WORLD_TILE_COUNT];
 };
 #endif /* CIVILIZATION_CORE_INTERNAL */
 
@@ -436,6 +483,12 @@ uint64_t civ_audio_overflow_count(const CivRecomp *instance);
 int civ_run_to_frame(CivRecomp *instance, uint64_t target_frame,
                      uint64_t instruction_budget);
 void civ_set_host_hooks(CivRecomp *instance,const CivHostHooks *hooks);
+void civ_set_widescreen_enabled(CivRecomp *instance,int enabled);
+int civ_widescreen_enabled(const CivRecomp *instance);
+int civ_widescreen_frame_active(const CivRecomp *instance);
+unsigned civ_frame_width(const CivRecomp *instance);
+int civ_widescreen_cursor_extension_x(const CivRecomp *instance);
+int civ_widescreen_cursor_extension_y(const CivRecomp *instance);
 int civ_run_frame(CivRecomp *instance,uint16_t controller1,
                   uint64_t instruction_budget,int render,
                   CivFrameResult *result);
@@ -453,6 +506,16 @@ int civ_run_v20(CivRecomp *instance, uint64_t max_instructions);
 int civ_v20_audio_sync(CivRecomp *instance);
 void civ_v20_set_host_pcm_sink(CivRecomp *instance,CivHostPcmSink sink,void *context);
 int civ_render_current_frame(CivRecomp *instance);
+int civ_render_present_frame(CivRecomp *instance);
+/* Compatibility diagnostic spelling retained for existing Temp scripts. */
+int civ_render_widescreen_probe_frame(CivRecomp *instance);
+int civ_render_layer_probe_frame(CivRecomp *instance,unsigned layer_mask);
+size_t civ_widescreen_probe_vram_dma_history(CivWidescreenProbeDmaEvent *out,
+                                             size_t capacity);
+size_t civ_widescreen_probe_tilemap_writers(CivWidescreenProbeWramWriter *out,
+                                            size_t capacity);
+size_t civ_widescreen_probe_fog_readers(CivWidescreenProbeWramWriter *out,
+                                        size_t capacity);
 /* Source-compatibility spelling for Version 20-era frontends. */
 int civ_v20_render_current_frame(CivRecomp *instance);
 const uint32_t *civ_get_framebuffer_rgba(const CivRecomp *instance);

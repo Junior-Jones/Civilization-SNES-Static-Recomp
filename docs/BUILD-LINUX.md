@@ -1,4 +1,4 @@
-# Civilization 1.2.0 Linux build and static gate
+# Civilization 1.3.0 Linux build and static gate
 
 The Civilization ROM is external and must match `ROM-REQUIREMENTS.txt`.
 
@@ -9,7 +9,7 @@ cmake --build build -j2
 ctest --test-dir build --output-on-failure
 ```
 
-The 1.2.0 release gate contains **53 tests**. It retains the target-bounded
+The 1.3.0 release gate contains **53 tests**. It retains the target-bounded
 machine, CPU, PPU, DMA/HDMA, controller, ROM-identity, lifecycle, bus-surface,
 Full Static audio and finite-state checks and adds the current proof/persistence
 acceptance gates:

@@ -10,6 +10,7 @@ extern "C" {
 
 #define CIVILIZATION_RECOMP_ROM_SIZE 1572864u
 #define CIVILIZATION_RECOMP_FRAME_WIDTH 256u
+#define CIVILIZATION_RECOMP_WIDESCREEN_WIDTH 398u
 #define CIVILIZATION_RECOMP_FRAME_HEIGHT 224u
 #define CIVILIZATION_RECOMP_HOST_AUDIO_SAMPLE_RATE 32040u
 #define CIVILIZATION_RECOMP_AUDIO_SAMPLE_RATE 32040u
@@ -66,6 +67,10 @@ int civilization_recomp_advance_headless(CivilizationRecomp *instance,
 const uint32_t *civilization_recomp_frame_bgra(
     const CivilizationRecomp *instance);
 uint32_t civilization_recomp_frame_width(const CivilizationRecomp *instance);
+int civilization_recomp_widescreen_enabled(const CivilizationRecomp *instance);
+int civilization_recomp_set_widescreen(CivilizationRecomp *instance,
+                                        int enabled, char *error,
+                                        size_t error_capacity);
 uint32_t civilization_recomp_current_frame(
     const CivilizationRecomp *instance);
 const char *civilization_recomp_last_error(

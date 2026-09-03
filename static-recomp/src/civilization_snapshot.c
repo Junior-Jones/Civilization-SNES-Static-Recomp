@@ -181,6 +181,9 @@ int civ_snapshot_load(CivRecomp *instance, const uint8_t *rom, size_t rom_size,
     uint8_t *payload = NULL;
     char payload_sha256[65];
     CivHostHooks preserved_hooks;
+    uint8_t preserved_widescreen;
+    CivCpuState preserved_terrain_cpu;
+    uint8_t preserved_terrain_cpu_valid;
     int trailing;
     int ok = 0;
 
@@ -191,6 +194,9 @@ int civ_snapshot_load(CivRecomp *instance, const uint8_t *rom, size_t rom_size,
     }
     if (!civ_verify_rom(rom, rom_size, &rom_info, error, error_cap)) return 0;
     preserved_hooks=instance->host_hooks;
+    preserved_widescreen=instance->widescreen_enabled;
+    preserved_terrain_cpu=instance->widescreen_terrain_cpu;
+    preserved_terrain_cpu_valid=instance->widescreen_terrain_cpu_valid;
     file = fopen(path, "rb");
     if (!file) {
         snapshot_error(error, error_cap, "Unable to open snapshot file.");
@@ -250,6 +256,15 @@ int civ_snapshot_load(CivRecomp *instance, const uint8_t *rom, size_t rom_size,
     instance->headless_frame_stop_reached = 0u;
     instance->headless_frame_stop_target = 0u;
     instance->host_hooks=preserved_hooks;
+    instance->widescreen_enabled=preserved_widescreen;
+    instance->widescreen_terrain_cpu=preserved_terrain_cpu;
+    instance->widescreen_terrain_cpu_valid=preserved_terrain_cpu_valid;
+    instance->widescreen_cursor_extension_x=0;
+    instance->widescreen_cursor_extension_y=0;
+    instance->widescreen_previous_input=0u;
+    instance->widescreen_consumed_direction=0u;
+    instance->widescreen_input_rebased=0u;
+    instance->widescreen_clear_after_release=0u;
 
     if (header.audio_size != 0u) {
         /* A fresh process has no static-APU owner.  Acquire the one production

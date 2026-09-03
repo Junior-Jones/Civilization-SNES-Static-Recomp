@@ -286,7 +286,7 @@ int civilization_core_group_0352D(CivRecomp*,uint32_t);
 static uint32_t civ_generated_context_key_values(uint8_t pbr,uint16_t pc,uint8_t e,uint8_t m,uint8_t x){return ((uint32_t)pbr<<16)|(uint32_t)pc|((uint32_t)(e&1u)<<24)|((uint32_t)(m&1u)<<25)|((uint32_t)(x&1u)<<26);}
 uint32_t civ_generated_core_context_key(const CivRecomp *i){uint8_t m,x;if(!i)return 0u;m=(uint8_t)((i->cpu.p&CIV_P_M)!=0u);x=(uint8_t)((i->cpu.p&CIV_P_X)!=0u);return civ_generated_context_key_values(i->cpu.pbr,i->cpu.pc,i->cpu.e,m,x);}
 unsigned civ_generated_core_context_count(void){return 103584u;}
-int civ_generated_core_step(CivRecomp *i){uint32_t key,group;int result;if(!i)return 0;key=civ_generated_core_context_key(i);group=(key&0x00FFFFFFu)>>10u;switch(group){
+int civ_generated_core_step(CivRecomp *i){uint32_t key,group;int result;if(!i)return 0;if(i->cpu.pbr==0xC2u&&i->cpu.pc==0x0712u)civ_widescreen_probe_record_terrain_entry(i);key=civ_generated_core_context_key(i);group=(key&0x00FFFFFFu)>>10u;switch(group){
   case 0x20u:result=civilization_core_group_00020(i,key);break;
   case 0x3000u:result=civilization_core_group_03000(i,key);break;
   case 0x3001u:result=civilization_core_group_03001(i,key);break;

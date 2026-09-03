@@ -231,11 +231,15 @@ int civ_frontend_snapshot_save(CivFrontend *f,unsigned slot)
 int civ_frontend_snapshot_load(CivFrontend *f,unsigned slot)
 {
     char path[CIV_FRONTEND_PATH_CAPACITY];
-    if(!f||!f->loaded||slot<1u||slot>CIV_FRONTEND_SNAPSHOT_SLOTS||
+    int widescreen;
+    if(!f||!f->loaded||slot<1u||slot>CIV_FRONTEND_SNAPSHOT_SLOTS)return 0;
+    widescreen=civ_widescreen_enabled(f->core);
+    if(
        !civ_frontend_snapshot_path(f,slot,path,sizeof(path))||
        !civ_snapshot_load(f->core,f->rom,f->rom_size,path,f->last_error,sizeof(f->last_error)))return 0;
+    civ_set_widescreen_enabled(f->core,widescreen);
     f->paused=1;f->controller1=0u;civ_set_controller_input(f->core,0u,0u);
-    if(!civ_render_current_frame(f->core)){frontend_error(f,NULL,0u,"Snapshot restored, but current-frame rendering failed.");return 0;}
+    if(!civ_render_present_frame(f->core)){frontend_error(f,NULL,0u,"Snapshot restored, but current-frame rendering failed.");return 0;}
     return 1;
 }
 

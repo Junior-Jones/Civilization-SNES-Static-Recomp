@@ -223,7 +223,32 @@ const uint32_t *civilization_recomp_frame_bgra(
 
 uint32_t civilization_recomp_frame_width(const CivilizationRecomp *instance)
 {
-    return instance?CIVILIZATION_RECOMP_FRAME_WIDTH:0u;
+    return instance?(uint32_t)civ_frame_width(instance->frontend.core):0u;
+}
+
+int civilization_recomp_widescreen_enabled(const CivilizationRecomp *instance)
+{
+    return instance?civ_widescreen_enabled(instance->frontend.core):0;
+}
+
+int civilization_recomp_set_widescreen(CivilizationRecomp *instance,
+                                        int enabled,char *error,
+                                        size_t error_capacity)
+{
+    int has_completed_frame;
+    if(error&&error_capacity)error[0]='\0';
+    if(!instance) {
+        copy_error(instance,error,error_capacity,"No Civilization instance.");
+        return 0;
+    }
+    has_completed_frame=civ_get_framebuffer_rgba(instance->frontend.core)!=NULL;
+    civ_set_widescreen_enabled(instance->frontend.core,enabled);
+    if(has_completed_frame&&!civ_render_present_frame(instance->frontend.core)) {
+        copy_error(instance,error,error_capacity,
+                   "Unable to render the selected presentation geometry.");
+        return 0;
+    }
+    return 1;
 }
 
 uint32_t civilization_recomp_current_frame(const CivilizationRecomp *instance)
@@ -301,16 +326,19 @@ int civilization_recomp_snapshot_load(CivilizationRecomp *instance,
                                        size_t error_capacity)
 {
     int ok;
+    int widescreen;
     if (!instance) return 0;
+    widescreen=civ_widescreen_enabled(instance->frontend.core);
     ok = civ_snapshot_load(instance->frontend.core, instance->rom,
                            CIVILIZATION_RECOMP_ROM_SIZE, path, error,
                            error_capacity);
     if (ok) {
+        civ_set_widescreen_enabled(instance->frontend.core,widescreen);
         instance->pcm_read = 0u;
         instance->pcm_count = 0u;
         instance->audio_overflow = 0;
         install_host_hooks(instance);
-        (void)civ_render_current_frame(instance->frontend.core);
+        (void)civ_render_present_frame(instance->frontend.core);
     }
     return ok;
 }
@@ -379,7 +407,7 @@ int civilization_recomp_write_diagnostic_log(
         return 0;
     }
     (void)fprintf(file,
-        "Civilization Static Recomp 1.2.0 - Screenshot Static-Core Log\r\n"
+        "Civilization Static Recomp 1.3.0 - Screenshot Static-Core Log\r\n"
         "format=civilization-v35-screenshot-static-log-v1\r\n"
         "screenshot=%s\r\n"
         "authority=closed-exact-ROM-static-PBR-PC-E-M-X\r\n"

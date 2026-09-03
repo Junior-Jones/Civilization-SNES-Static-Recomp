@@ -1,1 +1,45 @@
-1.2.0
+Civilization (SNES) Static Recomp 1.3.0
+
+Frontend and integration features
+---------------------------------
+
+- Native accessible Win32 launcher with windowed and full-screen presentation,
+  exact rational NTSC pacing and an optional title-bar FPS counter.
+- New saved Wide Screen mode, enabled by default, expands live world-map play
+  from 256x224 to 398x224 with real generated terrain rather than stretching.
+- Wide Screen preserves fog of war and supports cursor movement, unit selection
+  and land inspection in the added left, right, top and bottom map areas.
+- Menus, city screens and other non-map scenes automatically remain at their
+  authentic 256x224 geometry.
+- A 398x224 Wide Screen frame uses its real near-16:9 aspect in a window and
+  fills a 1920x1080 full-screen display without cropping or 4:3 distortion.
+- F8 saves the active 256- or 398-pixel core framebuffer in windowed mode and
+  captures the complete presented screen while full-screen mode is active.
+- Five persistent full-machine snapshot slots, battery SRAM, configurable
+  keyboard and SDL gamepad input, and settings stored beside the executable.
+- Accessible Welcome, Settings, Controls, Audio Settings, snapshot and static-
+  failure windows restore focus to the launcher or running game when closed.
+
+Audio
+-----
+
+- The static core executes the project-owned Full Static S-SMP and 32-phase
+  S-DSP authority and produces native 32,040 Hz stereo PCM with no interpreter,
+  runtime DSP library or emulator fallback.
+- The Mesen-derived DirectSound frontend presents that PCM to the selected
+  Windows device and resamples speaker output only when required.
+- Configurable output device/rate, volume, Hermite/linear/nearest resampling,
+  optional 0-40 ms extra latency, safety prebuffer, ring buffering, drift
+  correction, stale-audio recovery and resume fade.
+- Extra latency is disabled at zero by default.
+
+Static core and validation
+--------------------------
+
+- Frozen Full Static W65C816 authority contains 103,584 exact processor
+  contexts across 280 compact ahead-of-time shards, with fail-closed dispatch.
+- Wide Screen terrain is generated from live game state and uses bounded caches
+  and map-state checks; it does not replace or bypass compiled game execution.
+- Native and Wide Screen windowed/full-screen screenshots, fog-of-war behavior,
+  cursor interaction, snapshot continuation, settings persistence and audio
+  operation were tested before packaging.

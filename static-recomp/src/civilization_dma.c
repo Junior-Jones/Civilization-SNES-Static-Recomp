@@ -1,5 +1,25 @@
 #include "civilization_internal.h"
 
+#include <string.h>
+
+#define CIV_PROBE_DMA_HISTORY_CAPACITY 32u
+static CivWidescreenProbeDmaEvent g_probe_dma_history[CIV_PROBE_DMA_HISTORY_CAPACITY];
+static size_t g_probe_dma_history_count;
+
+size_t civ_widescreen_probe_vram_dma_history(CivWidescreenProbeDmaEvent *out,
+                                             size_t capacity)
+{
+    size_t count=g_probe_dma_history_count<CIV_PROBE_DMA_HISTORY_CAPACITY?
+        g_probe_dma_history_count:CIV_PROBE_DMA_HISTORY_CAPACITY;
+    size_t first=g_probe_dma_history_count>count?
+        g_probe_dma_history_count%CIV_PROBE_DMA_HISTORY_CAPACITY:0u;
+    size_t n;
+    if(!out||capacity==0u)return count;
+    if(count>capacity){first=(first+(count-capacity))%CIV_PROBE_DMA_HISTORY_CAPACITY;count=capacity;}
+    for(n=0u;n<count;++n)out[n]=g_probe_dma_history[(first+n)%CIV_PROBE_DMA_HISTORY_CAPACITY];
+    return count;
+}
+
 static int civ_dma_process_nested_hdma(CivRecomp *i,uint8_t cpu_speed,
                                        uint32_t *dma_clock_counter);
 
@@ -28,6 +48,19 @@ static int civ_dma_channel_run(CivRecomp *i,CivDmaChannel0 *channel,unsigned cha
         return civ_fail_frontier(i,"DMA transfer mode reached outside the target-proved channel/mode set.",NULL);
     remaining=channel->transfer_size ? (uint32_t)channel->transfer_size : 65536u;
     source=channel->source_address;
+    if(channel->bbad==0x18u || channel->bbad==0x19u) {
+        CivWidescreenProbeDmaEvent *event=&g_probe_dma_history[
+            g_probe_dma_history_count%CIV_PROBE_DMA_HISTORY_CAPACITY];
+        memset(event,0,sizeof(*event));
+        event->frame=i->frame_count;
+        event->cpu_address=((uint32_t)channel->source_bank<<16)|source;
+        event->vram_word_address=i->vram_address;
+        event->byte_count=(uint16_t)(remaining==65536u?0u:remaining);
+        event->cpu_pc=((uint32_t)i->cpu.pbr<<16)|i->cpu.pc;
+        event->channel=(uint8_t)channel_index;
+        event->mode=mode;
+        ++g_probe_dma_history_count;
+    }
     for(n=0u;n<remaining;n++) {
         uint8_t data;
         uint8_t boff=(uint8_t)(channel->bbad+transfer_offsets[mode][n&3u]);

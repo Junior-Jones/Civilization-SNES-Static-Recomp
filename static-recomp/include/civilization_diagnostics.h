@@ -99,9 +99,30 @@ typedef struct CivDiagnosticState {
     char frontier_address[16], frontier_reason[192];
 } CivDiagnosticState;
 
+typedef struct CivTerrainRenderEntry {
+    uint64_t frame;
+    CivDiagnosticCpuState cpu;
+    uint16_t map_x, map_y, ring_x, ring_y, tile_number, world_index;
+} CivTerrainRenderEntry;
+
 int civ_diagnostics_capture(const CivRecomp *instance, CivDiagnosticState *state);
 int civ_diagnostics_read_wram(const CivRecomp *instance, size_t offset,
                               void *destination, size_t size);
+int civ_diagnostics_read_oam(const CivRecomp *instance, size_t offset,
+                             void *destination, size_t size);
+/* Temp-only widescreen/fog discovery helper. Never used by the production UI. */
+int civ_diagnostics_write_wram(CivRecomp *instance, size_t offset,
+                               const void *source, size_t size);
+size_t civ_widescreen_probe_terrain_entries(CivTerrainRenderEntry *out,
+                                            size_t capacity);
+int civ_widescreen_probe_generate_terrain_tile(const CivRecomp *instance,
+                                                unsigned world_x,
+                                                unsigned world_y,
+                                                uint8_t graphics[128],
+                                                uint16_t *tile_attributes,
+                                                unsigned *steps,
+                                                char *error,
+                                                size_t error_capacity);
 void civ_capture_video_checkpoint(const CivRecomp *instance,
                                   CivVideoCheckpoint *checkpoint);
 int civ_v20_get_audio_status(const CivRecomp *instance,CivV20AudioStatus *status);

@@ -117,6 +117,7 @@ void civ_reset(CivRecomp *i) {
     uint8_t preserved_sram[CIV_SRAM_SIZE];
     uint8_t preserved_dirty = 0u;
     CivHostHooks preserved_hooks;
+    uint8_t preserved_widescreen=0u;
     int preserve_sram;
     if (!i) return;
     /* Public callers cannot construct CivRecomp directly. A zero signature is
@@ -126,6 +127,7 @@ void civ_reset(CivRecomp *i) {
     preserve_sram = memcmp(i->reset_signature, signature, sizeof(signature)) == 0;
     if (preserve_sram) {
         preserved_hooks=i->host_hooks;
+        preserved_widescreen=i->widescreen_enabled;
         civ_v20_audio_release_internal(i);
         memcpy(preserved_sram, i->sram, sizeof(preserved_sram));
         preserved_dirty = i->sram_dirty;
@@ -135,6 +137,7 @@ void civ_reset(CivRecomp *i) {
         memcpy(i->sram, preserved_sram, sizeof(preserved_sram));
         i->sram_dirty = preserved_dirty;
         i->host_hooks=preserved_hooks;
+        i->widescreen_enabled=preserved_widescreen;
     }
     memcpy(i->reset_signature, signature, sizeof(signature));
     i->cpu.s = 0x01FFu;
@@ -230,6 +233,71 @@ void civ_set_host_hooks(CivRecomp *instance,const CivHostHooks *hooks) {
                               instance->host_hooks.context);
 }
 
+void civ_set_widescreen_enabled(CivRecomp *instance,int enabled) {
+    if(!instance)return;
+    if(!enabled&&instance->widescreen_enabled)
+        civ_set_controller_input(instance,0u,0u);
+    instance->widescreen_enabled=(uint8_t)(enabled!=0);
+    if(!instance->widescreen_enabled) {
+        instance->widescreen_cursor_extension_x=0;
+        instance->widescreen_cursor_extension_y=0;
+        instance->widescreen_previous_input=0u;
+        instance->widescreen_consumed_direction=0u;
+        instance->widescreen_input_rebased=0u;
+        instance->widescreen_clear_after_release=0u;
+    }
+}
+
+int civ_widescreen_enabled(const CivRecomp *instance) {
+    return instance&&instance->widescreen_enabled;
+}
+
+int civ_widescreen_live_map_state(const CivRecomp *instance) {
+    uint16_t top_left;
+    uint16_t top_inner;
+    uint16_t top_right;
+    if(!instance||instance->ppu.forced_blank||instance->ppu.bg_mode!=1u||
+       instance->ppu.main_screen_layers!=0x13u||
+       instance->ppu.bg_tilemap_address[0]!=0x5800u||
+       instance->ppu.bg_tilemap_address[1]!=0x5C00u)return 0;
+    /* The bare world-map frame has a stable three-word upper border in the
+       guest's authoritative BG1 staging map. City/unit command menus reuse
+       the same PPU mode and tilemap addresses but replace this border with
+       their status header, so the PPU signature alone is not a safe gate. */
+    top_left=(uint16_t)(instance->wram[0x2462u]|
+        ((uint16_t)instance->wram[0x2463u]<<8));
+    top_inner=(uint16_t)(instance->wram[0x2464u]|
+        ((uint16_t)instance->wram[0x2465u]<<8));
+    top_right=(uint16_t)(instance->wram[0x249Cu]|
+        ((uint16_t)instance->wram[0x249Du]<<8));
+    /* Palette/priority bits vary with the active terrain palette. The map
+       frame identity is carried by the 10-bit tile number itself. */
+    return (top_left&0x03FFu)==0x004Fu&&
+           (top_inner&0x03FFu)==0x0050u&&
+           (top_right&0x03FFu)==0x004Fu;
+}
+
+int civ_widescreen_frame_active(const CivRecomp *instance) {
+    return instance&&instance->widescreen_enabled&&
+           civ_widescreen_live_map_state(instance);
+}
+
+unsigned civ_frame_width(const CivRecomp *instance) {
+    if(!instance)return 0u;
+    if(instance->v19_framebuffer_ready&&instance->v19_framebuffer_width)
+        return instance->v19_framebuffer_width;
+    return civ_widescreen_frame_active(instance)?CIV_WIDESCREEN_WIDTH:
+                                                  CIV_FRAME_WIDTH;
+}
+
+int civ_widescreen_cursor_extension_x(const CivRecomp *instance) {
+    return instance?(int)instance->widescreen_cursor_extension_x:0;
+}
+
+int civ_widescreen_cursor_extension_y(const CivRecomp *instance) {
+    return instance?(int)instance->widescreen_cursor_extension_y:0;
+}
+
 int civ_run_frame(CivRecomp *instance,uint16_t controller1,
                   uint64_t instruction_budget,int render,
                   CivFrameResult *result) {
@@ -248,7 +316,7 @@ int civ_run_frame(CivRecomp *instance,uint16_t controller1,
     result->end_frame=instance->frame_count;
     result->instructions_executed=instance->instruction_count-result->instructions_executed;
     result->frame_completed=(uint8_t)(ok&&instance->frame_count>=target);
-    if(ok&&render)result->frame_rendered=(uint8_t)civ_render_current_frame(instance);
+    if(ok&&render)result->frame_rendered=(uint8_t)civ_render_present_frame(instance);
     if(ok&&(!render||result->frame_rendered)){
         if(instance->host_hooks.frame_complete)
             instance->host_hooks.frame_complete(instance->host_hooks.context,
